@@ -2,9 +2,11 @@ from __future__ import annotations
 
 import csv
 import math
+from datetime import datetime, timezone
 from collections import Counter, defaultdict
 from pathlib import Path
-from re import split
+from re import split, sub
+import zipfile
 from xml.sax.saxutils import escape
 
 from docx import Document
@@ -461,6 +463,19 @@ def hardware_model_rows() -> list[list[str]]:
     ]
 
 
+def normalize_docx_revision(path: Path) -> None:
+    tmp_path = path.with_suffix(path.suffix + ".tmp")
+    with zipfile.ZipFile(path, "r") as zin, zipfile.ZipFile(tmp_path, "w", zipfile.ZIP_DEFLATED) as zout:
+        for item in zin.infolist():
+            data = zin.read(item.filename)
+            if item.filename == "docProps/core.xml":
+                text = data.decode("utf-8")
+                text = sub(r"<cp:revision>.*?</cp:revision>", "<cp:revision>1</cp:revision>", text)
+                data = text.encode("utf-8")
+            zout.writestr(item, data)
+    tmp_path.replace(path)
+
+
 def clear_body(doc: Document) -> None:
     body = doc._element.body
     for child in list(body):
@@ -851,7 +866,7 @@ def add_data_table(doc: Document, caption: str, headers: list[str], rows: list[l
     spacer.add_run(" ").font.size = Pt(2)
 
 
-def add_figure(doc: Document, filename: str, caption: str, width_inches: float = 5.15) -> None:
+def add_figure(doc: Document, filename: str, caption: str, width_inches: float = 4.85) -> None:
     p = doc.add_paragraph()
     p.alignment = WD_ALIGN_PARAGRAPH.CENTER
     p.paragraph_format.keep_together = True
@@ -865,8 +880,11 @@ def add_figure(doc: Document, filename: str, caption: str, width_inches: float =
 def build() -> None:
     doc = Document(TEMPLATE)
     props = doc.core_properties
+    now = datetime.now(timezone.utc)
     props.author = "Dong Liu"
     props.last_modified_by = "Dong Liu"
+    props.created = now
+    props.modified = now
     props.title = "A Coefficient-Aware Finite-Difference Benchmark for Solver Selection and CPU/GPU Stencil Scaling in Heat-Conduction Simulation"
     props.subject = "ICEMCE 2026 reproducible heat-conduction benchmark"
     props.keywords = "heat conduction; finite difference; sparse solvers; algebraic multigrid; CPU/GPU stencil scaling; reproducible benchmark"
@@ -964,7 +982,7 @@ def build() -> None:
     )
     add_paragraph(
         doc,
-        "To report contrast, coefficient sharpness, and coefficient geometry separately, each coefficient field is summarised by Cₖ, the discrete maximum gradient magnitude of log(k), and a discrete total-variation proxy. For discontinuous coefficient fields, the log-gradient descriptor depends on grid spacing and is interpreted at fixed N rather than as a continuous invariant. Small-grid spectral evidence is also recorded through the estimated condition number κ(A) = λₘₐₓ(A) / λₘᵢₙ(A).",
+        "To report contrast, coefficient sharpness, and coefficient geometry separately, each coefficient field is summarised by Cₖ, the discrete maximum gradient magnitude of log(k), and a discrete total-variation proxy. For discontinuous coefficient fields, the log-gradient descriptor depends on grid spacing and is interpreted at fixed N rather than as a continuous invariant. Small-grid spectral evidence is also recorded through computed condition-number estimates κ(A) = λₘₐₓ(A) / λₘᵢₙ(A).",
         body,
     )
     add_equation(doc, "Cₖ = max(k)/min(k),  Gₖ(h) = ||∇h log(k)||∞,  Vₖ = Σ|Δₓk| + Σ|Δᵧk|", 4)
@@ -1026,7 +1044,7 @@ def build() -> None:
     )
     add_paragraph(
         doc,
-        "The decision map covers 13 coefficient cases, three grid sizes, and three Krylov/preconditioner choices. The spectral conditioning study uses N = 32, 64, and 128. The rank-correlation analysis uses all 39 case-size decisions and three fixed-grid strata of 13 cases; condition numbers are matched to N = 64 and N = 128 where available, and the N = 128 condition estimate is used as the maximum-available case-level spectral proxy for N = 256. The repeated timing check uses five repeats for one constant case and four high-difficulty cases. The face-averaging sensitivity study reruns the three discontinuous Ck = 100 stress cases with arithmetic and harmonic face averages at N = 64, 128, and 256. The hardware crossover fit used the measured Jacobi-kernel timings at N = 512, 1024, 2048, and 4096.",
+        "The decision map covers 13 coefficient cases, three grid sizes, and three Krylov/preconditioner choices. The spectral conditioning study uses N = 32, 64, and 128. The rank-correlation analysis uses all 39 case-size decisions and three fixed-grid strata of 13 cases; condition numbers are matched to N = 64 and N = 128 where available, and the N = 128 condition estimate is used as the maximum-available case-level spectral proxy for N = 256. The repeated timing check uses five repeats for one constant case and four nonconstant representative cases. The face-averaging sensitivity study reruns the three discontinuous Ck = 100 stress cases with arithmetic and harmonic face averages at N = 64, 128, and 256. The hardware crossover fit used the measured Jacobi-kernel timings at N = 512, 1024, 2048, and 4096.",
         body,
     )
     add_subsection(doc, "5.1", "Verification and Coefficient Difficulty")
@@ -1059,7 +1077,7 @@ def build() -> None:
     )
     add_paragraph(
         doc,
-        "Table 3 reports representative coefficient descriptors. The spectral evidence confirms that contrast alone is not a complete difficulty measure. At N = 128, the inclusion case with Ck = 100 had an estimated condition number of 6.43e5, while the checkerboard case with the same contrast had a much smaller estimate of 3.12e4 under this discretisation. Figure 2 shows the same effect across the measured coefficient grid.",
+        "Table 3 reports representative coefficient descriptors. The spectral evidence confirms that contrast alone is not a complete difficulty measure. At N = 128, the inclusion case with Ck = 100 had a computed condition-number estimate of 6.43e5, while the checkerboard case with the same contrast had a much smaller estimate of 3.12e4 under this discretisation. Figure 2 shows the same effect across the measured coefficient grid.",
         body,
     )
     add_data_table(
@@ -1071,11 +1089,11 @@ def build() -> None:
     add_figure(
         doc,
         "conditioning.png",
-        "Figure 2. Estimated condition number response to coefficient contrast and coefficient geometry.",
+        "Figure 2. Computed condition-number response to coefficient contrast and coefficient geometry.",
     )
     add_paragraph(
         doc,
-        "Table 4 turns the coefficient descriptors into a solver-behaviour diagnostic and also shows why a single pooled ranking is unsafe. Across all 39 case-size entries, the matched condition estimate had the largest association with selected-solver speedup (rho = 0.94), while Gk(h) had a larger pooled association with CG iterations (rho = 0.82) than contrast (rho = 0.63). Within fixed-N strata, the condition estimate, contrast, and Gk(h) were all positively associated with CG iterations, with median stratum correlations of rho = 0.96, 0.89, and 0.83, respectively. However, the fixed-grid samples contain only 13 coefficient cases and the case-resampling intervals overlap in the raw CSV archive. The result is therefore used as a descriptive ordering signal and as evidence for stratified reporting, not as a formal claim that these descriptors are significantly separated.",
+        "Table 4 turns the coefficient descriptors into a solver-behaviour diagnostic and also shows why a single pooled ranking is unsafe. Across all 39 case-size entries, the matched condition estimate had the largest association with selected-solver speedup (rho = 0.94), while Gk(h) had a larger pooled association with CG iterations (rho = 0.82) than contrast (rho = 0.63). Within fixed-N strata, the condition estimate, contrast, and Gk(h) were all positively associated with CG iterations, with median stratum correlations of rho = 0.96, 0.89, and 0.83, respectively. For the designed structured fields, the cross-case ordering of contrast, sharpness, and total-variation descriptors is mostly resolution-invariant across fixed-N strata; this explains the repeated fixed-grid rank coefficients for those descriptors, while κ(A) still changes with N and is reported separately. However, the fixed-grid samples contain only 13 coefficient cases and the case-resampling intervals overlap in the raw CSV archive. The result is therefore used as a descriptive ordering signal and as evidence for stratified reporting, not as a formal claim that these descriptors are significantly separated.",
         body,
     )
     add_data_table(
@@ -1115,7 +1133,7 @@ def build() -> None:
     )
     add_paragraph(
         doc,
-        "The repeat timing check in Table 7 gives a stricter interpretation of the map. For the high-difficulty representative cases at N = 256, AMG-PCG remained the median-best solver in every repeat, with selected-method relative IQR between 0.5% and 6.6%. The constant-coefficient N = 64 case was a near tie: Jacobi-PCG was best by median time, but the per-repeat vote favoured CG in four of five repeats and the median speedup was only 1.03x. The benchmark therefore treats that small-grid constant case as a timing boundary rather than a robust preconditioner preference.",
+        "The repeat timing check in Table 7 gives a stricter interpretation of the map. For the nonconstant representative cases at N = 256, AMG-PCG remained the median-best solver in every repeat, with selected-method relative IQR between 0.5% and 6.6%. The constant-coefficient N = 64 case was a near tie: Jacobi-PCG was best by median time, but the per-repeat vote favoured CG in four of five repeats and the median speedup was only 1.03x. The benchmark therefore treats that small-grid constant case as a timing boundary rather than a robust preconditioner preference.",
         body,
     )
     add_data_table(
@@ -1188,7 +1206,7 @@ def build() -> None:
     add_section(doc, 6, "Discussion")
     add_paragraph(
         doc,
-        "The main numerical result is the decision-level transition rather than the superiority of a single method in isolation. At small grids, Jacobi-PCG can win because its setup cost is negligible, but the repeated timing check shows that this statement has a near-tie boundary for the constant N = 64 case. Once the grid reaches the tested N = 128 and N = 256 levels, AMG-PCG wins consistently in the decision grid and in the repeated representative checks because its solve-time reduction outweighs the one-time AMG setup cost. This behaviour is consistent with the multilevel purpose of AMG: reduce error across scales rather than relying on local diagonal rescaling.",
+        "The main numerical result is the decision-level transition rather than the superiority of a single method in isolation. At small grids, Jacobi-PCG can win because its setup cost is negligible, but the repeated timing check shows that this statement has a near-tie boundary for the constant N = 64 case. Once the grid reaches the tested N = 128 and N = 256 levels, AMG-PCG wins consistently in the decision grid and in the repeated representative checks because its solve-time reduction outweighs the one-time AMG setup cost. For the two headline N = 256 solver comparisons, the reported setup and solve columns imply repeated-right-hand-side break-even counts below one solve, about 0.19 for the smooth case and 0.03 for the high-contrast case, so the AMG decision is already favourable under the stricter single-solve metric. This behaviour is consistent with the multilevel purpose of AMG: reduce error across scales rather than relying on local diagonal rescaling.",
         body_first,
     )
     add_paragraph(
@@ -1222,6 +1240,15 @@ def build() -> None:
     )
 
     p = doc.add_paragraph(style=style_name(doc, "IOP-CS-SectionHead"))
+    p.add_run("Acknowledgements")
+    normalize_runs(p)
+    add_paragraph(
+        doc,
+        "The author used OpenAI GPT-5, Claude Code, and DeepSeek V4 Pro for editorial review, formatting assistance, and consistency checking. The numerical experiments, references, data, and conclusions were checked by the author, who remains responsible for the manuscript.",
+        body_first,
+    )
+
+    p = doc.add_paragraph(style=style_name(doc, "IOP-CS-SectionHead"))
     p.add_run("References")
     normalize_runs(p)
     for i, ref in enumerate(REFERENCES, start=1):
@@ -1232,10 +1259,11 @@ def build() -> None:
         p.add_run(f"[{i}] {ref}")
         normalize_runs(p)
         for run in p.runs:
-            run.font.size = Pt(8.5)
+            run.font.size = Pt(8)
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
     doc.save(OUT)
+    normalize_docx_revision(OUT)
     print(OUT)
 
 

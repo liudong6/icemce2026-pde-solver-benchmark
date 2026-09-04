@@ -43,7 +43,7 @@
 - [x] The single-pass setup-inclusive fastest solver changes with grid size: Jacobi-PCG is selected at the smallest tested grid; AMG-PCG dominates the larger tested grids.
 - [x] The one-dimensional aligned jump-interface check shows harmonic face averaging recovers analytic flux to roundoff, while arithmetic averaging has grid-refined interface error.
 - [x] The discontinuous `C_k=100` arithmetic/harmonic sensitivity check changes iterations and condition estimates but not the tested fastest-solver class.
-- [x] Repeated timing supports the high-difficulty AMG-PCG selections and flags the constant-coefficient `N=64` case as a near-tie.
+- [x] Repeated timing supports the nonconstant `N=256` AMG-PCG selections and flags the constant-coefficient `N=64` case as a near-tie.
 - [x] Coefficient geometry matters; stratified rank-correlation evidence with uncertainty checks shows that no single contrast or sharpness descriptor is a universal difficulty metric.
 - [x] Numba improves repeated CPU stencil throughput over NumPy for this benchmark.
 - [x] CUDA gives kernel-only speedup above 2x for `N >= 2048` when data stay resident on the device.
@@ -61,7 +61,8 @@
 - [x] Do not treat selected-solver speedup correlations as primary solver-difficulty evidence; iteration-count associations are the primary diagnostic.
 - [x] Do not present harmonic averaging as a universal discretisation for curved or non-grid-aligned material interfaces.
 - [x] Do not present the `N≈755` CPU/CUDA crossover as more than an illustrative interpolation over measured Jacobi-kernel timings.
-- [x] Do not claim a public repository DOI until GitHub/Zenodo publication is actually completed.
+- [x] Cite the public repository DOI only after confirming the GitHub release and Zenodo version actually contain the current submission artefact.
+- [x] Include a narrow AI-assistance disclosure when required by the publisher or conference policy.
 
 ## Commands to Reproduce
 

@@ -76,4 +76,4 @@ The variable-coefficient stencil bandwidth estimate uses 11 double-precision val
 
 The artefact does not claim industrial geometry support, unstructured finite elements, end-to-end GPU sparse-solver acceleration, general GPU superiority at all grid sizes, or a universal single coefficient-difficulty predictor.
 
-No public repository DOI is claimed in the manuscript until a GitHub or Zenodo release is actually created.
+For submission, cite either the current Zenodo version DOI after upload or the Zenodo concept DOI for the version chain. Do not cite a superseded version DOI when a revised artefact has been published.

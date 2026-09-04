@@ -68,7 +68,7 @@ To report contrast, coefficient sharpness, and coefficient geometry separately, 
     V_k=\sum |\Delta_x k|+\sum |\Delta_y k|,
     \label{eq:difficulty}
 \end{equation}
-where $G_k^{(h)}$ is a discrete log-gradient sharpness indicator and $V_k$ is used only as a discrete total-variation proxy. For discontinuous coefficient fields, $G_k^{(h)}$ depends on the grid spacing and is interpreted at fixed $N$ rather than as a continuous invariant. Small-grid spectral evidence is also recorded through the estimated condition number $\kappa(A)=\lambda_{\max}(A)/\lambda_{\min}(A)$.
+where $G_k^{(h)}$ is a discrete log-gradient sharpness indicator and $V_k$ is used only as a discrete total-variation proxy. For discontinuous coefficient fields, $G_k^{(h)}$ depends on the grid spacing and is interpreted at fixed $N$ rather than as a continuous invariant. Small-grid spectral evidence is also recorded through computed condition-number estimates $\kappa(A)=\lambda_{\max}(A)/\lambda_{\min}(A)$.
 
 The domain is discretised on an $N\times N$ uniform grid with spacing $h=1/(N-1)$. Interior unknowns are ordered lexicographically. For an interior node $(i,j)$, the conservative five-point stencil is
 \begin{align}
@@ -106,7 +106,7 @@ To make the coefficient descriptors operational rather than decorative, the benc
 
 \section{Experiments and Results}
 
-All experiments were run on Windows 11 with Python 3.12.9, NumPy 2.4.6, SciPy 1.18.1, Numba 0.67.0, PyAMG 5.3.0, and Numba-CUDA 0.30.4. The machine used an AMD Ryzen 9 7940HS w/ Radeon 780M Graphics CPU with 8 physical cores and 16 logical processors, approximately 16 GB of system memory reported by the operating system as 15.2 GB usable, and an NVIDIA GeForce RTX 4060 Laptop GPU with compute capability 8.9. The exact raw CSV outputs, environment metadata, and scripts are included in the supplementary artefact. The decision map covers 13 coefficient cases, three grid sizes, and three Krylov/preconditioner choices. The spectral conditioning study uses $N=32,64,128$. The rank-correlation analysis uses all 39 case-size decisions and three fixed-grid strata of 13 cases; condition numbers are matched to $N=64$ and $N=128$ where available, and the $N=128$ condition estimate is used as the maximum-available case-level spectral proxy for $N=256$. The repeated timing check uses five repeats for one constant case and four high-difficulty cases. The face-averaging sensitivity study reruns the three discontinuous $C_k=100$ stress cases with arithmetic and harmonic face averages at $N=64,128,256$.
+All experiments were run on Windows 11 with Python 3.12.9, NumPy 2.4.6, SciPy 1.18.1, Numba 0.67.0, PyAMG 5.3.0, and Numba-CUDA 0.30.4. The machine used an AMD Ryzen 9 7940HS w/ Radeon 780M Graphics CPU with 8 physical cores and 16 logical processors, approximately 16 GB of system memory reported by the operating system as 15.2 GB usable, and an NVIDIA GeForce RTX 4060 Laptop GPU with compute capability 8.9. The exact raw CSV outputs, environment metadata, and scripts are included in the supplementary artefact. The decision map covers 13 coefficient cases, three grid sizes, and three Krylov/preconditioner choices. The spectral conditioning study uses $N=32,64,128$. The rank-correlation analysis uses all 39 case-size decisions and three fixed-grid strata of 13 cases; condition numbers are matched to $N=64$ and $N=128$ where available, and the $N=128$ condition estimate is used as the maximum-available case-level spectral proxy for $N=256$. The repeated timing check uses five repeats for one constant case and four nonconstant representative cases. The face-averaging sensitivity study reruns the three discontinuous $C_k=100$ stress cases with arithmetic and harmonic face averages at $N=64,128,256$.
 
 \subsection{Verification and Coefficient Difficulty}
 
@@ -125,18 +125,18 @@ The discontinuous-interface check in Table~\ref{tab:interface-verification} isol
 
 \input{tables/interface_verification_summary}
 
-Table~\ref{tab:difficulty} reports representative coefficient descriptors. The spectral evidence confirms that contrast alone is not a complete difficulty measure. At $N=128$, the inclusion case with $C_k=100$ had an estimated condition number of $6.43\times10^5$, while the checkerboard case with the same contrast had a much smaller estimate of $3.12\times10^4$ under this discretisation. Figure~\ref{fig:conditioning} shows the same effect across the measured coefficient grid.
+Table~\ref{tab:difficulty} reports representative coefficient descriptors. The spectral evidence confirms that contrast alone is not a complete difficulty measure. At $N=128$, the inclusion case with $C_k=100$ had a computed condition-number estimate of $6.43\times10^5$, while the checkerboard case with the same contrast had a much smaller estimate of $3.12\times10^4$ under this discretisation. Figure~\ref{fig:conditioning} shows the same effect across the measured coefficient grid.
 
 \input{tables/coefficient_difficulty_summary}
 
 \begin{figure}[t]
 \centering
 \includegraphics[width=0.84\linewidth]{figures/conditioning.png}
-\caption{Estimated condition number response to coefficient contrast and coefficient geometry.}
+\caption{Computed condition-number response to coefficient contrast and coefficient geometry.}
 \label{fig:conditioning}
 \end{figure}
 
-Table~\ref{tab:difficulty-relationships} turns the coefficient descriptors into a solver-behaviour diagnostic and also shows why a single pooled ranking is unsafe. Across all 39 case-size entries, the matched condition estimate had the largest association with selected-solver speedup ($\rho=0.94$), while $G_k^{(h)}$ had a larger pooled association with CG iterations ($\rho=0.82$) than contrast ($\rho=0.63$). Within fixed-$N$ strata, the condition estimate, contrast, and $G_k^{(h)}$ were all positively associated with CG iterations, with median stratum correlations of $\rho=0.96$, $0.89$, and $0.83$, respectively. However, the fixed-grid samples contain only 13 coefficient cases and the case-resampling intervals overlap in the raw CSV archive. The result is therefore used as a descriptive ordering signal and as evidence for stratified reporting, not as a formal claim that these descriptors are significantly separated.
+Table~\ref{tab:difficulty-relationships} turns the coefficient descriptors into a solver-behaviour diagnostic and also shows why a single pooled ranking is unsafe. Across all 39 case-size entries, the matched condition estimate had the largest association with selected-solver speedup ($\rho=0.94$), while $G_k^{(h)}$ had a larger pooled association with CG iterations ($\rho=0.82$) than contrast ($\rho=0.63$). Within fixed-$N$ strata, the condition estimate, contrast, and $G_k^{(h)}$ were all positively associated with CG iterations, with median stratum correlations of $\rho=0.96$, $0.89$, and $0.83$, respectively. For the designed structured fields, the cross-case ordering of contrast, sharpness, and total-variation descriptors is mostly resolution-invariant across fixed-$N$ strata; this explains the repeated fixed-grid rank coefficients for those descriptors, while $\kappa(A)$ still changes with $N$ and is reported separately. However, the fixed-grid samples contain only 13 coefficient cases and the case-resampling intervals overlap in the raw CSV archive. The result is therefore used as a descriptive ordering signal and as evidence for stratified reporting, not as a formal claim that these descriptors are significantly separated.
 
 \input{tables/difficulty_relationship_summary}
 
@@ -157,7 +157,7 @@ Table~\ref{tab:averaging-sensitivity} tests whether the discontinuous high-contr
 
 \input{tables/averaging_sensitivity_summary}
 
-The repeat timing check in Table~\ref{tab:timing-stability} gives a stricter interpretation of the map. For the high-difficulty representative cases at $N=256$, AMG-PCG remained the median-best solver in every repeat, with selected-method relative IQR between 0.5\% and 6.6\%. The constant-coefficient $N=64$ case was a near tie: Jacobi-PCG was best by median time, but the per-repeat vote favoured CG in four of five repeats and the median speedup was only $1.03\times$. The benchmark therefore treats that small-grid constant case as a timing boundary rather than a robust preconditioner preference.
+The repeat timing check in Table~\ref{tab:timing-stability} gives a stricter interpretation of the map. For the nonconstant representative cases at $N=256$, AMG-PCG remained the median-best solver in every repeat, with selected-method relative IQR between 0.5\% and 6.6\%. The constant-coefficient $N=64$ case was a near tie: Jacobi-PCG was best by median time, but the per-repeat vote favoured CG in four of five repeats and the median speedup was only $1.03\times$. The benchmark therefore treats that small-grid constant case as a timing boundary rather than a robust preconditioner preference.
 
 \input{tables/timing_stability_summary}
 
@@ -207,7 +207,7 @@ The local linear crossover fit gives a compact way to report this boundary. Tabl
 
 \section{Discussion}
 
-The main numerical result is the decision-level transition rather than the superiority of a single method in isolation. At small grids, Jacobi-PCG can win because its setup cost is negligible, but the repeated timing check shows that this statement has a near-tie boundary for the constant $N=64$ case. Once the grid reaches the tested $N=128$ and $N=256$ levels, AMG-PCG wins consistently in the decision grid and in the repeated representative checks because the solve-time reduction outweighs the one-time AMG setup cost. This behaviour is consistent with the multilevel purpose of AMG: reduce error across scales rather than relying on local diagonal rescaling.
+The main numerical result is the decision-level transition rather than the superiority of a single method in isolation. At small grids, Jacobi-PCG can win because its setup cost is negligible, but the repeated timing check shows that this statement has a near-tie boundary for the constant $N=64$ case. Once the grid reaches the tested $N=128$ and $N=256$ levels, AMG-PCG wins consistently in the decision grid and in the repeated representative checks because the solve-time reduction outweighs the one-time AMG setup cost. For the two headline $N=256$ solver comparisons, the reported setup and solve columns imply repeated-right-hand-side break-even counts below one solve, about 0.19 for the smooth case and 0.03 for the high-contrast case, so the AMG decision is already favourable under the stricter single-solve metric. This behaviour is consistent with the multilevel purpose of AMG: reduce error across scales rather than relying on local diagonal rescaling.
 
 The coefficient-difficulty results also show why neither contrast nor any other single descriptor should be used alone. Inclusion and checkerboard fields can share both nominal contrast and discrete log-gradient values while having very different condition estimates, because geometry changes the operator spectrum. The pooled rank correlations are useful for summarising the combined grid-size and coefficient-field effect, but the fixed-grid correlations give the safer coefficient-level reading: contrast, discrete sharpness, and spectral conditioning capture different parts of the solver response, and the small sample size prevents a strong significance claim about their pairwise ordering. This is the main methodological lesson of the descriptor analysis: benchmark descriptors should be reported with stratification and uncertainty, not collapsed into a single universal difficulty score.
 
@@ -222,6 +222,10 @@ The supplementary artefact contains the scripts, raw CSV files, generated tables
 \section{Conclusion}
 
 This paper presented a coefficient-aware finite-difference benchmark for heat-conduction simulation. Smooth verification, an aligned-interface check, coefficient descriptors, setup-inclusive solver decisions, repeated timings, and bounded CPU/CUDA stencil measurements were linked to raw CSV evidence. The main lesson is methodological: solver choice should be reported with discretisation checks, coefficient stratification, setup cost, timing stability, and explicit hardware boundaries. In this benchmark, Jacobi-PCG was selected on the smallest single-pass grid, AMG-PCG dominated the tested larger grids, and CUDA speedups were meaningful only for resident-data stencil kernels at sufficiently large problem sizes.
+
+\section*{Acknowledgements}
+
+The author used OpenAI GPT-5, Claude Code, and DeepSeek V4 Pro for editorial review, formatting assistance, and consistency checking. The numerical experiments, references, data, and conclusions were checked by the author, who remains responsible for the manuscript.
 
 \bibliographystyle{unsrt}
 \bibliography{references}
