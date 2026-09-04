@@ -287,7 +287,7 @@ def plot_conditioning(csv_path: str | Path, output_path: str | Path) -> None:
         ax.loglog(x, y, marker="o", linewidth=1.7, label=f"{family}, N={n}")
 
     ax.set_xlabel("Target coefficient contrast")
-    ax.set_ylabel("Estimated condition number")
+    ax.set_ylabel("Computed condition-number estimate")
     ax.set_title("Conditioning response to coefficient difficulty")
     ax.grid(True, which="both", linestyle=":", linewidth=0.7)
     ax.xaxis.set_minor_formatter(NullFormatter())
