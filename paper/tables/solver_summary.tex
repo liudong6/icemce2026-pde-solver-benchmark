@@ -1,0 +1,19 @@
+\begin{table}[t]
+\centering
+\caption{Solver comparison at $N=256$ grid points in each direction.}
+\label{tab:solver}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{llrrr}
+\toprule
+Case & Method & Iter. & Time (s) & Rel. residual \\
+\midrule
+Smooth variable & CG & 770 & 0.939 & $9.71\times10^{-9}$ \\
+Smooth variable & Jacobi-PCG & 605 & 0.829 & $9.88\times10^{-9}$ \\
+Smooth variable & AMG-PCG & 9 & 0.240 & $4.82\times10^{-9}$ \\
+High contrast & CG & 4370 & 6.155 & $9.95\times10^{-9}$ \\
+High contrast & Jacobi-PCG & 535 & 0.728 & $9.14\times10^{-9}$ \\
+High contrast & AMG-PCG & 12 & 0.288 & $4.44\times10^{-9}$ \\
+\bottomrule
+\end{tabular}
+}
+\end{table}

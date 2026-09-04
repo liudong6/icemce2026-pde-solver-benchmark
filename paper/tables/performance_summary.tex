@@ -1,0 +1,18 @@
+\begin{table}[t]
+\centering
+\caption{Representative stencil-throughput measurements. CPU entries use the variable-coefficient operator at $N=2048$; CUDA entries use a repeated Jacobi kernel-only benchmark.}
+\label{tab:performance}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{llrrr}
+\toprule
+Experiment & Method & $N$ & Time & Throughput / speedup \\
+\midrule
+CPU stencil & NumPy & 2048 & 0.1813 s/apply & 2.03 GB/s \\
+CPU stencil & Numba serial & 2048 & 0.005325 s/apply & 69.18 GB/s \\
+CPU stencil & Numba parallel, 4 threads & 2048 & 0.003725 s/apply & 98.90 GB/s \\
+GPU crossover & CUDA kernel & 2048 & $7.97\times10^{-4}$ s/step & $3.23\times$ vs CPU \\
+GPU crossover & CUDA kernel & 4096 & $3.15\times10^{-3}$ s/step & $3.51\times$ vs CPU \\
+\bottomrule
+\end{tabular}
+}
+\end{table}

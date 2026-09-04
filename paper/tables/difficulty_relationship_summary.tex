@@ -1,0 +1,17 @@
+\begin{table}[t]
+\centering
+\caption{Descriptive Spearman rank correlations linking coefficient-difficulty descriptors to solver behaviour. Pooled columns use all 39 case-size entries and are not treated as independent population samples; fixed-$N$ columns summarise the stratum-specific rank coefficients by median and, when they differ, range. Raw stratum values and case-resampling uncertainty intervals are archived in the supplementary CSV.}
+\label{tab:difficulty-relationships}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lrrrr}
+\toprule
+Descriptor & CG pooled & CG fixed-$N$ & Speedup pooled & Speedup fixed-$N$ \\
+\midrule
+$C_k$ contrast & 0.63 & 0.89 & 0.68 & 0.85 (0.82-0.86) \\
+$G_k^{(h)}$ log-gradient & 0.82 & 0.83 & 0.80 & 0.77 (0.74-0.77) \\
+$V_k$ TV proxy & 0.43 & 0.65 & 0.42 & 0.53 (0.47-0.57) \\
+$\kappa(A)$ proxy & 0.87 & 0.96 (0.95-0.96) & 0.94 & 0.95 (0.94-0.96) \\
+\bottomrule
+\end{tabular}
+}
+\end{table}

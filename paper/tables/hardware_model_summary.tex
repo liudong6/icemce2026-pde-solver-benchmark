@@ -1,0 +1,16 @@
+\begin{table}[t]
+\centering
+\caption{Empirical linear CPU/CUDA kernel crossover model fitted over the measured Jacobi-stencil range. The fit is used as a local interpolation of the crossover point, not as a physical launch-overhead model.}
+\label{tab:hardware-model}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lrrrr}
+\toprule
+Component & Observations & $\beta$ (s/unknown) & $R^2$ & Crossover $N$ \\
+\midrule
+CPU Numba & 4 & $6.780\times10^{-10}$ & 0.999 & - \\
+CUDA kernel & 4 & $1.896\times10^{-10}$ & 0.999 & - \\
+Illustrative fitted crossover & - & - & 0.999 & 755 \\
+\bottomrule
+\end{tabular}
+}
+\end{table}

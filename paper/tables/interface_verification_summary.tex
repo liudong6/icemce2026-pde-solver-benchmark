@@ -1,0 +1,17 @@
+\begin{table}[t]
+\centering
+\caption{Discontinuous-interface verification on a one-dimensional two-material heat-conduction problem. Harmonic face averaging recovers the analytic flux continuity to roundoff in this aligned-interface test.}
+\label{tab:interface-verification}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{rrrrr}
+\toprule
+$N$ & $L^2$ error, arithmetic & $L^2$ error, harmonic & Flux error, arithmetic & Flux error, harmonic \\
+\midrule
+32 & $1.27\times10^{-2}$ & $5.96\times10^{-16}$ & $6.33\times10^{-2}$ & $5.11\times10^{-15}$ \\
+64 & $6.21\times10^{-3}$ & $1.56\times10^{-15}$ & $3.07\times10^{-2}$ & $6.66\times10^{-15}$ \\
+128 & $3.07\times10^{-3}$ & $3.55\times10^{-14}$ & $1.51\times10^{-2}$ & $2.44\times10^{-14}$ \\
+256 & $1.53\times10^{-3}$ & $9.51\times10^{-15}$ & $7.49\times10^{-3}$ & $4.91\times10^{-14}$ \\
+\bottomrule
+\end{tabular}
+}
+\end{table}

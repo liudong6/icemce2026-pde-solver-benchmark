@@ -1,0 +1,7 @@
+sizes: [512, 1024, 2048, 4096]
+steps: 20
+repeats: 3
+warmup: 1
+min_seconds: 0.2
+cpu_threads: 4
+block: [16, 16]

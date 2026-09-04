@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this benchmark artefact, please cite it using the metadata below."
+title: "A Coefficient-Aware Finite-Difference Benchmark for Solver Selection and CPU/GPU Stencil Scaling in Heat-Conduction Simulation"
+authors:
+  - family-names: Liu
+    given-names: Dong
+    affiliation: University of Nottingham Ningbo China
+type: conference-paper
+date-released: 2026-09-04
+keywords:
+  - heat conduction
+  - finite difference method
+  - partial differential equations
+  - sparse linear solvers
+  - conjugate gradient
+  - algebraic multigrid
+  - performance scaling
+  - reproducible benchmark
+  - CPU/GPU stencil
+  - Numba CUDA
+repository-code: "https://github.com/liudong6/icemce2026-pde-solver-benchmark"

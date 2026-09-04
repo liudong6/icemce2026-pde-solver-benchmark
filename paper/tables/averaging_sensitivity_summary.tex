@@ -1,0 +1,22 @@
+\begin{table}[t]
+\centering
+\caption{Arithmetic/harmonic face-averaging sensitivity for discontinuous $C_k=100$ stress cases. Each paired entry reports arithmetic/harmonic values. The full CSV also records $\kappa(A)$ using matched $N$ for 64 and 128 and the $N=128$ proxy for $N=256$.}
+\label{tab:averaging-sensitivity}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lrrrrlr}
+\toprule
+Case & $N$ & CG it. & Jacobi-PCG it. & AMG-PCG it. & Best solver & Best speedup \\
+\midrule
+inclusion\_c100 & 64 & 796/725 & 129/129 & 10/10 & Jacobi-PCG/Jacobi-PCG & 6.02/3.92 \\
+inclusion\_c100 & 128 & 1963/1891 & 264/263 & 12/11 & AMG-PCG/AMG-PCG & 14.25/14.45 \\
+inclusion\_c100 & 256 & 4370/4326 & 535/535 & 12/12 & AMG-PCG/AMG-PCG & 18.40/20.74 \\
+layered\_c100 & 64 & 1136/1120 & 164/181 & 9/9 & Jacobi-PCG/Jacobi-PCG & 6.61/6.43 \\
+layered\_c100 & 128 & 2447/2442 & 325/367 & 10/10 & AMG-PCG/AMG-PCG & 17.21/18.58 \\
+layered\_c100 & 256 & 5055/5054 & 657/715 & 10/10 & AMG-PCG/AMG-PCG & 24.44/23.67 \\
+checkerboard\_c100 & 64 & 443/557 & 171/190 & 13/28 & Jacobi-PCG/Jacobi-PCG & 2.20/2.78 \\
+checkerboard\_c100 & 128 & 1050/1308 & 350/388 & 17/32 & AMG-PCG/AMG-PCG & 6.83/6.03 \\
+checkerboard\_c100 & 256 & 2268/2809 & 718/783 & 17/31 & AMG-PCG/AMG-PCG & 8.44/7.81 \\
+\bottomrule
+\end{tabular}
+}
+\end{table}

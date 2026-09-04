@@ -1,0 +1,26 @@
+{
+  "title": "A Coefficient-Aware Finite-Difference Benchmark for Solver Selection and CPU/GPU Stencil Scaling in Heat-Conduction Simulation",
+  "upload_type": "publication",
+  "publication_type": "conferencepaper",
+  "creators": [
+    {
+      "name": "Liu, Dong",
+      "affiliation": "University of Nottingham Ningbo China"
+    }
+  ],
+  "description": "This archive contains the manuscript, source code, raw CSV evidence, generated figures and tables, environment requirements, and cold-start smoke-test log for a reproducible finite-difference benchmark of solver selection and CPU/GPU stencil scaling in heat-conduction simulation. The study verifies a conservative finite-difference operator, evaluates coefficient-aware solver decisions for CG, Jacobi-PCG, and AMG-PCG, and reports bounded CPU/Numba/CUDA stencil measurements on one workstation.",
+  "keywords": [
+    "heat conduction",
+    "finite difference method",
+    "partial differential equations",
+    "sparse linear solvers",
+    "conjugate gradient",
+    "algebraic multigrid",
+    "performance scaling",
+    "reproducible benchmark",
+    "CPU/GPU stencil",
+    "Numba CUDA"
+  ],
+  "access_right": "open_access",
+  "license": "mit"
+}

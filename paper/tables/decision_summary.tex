@@ -1,0 +1,16 @@
+\begin{table}[t]
+\centering
+\caption{Setup-inclusive single-solve decision summary over the coefficient-family grid. Counts report the fastest converged method by setup-plus-solve time from one timing pass per cell.}
+\label{tab:decision-summary}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{rrrrrrr}
+\toprule
+$N$ & Cases & CG & Jacobi-PCG & AMG-PCG & Median speedup vs CG & Max speedup vs CG \\
+\midrule
+64 & 13 & 0 & 13 & 0 & 2.79 & 6.76 \\
+128 & 13 & 0 & 0 & 13 & 5.44 & 19.40 \\
+256 & 13 & 0 & 0 & 13 & 7.80 & 25.72 \\
+\bottomrule
+\end{tabular}
+}
+\end{table}

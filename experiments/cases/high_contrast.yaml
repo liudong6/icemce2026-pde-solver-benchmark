@@ -1,0 +1,7 @@
+name: high_contrast_solver
+coefficient_case: high_contrast
+sizes: [64, 128, 256]
+methods: [cg, jacobi-pcg, amg-pcg]
+tolerance: 1.0e-8
+maxiter: 20000
+rhs: ones

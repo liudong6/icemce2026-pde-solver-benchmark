@@ -1,0 +1,18 @@
+\begin{table}[t]
+\centering
+\caption{Repeated timing stability check. Rows report the solver selected by median total time across repeats, the per-repeat vote fraction, and the relative interquartile range of the selected method.}
+\label{tab:timing-stability}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lrllrrrl}
+\toprule
+Case & $N$ & Median best & Vote best & Vote & Speedup & Rel. IQR & Status \\
+\midrule
+constant & 64 & Jacobi-PCG & CG & 0.80 & 1.03 & 33.5\% & variable \\
+smooth\_c30 & 256 & AMG-PCG & AMG-PCG & 1.00 & 5.03 & 2.2\% & stable \\
+inclusion\_c100 & 256 & AMG-PCG & AMG-PCG & 1.00 & 19.85 & 0.5\% & stable \\
+layered\_c100 & 256 & AMG-PCG & AMG-PCG & 1.00 & 24.05 & 1.2\% & stable \\
+checkerboard\_c100 & 256 & AMG-PCG & AMG-PCG & 1.00 & 8.98 & 6.6\% & stable \\
+\bottomrule
+\end{tabular}
+}
+\end{table}

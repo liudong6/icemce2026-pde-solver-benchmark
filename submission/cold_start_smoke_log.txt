@@ -1,0 +1,42 @@
+﻿Cold-start smoke test for supplementary_artefact.zip
+timestamp=2026-09-04T09:33:53.2016345+08:00
+zip=C:\Users\25872\Desktop\ieee\submission\supplementary_artefact.zip
+extract=C:\Users\25872\Desktop\ieee\tmp\supplementary_smoke_page_reduced_final
+=== pytest ===
+........................................................................ [ 97%]
+..                                                                       [100%]
+exit_code=0
+=== make_paper_tables ===
+wrote paper\tables\convergence_summary.tex
+wrote paper\tables\solver_summary.tex
+wrote paper\tables\performance_summary.tex
+wrote paper\tables\coefficient_difficulty_summary.tex
+wrote paper\tables\decision_summary.tex
+wrote paper\tables\difficulty_relationship_summary.tex
+wrote paper\tables\interface_verification_summary.tex
+wrote paper\tables\averaging_sensitivity_summary.tex
+wrote paper\tables\timing_stability_summary.tex
+wrote paper\tables\hardware_model_summary.tex
+exit_code=0
+=== make_all_figures ===
+wrote results/figures/convergence_l2.png
+wrote results/figures/solver_runtime.png
+wrote results/figures/solver_iterations.png
+wrote results/figures/cpu_scaling.png
+wrote results/figures/gpu_crossover.png
+wrote results/figures/solver_decision_map.png
+wrote results/figures/conditioning.png
+wrote results/figures/difficulty_relationships.png
+wrote results/figures/timing_stability.png
+wrote results/figures/hardware_crossover_model.png
+copied results\figures\convergence_l2.png -> paper\figures\convergence_l2.png
+copied results\figures\solver_runtime.png -> paper\figures\solver_runtime.png
+copied results\figures\solver_iterations.png -> paper\figures\solver_iterations.png
+copied results\figures\cpu_scaling.png -> paper\figures\cpu_scaling.png
+copied results\figures\gpu_crossover.png -> paper\figures\gpu_crossover.png
+copied results\figures\solver_decision_map.png -> paper\figures\solver_decision_map.png
+copied results\figures\conditioning.png -> paper\figures\conditioning.png
+copied results\figures\difficulty_relationships.png -> paper\figures\difficulty_relationships.png
+copied results\figures\timing_stability.png -> paper\figures\timing_stability.png
+copied results\figures\hardware_crossover_model.png -> paper\figures\hardware_crossover_model.png
+exit_code=0

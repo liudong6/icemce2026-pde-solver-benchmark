@@ -1,0 +1,8 @@
+numpy==2.4.6
+scipy==1.18.1
+numba==0.67.0
+pyamg==5.3.0
+matplotlib==3.11.1
+pytest==9.1.1
+psutil==7.2.2
+PyYAML==6.0.3

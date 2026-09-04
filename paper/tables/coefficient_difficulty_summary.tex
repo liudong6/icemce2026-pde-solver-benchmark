@@ -1,0 +1,18 @@
+\begin{table}[t]
+\centering
+\caption{Representative coefficient-difficulty descriptors. Metrics use $N=64$ for the discrete descriptors; $\kappa(A)$ is the largest available spectral estimate, here $N=128$.}
+\label{tab:difficulty}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{llrrrr}
+\toprule
+Case & Family & $C_k$ & $G_k^{(h)}$ & TV proxy & $\kappa(A)$ \\
+\midrule
+constant & Constant & 1.0 & 0.00 & 0.00 & $6.54\times10^{3}$ \\
+smooth\_c30 & Smooth & 29.7 & 16.41 & 4.76 & $1.38\times10^{4}$ \\
+inclusion\_c100 & Inclusion & 100.0 & 205.15 & 113.14 & $6.43\times10^{5}$ \\
+layered\_c100 & Layered & 100.0 & 145.06 & 100.57 & $2.61\times10^{5}$ \\
+checkerboard\_c100 & Checkerboard & 100.0 & 205.15 & 1408.00 & $3.12\times10^{4}$ \\
+\bottomrule
+\end{tabular}
+}
+\end{table}

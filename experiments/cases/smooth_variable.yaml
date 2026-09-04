@@ -1,0 +1,7 @@
+name: smooth_variable
+coefficient_case: smooth
+sizes: [32, 64, 128, 256]
+method: cg
+tol: 1.0e-11
+maxiter: 20000
+

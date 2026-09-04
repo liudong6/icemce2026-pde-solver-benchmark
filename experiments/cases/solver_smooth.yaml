@@ -1,0 +1,7 @@
+name: smooth_variable_solver
+coefficient_case: smooth
+sizes: [64, 128, 256]
+methods: [cg, jacobi-pcg, amg-pcg]
+tolerance: 1.0e-8
+maxiter: 20000
+rhs: ones
