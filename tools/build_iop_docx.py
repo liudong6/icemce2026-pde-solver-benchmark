@@ -1228,7 +1228,7 @@ def build() -> None:
     add_section(doc, 7, "Reproducibility Artefact")
     add_paragraph(
         doc,
-        "The supplementary artefact contains the scripts, raw CSV files, generated tables and figures, metadata, and tests needed to reproduce the reported benchmark. The main scripts cover convergence, solver comparison, the coefficient-aware decision map, conditioning, interface verification, descriptor analysis, arithmetic/harmonic sensitivity, timing stability, CPU/CUDA stencil scaling, crossover fitting, and table/figure regeneration. Unit tests cover the numerical operators, solver behaviour, summaries, plotting, tables, descriptors, conditioning, timing stability, and crossover fit; every reported manuscript number traces to a raw CSV file.",
+        "The supplementary artefact contains the scripts, raw CSV files, generated tables and figures, metadata, and tests needed to reproduce the reported benchmark. The submitted reproducibility artefact is archived on Zenodo at https://doi.org/10.5281/zenodo.22303525. The main scripts cover convergence, solver comparison, the coefficient-aware decision map, conditioning, interface verification, descriptor analysis, arithmetic/harmonic sensitivity, timing stability, CPU/CUDA stencil scaling, crossover fitting, and table/figure regeneration. Unit tests cover the numerical operators, solver behaviour, summaries, plotting, tables, descriptors, conditioning, timing stability, and crossover fit; every reported manuscript number traces to a raw CSV file.",
         body_first,
     )
 

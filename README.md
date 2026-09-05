@@ -5,6 +5,7 @@ This repository contains the reproducible code and experiments for an ICEMCE 202
 Archived release:
 
 - GitHub release: https://github.com/liudong6/icemce2026-pde-solver-benchmark/releases/tag/v1.0-icemce2026-submission
+- Zenodo archived version: https://doi.org/10.5281/zenodo.22303525
 
 ## Manuscript
 

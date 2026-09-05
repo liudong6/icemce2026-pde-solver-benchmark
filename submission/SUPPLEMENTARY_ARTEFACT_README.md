@@ -4,6 +4,8 @@ This package supports the ICEMCE 2026 manuscript:
 
 `A Coefficient-Aware Finite-Difference Benchmark for Solver Selection and CPU/GPU Stencil Scaling in Heat-Conduction Simulation`
 
+The submitted reproducibility artefact is archived on Zenodo at https://doi.org/10.5281/zenodo.22303525.
+
 ## Contents
 
 - `src/pdescale/`: finite-difference operator, face-averaging checks, coefficient-field descriptors, conditioning estimates, descriptor-to-solver analysis, solver decision logic, timing-stability summaries, manufactured-solution problems, solvers, CPU scaling kernels, CUDA stencil kernels, plotting, and metadata utilities.
