@@ -1,7 +1,9 @@
 import csv
 import math
+import pytest
 
 
+@pytest.mark.cuda
 def test_gpu_stencil_benchmark_records_speedup_decision():
     from pdescale.gpu_scaling import (
         GPU_STENCIL_FIELDS,
@@ -27,6 +29,7 @@ def test_gpu_stencil_benchmark_records_speedup_decision():
     assert decision["include_in_main_paper"] is True
 
 
+@pytest.mark.cuda
 def test_write_gpu_stencil_csv_uses_schema(tmp_path):
     from pdescale.gpu_scaling import (
         GPU_STENCIL_FIELDS,

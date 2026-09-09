@@ -1,0 +1,60 @@
+{
+  "n": [
+    128,
+    192
+  ],
+  "contrast": 1000.0,
+  "fields": [
+    [
+      "connected",
+      0
+    ],
+    [
+      "disconnected",
+      0
+    ],
+    [
+      "disconnected",
+      1
+    ]
+  ],
+  "rhs": [
+    "odd_x",
+    "random"
+  ],
+  "methods": [
+    "jacobi",
+    "amg0",
+    "amg025",
+    "rs025"
+  ],
+  "repeats": 5,
+  "setup_seed": 12401,
+  "order_seed": 94218,
+  "rtol": 1e-09,
+  "residual_acceptance": 1e-08,
+  "script_sha256": "81107172f7a7929d0be570a5b11cb69bd7d11a55f1b9176b3bb0f1c08b91f60c",
+  "protocol_sha256": "ce5ae6865854d51eadadcc0062f7c7de72bb3c45ed45f028558d64240660d171",
+  "threadpools": [
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libscipy_openblas",
+      "filepath": "C:\\Users\\25872\\Desktop\\ieee\\.venv-cuda\\Lib\\site-packages\\numpy.libs\\libscipy_openblas64_-63c857e738469261263c764a36be9436.dll",
+      "version": "0.3.31.188.0",
+      "threading_layer": "pthreads",
+      "architecture": "SkylakeX"
+    },
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libscipy_openblas",
+      "filepath": "C:\\Users\\25872\\Desktop\\ieee\\.venv-cuda\\Lib\\site-packages\\scipy.libs\\libscipy_openblas-197ee2fc9b4d071f7e048078cac74115.dll",
+      "version": "0.3.31.dev",
+      "threading_layer": "pthreads",
+      "architecture": "SkylakeX"
+    }
+  ]
+}

@@ -2,7 +2,7 @@
 
 ## Manuscript Status
 
-- [x] Full-paper skeleton created: `paper/main.tex`
+- [x] LaTeX manuscript source: `paper/main.tex`
 - [x] Bibliography file created: `paper/references.bib`
 - [x] Main figures copied to `paper/figures/`
 - [x] Main tables created in `paper/tables/`
@@ -51,6 +51,12 @@
 
 ## Claims Not Allowed
 
+- [x] Do not claim setup-inclusive diffusion benchmarking is new; compare directly with HPGMG-FV and AMG2023.
+- [x] Do not describe the retrospective fastest-solver labels as a validated predictive or online selector.
+- [x] Report all 15 available repeated-timing case-size cells, including the constant-grid near tie.
+- [x] Do not attribute constant-coefficient CG/Jacobi timing differences to improved conditioning.
+- [x] Keep the unvalidated four-point crossover fit in supplementary materials and report no fitted hardware threshold.
+
 - [x] Do not claim industrial-scale validation.
 - [x] Do not claim end-to-end GPU solver acceleration.
 - [x] Do not claim unstructured FEM capability.
@@ -60,9 +66,14 @@
 - [x] Do not describe the solver decision map as a repeated-right-hand-side or setup-amortised model.
 - [x] Do not treat selected-solver speedup correlations as primary solver-difficulty evidence; iteration-count associations are the primary diagnostic.
 - [x] Do not present harmonic averaging as a universal discretisation for curved or non-grid-aligned material interfaces.
-- [x] Do not present the `N≈755` CPU/CUDA crossover as more than an illustrative interpolation over measured Jacobi-kernel timings.
-- [x] Cite the public repository DOI only after confirming the GitHub release and Zenodo version actually contain the current submission artefact.
-- [x] Include a narrow AI-assistance disclosure when required by the publisher or conference policy.
+- [x] Do not use the exploratory `N≈755` fit intersection as a hardware-selection threshold; the CPU fit predicts a negative time at the measured `N=512` point.
+- [x] Separate the historical monitored protocol from the new warm-import, shuffled-order, count-only protocol; do not pool their timing conclusions.
+- [x] The existing DOI identifies the retained baseline data, not the new controlled extension or revised manuscript.
+- [x] Reserve the new Zenodo version DOI 10.5281/zenodo.22668106 in the existing version chain and synchronise its citation throughout the source files.
+- [ ] Verify the rebuilt documents and packages, publish the corresponding GitHub release and Zenodo version, and retain a separate publication receipt with their public identities and checksums.
+- [x] On 9 September 2026, inspect the conference-linked submission platform at https://www.ais.cn/attendees/index/FYEY3M: it announces a third-round full-paper deadline of 18 September 2026 at 23:59, IOP Journal of Physics: Conference Series publication, and a single-column manuscript of at least six full pages. This newer platform notice differs from the English homepage's 15 August deadline.
+- [ ] Complete the authenticated submission workflow and retain its receipt; the public paper-submission link currently requests login, so inspection of the announcement does not prove that a manuscript has been received or accepted.
+- [x] Disclose the recorded AI models and actual uses, including experiment design, code implementation, numerical analysis and manuscript preparation; state the author's confirmed independent review and responsibility for the final content.
 
 ## Commands to Reproduce
 
@@ -87,3 +98,17 @@ py -3.12 -m venv .venv-cuda
 .\.venv-cuda\Scripts\python.exe experiments\make_paper_tables.py
 .\.venv-cuda\Scripts\python.exe experiments\make_all_figures.py --only all
 ```
+
+## Controlled extension review
+
+- [x] Preserve the 13 baseline raw files and distinguish their version DOI from the new data.
+- [x] Verify exact descriptor matches, flux-energy identities and reflection/transpose controls.
+- [x] Retain all 576 pilot solves, including failed acceptance checks.
+- [x] Verify all 2212 geometry/forcing follow-up solves and 744 portfolio-audit solves against the independent true-residual threshold.
+- [x] Report the interleaved three-method confirmation: 17/24 stable cells, 3/12 stable translated-pair reversals, and portfolio-conditional cost floors.
+- [x] Report complete case summaries and unstable winners, not only the illustrated reversal.
+- [x] Distinguish established invariant-subspace/island theory from this specific benchmark audit.
+- [x] On 8 September 2026, the author confirmed independent review of the matched-field, source-perturbation and classical-AMG experiments and the ability to explain their key derivations, timing boundaries and failure cases. This records the author's confirmation, separately from automated verification.
+
+- [x] Verify a newly installed CPU-only environment: 91 passed, 5 explicit CUDA skips; 76 regenerated/recorded outputs match byte-for-byte.
+- [x] Require CUDA explicitly for GPU validation: the existing CUDA environment passes all 96 tests; a CPU-only environment rejects this mode.

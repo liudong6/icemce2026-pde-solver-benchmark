@@ -1,0 +1,162 @@
+{
+  "portfolio": {
+    "solves": 240,
+    "failed_acceptance": 0,
+    "cells": 12,
+    "stable_cells": 11,
+    "max_residual": 1.0046020137480822e-09
+  },
+  "portfolio_confirmation": {
+    "solves": 504,
+    "failed_acceptance": 0,
+    "cells": 24,
+    "stable_cells": 17,
+    "max_residual": 9.941891616592456e-10,
+    "pairs": [
+      {
+        "n": "128",
+        "motif": "three_by_six",
+        "rhs": "odd_x",
+        "accepted": true,
+        "centered_winner": "jacobi",
+        "shifted_winner": "rs025",
+        "both_stable": true,
+        "stable_reversal": true,
+        "empirical_minimum_mean_excess": 0.12420463698099393,
+        "best_invariant_only_method": "jacobi"
+      },
+      {
+        "n": "128",
+        "motif": "three_by_six",
+        "rhs": "random",
+        "accepted": true,
+        "centered_winner": "rs025",
+        "shifted_winner": "rs025",
+        "both_stable": true,
+        "stable_reversal": false,
+        "empirical_minimum_mean_excess": 0.0,
+        "best_invariant_only_method": "rs025"
+      },
+      {
+        "n": "128",
+        "motif": "two_by_eight",
+        "rhs": "odd_x",
+        "accepted": true,
+        "centered_winner": "jacobi",
+        "shifted_winner": "rs025",
+        "both_stable": true,
+        "stable_reversal": true,
+        "empirical_minimum_mean_excess": 0.1190715324870677,
+        "best_invariant_only_method": "jacobi"
+      },
+      {
+        "n": "128",
+        "motif": "two_by_eight",
+        "rhs": "random",
+        "accepted": true,
+        "centered_winner": "rs025",
+        "shifted_winner": "rs025",
+        "both_stable": true,
+        "stable_reversal": false,
+        "empirical_minimum_mean_excess": 0.0,
+        "best_invariant_only_method": "rs025"
+      },
+      {
+        "n": "160",
+        "motif": "three_by_six",
+        "rhs": "odd_x",
+        "accepted": true,
+        "centered_winner": "jacobi",
+        "shifted_winner": "rs025",
+        "both_stable": true,
+        "stable_reversal": true,
+        "empirical_minimum_mean_excess": 0.096894244664127,
+        "best_invariant_only_method": "rs025"
+      },
+      {
+        "n": "160",
+        "motif": "three_by_six",
+        "rhs": "random",
+        "accepted": true,
+        "centered_winner": "rs025",
+        "shifted_winner": "rs025",
+        "both_stable": false,
+        "stable_reversal": false,
+        "empirical_minimum_mean_excess": 0.0,
+        "best_invariant_only_method": "rs025"
+      },
+      {
+        "n": "160",
+        "motif": "two_by_eight",
+        "rhs": "odd_x",
+        "accepted": true,
+        "centered_winner": "jacobi",
+        "shifted_winner": "rs025",
+        "both_stable": false,
+        "stable_reversal": false,
+        "empirical_minimum_mean_excess": 0.048590378537783474,
+        "best_invariant_only_method": "jacobi"
+      },
+      {
+        "n": "160",
+        "motif": "two_by_eight",
+        "rhs": "random",
+        "accepted": true,
+        "centered_winner": "rs025",
+        "shifted_winner": "rs025",
+        "both_stable": true,
+        "stable_reversal": false,
+        "empirical_minimum_mean_excess": 0.0,
+        "best_invariant_only_method": "rs025"
+      },
+      {
+        "n": "192",
+        "motif": "three_by_six",
+        "rhs": "odd_x",
+        "accepted": true,
+        "centered_winner": "rs025",
+        "shifted_winner": "rs025",
+        "both_stable": false,
+        "stable_reversal": false,
+        "empirical_minimum_mean_excess": 0.0,
+        "best_invariant_only_method": "rs025"
+      },
+      {
+        "n": "192",
+        "motif": "three_by_six",
+        "rhs": "random",
+        "accepted": true,
+        "centered_winner": "rs025",
+        "shifted_winner": "rs025",
+        "both_stable": true,
+        "stable_reversal": false,
+        "empirical_minimum_mean_excess": 0.0,
+        "best_invariant_only_method": "rs025"
+      },
+      {
+        "n": "192",
+        "motif": "two_by_eight",
+        "rhs": "odd_x",
+        "accepted": true,
+        "centered_winner": "rs025",
+        "shifted_winner": "rs025",
+        "both_stable": false,
+        "stable_reversal": false,
+        "empirical_minimum_mean_excess": 0.0,
+        "best_invariant_only_method": "rs025"
+      },
+      {
+        "n": "192",
+        "motif": "two_by_eight",
+        "rhs": "random",
+        "accepted": true,
+        "centered_winner": "rs025",
+        "shifted_winner": "rs025",
+        "both_stable": true,
+        "stable_reversal": false,
+        "empirical_minimum_mean_excess": 0.0,
+        "best_invariant_only_method": "rs025"
+      }
+    ]
+  }
+}

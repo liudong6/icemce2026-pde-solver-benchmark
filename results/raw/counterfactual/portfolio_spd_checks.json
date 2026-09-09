@@ -1,0 +1,50 @@
+[
+  {
+    "geometry": "connected",
+    "method": "jacobi",
+    "relative_asymmetry": 0.0,
+    "min_eigenvalue": 2.6014568158168575e-07
+  },
+  {
+    "geometry": "connected",
+    "method": "amg0",
+    "relative_asymmetry": 3.8925688730213505e-16,
+    "min_eigenvalue": 1.4147528883532314e-07
+  },
+  {
+    "geometry": "connected",
+    "method": "amg025",
+    "relative_asymmetry": 1.8212279139523795e-16,
+    "min_eigenvalue": 1.4121845627619643e-07
+  },
+  {
+    "geometry": "connected",
+    "method": "rs025",
+    "relative_asymmetry": 3.4095997910713427e-16,
+    "min_eigenvalue": 1.4121629909839911e-07
+  },
+  {
+    "geometry": "disconnected",
+    "method": "jacobi",
+    "relative_asymmetry": 0.0,
+    "min_eigenvalue": 2.6014568158168575e-07
+  },
+  {
+    "geometry": "disconnected",
+    "method": "amg0",
+    "relative_asymmetry": 4.082120362795159e-16,
+    "min_eigenvalue": 1.4397104835543104e-07
+  },
+  {
+    "geometry": "disconnected",
+    "method": "amg025",
+    "relative_asymmetry": 1.8153006625831745e-16,
+    "min_eigenvalue": 1.4378509625710165e-07
+  },
+  {
+    "geometry": "disconnected",
+    "method": "rs025",
+    "relative_asymmetry": 3.857700124805151e-16,
+    "min_eigenvalue": 1.4369288918977668e-07
+  }
+]

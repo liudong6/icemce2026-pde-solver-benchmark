@@ -1,0 +1,11 @@
+{
+  "confirmation_cells": 144,
+  "heldout_cells": 64,
+  "perturbation_cells": 22,
+  "all_followup_accepted": true,
+  "stable_confirmation_cells": 124,
+  "stable_heldout_cells": 55,
+  "translation_pairs": 48,
+  "stable_translation_reversals": 2,
+  "interpretation": "Descriptive finite-case audit; empirical regret floors use equal weights and measured medians, not population confidence bounds or an online policy."
+}

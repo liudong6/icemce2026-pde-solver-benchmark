@@ -51,7 +51,7 @@ def method_label(method: str, threads: str | None = None) -> str:
         "numba-serial": "Numba serial",
         "cuda-kernel": "CUDA kernel",
         "numba-parallel-cpu": "CPU Numba",
-        "linear_cpu_vs_cuda": "Illustrative fitted crossover",
+        "linear_cpu_vs_cuda": "Unvalidated fit intersection",
     }
     if method == "numba-parallel":
         return f"Numba parallel, {threads} threads"
@@ -533,27 +533,7 @@ def averaging_sensitivity_table(rows: Iterable[dict[str, str]]) -> str:
 
 def timing_stability_table(rows: Iterable[dict[str, str]]) -> str:
     rows = list(rows)
-    preferred = [
-        ("constant", 64),
-        ("smooth_c30", 256),
-        ("inclusion_c100", 256),
-        ("layered_c100", 256),
-        ("checkerboard_c100", 256),
-    ]
-    selected: list[dict[str, str]] = []
-    for case, n in preferred:
-        row = next(
-            (
-                item
-                for item in rows
-                if item["coefficient_case"] == case and int(float(item["n"])) == n
-            ),
-            None,
-        )
-        if row is not None:
-            selected.append(row)
-    if not selected:
-        selected = sorted(rows, key=lambda item: (int(float(item["n"])), item["coefficient_case"]))
+    selected = sorted(rows, key=lambda item: (int(float(item["n"])), item["coefficient_case"]))
 
     body: list[str] = []
     for row in selected:
@@ -578,7 +558,7 @@ def timing_stability_table(rows: Iterable[dict[str, str]]) -> str:
         [
             r"\begin{table}[t]",
             r"\centering",
-            r"\caption{Repeated timing stability check. Rows report the solver selected by median total time across repeats, the per-repeat vote fraction, and the relative interquartile range of the selected method.}",
+            r"\caption{Repeated timing stability for all 15 tested case-size cells, with five repeats each. Rows report the solver selected by median total time across repeats, the per-repeat vote fraction, and the relative interquartile range of the selected method.}",
             r"\label{tab:timing-stability}",
             r"\resizebox{\columnwidth}{!}{%",
             r"\begin{tabular}{lrllrrrl}",
@@ -623,7 +603,7 @@ def hardware_model_table(rows: Iterable[dict[str, str]]) -> str:
         + r" \\",
         " & ".join(
             [
-                "Illustrative fitted crossover",
+                "Unvalidated fit intersection",
                 "-",
                 "-",
                 f"{float(crossover['r2']):.3f}",
@@ -636,12 +616,12 @@ def hardware_model_table(rows: Iterable[dict[str, str]]) -> str:
         [
             r"\begin{table}[t]",
             r"\centering",
-            r"\caption{Empirical linear CPU/CUDA kernel crossover model fitted over the measured Jacobi-stencil range. The fit is used as a local interpolation of the crossover point, not as a physical launch-overhead model.}",
+            r"\caption{Exploratory global linear fit to all four measured Jacobi-stencil sizes. Its intersection is not a validated crossover threshold.}",
             r"\label{tab:hardware-model}",
             r"\resizebox{\columnwidth}{!}{%",
             r"\begin{tabular}{lrrrr}",
             r"\toprule",
-            r"Component & Observations & $\beta$ (s/unknown) & $R^2$ & Crossover $N$ \\",
+            r"Component & Observations & $\beta$ (s/unknown) & $R^2$ & Intersection $N$ \\",
             r"\midrule",
             *body,
             r"\bottomrule",

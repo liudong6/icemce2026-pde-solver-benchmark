@@ -1,3 +1,6 @@
+import pytest
+
+
 def test_capture_metadata_has_required_keys():
     from pdescale.metadata import capture_metadata
 
@@ -37,6 +40,7 @@ def test_write_metadata_json_persists_environment(tmp_path):
     assert "numpy" in loaded["packages"]
 
 
+@pytest.mark.cuda
 def test_cuda_available_for_optional_experiment():
     from numba import cuda
 

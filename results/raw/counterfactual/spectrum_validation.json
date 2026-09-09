@@ -1,0 +1,90 @@
+[
+  {
+    "geometry": "connected",
+    "average": "arithmetic",
+    "n": 32,
+    "start": 0,
+    "B_symmetry_defect": 4.4055138897148155e-16,
+    "dense_min": 0.43860528356115314,
+    "dense_max": 1.0000000000028526,
+    "low_relative_error": 9.57012247226885e-14,
+    "high_relative_error": 1.739946742240761e-09
+  },
+  {
+    "geometry": "connected",
+    "average": "arithmetic",
+    "n": 32,
+    "start": 1,
+    "B_symmetry_defect": 4.4055138897148155e-16,
+    "dense_min": 0.43860528356115314,
+    "dense_max": 1.0000000000028526,
+    "low_relative_error": 9.492406860545088e-14,
+    "high_relative_error": 3.983136820373545e-09
+  },
+  {
+    "geometry": "connected",
+    "average": "harmonic",
+    "n": 32,
+    "start": 0,
+    "B_symmetry_defect": 5.820406215282942e-16,
+    "dense_min": 0.42662950745449624,
+    "dense_max": 1.0000000000012834,
+    "low_relative_error": 1.2871925747504065e-12,
+    "high_relative_error": 2.176969715605992e-11
+  },
+  {
+    "geometry": "connected",
+    "average": "harmonic",
+    "n": 32,
+    "start": 1,
+    "B_symmetry_defect": 5.820406215282942e-16,
+    "dense_min": 0.42662950745449624,
+    "dense_max": 1.0000000000012834,
+    "low_relative_error": 1.2894130207996568e-12,
+    "high_relative_error": 9.48097023112382e-09
+  },
+  {
+    "geometry": "disconnected",
+    "average": "arithmetic",
+    "n": 32,
+    "start": 0,
+    "B_symmetry_defect": 7.947986784453712e-16,
+    "dense_min": 0.0033429631869007492,
+    "dense_max": 1.000000000003587,
+    "low_relative_error": 2.8843594179761567e-11,
+    "high_relative_error": 4.5102424017784415e-09
+  },
+  {
+    "geometry": "disconnected",
+    "average": "arithmetic",
+    "n": 32,
+    "start": 1,
+    "B_symmetry_defect": 7.947986784453712e-16,
+    "dense_min": 0.0033429631869007492,
+    "dense_max": 1.000000000003587,
+    "low_relative_error": 2.8876678825895397e-11,
+    "high_relative_error": 1.7126876583617445e-09
+  },
+  {
+    "geometry": "disconnected",
+    "average": "harmonic",
+    "n": 32,
+    "start": 0,
+    "B_symmetry_defect": 5.732377595943879e-16,
+    "dense_min": 0.004178322840128312,
+    "dense_max": 1.000000000003013,
+    "low_relative_error": 2.180156055686666e-11,
+    "high_relative_error": 4.604649994632837e-11
+  },
+  {
+    "geometry": "disconnected",
+    "average": "harmonic",
+    "n": 32,
+    "start": 1,
+    "B_symmetry_defect": 5.732377595943879e-16,
+    "dense_min": 0.004178322840128312,
+    "dense_max": 1.000000000003013,
+    "low_relative_error": 2.18147722108597e-11,
+    "high_relative_error": 1.5684333831700314e-09
+  }
+]

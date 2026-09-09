@@ -1,17 +1,27 @@
 \begin{table}[t]
 \centering
-\caption{Repeated timing stability check. Rows report the solver selected by median total time across repeats, the per-repeat vote fraction, and the relative interquartile range of the selected method.}
+\caption{Repeated timing stability for all 15 tested case-size cells, with five repeats each. Rows report the solver selected by median total time across repeats, the per-repeat vote fraction, and the relative interquartile range of the selected method.}
 \label{tab:timing-stability}
 \resizebox{\columnwidth}{!}{%
 \begin{tabular}{lrllrrrl}
 \toprule
 Case & $N$ & Median best & Vote best & Vote & Speedup & Rel. IQR & Status \\
 \midrule
+checkerboard\_c100 & 64 & Jacobi-PCG & Jacobi-PCG & 1.00 & 2.40 & 3.0\% & stable \\
 constant & 64 & Jacobi-PCG & CG & 0.80 & 1.03 & 33.5\% & variable \\
-smooth\_c30 & 256 & AMG-PCG & AMG-PCG & 1.00 & 5.03 & 2.2\% & stable \\
+inclusion\_c100 & 64 & Jacobi-PCG & Jacobi-PCG & 1.00 & 5.69 & 8.0\% & stable \\
+layered\_c100 & 64 & Jacobi-PCG & Jacobi-PCG & 1.00 & 6.43 & 6.4\% & stable \\
+smooth\_c30 & 64 & Jacobi-PCG & Jacobi-PCG & 1.00 & 1.56 & 5.3\% & stable \\
+checkerboard\_c100 & 128 & AMG-PCG & AMG-PCG & 1.00 & 6.43 & 3.6\% & stable \\
+constant & 128 & AMG-PCG & AMG-PCG & 1.00 & 1.89 & 1.5\% & stable \\
+inclusion\_c100 & 128 & AMG-PCG & AMG-PCG & 1.00 & 14.82 & 2.0\% & stable \\
+layered\_c100 & 128 & AMG-PCG & AMG-PCG & 1.00 & 19.24 & 3.5\% & stable \\
+smooth\_c30 & 128 & AMG-PCG & AMG-PCG & 1.00 & 4.10 & 1.7\% & stable \\
+checkerboard\_c100 & 256 & AMG-PCG & AMG-PCG & 1.00 & 8.98 & 6.6\% & stable \\
+constant & 256 & AMG-PCG & AMG-PCG & 1.00 & 2.32 & 1.0\% & stable \\
 inclusion\_c100 & 256 & AMG-PCG & AMG-PCG & 1.00 & 19.85 & 0.5\% & stable \\
 layered\_c100 & 256 & AMG-PCG & AMG-PCG & 1.00 & 24.05 & 1.2\% & stable \\
-checkerboard\_c100 & 256 & AMG-PCG & AMG-PCG & 1.00 & 8.98 & 6.6\% & stable \\
+smooth\_c30 & 256 & AMG-PCG & AMG-PCG & 1.00 & 5.03 & 2.2\% & stable \\
 \bottomrule
 \end{tabular}
 }

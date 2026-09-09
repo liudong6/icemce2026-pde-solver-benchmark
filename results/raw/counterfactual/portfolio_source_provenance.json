@@ -1,0 +1,17 @@
+{
+  "portfolio.py": {
+    "executed_source_sha256": "81107172f7a7929d0be570a5b11cb69bd7d11a55f1b9176b3bb0f1c08b91f60c",
+    "distributed_source_sha256": "ece2b6a5a9f4b174e8fc3dea32408b35d18a35e8212c59b5a3801ef8ac125e8b",
+    "unchanged_numerical_functions": [
+      "prepare",
+      "solve"
+    ],
+    "changes": "Module naming and safe output/provenance routing; numerical workload and solver settings unchanged."
+  },
+  "portfolio_confirmation.py": {
+    "executed_source_sha256": "54b2345bea3cfe15d909f150c2d2a05322b63b8186ea6a5b218e4024aff97b8b",
+    "distributed_source_sha256": "8395409ed85b073668b5d42b92e9bd07a063d3ee8c39d625df0488867cca9767",
+    "unchanged_numerical_functions": [],
+    "changes": "Module naming and safe output/provenance routing; numerical workload and solver settings unchanged."
+  }
+}

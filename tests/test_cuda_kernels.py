@@ -14,6 +14,7 @@ def _jacobi_reference(u0, steps):
     return u
 
 
+@pytest.mark.cuda
 def test_cuda_jacobi_steps_matches_cpu_reference():
     from pdescale.cuda_kernels import cuda_jacobi_steps
 
@@ -27,6 +28,7 @@ def test_cuda_jacobi_steps_matches_cpu_reference():
     assert np.allclose(actual, expected, rtol=1e-12, atol=1e-12)
 
 
+@pytest.mark.cuda
 def test_cuda_jacobi_steps_rejects_invalid_inputs():
     from pdescale.cuda_kernels import cuda_jacobi_steps
 

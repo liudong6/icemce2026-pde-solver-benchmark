@@ -1,12 +1,18 @@
-﻿Cold-start smoke test for supplementary_artefact.zip
-timestamp=2026-09-04T09:33:53.2016345+08:00
-zip=C:\Users\25872\Desktop\ieee\submission\supplementary_artefact.zip
-extract=C:\Users\25872\Desktop\ieee\tmp\supplementary_smoke_page_reduced_final
-=== pytest ===
-........................................................................ [ 97%]
-..                                                                       [100%]
+Clean-extraction verification of the matched-field/forcing extension.
+Existing locked numerical environment; this is not a fresh dependency installation test.
+Command: python -c import pdescale; from pathlib import Path; assert Path(pdescale.__file__).resolve().is_relative_to(Path.cwd()); print("Extracted package import verified")
+Extracted package import verified
+
+
 exit_code=0
-=== make_paper_tables ===
+Command: python -m pytest -o addopts= -q
+........................................................................ [ 75%]
+........................                                                 [100%]
+96 passed in 19.72s
+
+
+exit_code=0
+Command: python experiments/make_paper_tables.py
 wrote paper\tables\convergence_summary.tex
 wrote paper\tables\solver_summary.tex
 wrote paper\tables\performance_summary.tex
@@ -17,8 +23,10 @@ wrote paper\tables\interface_verification_summary.tex
 wrote paper\tables\averaging_sensitivity_summary.tex
 wrote paper\tables\timing_stability_summary.tex
 wrote paper\tables\hardware_model_summary.tex
+
+
 exit_code=0
-=== make_all_figures ===
+Command: python experiments/make_all_figures.py --only all
 wrote results/figures/convergence_l2.png
 wrote results/figures/solver_runtime.png
 wrote results/figures/solver_iterations.png
@@ -39,4 +47,437 @@ copied results\figures\conditioning.png -> paper\figures\conditioning.png
 copied results\figures\difficulty_relationships.png -> paper\figures\difficulty_relationships.png
 copied results\figures\timing_stability.png -> paper\figures\timing_stability.png
 copied results\figures\hardware_crossover_model.png -> paper\figures\hardware_crossover_model.png
+
+
 exit_code=0
+Command: python experiments/analyze_counterfactual.py
+{
+  "confirmation_cells": 144,
+  "heldout_cells": 64,
+  "perturbation_cells": 22,
+  "all_followup_accepted": true,
+  "stable_confirmation_cells": 124,
+  "stable_heldout_cells": 55,
+  "translation_pairs": 48,
+  "stable_translation_reversals": 2,
+  "interpretation": "Descriptive finite-case audit; empirical regret floors use equal weights and measured medians, not population confidence bounds or an online policy."
+}
+
+
+exit_code=0
+Command: python experiments/analyze_portfolio.py
+{
+  "portfolio": {
+    "solves": 240,
+    "failed_acceptance": 0,
+    "cells": 12,
+    "stable_cells": 11,
+    "max_residual": 1.0046020137480822e-09
+  },
+  "portfolio_confirmation": {
+    "solves": 504,
+    "failed_acceptance": 0,
+    "cells": 24,
+    "stable_cells": 17,
+    "max_residual": 9.941891616592456e-10,
+    "pairs": [
+      {
+        "n": "128",
+        "motif": "three_by_six",
+        "rhs": "odd_x",
+        "accepted": true,
+        "centered_winner": "jacobi",
+        "shifted_winner": "rs025",
+        "both_stable": true,
+        "stable_reversal": true,
+        "empirical_minimum_mean_excess": 0.12420463698099393,
+        "best_invariant_only_method": "jacobi"
+      },
+      {
+        "n": "128",
+        "motif": "three_by_six",
+        "rhs": "random",
+        "accepted": true,
+        "centered_winner": "rs025",
+        "shifted_winner": "rs025",
+        "both_stable": true,
+        "stable_reversal": false,
+        "empirical_minimum_mean_excess": 0.0,
+        "best_invariant_only_method": "rs025"
+      },
+      {
+        "n": "128",
+        "motif": "two_by_eight",
+        "rhs": "odd_x",
+        "accepted": true,
+        "centered_winner": "jacobi",
+        "shifted_winner": "rs025",
+        "both_stable": true,
+        "stable_reversal": true,
+        "empirical_minimum_mean_excess": 0.1190715324870677,
+        "best_invariant_only_method": "jacobi"
+      },
+      {
+        "n": "128",
+        "motif": "two_by_eight",
+        "rhs": "random",
+        "accepted": true,
+        "centered_winner": "rs025",
+        "shifted_winner": "rs025",
+        "both_stable": true,
+        "stable_reversal": false,
+        "empirical_minimum_mean_excess": 0.0,
+        "best_invariant_only_method": "rs025"
+      },
+      {
+        "n": "160",
+        "motif": "three_by_six",
+        "rhs": "odd_x",
+        "accepted": true,
+        "centered_winner": "jacobi",
+        "shifted_winner": "rs025",
+        "both_stable": true,
+        "stable_reversal": true,
+        "empirical_minimum_mean_excess": 0.096894244664127,
+        "best_invariant_only_method": "rs025"
+      },
+      {
+        "n": "160",
+        "motif": "three_by_six",
+        "rhs": "random",
+        "accepted": true,
+        "centered_winner": "rs025",
+        "shifted_winner": "rs025",
+        "both_stable": false,
+        "stable_reversal": false,
+        "empirical_minimum_mean_excess": 0.0,
+        "best_invariant_only_method": "rs025"
+      },
+      {
+        "n": "160",
+        "motif": "two_by_eight",
+        "rhs": "odd_x",
+        "accepted": true,
+        "centered_winner": "jacobi",
+        "shifted_winner": "rs025",
+        "both_stable": false,
+        "stable_reversal": false,
+        "empirical_minimum_mean_excess": 0.048590378537783474,
+        "best_invariant_only_method": "jacobi"
+      },
+      {
+        "n": "160",
+        "motif": "two_by_eight",
+        "rhs": "random",
+        "accepted": true,
+        "centered_winner": "rs025",
+        "shifted_winner": "rs025",
+        "both_stable": true,
+        "stable_reversal": false,
+        "empirical_minimum_mean_excess": 0.0,
+        "best_invariant_only_method": "rs025"
+      },
+      {
+        "n": "192",
+        "motif": "three_by_six",
+        "rhs": "odd_x",
+        "accepted": true,
+        "centered_winner": "rs025",
+        "shifted_winner": "rs025",
+        "both_stable": false,
+        "stable_reversal": false,
+        "empirical_minimum_mean_excess": 0.0,
+        "best_invariant_only_method": "rs025"
+      },
+      {
+        "n": "192",
+        "motif": "three_by_six",
+        "rhs": "random",
+        "accepted": true,
+        "centered_winner": "rs025",
+        "shifted_winner": "rs025",
+        "both_stable": true,
+        "stable_reversal": false,
+        "empirical_minimum_mean_excess": 0.0,
+        "best_invariant_only_method": "rs025"
+      },
+      {
+        "n": "192",
+        "motif": "two_by_eight",
+        "rhs": "odd_x",
+        "accepted": true,
+        "centered_winner": "rs025",
+        "shifted_winner": "rs025",
+        "both_stable": false,
+        "stable_reversal": false,
+        "empirical_minimum_mean_excess": 0.0,
+        "best_invariant_only_method": "rs025"
+      },
+      {
+        "n": "192",
+        "motif": "two_by_eight",
+        "rhs": "random",
+        "accepted": true,
+        "centered_winner": "rs025",
+        "shifted_winner": "rs025",
+        "both_stable": true,
+        "stable_reversal": false,
+        "empirical_minimum_mean_excess": 0.0,
+        "best_invariant_only_method": "rs025"
+      }
+    ]
+  }
+}
+
+
+exit_code=0
+Regenerated/retained file differences: []
+
+
+Fresh CPU-only environment validation, 8 September 2026.
+New Windows x86-64/Python3.12.9 virtual environment with system-site-packages disabled.
+Installed requirements.txt with the explicit public PyPI index; pip reused cached wheels.
+The resolved dependency set is recorded in requirements-cpu-verified.txt.
+Installed the newly extracted project with pip install --no-deps -e .; pip check passed.
+Confirmed that pdescale imports from the extracted project.
+python -m pytest -o addopts= -q: 91 passed, 5 skipped. Skips are the five optional CUDA tests.
+Explicit --require-cuda mode fails when CUDA is unavailable.
+In the existing CUDA environment, python -m pytest -o addopts= -q --require-cuda: 96 passed.
+No independent CUDA/office-runtime installation or new performance measurement is claimed.
+Regenerated legacy tables/figures, matched-field analysis and portfolio analysis.
+All 76 compared recorded/generated outputs match byte-for-byte.
+
+
+Clean-extraction verification of the focused manuscript and new portfolio table.
+Existing locked numerical environment; this is not a fresh dependency installation test.
+Command: python -c import pdescale; from pathlib import Path; assert Path(pdescale.__file__).resolve().is_relative_to(Path.cwd()); print("Extracted package import verified")
+Extracted package import verified
+
+
+exit_code=0
+Command: python -m pytest -o addopts= -q tests/test_portfolio_analysis.py
+...                                                                      [100%]
+3 passed in 2.19s
+
+
+exit_code=0
+Command: python experiments/make_paper_tables.py
+wrote paper\tables\convergence_summary.tex
+wrote paper\tables\solver_summary.tex
+wrote paper\tables\performance_summary.tex
+wrote paper\tables\coefficient_difficulty_summary.tex
+wrote paper\tables\decision_summary.tex
+wrote paper\tables\difficulty_relationship_summary.tex
+wrote paper\tables\interface_verification_summary.tex
+wrote paper\tables\averaging_sensitivity_summary.tex
+wrote paper\tables\timing_stability_summary.tex
+wrote paper\tables\hardware_model_summary.tex
+
+
+exit_code=0
+Command: python experiments/make_all_figures.py --only all
+wrote results/figures/convergence_l2.png
+wrote results/figures/solver_runtime.png
+wrote results/figures/solver_iterations.png
+wrote results/figures/cpu_scaling.png
+wrote results/figures/gpu_crossover.png
+wrote results/figures/solver_decision_map.png
+wrote results/figures/conditioning.png
+wrote results/figures/difficulty_relationships.png
+wrote results/figures/timing_stability.png
+wrote results/figures/hardware_crossover_model.png
+copied results\figures\convergence_l2.png -> paper\figures\convergence_l2.png
+copied results\figures\solver_runtime.png -> paper\figures\solver_runtime.png
+copied results\figures\solver_iterations.png -> paper\figures\solver_iterations.png
+copied results\figures\cpu_scaling.png -> paper\figures\cpu_scaling.png
+copied results\figures\gpu_crossover.png -> paper\figures\gpu_crossover.png
+copied results\figures\solver_decision_map.png -> paper\figures\solver_decision_map.png
+copied results\figures\conditioning.png -> paper\figures\conditioning.png
+copied results\figures\difficulty_relationships.png -> paper\figures\difficulty_relationships.png
+copied results\figures\timing_stability.png -> paper\figures\timing_stability.png
+copied results\figures\hardware_crossover_model.png -> paper\figures\hardware_crossover_model.png
+
+
+exit_code=0
+Command: python experiments/analyze_counterfactual.py
+{
+  "confirmation_cells": 144,
+  "heldout_cells": 64,
+  "perturbation_cells": 22,
+  "all_followup_accepted": true,
+  "stable_confirmation_cells": 124,
+  "stable_heldout_cells": 55,
+  "translation_pairs": 48,
+  "stable_translation_reversals": 2,
+  "interpretation": "Descriptive finite-case audit; empirical regret floors use equal weights and measured medians, not population confidence bounds or an online policy."
+}
+
+
+exit_code=0
+Command: python experiments/analyze_portfolio.py
+{
+  "portfolio": {
+    "solves": 240,
+    "failed_acceptance": 0,
+    "cells": 12,
+    "stable_cells": 11,
+    "max_residual": 1.0046020137480822e-09
+  },
+  "portfolio_confirmation": {
+    "solves": 504,
+    "failed_acceptance": 0,
+    "cells": 24,
+    "stable_cells": 17,
+    "max_residual": 9.941891616592456e-10,
+    "pairs": [
+      {
+        "n": "128",
+        "motif": "three_by_six",
+        "rhs": "odd_x",
+        "accepted": true,
+        "centered_winner": "jacobi",
+        "shifted_winner": "rs025",
+        "both_stable": true,
+        "stable_reversal": true,
+        "empirical_minimum_mean_excess": 0.12420463698099393,
+        "best_invariant_only_method": "jacobi"
+      },
+      {
+        "n": "128",
+        "motif": "three_by_six",
+        "rhs": "random",
+        "accepted": true,
+        "centered_winner": "rs025",
+        "shifted_winner": "rs025",
+        "both_stable": true,
+        "stable_reversal": false,
+        "empirical_minimum_mean_excess": 0.0,
+        "best_invariant_only_method": "rs025"
+      },
+      {
+        "n": "128",
+        "motif": "two_by_eight",
+        "rhs": "odd_x",
+        "accepted": true,
+        "centered_winner": "jacobi",
+        "shifted_winner": "rs025",
+        "both_stable": true,
+        "stable_reversal": true,
+        "empirical_minimum_mean_excess": 0.1190715324870677,
+        "best_invariant_only_method": "jacobi"
+      },
+      {
+        "n": "128",
+        "motif": "two_by_eight",
+        "rhs": "random",
+        "accepted": true,
+        "centered_winner": "rs025",
+        "shifted_winner": "rs025",
+        "both_stable": true,
+        "stable_reversal": false,
+        "empirical_minimum_mean_excess": 0.0,
+        "best_invariant_only_method": "rs025"
+      },
+      {
+        "n": "160",
+        "motif": "three_by_six",
+        "rhs": "odd_x",
+        "accepted": true,
+        "centered_winner": "jacobi",
+        "shifted_winner": "rs025",
+        "both_stable": true,
+        "stable_reversal": true,
+        "empirical_minimum_mean_excess": 0.096894244664127,
+        "best_invariant_only_method": "rs025"
+      },
+      {
+        "n": "160",
+        "motif": "three_by_six",
+        "rhs": "random",
+        "accepted": true,
+        "centered_winner": "rs025",
+        "shifted_winner": "rs025",
+        "both_stable": false,
+        "stable_reversal": false,
+        "empirical_minimum_mean_excess": 0.0,
+        "best_invariant_only_method": "rs025"
+      },
+      {
+        "n": "160",
+        "motif": "two_by_eight",
+        "rhs": "odd_x",
+        "accepted": true,
+        "centered_winner": "jacobi",
+        "shifted_winner": "rs025",
+        "both_stable": false,
+        "stable_reversal": false,
+        "empirical_minimum_mean_excess": 0.048590378537783474,
+        "best_invariant_only_method": "jacobi"
+      },
+      {
+        "n": "160",
+        "motif": "two_by_eight",
+        "rhs": "random",
+        "accepted": true,
+        "centered_winner": "rs025",
+        "shifted_winner": "rs025",
+        "both_stable": true,
+        "stable_reversal": false,
+        "empirical_minimum_mean_excess": 0.0,
+        "best_invariant_only_method": "rs025"
+      },
+      {
+        "n": "192",
+        "motif": "three_by_six",
+        "rhs": "odd_x",
+        "accepted": true,
+        "centered_winner": "rs025",
+        "shifted_winner": "rs025",
+        "both_stable": false,
+        "stable_reversal": false,
+        "empirical_minimum_mean_excess": 0.0,
+        "best_invariant_only_method": "rs025"
+      },
+      {
+        "n": "192",
+        "motif": "three_by_six",
+        "rhs": "random",
+        "accepted": true,
+        "centered_winner": "rs025",
+        "shifted_winner": "rs025",
+        "both_stable": true,
+        "stable_reversal": false,
+        "empirical_minimum_mean_excess": 0.0,
+        "best_invariant_only_method": "rs025"
+      },
+      {
+        "n": "192",
+        "motif": "two_by_eight",
+        "rhs": "odd_x",
+        "accepted": true,
+        "centered_winner": "rs025",
+        "shifted_winner": "rs025",
+        "both_stable": false,
+        "stable_reversal": false,
+        "empirical_minimum_mean_excess": 0.0,
+        "best_invariant_only_method": "rs025"
+      },
+      {
+        "n": "192",
+        "motif": "two_by_eight",
+        "rhs": "random",
+        "accepted": true,
+        "centered_winner": "rs025",
+        "shifted_winner": "rs025",
+        "both_stable": true,
+        "stable_reversal": false,
+        "empirical_minimum_mean_excess": 0.0,
+        "best_invariant_only_method": "rs025"
+      }
+    ]
+  }
+}
+
+
+exit_code=0
+Regenerated/retained file differences: []

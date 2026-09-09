@@ -1,0 +1,5 @@
+{
+  "first_attempt": "ARPACK largest eigenvalue with tol=1e-10 and default Arnoldi space failed to converge at N=32. No completed validation output was produced.",
+  "resolution": "Largest-eigenvalue tol=1e-7 and ncv=60; low-eigenvalue tolerance unchanged. Compare against independently formed dense SPD-similar matrix and two initial vectors.",
+  "final_result": "Eight comparisons passed relative error <1e-5; see spectrum_validation.json."
+}

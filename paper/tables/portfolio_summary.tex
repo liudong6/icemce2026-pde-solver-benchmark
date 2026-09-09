@@ -1,0 +1,23 @@
+\begin{table}[t]
+\centering
+\caption{All 12 translated pairs in the interleaved confirmation. Winners use median total time: J = Jacobi-PCG, RS = classical AMG-PCG; SA was also a candidate. Stable means both positions retain their respective winner in all seven repeats. E(P) uses measured medians even for unstable pairs; it is not a confidence bound.}
+\label{tab:portfolio-audit}
+\begin{tabular}{rlllllr}
+\toprule
+$N$ & Motif & Source & Centered & Shifted & Stable & $E(P)$ (\%) \\
+\midrule
+128 & 3x6 & Odd-x & J & RS & Yes & 12.42 \\
+128 & 3x6 & Random & RS & RS & Yes & 0.00 \\
+128 & 2x8 & Odd-x & J & RS & Yes & 11.91 \\
+128 & 2x8 & Random & RS & RS & Yes & 0.00 \\
+160 & 3x6 & Odd-x & J & RS & Yes & 9.69 \\
+160 & 3x6 & Random & RS & RS & No & 0.00 \\
+160 & 2x8 & Odd-x & J & RS & No & 4.86 \\
+160 & 2x8 & Random & RS & RS & Yes & 0.00 \\
+192 & 3x6 & Odd-x & RS & RS & No & 0.00 \\
+192 & 3x6 & Random & RS & RS & Yes & 0.00 \\
+192 & 2x8 & Odd-x & RS & RS & No & 0.00 \\
+192 & 2x8 & Random & RS & RS & Yes & 0.00 \\
+\bottomrule
+\end{tabular}
+\end{table}

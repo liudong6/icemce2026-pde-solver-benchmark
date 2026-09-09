@@ -1,12 +1,14 @@
 cff-version: 1.2.0
-message: "If you use this benchmark artefact, please cite it using the metadata below."
+message: "Cite this exact archived benchmark version when using the controlled extension."
+version: "v4"
+doi: "10.5281/zenodo.22668106"
+date-released: "2026-09-09"
 title: "A Coefficient-Aware Finite-Difference Benchmark for Solver Selection and CPU/GPU Stencil Scaling in Heat-Conduction Simulation"
 authors:
   - family-names: Liu
     given-names: Dong
     affiliation: University of Nottingham Ningbo China
-type: conference-paper
-date-released: 2026-09-04
+type: software
 keywords:
   - heat conduction
   - finite difference method

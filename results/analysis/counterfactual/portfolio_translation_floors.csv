@@ -1,0 +1,13 @@
+n,motif,rhs,accepted,centered_winner,shifted_winner,both_stable,stable_reversal,empirical_minimum_mean_excess,best_invariant_only_method
+128,three_by_six,odd_x,True,jacobi,rs025,True,True,0.12420463698099393,jacobi
+128,three_by_six,random,True,rs025,rs025,True,False,0.0,rs025
+128,two_by_eight,odd_x,True,jacobi,rs025,True,True,0.1190715324870677,jacobi
+128,two_by_eight,random,True,rs025,rs025,True,False,0.0,rs025
+160,three_by_six,odd_x,True,jacobi,rs025,True,True,0.096894244664127,rs025
+160,three_by_six,random,True,rs025,rs025,False,False,0.0,rs025
+160,two_by_eight,odd_x,True,jacobi,rs025,False,False,0.048590378537783474,jacobi
+160,two_by_eight,random,True,rs025,rs025,True,False,0.0,rs025
+192,three_by_six,odd_x,True,rs025,rs025,False,False,0.0,rs025
+192,three_by_six,random,True,rs025,rs025,True,False,0.0,rs025
+192,two_by_eight,odd_x,True,rs025,rs025,False,False,0.0,rs025
+192,two_by_eight,random,True,rs025,rs025,True,False,0.0,rs025
