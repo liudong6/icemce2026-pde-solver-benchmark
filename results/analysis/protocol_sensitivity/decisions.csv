@@ -1,0 +1,10 @@
+coefficient_case,n,monitored_winner,monitored_votes,monitored_median_ms,count-only_winner,count-only_votes,count-only_median_ms
+constant,64,cg,7,5.635400011669844,cg,5,3.5533999907784164
+constant,128,cg,6,31.2246999819763,cg,7,19.10689997021109
+constant,256,amg-pcg,7,141.1818999913521,amg-pcg,3,147.69929996691644
+inclusion_c100,64,jacobi-pcg,7,6.666800007224083,jacobi-pcg,7,4.120600002352148
+inclusion_c100,128,jacobi-pcg,7,38.27899997122586,jacobi-pcg,7,22.33840001281351
+inclusion_c100,256,amg-pcg,7,156.225299986545,amg-pcg,6,152.33700000680983
+checkerboard_c100,64,jacobi-pcg,6,8.686999964993447,jacobi-pcg,7,5.62860001809895
+checkerboard_c100,128,jacobi-pcg,5,50.1819999772124,jacobi-pcg,7,29.65129999211058
+checkerboard_c100,256,amg-pcg,7,192.30790005531162,amg-pcg,7,180.23779999930412

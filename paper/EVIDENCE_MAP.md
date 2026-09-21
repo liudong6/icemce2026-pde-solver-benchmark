@@ -1,5 +1,20 @@
 # Manuscript evidence map
 
+## Second-round review revision — v5 / v1.2
+
+This complete revision is identified by Zenodo v5, https://doi.org/10.5281/zenodo.22874266, and GitHub release https://github.com/liudong6/icemce2026-pde-solver-benchmark/releases/tag/v1.2-icemce2026-review-revision. The v4 DOI identifies the earlier baseline and controlled extension. This revision adds 378 paired callback-calibration solves, the complete nine-cell face-averaging table in the main paper, an explicit interface-resistance interpretation, and distinct scopes for historical, extension and calibration timings. Original raw files are unchanged. The primary Word/PDF manuscript highlights review changes in yellow.
+
+Reproduce the new tables without rerunning timings:
+
+```powershell
+python experiments/analyze_protocol_sensitivity.py
+```
+
+The prospective design is `experiments/protocol_sensitivity.md`; raw timings, configuration, source hashes and environment are in `results/raw/protocol_sensitivity`. Method quartiles, paired ratios, winner votes and the numerical audit are in `results/analysis/protocol_sensitivity`. To rerun measurements, use `python experiments/run_protocol_sensitivity.py --output results/raw/protocol_sensitivity_rerun` in an unused directory, with no other performance workload running. Existing evidence is never overwritten.
+
+All 378 recorded residuals are at most 1e-8, and all 189 mode pairs have identical solution hashes and iteration counts. Median solve-time inflation is 1.54–1.84 for CG, 1.58–1.77 for Jacobi, and 1.03–1.06 for AMG. The nine median winners agree between callbacks, but vote instability is retained. These results do not reconstruct historical cold-import/thread/order effects or establish a machine-independent crossover.
+
+
 Paths are relative to the extracted reproducibility artefact. This map identifies
 the numerical sources of the main results and the checks that bound their use.
 The baseline and controlled-extension timing protocols are different and must
@@ -16,8 +31,9 @@ figures or portfolio cost calculation from recorded data.
 | Table 4: baseline measured decisions | `results/raw/solver_decision_map.csv` | Group the 13 cases by N; count fastest converged methods and summarize `speedup_vs_cg`; table builder |
 | Table 5; Figure 3: baseline solver performance | `results/raw/solver_benchmark.csv` | Table uses N256; plot retains each recorded N; table/figure builders |
 | Figure 4: matched-field/source audit | `results/raw/counterfactual/confirmation.csv` | `experiments/analyze_counterfactual.py`; plotted medians and full five-run ranges, with no confidence-interval claim |
-| Table 6: all 12 interleaved translated pairs | `results/raw/counterfactual/portfolio_confirmation.csv` | `experiments/analyze_portfolio.py` produces per-position medians, all pair floors, and `paper/tables/portfolio_summary.tex` |
-| Table 7; Figures 5 and 6: stencil measurements | `results/raw/cpu_scaling.csv`, `results/raw/gpu_stencil.csv` | The baseline table/figure builders; CUDA is resident-data Jacobi and CPU variable-coefficient apply is a separate experiment |
+| Tables 6 and 7: all face-average comparisons and paired callback calibration | `results/raw/averaging_sensitivity.csv`, `results/raw/protocol_sensitivity/timings.csv` | `experiments/analyze_protocol_sensitivity.py`; complete candidate quartiles, paired ratios and votes in `results/analysis/protocol_sensitivity` |
+| Table 8: all 12 interleaved translated pairs | `results/raw/counterfactual/portfolio_confirmation.csv` | `experiments/analyze_portfolio.py` produces per-position medians, all pair floors, and `paper/tables/portfolio_summary.tex` |
+| Table 9; Figures 5 and 6: stencil measurements | `results/raw/cpu_scaling.csv`, `results/raw/gpu_stencil.csv` | The baseline table/figure builders; CUDA is resident-data Jacobi and CPU variable-coefficient apply is a separate experiment |
 
 `tools/build_iop_docx.py` reads the same recorded inputs and the generated
 portfolio summary when building the editable Word tables. The LaTeX manuscript
@@ -115,6 +131,6 @@ GPU validation requires `python -m pytest -q --require-cuda`; the CPU-only
 command explicitly skips unavailable CUDA tests. Follow
 `experiments/counterfactual/README.md` for timing reruns into a separate output
 directory. Derived values do not establish cross-machine thresholds, industrial
-prevalence, a new preconditioner or an online solver policy. The complete revised artefact is identified by
+prevalence, a new preconditioner or an online solver policy. The prior baseline and controlled extension are identified by
 https://doi.org/10.5281/zenodo.22668106. The earlier baseline DOI
 10.5281/zenodo.22303525 identifies the retained baseline measurements only.

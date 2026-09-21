@@ -1,0 +1,20 @@
+{
+  "solves": 378,
+  "identical_solution_pairs": 189,
+  "max_residual": 9.999037736756677e-09,
+  "median_solve_ratio_ranges": {
+    "cg": [
+      1.542283961222655,
+      1.8365311944682388
+    ],
+    "jacobi-pcg": [
+      1.578573061398676,
+      1.7658096010027737
+    ],
+    "amg-pcg": [
+      1.0253822212119306,
+      1.0646202672809437
+    ]
+  },
+  "changed_median_winners": 0
+}

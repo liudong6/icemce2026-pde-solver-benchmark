@@ -1,5 +1,20 @@
 # ICEMCE 2026 PDE Solver Benchmark
 
+## Second-round review revision — v5 / v1.2
+
+This complete revision is identified by Zenodo v5, https://doi.org/10.5281/zenodo.22874266, and GitHub release https://github.com/liudong6/icemce2026-pde-solver-benchmark/releases/tag/v1.2-icemce2026-review-revision. The v4 DOI identifies the earlier baseline and controlled extension. This revision adds 378 paired callback-calibration solves, the complete nine-cell face-averaging table in the main paper, an explicit interface-resistance interpretation, and distinct scopes for historical, extension and calibration timings. Original raw files are unchanged. The primary Word/PDF manuscript highlights review changes in yellow.
+
+Reproduce the new tables without rerunning timings:
+
+```powershell
+python experiments/analyze_protocol_sensitivity.py
+```
+
+The prospective design is `experiments/protocol_sensitivity.md`; raw timings, configuration, source hashes and environment are in `results/raw/protocol_sensitivity`. Method quartiles, paired ratios, winner votes and the numerical audit are in `results/analysis/protocol_sensitivity`. To rerun measurements, use `python experiments/run_protocol_sensitivity.py --output results/raw/protocol_sensitivity_rerun` in an unused directory, with no other performance workload running. Existing evidence is never overwritten.
+
+All 378 recorded residuals are at most 1e-8, and all 189 mode pairs have identical solution hashes and iteration counts. Median solve-time inflation is 1.54–1.84 for CG, 1.58–1.77 for Jacobi, and 1.03–1.06 for AMG. The nine median winners agree between callbacks, but vote instability is retained. These results do not reconstruct historical cold-import/thread/order effects or establish a machine-independent crossover.
+
+
 This repository contains the reproducible code and experiments for an ICEMCE 2026 paper on variable-coefficient heat-conduction solvers and performance scaling.
 
 Published benchmark-data baseline:
@@ -8,7 +23,7 @@ Published benchmark-data baseline:
 - Zenodo archived version (v4): https://doi.org/10.5281/zenodo.22668106
 - Baseline version: https://doi.org/10.5281/zenodo.22303525
 
-The revision retains the baseline evidence and adds a controlled matched-field and forcing audit. New raw data are in `results/raw/counterfactual`; the release and version DOI above identify this extension and the revised manuscript. `MANIFEST.sha256` records each packaged snapshot.
+The revision retains the baseline evidence and adds a controlled matched-field and forcing audit. New raw data are in `results/raw/counterfactual`; the release and version DOI above identify that previously published extension and its manuscript, before the local 20 September revision. `MANIFEST.sha256` records each packaged snapshot.
 
 The extension uses exact matching of scalar coefficient descriptors, rigid translations, source and transpose controls, independent motifs, fresh-setup timings and preconditioned spectral diagnostics. The geometry/forcing follow-up comprises 2212 accepted solves; the candidate-solver audit adds 744, giving 2956 accepted extension solves in total; 576 exploratory pilot solves are also retained, including failures. It gives measured counterexamples to invariant-only solver choice, not a new Krylov/AMG algorithm or an online selector. The original decision map remains a separate monitored-implementation baseline.
 

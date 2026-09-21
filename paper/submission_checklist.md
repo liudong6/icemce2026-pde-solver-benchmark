@@ -1,5 +1,20 @@
 # ICEMCE 2026 Submission Checklist
 
+## Second-round review revision — v5 / v1.2
+
+This complete revision is identified by Zenodo v5, https://doi.org/10.5281/zenodo.22874266, and GitHub release https://github.com/liudong6/icemce2026-pde-solver-benchmark/releases/tag/v1.2-icemce2026-review-revision. The v4 DOI identifies the earlier baseline and controlled extension. This revision adds 378 paired callback-calibration solves, the complete nine-cell face-averaging table in the main paper, an explicit interface-resistance interpretation, and distinct scopes for historical, extension and calibration timings. Original raw files are unchanged. The primary Word/PDF manuscript highlights review changes in yellow.
+
+Reproduce the new tables without rerunning timings:
+
+```powershell
+python experiments/analyze_protocol_sensitivity.py
+```
+
+The prospective design is `experiments/protocol_sensitivity.md`; raw timings, configuration, source hashes and environment are in `results/raw/protocol_sensitivity`. Method quartiles, paired ratios, winner votes and the numerical audit are in `results/analysis/protocol_sensitivity`. To rerun measurements, use `python experiments/run_protocol_sensitivity.py --output results/raw/protocol_sensitivity_rerun` in an unused directory, with no other performance workload running. Existing evidence is never overwritten.
+
+All 378 recorded residuals are at most 1e-8, and all 189 mode pairs have identical solution hashes and iteration counts. Median solve-time inflation is 1.54–1.84 for CG, 1.58–1.77 for Jacobi, and 1.03–1.06 for AMG. The nine median winners agree between callbacks, but vote instability is retained. These results do not reconstruct historical cold-import/thread/order effects or establish a machine-independent crossover.
+
+
 ## Manuscript Status
 
 - [x] LaTeX manuscript source: `paper/main.tex`
@@ -68,9 +83,9 @@
 - [x] Do not present harmonic averaging as a universal discretisation for curved or non-grid-aligned material interfaces.
 - [x] Do not use the exploratory `N≈755` fit intersection as a hardware-selection threshold; the CPU fit predicts a negative time at the measured `N=512` point.
 - [x] Separate the historical monitored protocol from the new warm-import, shuffled-order, count-only protocol; do not pool their timing conclusions.
-- [x] The existing DOI identifies the retained baseline data, not the new controlled extension or revised manuscript.
-- [x] Reserve the new Zenodo version DOI 10.5281/zenodo.22668106 in the existing version chain and synchronise its citation throughout the source files.
-- [ ] Verify the rebuilt documents and packages, publish the corresponding GitHub release and Zenodo version, and retain a separate publication receipt with their public identities and checksums.
+- [x] Distinguish the older baseline DOI, published v4 extension DOI, and the presently unpublished callback calibration.
+- [x] Preserve published v4 DOI 10.5281/zenodo.22668106 as the identity of the earlier extension. The 20 September calibration is assigned v5 DOI 10.5281/zenodo.22874266.
+- [ ] Publish a new GitHub/Zenodo version for this local 20 September revision and retain its receipt. The prior v4 release is unchanged.
 - [x] On 9 September 2026, inspect the conference-linked submission platform at https://www.ais.cn/attendees/index/FYEY3M: it announces a third-round full-paper deadline of 18 September 2026 at 23:59, IOP Journal of Physics: Conference Series publication, and a single-column manuscript of at least six full pages. This newer platform notice differs from the English homepage's 15 August deadline.
 - [ ] Complete the authenticated submission workflow and retain its receipt; the public paper-submission link currently requests login, so inspection of the announcement does not prove that a manuscript has been received or accepted.
 - [x] Disclose the recorded AI models and actual uses, including experiment design, code implementation, numerical analysis and manuscript preparation; state the author's confirmed independent review and responsibility for the final content.
@@ -112,3 +127,10 @@ py -3.12 -m venv .venv-cuda
 
 - [x] Verify a newly installed CPU-only environment: 91 passed, 5 explicit CUDA skips; 76 regenerated/recorded outputs match byte-for-byte.
 - [x] Require CUDA explicitly for GPU validation: the existing CUDA environment passes all 96 tests; a CPU-only environment rejects this mode.
+
+## Revision verification, 20 September 2026
+
+- [x] 378 calibration rows accepted; 189 paired solution hashes and iteration counts identical.
+- [x] All 35 original raw CSV/JSON files retain their pre-revision SHA-256.
+- [x] Clean-extraction verification: 96 tests passed with CUDA required; all regenerated/retained outputs byte-identical.
+- [x] Word-exported PDF visually inspected: 15 pages, nine data tables, six figures and 27 references. LaTeX has no undefined references or overfull boxes.

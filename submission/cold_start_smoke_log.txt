@@ -481,3 +481,349 @@ Command: python experiments/analyze_portfolio.py
 
 exit_code=0
 Regenerated/retained file differences: []
+
+
+20 September 2026 revision: clean-extraction checks in the existing verified CUDA environment; not a new dependency installation.
+Command: python -m pytest -o addopts= -q --require-cuda
+........................................................................ [ 75%]
+........................                                                 [100%]
+96 passed in 26.82s
+
+
+exit_code=0
+Command: python experiments/make_paper_tables.py
+wrote paper\tables\convergence_summary.tex
+wrote paper\tables\solver_summary.tex
+wrote paper\tables\performance_summary.tex
+wrote paper\tables\coefficient_difficulty_summary.tex
+wrote paper\tables\decision_summary.tex
+wrote paper\tables\difficulty_relationship_summary.tex
+wrote paper\tables\interface_verification_summary.tex
+wrote paper\tables\averaging_sensitivity_summary.tex
+wrote paper\tables\timing_stability_summary.tex
+wrote paper\tables\hardware_model_summary.tex
+
+
+exit_code=0
+Command: python experiments/make_all_figures.py --only all
+wrote results/figures/convergence_l2.png
+wrote results/figures/solver_runtime.png
+wrote results/figures/solver_iterations.png
+wrote results/figures/cpu_scaling.png
+wrote results/figures/gpu_crossover.png
+wrote results/figures/solver_decision_map.png
+wrote results/figures/conditioning.png
+wrote results/figures/difficulty_relationships.png
+wrote results/figures/timing_stability.png
+wrote results/figures/hardware_crossover_model.png
+copied results\figures\convergence_l2.png -> paper\figures\convergence_l2.png
+copied results\figures\solver_runtime.png -> paper\figures\solver_runtime.png
+copied results\figures\solver_iterations.png -> paper\figures\solver_iterations.png
+copied results\figures\cpu_scaling.png -> paper\figures\cpu_scaling.png
+copied results\figures\gpu_crossover.png -> paper\figures\gpu_crossover.png
+copied results\figures\solver_decision_map.png -> paper\figures\solver_decision_map.png
+copied results\figures\conditioning.png -> paper\figures\conditioning.png
+copied results\figures\difficulty_relationships.png -> paper\figures\difficulty_relationships.png
+copied results\figures\timing_stability.png -> paper\figures\timing_stability.png
+copied results\figures\hardware_crossover_model.png -> paper\figures\hardware_crossover_model.png
+
+
+exit_code=0
+Command: python experiments/analyze_counterfactual.py
+{
+  "confirmation_cells": 144,
+  "heldout_cells": 64,
+  "perturbation_cells": 22,
+  "all_followup_accepted": true,
+  "stable_confirmation_cells": 124,
+  "stable_heldout_cells": 55,
+  "translation_pairs": 48,
+  "stable_translation_reversals": 2,
+  "interpretation": "Descriptive finite-case audit; empirical regret floors use equal weights and measured medians, not population confidence bounds or an online policy."
+}
+
+
+exit_code=0
+Command: python experiments/analyze_portfolio.py
+{
+  "portfolio": {
+    "solves": 240,
+    "failed_acceptance": 0,
+    "cells": 12,
+    "stable_cells": 11,
+    "max_residual": 1.0046020137480822e-09
+  },
+  "portfolio_confirmation": {
+    "solves": 504,
+    "failed_acceptance": 0,
+    "cells": 24,
+    "stable_cells": 17,
+    "max_residual": 9.941891616592456e-10,
+    "pairs": [
+      {
+        "n": "128",
+        "motif": "three_by_six",
+        "rhs": "odd_x",
+        "accepted": true,
+        "centered_winner": "jacobi",
+        "shifted_winner": "rs025",
+        "both_stable": true,
+        "stable_reversal": true,
+        "empirical_minimum_mean_excess": 0.12420463698099393,
+        "best_invariant_only_method": "jacobi"
+      },
+      {
+        "n": "128",
+        "motif": "three_by_six",
+        "rhs": "random",
+        "accepted": true,
+        "centered_winner": "rs025",
+        "shifted_winner": "rs025",
+        "both_stable": true,
+        "stable_reversal": false,
+        "empirical_minimum_mean_excess": 0.0,
+        "best_invariant_only_method": "rs025"
+      },
+      {
+        "n": "128",
+        "motif": "two_by_eight",
+        "rhs": "odd_x",
+        "accepted": true,
+        "centered_winner": "jacobi",
+        "shifted_winner": "rs025",
+        "both_stable": true,
+        "stable_reversal": true,
+        "empirical_minimum_mean_excess": 0.1190715324870677,
+        "best_invariant_only_method": "jacobi"
+      },
+      {
+        "n": "128",
+        "motif": "two_by_eight",
+        "rhs": "random",
+        "accepted": true,
+        "centered_winner": "rs025",
+        "shifted_winner": "rs025",
+        "both_stable": true,
+        "stable_reversal": false,
+        "empirical_minimum_mean_excess": 0.0,
+        "best_invariant_only_method": "rs025"
+      },
+      {
+        "n": "160",
+        "motif": "three_by_six",
+        "rhs": "odd_x",
+        "accepted": true,
+        "centered_winner": "jacobi",
+        "shifted_winner": "rs025",
+        "both_stable": true,
+        "stable_reversal": true,
+        "empirical_minimum_mean_excess": 0.096894244664127,
+        "best_invariant_only_method": "rs025"
+      },
+      {
+        "n": "160",
+        "motif": "three_by_six",
+        "rhs": "random",
+        "accepted": true,
+        "centered_winner": "rs025",
+        "shifted_winner": "rs025",
+        "both_stable": false,
+        "stable_reversal": false,
+        "empirical_minimum_mean_excess": 0.0,
+        "best_invariant_only_method": "rs025"
+      },
+      {
+        "n": "160",
+        "motif": "two_by_eight",
+        "rhs": "odd_x",
+        "accepted": true,
+        "centered_winner": "jacobi",
+        "shifted_winner": "rs025",
+        "both_stable": false,
+        "stable_reversal": false,
+        "empirical_minimum_mean_excess": 0.048590378537783474,
+        "best_invariant_only_method": "jacobi"
+      },
+      {
+        "n": "160",
+        "motif": "two_by_eight",
+        "rhs": "random",
+        "accepted": true,
+        "centered_winner": "rs025",
+        "shifted_winner": "rs025",
+        "both_stable": true,
+        "stable_reversal": false,
+        "empirical_minimum_mean_excess": 0.0,
+        "best_invariant_only_method": "rs025"
+      },
+      {
+        "n": "192",
+        "motif": "three_by_six",
+        "rhs": "odd_x",
+        "accepted": true,
+        "centered_winner": "rs025",
+        "shifted_winner": "rs025",
+        "both_stable": false,
+        "stable_reversal": false,
+        "empirical_minimum_mean_excess": 0.0,
+        "best_invariant_only_method": "rs025"
+      },
+      {
+        "n": "192",
+        "motif": "three_by_six",
+        "rhs": "random",
+        "accepted": true,
+        "centered_winner": "rs025",
+        "shifted_winner": "rs025",
+        "both_stable": true,
+        "stable_reversal": false,
+        "empirical_minimum_mean_excess": 0.0,
+        "best_invariant_only_method": "rs025"
+      },
+      {
+        "n": "192",
+        "motif": "two_by_eight",
+        "rhs": "odd_x",
+        "accepted": true,
+        "centered_winner": "rs025",
+        "shifted_winner": "rs025",
+        "both_stable": false,
+        "stable_reversal": false,
+        "empirical_minimum_mean_excess": 0.0,
+        "best_invariant_only_method": "rs025"
+      },
+      {
+        "n": "192",
+        "motif": "two_by_eight",
+        "rhs": "random",
+        "accepted": true,
+        "centered_winner": "rs025",
+        "shifted_winner": "rs025",
+        "both_stable": true,
+        "stable_reversal": false,
+        "empirical_minimum_mean_excess": 0.0,
+        "best_invariant_only_method": "rs025"
+      }
+    ]
+  }
+}
+
+
+exit_code=0
+Command: python experiments/analyze_protocol_sensitivity.py
+{
+  "solves": 378,
+  "identical_solution_pairs": 189,
+  "max_residual": 9.999037736756677e-09,
+  "median_solve_ratio_ranges": {
+    "cg": [
+      1.542283961222655,
+      1.8365311944682388
+    ],
+    "jacobi-pcg": [
+      1.578573061398676,
+      1.7658096010027737
+    ],
+    "amg-pcg": [
+      1.0253822212119306,
+      1.0646202672809437
+    ]
+  },
+  "changed_median_winners": 0
+}
+[
+  {
+    "coefficient_case": "constant",
+    "n": 64,
+    "monitored_winner": "cg",
+    "monitored_votes": 7,
+    "monitored_median_ms": 5.635400011669844,
+    "count-only_winner": "cg",
+    "count-only_votes": 5,
+    "count-only_median_ms": 3.5533999907784164
+  },
+  {
+    "coefficient_case": "constant",
+    "n": 128,
+    "monitored_winner": "cg",
+    "monitored_votes": 6,
+    "monitored_median_ms": 31.2246999819763,
+    "count-only_winner": "cg",
+    "count-only_votes": 7,
+    "count-only_median_ms": 19.10689997021109
+  },
+  {
+    "coefficient_case": "constant",
+    "n": 256,
+    "monitored_winner": "amg-pcg",
+    "monitored_votes": 7,
+    "monitored_median_ms": 141.1818999913521,
+    "count-only_winner": "amg-pcg",
+    "count-only_votes": 3,
+    "count-only_median_ms": 147.69929996691644
+  },
+  {
+    "coefficient_case": "inclusion_c100",
+    "n": 64,
+    "monitored_winner": "jacobi-pcg",
+    "monitored_votes": 7,
+    "monitored_median_ms": 6.666800007224083,
+    "count-only_winner": "jacobi-pcg",
+    "count-only_votes": 7,
+    "count-only_median_ms": 4.120600002352148
+  },
+  {
+    "coefficient_case": "inclusion_c100",
+    "n": 128,
+    "monitored_winner": "jacobi-pcg",
+    "monitored_votes": 7,
+    "monitored_median_ms": 38.27899997122586,
+    "count-only_winner": "jacobi-pcg",
+    "count-only_votes": 7,
+    "count-only_median_ms": 22.33840001281351
+  },
+  {
+    "coefficient_case": "inclusion_c100",
+    "n": 256,
+    "monitored_winner": "amg-pcg",
+    "monitored_votes": 7,
+    "monitored_median_ms": 156.225299986545,
+    "count-only_winner": "amg-pcg",
+    "count-only_votes": 6,
+    "count-only_median_ms": 152.33700000680983
+  },
+  {
+    "coefficient_case": "checkerboard_c100",
+    "n": 64,
+    "monitored_winner": "jacobi-pcg",
+    "monitored_votes": 6,
+    "monitored_median_ms": 8.686999964993447,
+    "count-only_winner": "jacobi-pcg",
+    "count-only_votes": 7,
+    "count-only_median_ms": 5.62860001809895
+  },
+  {
+    "coefficient_case": "checkerboard_c100",
+    "n": 128,
+    "monitored_winner": "jacobi-pcg",
+    "monitored_votes": 5,
+    "monitored_median_ms": 50.1819999772124,
+    "count-only_winner": "jacobi-pcg",
+    "count-only_votes": 7,
+    "count-only_median_ms": 29.65129999211058
+  },
+  {
+    "coefficient_case": "checkerboard_c100",
+    "n": 256,
+    "monitored_winner": "amg-pcg",
+    "monitored_votes": 7,
+    "monitored_median_ms": 192.30790005531162,
+    "count-only_winner": "amg-pcg",
+    "count-only_votes": 7,
+    "count-only_median_ms": 180.23779999930412
+  }
+]
+
+
+exit_code=0
+Regenerated/retained file differences: []

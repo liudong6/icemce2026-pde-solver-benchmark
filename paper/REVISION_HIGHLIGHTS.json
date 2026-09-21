@@ -1,0 +1,135 @@
+{
+  "baseline": "C:\\Users\\25872\\Desktop\\ieee\\tools\\review_baseline.docx",
+  "changed_blocks": 21,
+  "highlighted_runs": 169,
+  "text_unchanged": true,
+  "math_unchanged": true,
+  "changes": [
+    {
+      "block": 5,
+      "type": "paragraph",
+      "spans": 1,
+      "text": "Abstract. Sparse solves for variable-coefficient heat conduction depend on coefficient geometry, forcing, preconditioner setup, and implementation. We present a verified finite-dif"
+    },
+    {
+      "block": 30,
+      "type": "paragraph",
+      "spans": 1,
+      "text": "Arithmetic faces are retained to preserve the specified nodal graph-diffusion benchmark and its historical comparisons, not because they are the preferred interface law for composi"
+    },
+    {
+      "block": 35,
+      "type": "paragraph",
+      "spans": 1,
+      "text": "Three evidence groups have distinct timing meanings [27]. Historical coefficient-family results include a true-residual evaluation at every iteration, fixed method order and the fi"
+    },
+    {
+      "block": 68,
+      "type": "paragraph",
+      "spans": 1,
+      "text": "The complete arithmetic/harmonic sensitivity results are reported below in Table 6."
+    },
+    {
+      "block": 76,
+      "type": "paragraph",
+      "spans": 1,
+      "text": "The complete face-averaging check in Table 6 reports all nine historical case-size cells. Arithmetic/harmonic iteration counts differ substantially, including AMG changes for check"
+    },
+    {
+      "block": 77,
+      "type": "paragraph",
+      "spans": 1,
+      "text": "Table 6. Complete contrast-100 face-averaging check under the historical monitored protocol. Entries are arithmetic/harmonic iteration counts and setup-inclusive winners (J = Jacob"
+    },
+    {
+      "block": 78,
+      "type": "table",
+      "spans": 60,
+      "text": "CaseNCGJSAWinnerInclusion64796/725129/12910/10J/JInclusion1281963/1891264/26312/11SA/SAInclusion2564370/4326535/53512/12SA/SALayered641136/1120164/1819/9J/JLayered1282447/2442325/3"
+    },
+    {
+      "block": 80,
+      "type": "paragraph",
+      "spans": 1,
+      "text": "5.3. Paired Callback Calibration"
+    },
+    {
+      "block": 81,
+      "type": "paragraph",
+      "spans": 1,
+      "text": "A prospective calibration covers constant, inclusion and checkerboard conductivity (contrast 100 for the latter two), N = 64, 128, 256, three methods, two callback modes and seven "
+    },
+    {
+      "block": 82,
+      "type": "paragraph",
+      "spans": 1,
+      "text": "Table 7 reports every case-size cell, including vote instability. The median winner agrees between callbacks in all nine cells. At constant N = 256, however, count-only AMG wins on"
+    },
+    {
+      "block": 83,
+      "type": "paragraph",
+      "spans": 1,
+      "text": "Table 7. Paired callback calibration. Winner entries give method, median total milliseconds and votes out of seven. Last columns give median paired monitored/count-only solve-time "
+    },
+    {
+      "block": 84,
+      "type": "table",
+      "spans": 70,
+      "text": "CaseNMonitoredCount-onlyCGJSAConstant64CG 5.64 (7/7)CG 3.55 (5/7)1.581.581.05Constant128CG 31.22 (6/7)CG 19.11 (7/7)1.671.701.04Constant256SA 141.18 (7/7)SA 147.70 (3/7)1.841.761.0"
+    },
+    {
+      "block": 86,
+      "type": "paragraph",
+      "spans": 1,
+      "text": "5.4. Matched-Field and Forcing Audit"
+    },
+    {
+      "block": 98,
+      "type": "paragraph",
+      "spans": 1,
+      "text": "Candidate-solver sensitivity. A separate 240-solve screen adds SA with symmetric-strength theta = 0.25 and classical Ruge-Stueben AMG with classical strength theta = 0.25. A subseq"
+    },
+    {
+      "block": 99,
+      "type": "paragraph",
+      "spans": 1,
+      "text": "Table 8. All 12 translated pairs in the interleaved confirmation. Winners use median total time: J = Jacobi-PCG, RS = classical AMG-PCG; SA was also a candidate. Stable means both "
+    },
+    {
+      "block": 102,
+      "type": "paragraph",
+      "spans": 1,
+      "text": "5.5. CPU and CUDA Stencil Scaling"
+    },
+    {
+      "block": 105,
+      "type": "paragraph",
+      "spans": 1,
+      "text": "Table 9. Representative stencil-throughput measurements. CPU entries use the variable-coefficient operator at N = 2048; CUDA entries are kernel-only Jacobi steps with arrays reside"
+    },
+    {
+      "block": 115,
+      "type": "paragraph",
+      "spans": 1,
+      "text": "For physical composite-conduction use, the face law must be chosen from the interface geometry and resistance model before comparing solvers. The arithmetic benchmark is not eviden"
+    },
+    {
+      "block": 120,
+      "type": "paragraph",
+      "spans": 17,
+      "text": "The previously published baseline and controlled extension are archived at https://doi.org/10.5281/zenodo.22668106, with the earlier baseline at https://doi.org/10.5281/zenodo.2230"
+    },
+    {
+      "block": 151,
+      "type": "paragraph",
+      "spans": 1,
+      "text": "[26] Patankar S V 1980 Numerical Heat Transfer and Fluid Flow 1st edn (New York: Hemisphere). ISBN:9780891165224"
+    },
+    {
+      "block": 152,
+      "type": "paragraph",
+      "spans": 1,
+      "text": "[27] Hoefler T and Belli R 2015 Scientific benchmarking of parallel computing systems: twelve ways to tell the masses when reporting performance results Proc. International Confere"
+    }
+  ]
+}
