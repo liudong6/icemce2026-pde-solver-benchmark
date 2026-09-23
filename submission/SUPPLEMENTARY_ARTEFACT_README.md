@@ -1,5 +1,9 @@
 # Supplementary Artefact README
 
+## Reviewer response update — v6 / v1.2.1-reviewer-response
+
+The current delivery is https://doi.org/10.5281/zenodo.22908710, with GitHub release https://github.com/liudong6/icemce2026-pde-solver-benchmark/releases/tag/v1.2.1-reviewer-response. It adds the revised two-page author-to-reviewer response and matching Markdown source. The paper and scientific evidence are unchanged from v5 (https://doi.org/10.5281/zenodo.22874266); existing manuscript and response citations to that evidence remain intentional. See RELEASE_NOTES.md for the scope and archive contents.
+
 Submission formatting (21 September): the primary manuscript DOCX and its PDF export highlight additions and replacements relative to the previous reviewed manuscript in yellow. The LaTeX source/PDF is an unhighlighted backup. Regenerating the Word manuscript preserves highlighting using tools/review_baseline.docx and tools/highlight_manuscript_changes.py.
 
 ## Second-round review revision — v5 / v1.2

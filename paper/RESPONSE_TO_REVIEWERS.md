@@ -1,37 +1,50 @@
-# Response to the second-round review
+Response to the reviewer
 
-Manuscript: *A Coefficient-Aware Finite-Difference Benchmark for Solver Selection and CPU/GPU Stencil Scaling in Heat-Conduction Simulation*
+Manuscript: A Coefficient-Aware Finite-Difference Benchmark for Solver Selection and CPU/GPU Stencil Scaling in Heat-Conduction Simulation
 
-Revision: 20 September 2026. Section and table numbers refer to the revised manuscript. This draft has not been submitted.
+Dear Editor and Reviewer,
 
-Thank you for identifying the need to clarify the interface discretisation and the interpretation of measurements collected under different timing protocols. The revision addresses both concerns and adds a dedicated paired callback calibration. The historical raw measurements remain unchanged. Additions and replacements relative to the previous reviewed manuscript are highlighted in yellow in the revised Word document and its PDF export.
+Thank you for your comments. We have clarified why arithmetic averaging is retained in the main benchmark and how the different timing protocols limit the interpretation of solver choices. We have also added a paired experiment to measure the effect of residual monitoring. Below, we respond to the two points in your comment separately. Changes in the revised manuscript are highlighted in yellow.
 
-## 1. Primary face averaging and physical interpretation
+1 Face averaging and physical interpretation
 
-**Comment, summarised:** Justify retaining arithmetic averaging in the two-dimensional decision map despite the aligned one-dimensional verification favouring harmonic averaging, and clarify the physical meaning of high-contrast material cases.
+Reviewer comment
 
-**Response:** Section 3 now explains that arithmetic averaging is retained to preserve the specified discrete benchmark and its historical comparisons. This choice is not presented as the preferred interface law for composite heat conduction. For two equal half-links, continuity of flux gives a resistance of h/(2a) + h/(2b), yielding the harmonic coefficient 2ab/(a+b). Its difference from the arithmetic coefficient is (a−b)²/[2(a+b)]: this is O(h²) for smooth positive conductivity but need not be small at a discontinuity. At contrast 100, the arithmetic-to-harmonic conductance ratio on a mixed link is 25.5025. The manuscript explicitly restricts this statement to the half-link interface assumption; it is not a global temperature-error estimate.
+The primary two-dimensional benchmark uses arithmetic averaging of conductivity at cell faces, while the one-dimensional discontinuous-interface verification shows that harmonic averaging reproduces the analytical interface flux to roundoff and arithmetic averaging retains a grid-dependent interface error. Although a sensitivity analysis is provided for several discontinuous cases, the authors should more clearly justify why arithmetic averaging remains the primary operator for the main heat-conduction decision map and discuss how this choice affects the physical interpretation of discontinuous high-contrast material cases.
 
-Table 6 now presents all nine existing contrast-100 case-size comparisons, including the iteration counts of all three solvers under both averages. Although the measured winner is unchanged in these single-pass comparisons, some iteration counts differ substantially—for example, checkerboard AMG at N = 64 requires 13 versus 28 iterations. The text therefore separates solver-cost sensitivity from physical solution accuracy. It also distinguishes the aligned one-dimensional flux verification from the two-dimensional operator comparison. The controlled matched-field extension includes both face averages.
+Response
 
-Section 6 states the practical implication: the face law should be chosen from the material-interface geometry and resistance model before interpreting solver costs. Curved-interface accuracy has not been established by these experiments; neither averaging rule is claimed to resolve that issue automatically. Reference [26] supplies directly relevant numerical heat-transfer context.
+We agree that the original presentation did not clearly separate the choice of a benchmark operator from the physical treatment of a material interface. We have revised Section 3 to make this distinction explicit. We retain arithmetic averaging to keep the main decision map consistent with the specified discrete benchmark and the historical comparisons. This is a reason for retaining the benchmark, not a claim that arithmetic averaging is the preferred interface law for composite heat conduction.
 
-**Locations:** Section 3; Section 5.2 and Table 6; Section 6.
+For an interface between two equal half-links, continuity of heat flux gives the harmonic coefficient 2ab/(a + b). We now explain this series-resistance argument and show why the two averages can differ substantially at a discontinuity. At a conductivity contrast of 100, the arithmetic-to-harmonic conductance ratio is 25.5025 on a mixed link. This ratio applies to the stated local interface model; it is not an estimate of the error in the temperature field.
 
-## 2. Different timing protocols and conditional solver boundaries
+We have also brought all nine arithmetic/harmonic comparisons into Table 6. The measured solver winner is unchanged in these single-pass comparisons, but the iteration counts are not: for example, AMG takes 13 and 28 iterations for the two averages in the checkerboard case at N = 64. We therefore explicitly state that agreement in the winner does not establish equivalent operators or equal physical accuracy.
 
-**Comment, summarised:** Make the distinction between the historical monitored decision map and the controlled count-only extension more explicit when drawing conclusions, because setup-inclusive solver boundaries may depend on timing conditions.
+The revised discussion limits the high-contrast arithmetic results to solver performance for that discrete operator. The one-dimensional test verifies aligned interface flux, whereas the two-dimensional comparison tests sensitivity of solver cost. We have not established accuracy at curved interfaces. Section 6 now advises choosing the face law from the interface geometry and resistance model before interpreting solver costs. The controlled matched-field study includes both averages. We have added Patankar’s Numerical Heat Transfer and Fluid Flow as reference [26] for the interface-conductivity context.
 
-**Response:** Section 4 now distinguishes three evidence groups: the historical monitored runs, the controlled matched-field extension, and a new paired callback calibration. It specifies callback behaviour, import treatment, execution order, threading, setup seeds, stopping tolerance and timing boundaries. Historical speedups describe the monitored implementation; translation reversals and empirical excess-cost floors are comparisons within their respective controlled experiments. No time ratios or winner boundaries are pooled across these groups.
+Revised locations: Section 3; Section 5.2 and Table 6; Section 6.
 
-The new Section 5.3 and Table 7 report a prospectively specified calibration: three coefficient cases, three grid sizes, three methods, two callback modes and seven repeats, totalling 378 solves. Within the calibration, the operator, source, tolerance, warm imports, single BLAS thread and paired setup seeds are fixed; the jobs are shuffled within each repeat. Each solve uses a fresh preconditioner. All 378 solves pass an independent true-residual threshold of 1e−8. All 189 callback-mode pairs have identical solution hashes and iteration counts.
+2 Timing protocols and solver boundaries
 
-Across the nine case-size cells, median paired monitored/count-only solve-time ratios range from 1.54 to 1.84 for CG, 1.58 to 1.77 for Jacobi-PCG, and 1.03 to 1.06 for AMG-PCG. The median winner does not change between callbacks in this calibration. We report this negative result together with unstable repeat-level choices: for constant conductivity at N = 256, count-only AMG has the lowest method median but wins only three of seven repeats. Complete candidate timings, quartiles and paired ratios accompany the manuscript.
+Reviewer comment
 
-Several N = 128 winners differ from the historical map under both callback modes. The revision explicitly states that removing the callback alone cannot explain that historical-to-calibration difference. Cold-import overhead and the historical effects of ordering, unrecorded threading and machine state cannot be separated retrospectively from the available measurements. We retain this limitation rather than subtracting estimated overhead from historical timings. No universal N = 128 AMG crossover is claimed. Reference [27] provides directly relevant performance-benchmarking context.
+The manuscript employs different timing protocols for the baseline decision map and the controlled matched-field extension. In the baseline runs, residual-monitoring callbacks add an extra sparse matrix-vector product at every iteration and the first AMG setup may include import overhead, whereas the controlled extension uses count-only callbacks, warm imports, shuffled execution order, and controlled BLAS threading. Although the manuscript states that these results are not pooled, the distinction should be made more explicit when drawing conclusions across the two experimental sections, since the measured setup-inclusive solver boundaries may depend on these timing conditions.
 
-**Locations:** Section 4; Section 5.3 and Table 7; Sections 6–7. Reproduction inputs and commands: `experiments/protocol_sensitivity.md`, `results/raw/protocol_sensitivity`, and `experiments/analyze_protocol_sensitivity.py`.
+Response
 
-## Availability of revision evidence
+We agree that stating that the timings were not pooled was insufficient. We have revised Section 4 and the discussion and conclusions to specify which results belong to each protocol. The historical decision map describes the monitored implementation, including its setup and first-use costs. The translation reversals and empirical excess-cost floors are comparisons within the controlled extension. We do not transfer time ratios or solver boundaries between these experiments.
 
-The accompanying supplementary package includes the new calibration, complete generated summaries and reproduction instructions. The prior published v4 DOI identifies the earlier baseline and controlled extension; it does not yet identify these additional calibration files. The complete revised artefact, including the new calibration, is identified by Zenodo v5 (https://doi.org/10.5281/zenodo.22874266) and GitHub release v1.2-icemce2026-review-revision. The recorded AI-assistance disclosure remains in the manuscript.
+To test the effect of the callback directly, we added a paired calibration in Section 5.3 and Table 7. It covers three coefficient cases, three grid sizes, three solvers, two callback modes and seven repeats, giving 378 solves. Within each pair, we keep the operator, source, stopping tolerance and setup seed fixed. Imports are warmed, BLAS is limited to one thread, execution order is shuffled, and each solve uses a fresh preconditioner. All solves satisfy an independently checked relative residual of at most 1e−8; all 189 pairs have identical solution hashes and iteration counts.
+
+The median paired monitored/count-only solve-time ratios range from 1.54 to 1.84 for CG, 1.58 to 1.77 for Jacobi-PCG, and 1.03 to 1.06 for AMG-PCG. Thus, monitoring affects the reported speedups differently across methods. It does not change the median winner in the nine calibration cells. We also report the variability: for constant conductivity at N = 256, count-only AMG has the lowest method median but wins only three of seven repeats. The supplementary summaries retain the timings and quartiles for every candidate.
+
+Some N = 128 winners differ from the historical map under both callback modes. We cannot attribute these differences to callback removal alone. The new calibration does not reconstruct the historical cold-import, execution-order, threading or machine-state effects, and we have stated this limitation explicitly. We therefore do not claim a universal N = 128 crossover to AMG. Reference [27], by Hoefler and Belli, supports the discussion of performance-measurement practice.
+
+Revised locations: Section 4; Section 5.3 and Table 7; Sections 6 and 7.
+
+The new calibration data, analysis scripts and complete summaries are included in the revised supplementary material, archived at https://doi.org/10.5281/zenodo.22874266. The historical raw measurements have been retained unchanged.
+
+Thank you for helping us make the scope and interpretation of the results clearer.
+
+Sincerely,
+The authors

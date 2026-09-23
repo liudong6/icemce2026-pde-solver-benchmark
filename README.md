@@ -1,5 +1,9 @@
 # ICEMCE 2026 PDE Solver Benchmark
 
+## Reviewer response update — v6 / v1.2.1-reviewer-response
+
+The current delivery is https://doi.org/10.5281/zenodo.22908710, with GitHub release https://github.com/liudong6/icemce2026-pde-solver-benchmark/releases/tag/v1.2.1-reviewer-response. It adds the revised two-page author-to-reviewer response and matching Markdown source. The paper and scientific evidence are unchanged from v5 (https://doi.org/10.5281/zenodo.22874266); existing manuscript and response citations to that evidence remain intentional. See RELEASE_NOTES.md for the scope and archive contents.
+
 ## Second-round review revision — v5 / v1.2
 
 This complete revision is identified by Zenodo v5, https://doi.org/10.5281/zenodo.22874266, and GitHub release https://github.com/liudong6/icemce2026-pde-solver-benchmark/releases/tag/v1.2-icemce2026-review-revision. The v4 DOI identifies the earlier baseline and controlled extension. This revision adds 378 paired callback-calibration solves, the complete nine-cell face-averaging table in the main paper, an explicit interface-resistance interpretation, and distinct scopes for historical, extension and calibration timings. Original raw files are unchanged. The primary Word/PDF manuscript highlights review changes in yellow.
