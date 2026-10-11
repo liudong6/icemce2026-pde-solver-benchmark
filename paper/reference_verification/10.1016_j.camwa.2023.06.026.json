@@ -1,0 +1,609 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          4,
+          18
+        ]
+      ],
+      "date-time": "2026-04-18T17:41:54Z",
+      "timestamp": 1776534114309,
+      "version": "3.51.2"
+    },
+    "reference-count": 31,
+    "publisher": "Elsevier BV",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2023,
+              8,
+              1
+            ]
+          ],
+          "date-time": "2023-08-01T00:00:00Z",
+          "timestamp": 1690848000000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2023,
+              8,
+              1
+            ]
+          ],
+          "date-time": "2023-08-01T00:00:00Z",
+          "timestamp": 1690848000000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://www.elsevier.com/legal/tdmrep-license"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2023,
+              9,
+              13
+            ]
+          ],
+          "date-time": "2023-09-13T00:00:00Z",
+          "timestamp": 1694563200000
+        },
+        "content-version": "vor",
+        "delay-in-days": 43,
+        "URL": "http://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/100018693",
+        "name": "Horizon 2020",
+        "doi-asserted-by": "publisher",
+        "id": [
+          {
+            "id": "10.13039/100018693",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "elsevier.com",
+        "sciencedirect.com"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [
+      "Computers &amp; Mathematics with Applications"
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2023,
+          8
+        ]
+      ]
+    },
+    "DOI": "10.1016/j.camwa.2023.06.026",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2023,
+          7,
+          14
+        ]
+      ],
+      "date-time": "2023-07-14T13:37:25Z",
+      "timestamp": 1689341845000
+    },
+    "page": "290-305",
+    "update-policy": "https://doi.org/10.1016/elsevier_cm_policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 4,
+    "special_numbering": "C",
+    "title": [
+      "Automatic coarsening in Algebraic Multigrid utilizing quality measures for matching-based aggregations"
+    ],
+    "prefix": "10.1016",
+    "volume": "144",
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0000-0003-2047-4986",
+        "authenticated-orcid": false,
+        "given": "Pasqua",
+        "family": "D'Ambra",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-1412-8289",
+        "authenticated-orcid": false,
+        "given": "Fabio",
+        "family": "Durastante",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Salvatore",
+        "family": "Filippone",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-5189-4230",
+        "authenticated-orcid": false,
+        "given": "Ludmil",
+        "family": "Zikatanov",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      }
+    ],
+    "member": "78",
+    "reference": [
+      {
+        "key": "10.1016/j.camwa.2023.06.026_br0010",
+        "first-page": "123",
+        "article-title": "An aggregation-based algebraic multigrid method",
+        "volume": "37",
+        "author": "Notay",
+        "year": "2010",
+        "journal-title": "Electron. Trans. Numer. Anal."
+      },
+      {
+        "key": "10.1016/j.camwa.2023.06.026_br0020",
+        "doi-asserted-by": "crossref",
+        "first-page": "591",
+        "DOI": "10.1017/S0962492917000083",
+        "article-title": "Algebraic multigrid methods",
+        "volume": "26",
+        "author": "Xu",
+        "year": "2017",
+        "journal-title": "Acta Numer."
+      },
+      {
+        "key": "10.1016/j.camwa.2023.06.026_br0030",
+        "series-title": "Aggregation Methods of Computing Stationary Distributions of Markov Processes",
+        "first-page": "155",
+        "author": "Marek",
+        "year": "1991"
+      },
+      {
+        "issue": "5",
+        "key": "10.1016/j.camwa.2023.06.026_br0040",
+        "first-page": "365",
+        "article-title": "A multilevel method with correction by aggregation for solving discrete elliptic problems",
+        "volume": "31",
+        "author": "Blaheta",
+        "year": "1986",
+        "journal-title": "Apl. Mat."
+      },
+      {
+        "issue": "2",
+        "key": "10.1016/j.camwa.2023.06.026_br0050",
+        "doi-asserted-by": "crossref",
+        "first-page": "59",
+        "DOI": "10.1007/s00791-014-0224-9",
+        "article-title": "Adaptive AMG with coarsening based on compatible weighted matching",
+        "volume": "16",
+        "author": "D'Ambra",
+        "year": "2013",
+        "journal-title": "Comput. Vis. Sci."
+      },
+      {
+        "issue": "4",
+        "key": "10.1016/j.camwa.2023.06.026_br0060",
+        "article-title": "BootCMatch: a software package for bootstrap AMG based on graph weighted matching",
+        "volume": "44",
+        "author": "D'Ambra",
+        "year": "2018",
+        "journal-title": "ACM Trans. Math. Softw."
+      },
+      {
+        "key": "10.1016/j.camwa.2023.06.026_br0070",
+        "series-title": "2014 IEEE 28th International Parallel and Distributed Processing Symposium",
+        "first-page": "519",
+        "article-title": "New effective multithreaded matching algorithms",
+        "author": "Manne",
+        "year": "2014"
+      },
+      {
+        "key": "10.1016/j.camwa.2023.06.026_br0080",
+        "series-title": "STACS 99 (Trier)",
+        "first-page": "259",
+        "article-title": "Linear time 12-approximation algorithm for maximum weighted matching in general graphs",
+        "volume": "vol. 1563",
+        "author": "Preis",
+        "year": "1999"
+      },
+      {
+        "issue": "4",
+        "key": "10.1016/j.camwa.2023.06.026_br0090",
+        "doi-asserted-by": "crossref",
+        "first-page": "973",
+        "DOI": "10.1137/S0895479899358443",
+        "article-title": "On algorithms for permuting large entries to the diagonal of a sparse matrix",
+        "volume": "22",
+        "author": "Duff",
+        "year": "2001",
+        "journal-title": "SIAM J. Matrix Anal. Appl."
+      },
+      {
+        "issue": "5",
+        "key": "10.1016/j.camwa.2023.06.026_br0100",
+        "doi-asserted-by": "crossref",
+        "first-page": "S220",
+        "DOI": "10.1137/18M1194493",
+        "article-title": "An adaptive multigrid method based on path cover",
+        "volume": "41",
+        "author": "Hu",
+        "year": "2019",
+        "journal-title": "SIAM J. Sci. Comput."
+      },
+      {
+        "key": "10.1016/j.camwa.2023.06.026_br0110",
+        "doi-asserted-by": "crossref",
+        "first-page": "718",
+        "DOI": "10.1016/j.cam.2017.10.032",
+        "article-title": "Adaptive aggregation on graphs",
+        "volume": "340",
+        "author": "Xu",
+        "year": "2018",
+        "journal-title": "J. Comput. Appl. Math."
+      },
+      {
+        "issue": "3",
+        "key": "10.1016/j.camwa.2023.06.026_br0120",
+        "doi-asserted-by": "crossref",
+        "first-page": "539",
+        "DOI": "10.1002/nla.741",
+        "article-title": "Algebraic analysis of aggregation-based multigrid",
+        "volume": "18",
+        "author": "Napov",
+        "year": "2011",
+        "journal-title": "Numer. Linear Algebra Appl."
+      },
+      {
+        "issue": "2",
+        "key": "10.1016/j.camwa.2023.06.026_br0130",
+        "doi-asserted-by": "crossref",
+        "first-page": "A1079",
+        "DOI": "10.1137/100818509",
+        "article-title": "An algebraic multigrid method with guaranteed convergence rate",
+        "volume": "34",
+        "author": "Napov",
+        "year": "2012",
+        "journal-title": "SIAM J. Sci. Comput."
+      },
+      {
+        "issue": "4",
+        "key": "10.1016/j.camwa.2023.06.026_br0140",
+        "doi-asserted-by": "crossref",
+        "first-page": "A2288",
+        "DOI": "10.1137/110835347",
+        "article-title": "Aggregation-based algebraic multigrid for convection-diffusion equations",
+        "volume": "34",
+        "author": "Notay",
+        "year": "2012",
+        "journal-title": "SIAM J. Sci. Comput."
+      },
+      {
+        "key": "10.1016/j.camwa.2023.06.026_br0150",
+        "series-title": "Matrix-Based Analysis and Algorithms for Solving Finite Element Equations",
+        "article-title": "Multilevel block factorization preconditioners",
+        "author": "Vassilevski",
+        "year": "2008"
+      },
+      {
+        "key": "10.1016/j.camwa.2023.06.026_br0160",
+        "first-page": "1",
+        "article-title": "General highly accurate algebraic coarsening",
+        "volume": "10",
+        "author": "Brandt",
+        "year": "2000",
+        "journal-title": "Electron. Trans. Numer. Anal."
+      },
+      {
+        "issue": "2–3",
+        "key": "10.1016/j.camwa.2023.06.026_br0170",
+        "doi-asserted-by": "crossref",
+        "first-page": "205",
+        "DOI": "10.1002/nla.378",
+        "article-title": "Coarsening by compatible relaxation",
+        "volume": "11",
+        "author": "Livne",
+        "year": "2004",
+        "journal-title": "Numer. Linear Algebra Appl."
+      },
+      {
+        "issue": "4",
+        "key": "10.1016/j.camwa.2023.06.026_br0180",
+        "doi-asserted-by": "crossref",
+        "first-page": "1669",
+        "DOI": "10.1137/S0036142903429742",
+        "article-title": "On generalizing the algebraic multigrid framework",
+        "volume": "42",
+        "author": "Falgout",
+        "year": "2004",
+        "journal-title": "SIAM J. Numer. Anal."
+      },
+      {
+        "issue": "3",
+        "key": "10.1016/j.camwa.2023.06.026_br0190",
+        "doi-asserted-by": "crossref",
+        "first-page": "1393",
+        "DOI": "10.1137/090772216",
+        "article-title": "Compatible relaxation and coarsening in algebraic multigrid",
+        "volume": "32",
+        "author": "Brannick",
+        "year": "2010",
+        "journal-title": "SIAM J. Sci. Comput."
+      },
+      {
+        "issue": "2",
+        "key": "10.1016/j.camwa.2023.06.026_br0200",
+        "doi-asserted-by": "crossref",
+        "first-page": "612",
+        "DOI": "10.1137/090752973",
+        "volume": "33",
+        "author": "Brandt",
+        "year": "2011",
+        "journal-title": "SIAM J. Sci. Comput."
+      },
+      {
+        "issue": "3",
+        "key": "10.1016/j.camwa.2023.06.026_br0210",
+        "doi-asserted-by": "crossref",
+        "first-page": "179",
+        "DOI": "10.1007/BF02238511",
+        "article-title": "Algebraic multigrid by smoothed aggregation for second and fourth order elliptic problems",
+        "volume": "56",
+        "author": "Vaněk",
+        "year": "1996",
+        "journal-title": "Computing"
+      },
+      {
+        "key": "10.1016/j.camwa.2023.06.026_br0220",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1093/acprof:oso/9780199678792.001.0001",
+        "article-title": "Finite Elements and Fast Iterative Solvers: with Applications in Incompressible Fluid Dynamics",
+        "author": "Elman",
+        "year": "2014"
+      },
+      {
+        "key": "10.1016/j.camwa.2023.06.026_br0230",
+        "doi-asserted-by": "crossref",
+        "first-page": "471",
+        "DOI": "10.1002/nla.437",
+        "article-title": "On two-grid convergence estimate",
+        "volume": "12",
+        "author": "Falgout",
+        "year": "2005",
+        "journal-title": "Numer. Linear Algebra Appl."
+      },
+      {
+        "issue": "3",
+        "key": "10.1016/j.camwa.2023.06.026_br0240",
+        "doi-asserted-by": "crossref",
+        "first-page": "A1473",
+        "DOI": "10.1137/17M1123456",
+        "article-title": "Optimal interpolation and compatible relaxation in classical algebraic multigrid",
+        "volume": "40",
+        "author": "Brannick",
+        "year": "2018",
+        "journal-title": "SIAM J. Sci. Comput."
+      },
+      {
+        "issue": "E2269",
+        "key": "10.1016/j.camwa.2023.06.026_br0250",
+        "first-page": "1",
+        "article-title": "Improving solve time of aggregation-based adaptive AMG",
+        "volume": "26",
+        "author": "D'Ambra",
+        "year": "2019",
+        "journal-title": "Numer. Linear Algebra Appl."
+      },
+      {
+        "key": "10.1016/j.camwa.2023.06.026_br0260",
+        "author": "HSL"
+      },
+      {
+        "issue": "5",
+        "key": "10.1016/j.camwa.2023.06.026_br0270",
+        "doi-asserted-by": "crossref",
+        "first-page": "S679",
+        "DOI": "10.1137/20M134914X",
+        "article-title": "AMG preconditioners for linear solvers towards extreme scale",
+        "volume": "43",
+        "author": "D'Ambra",
+        "year": "2021",
+        "journal-title": "SIAM J. Sci. Comput."
+      },
+      {
+        "issue": "1",
+        "key": "10.1016/j.camwa.2023.06.026_br0280",
+        "doi-asserted-by": "crossref",
+        "first-page": "7",
+        "DOI": "10.1007/BF00247653",
+        "article-title": "Auction algorithms for network flow problems: a tutorial introduction",
+        "volume": "1",
+        "author": "Bertsekas",
+        "year": "1992",
+        "journal-title": "Comput. Optim. Appl."
+      },
+      {
+        "key": "10.1016/j.camwa.2023.06.026_br0290",
+        "article-title": "AMG based on compatible weighted matching on GPUs",
+        "volume": "29",
+        "author": "Bernaschi",
+        "year": "2020",
+        "journal-title": "Parallel Comput."
+      },
+      {
+        "issue": "1–2",
+        "key": "10.1016/j.camwa.2023.06.026_br0300",
+        "doi-asserted-by": "crossref",
+        "first-page": "181",
+        "DOI": "10.1002/nla.317",
+        "article-title": "A multigrid method based on graph matching for convection-diffusion equations",
+        "volume": "10",
+        "author": "Kim",
+        "year": "2003",
+        "journal-title": "Numer. Linear Algebra Appl."
+      },
+      {
+        "issue": "5",
+        "key": "10.1016/j.camwa.2023.06.026_br0310",
+        "doi-asserted-by": "crossref",
+        "first-page": "2864",
+        "DOI": "10.1137/100798806",
+        "article-title": "Multigrid smoothers for ultraparallel computing",
+        "volume": "33",
+        "author": "Baker",
+        "year": "2011",
+        "journal-title": "SIAM J. Sci. Comput."
+      }
+    ],
+    "container-title": [
+      "Computers &amp; Mathematics with Applications"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://api.elsevier.com/content/article/PII:S089812212300278X?httpAccept=text/xml",
+        "content-type": "text/xml",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://api.elsevier.com/content/article/PII:S089812212300278X?httpAccept=text/plain",
+        "content-type": "text/plain",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2025,
+          10,
+          12
+        ]
+      ],
+      "date-time": "2025-10-12T10:29:09Z",
+      "timestamp": 1760264949000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://linkinghub.elsevier.com/retrieve/pii/S089812212300278X"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2023,
+          8
+        ]
+      ]
+    },
+    "references-count": 31,
+    "alternative-id": [
+      "S089812212300278X"
+    ],
+    "URL": "https://doi.org/10.1016/j.camwa.2023.06.026",
+    "relation": {},
+    "ISSN": [
+      "0898-1221"
+    ],
+    "issn-type": [
+      {
+        "value": "0898-1221",
+        "type": "print"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2023,
+          8
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "Elsevier",
+        "name": "publisher",
+        "label": "This article is maintained by"
+      },
+      {
+        "value": "Automatic coarsening in Algebraic Multigrid utilizing quality measures for matching-based aggregations",
+        "name": "articletitle",
+        "label": "Article Title"
+      },
+      {
+        "value": "Computers & Mathematics with Applications",
+        "name": "journaltitle",
+        "label": "Journal Title"
+      },
+      {
+        "value": "https://doi.org/10.1016/j.camwa.2023.06.026",
+        "name": "articlelink",
+        "label": "CrossRef DOI link to publisher maintained version"
+      },
+      {
+        "value": "article",
+        "name": "content_type",
+        "label": "Content Type"
+      },
+      {
+        "value": "© 2023 The Authors. Published by Elsevier Ltd.",
+        "name": "copyright",
+        "label": "Copyright"
+      }
+    ]
+  }
+}

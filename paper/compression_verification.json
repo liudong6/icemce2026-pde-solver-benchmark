@@ -1,0 +1,68 @@
+{
+  "pages": {
+    "icemce2026_iop_manuscript": 6,
+    "SUPPLEMENTARY_METHODS_AND_RESULTS": 13,
+    "RESPONSE_TO_REVIEWERS": 1,
+    "main": 6
+  },
+  "previous_main_pages": 15,
+  "pages_removed": 9,
+  "reduction_percent": 60,
+  "body_font_pt": 11,
+  "reference_font_pt": 9,
+  "template_margins_unchanged": true,
+  "all_pdf_fonts_embedded": true,
+  "fonts": [
+    "/AUWCNV+TimesNewRomanPSMT",
+    "/CWLLTB+Arial-BoldMT",
+    "/DCWGQU+CambriaMath",
+    "/ESHXQI+TimesNewRomanPS-BoldMT",
+    "/TYEPLS+TimesNewRomanPS-ItalicMT"
+  ],
+  "main_tables": 3,
+  "main_data_rows": 30,
+  "supplement_tables_preserved": 9,
+  "supplement_original_figures_preserved": 6,
+  "supplement_native_math_objects_preserved": 13,
+  "protected_files_unchanged": 170,
+  "AI_disclosure_identical": true,
+  "AI_disclosure_not_highlighted": true,
+  "references": {
+    "total": 31,
+    "recent_2022_2026": 18,
+    "recent_percent": 58.06,
+    "recent_formal_papers": 17,
+    "recent_formal_percent": 54.84,
+    "preprints": 1,
+    "preprint_percent": 3.23,
+    "recent_reference_numbers": [
+      4,
+      9,
+      10,
+      11,
+      12,
+      13,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29
+    ],
+    "preprint_reference_numbers": [
+      25
+    ],
+    "requirements_met": true
+  },
+  "main_6_pages_visually_inspected": true,
+  "supplement_13_pages_contact_sheets_inspected": true,
+  "reply_page_visually_inspected": true,
+  "latex_warnings": [],
+  "publication_status": "local_unpublished"
+}

@@ -1,0 +1,430 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          8,
+          21
+        ]
+      ],
+      "date-time": "2026-08-21T18:24:13Z",
+      "timestamp": 1787336653005,
+      "version": "build-2736575974"
+    },
+    "reference-count": 29,
+    "publisher": "Society for Industrial & Applied Mathematics (SIAM)",
+    "issue": "1",
+    "funder": [
+      {
+        "DOI": "10.13039/501100001665",
+        "name": "Agence Nationale de la Recherche",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "ANR-20-CE46-0009"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "ANR-20-CE46-0009"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/501100001665",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      },
+      {
+        "DOI": "10.13039/501100001665",
+        "name": "Agence Nationale de la Recherche",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "ANR-20-CE48-0014"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "ANR-20-CE48-0014"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/501100001665",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      },
+      {
+        "DOI": "10.13039/501100004794",
+        "name": "Centre National de la Recherche Scientifique",
+        "doi-asserted-by": "publisher",
+        "id": [
+          {
+            "id": "10.13039/501100004794",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "SIAM J. Sci. Comput."
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2024,
+          2,
+          29
+        ]
+      ]
+    },
+    "abstract": "<jats:p>Abstract.</jats:p>\n                  <jats:p>We introduce a mixed precision algorithm for computing sparse matrix-vector products and use it to accelerate the solution of sparse linear systems by iterative methods. Our approach is based on the idea of adapting the precision of each matrix element to their magnitude: we split the elements into buckets and use progressively lower precisions for the buckets of progressively smaller elements. We carry out a rounding error analysis of this algorithm that provides us with an explicit rule to decide which element goes into which bucket and allows us to rigorously control the accuracy of the algorithm. We implement the algorithm on a multicore computer and obtain significant speedups (up to a factor [Formula: see text]) with respect to uniform precision algorithms, without loss of accuracy, on a range of sparse matrices from real-life applications. We showcase the effectiveness of our algorithm by plugging it into various Krylov solvers for sparse linear systems and observe that the convergence of the solution is essentially unaffected by the use of adaptive precision.</jats:p>",
+    "DOI": "10.1137/22m1522619",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2024,
+          1,
+          25
+        ]
+      ],
+      "date-time": "2024-01-25T04:26:53Z",
+      "timestamp": 1706156813000
+    },
+    "page": "C30-C56",
+    "source": "Crossref",
+    "is-referenced-by-count": 13,
+    "title": [
+      "Adaptive Precision Sparse Matrix–Vector Product and Its Application to Krylov Solvers"
+    ],
+    "prefix": "10.1137",
+    "volume": "46",
+    "author": [
+      {
+        "given": "Stef",
+        "family": "Graillat",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Sorbonne Université, CNRS, LIP6, Paris, F-75005, France."
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Fabienne",
+        "family": "Jézéquel",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Sorbonne Université, CNRS, LIP6, Paris, F-75005, France, and Université Paris-Panthéon-Assas, Paris, F-75006, France."
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Theo",
+        "family": "Mary",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Sorbonne Université, CNRS, LIP6, Paris, F-75005, France."
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Roméo",
+        "family": "Molina",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Sorbonne Université, CNRS, LIP6, and Université Paris-Saclay, Paris, F-75005, France."
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "351",
+    "published-online": {
+      "date-parts": [
+        [
+          2024,
+          1,
+          25
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "ref1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3371275"
+      },
+      {
+        "key": "ref2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1177/10943420221115140"
+      },
+      {
+        "key": "ref3",
+        "volume-title": "Five-precision GMRES-based Iterative Refinement",
+        "author": "Amestoy P.",
+        "year": "2021"
+      },
+      {
+        "key": "ref4",
+        "volume-title": "Combining Sparse Approximate Factorizations with Mixed Precision Iterative Refinement",
+        "author": "Amestoy P.",
+        "year": "2022"
+      },
+      {
+        "key": "ref5",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1093/imanum/drac037"
+      },
+      {
+        "key": "ref6",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1002/cpe.4460"
+      },
+      {
+        "key": "ref7",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1137/20M138870X"
+      },
+      {
+        "key": "ref8",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1137/17M1122918"
+      },
+      {
+        "key": "ref9",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1137/17M1140819"
+      },
+      {
+        "key": "ref10",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1137/20M1334796"
+      },
+      {
+        "key": "ref11",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2049662.2049663"
+      },
+      {
+        "key": "ref12",
+        "unstructured": "J. Diffenderfer, D. Osei-Kuffuor, and H. Menon, QDOT: Quantized Dot Product Kernel for Approximate High-Performance Computing, preprint, https://arxiv.org/abs/2105.00115, 2021."
+      },
+      {
+        "key": "ref13",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3441850"
+      },
+      {
+        "key": "ref14",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1002/spe.3041"
+      },
+      {
+        "key": "ref15",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1137/1.9780898718027"
+      },
+      {
+        "key": "ref16",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1137/18M1182802"
+      },
+      {
+        "key": "ref17",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1137/20M1314355"
+      },
+      {
+        "key": "ref18",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1017/S0962492922000022"
+      },
+      {
+        "key": "ref19",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1137/120894488"
+      },
+      {
+        "key": "ref20",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s10543-017-0658-9"
+      },
+      {
+        "key": "ref21",
+        "first-page": "51",
+        "volume-title": "Communications in Computer and Information Science",
+        "author": "Lindquist N.",
+        "year": "2020"
+      },
+      {
+        "key": "ref22",
+        "doi-asserted-by": "crossref",
+        "unstructured": "J. A. Loe, C. A. Glusa, I. Yamazaki, E. G. Boman, and S. Rajamanickam, Experimental Evaluation of Multiprecision Strategies for GMRES on GPUs, preprint, https://arxiv.org/abs/2105.07544, 2021.",
+        "DOI": "10.1109/IPDPSW52791.2021.00078"
+      },
+      {
+        "key": "ref23",
+        "doi-asserted-by": "crossref",
+        "unstructured": "D. Mukunoki and T. Imamura, Reduced-precision floating-point formats on GPUs for high performance and energy efficient computation, in Proceedings of the 2016 IEEE International Conference on Cluster Computing (CLUSTER), IEEE, 2016, pp. 144–145.",
+        "DOI": "10.1109/CLUSTER.2016.77"
+      },
+      {
+        "key": "ref24",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/BF01386090"
+      },
+      {
+        "key": "ref25",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1137/050630416"
+      },
+      {
+        "key": "ref26",
+        "doi-asserted-by": "crossref",
+        "unstructured": "F. Renac, M. de la Llave Plata, E. Martin, J. B. Chapelier, and V. Couaillier, Aghora: A High-Order DG Solver for Turbulent Flow Simulations, Springer, Cham, 2015, pp. 315–335.",
+        "DOI": "10.1007/978-3-319-12886-3_15"
+      },
+      {
+        "key": "ref27",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/321406.321416"
+      },
+      {
+        "key": "ref28",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1137/1.9780898718003"
+      },
+      {
+        "key": "ref29",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1137/S1064827502406415"
+      }
+    ],
+    "container-title": [
+      "SIAM Journal on Scientific Computing"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://epubs.siam.org/doi/pdf/10.1137/22M1522619",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2026,
+          8,
+          21
+        ]
+      ],
+      "date-time": "2026-08-21T17:24:52Z",
+      "timestamp": 1787333092000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://epubs.siam.org/doi/10.1137/22M1522619"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2024,
+          1,
+          25
+        ]
+      ]
+    },
+    "references-count": 29,
+    "journal-issue": {
+      "issue": "1",
+      "published-print": {
+        "date-parts": [
+          [
+            2024,
+            2,
+            29
+          ]
+        ]
+      }
+    },
+    "alternative-id": [
+      "10.1137/22M1522619"
+    ],
+    "URL": "https://doi.org/10.1137/22m1522619",
+    "relation": {},
+    "ISSN": [
+      "1064-8275",
+      "1095-7197"
+    ],
+    "issn-type": [
+      {
+        "value": "1064-8275",
+        "type": "print"
+      },
+      {
+        "value": "1095-7197",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2024,
+          1,
+          25
+        ]
+      ]
+    }
+  }
+}

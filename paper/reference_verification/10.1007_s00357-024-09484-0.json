@@ -1,0 +1,706 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          18
+        ]
+      ],
+      "date-time": "2026-09-18T18:28:54Z",
+      "timestamp": 1789756134377,
+      "version": "4.0.1"
+    },
+    "reference-count": 44,
+    "publisher": "Springer Science and Business Media LLC",
+    "issue": "1",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2024,
+              7,
+              6
+            ]
+          ],
+          "date-time": "2024-07-06T00:00:00Z",
+          "timestamp": 1720224000000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://www.springernature.com/gp/researchers/text-and-data-mining"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2024,
+              7,
+              6
+            ]
+          ],
+          "date-time": "2024-07-06T00:00:00Z",
+          "timestamp": 1720224000000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://www.springernature.com/gp/researchers/text-and-data-mining"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/501100001809",
+        "name": "National Natural Science Foundation of China",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "12071062"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "12071062"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/501100001809",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      },
+      {
+        "DOI": "10.13039/501100013287",
+        "name": "Science Challenge Project",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "TZ2016002"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "TZ2016002"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/501100013287",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      },
+      {
+        "DOI": "10.13039/501100019538",
+        "name": "Science Fund for Distinguished Young Scholars of Sichuan Province",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "2023NSFSC1920"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "2023NSFSC1920"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/501100019538",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "link.springer.com"
+      ],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "J Classif"
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2025,
+          3
+        ]
+      ]
+    },
+    "DOI": "10.1007/s00357-024-09484-0",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2024,
+          7,
+          6
+        ]
+      ],
+      "date-time": "2024-07-06T07:01:47Z",
+      "timestamp": 1720249307000
+    },
+    "page": "72-89",
+    "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 5,
+    "title": [
+      "A New Matrix Feature Selection Strategy in Machine Learning Models for Certain Krylov Solver Prediction"
+    ],
+    "prefix": "10.1007",
+    "volume": "42",
+    "author": [
+      {
+        "given": "Hai-Bing",
+        "family": "Sun",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-6120-9583",
+        "authenticated-orcid": false,
+        "given": "Yan-Fei",
+        "family": "Jing",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Xiao-Wen",
+        "family": "Xu",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "297",
+    "published-online": {
+      "date-parts": [
+        [
+          2024,
+          7,
+          6
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "issue": "4",
+        "key": "9484_CR1",
+        "doi-asserted-by": "publisher",
+        "first-page": "1625",
+        "DOI": "10.1137/140961912",
+        "volume": "35",
+        "author": "E Agullo",
+        "year": "2014",
+        "unstructured": "Agullo, E., Giraud, L., & Jing, Y.-F. (2014). Block GMRES method with inexact breakdowns and deflated restarting. SIAM Journal on Matrix Analysis and Application, 35(4), 1625–1651.",
+        "journal-title": "SIAM Journal on Matrix Analysis and Application"
+      },
+      {
+        "key": "9484_CR2",
+        "doi-asserted-by": "publisher",
+        "first-page": "962",
+        "DOI": "10.1137/S0895479803422014",
+        "volume": "26",
+        "author": "AH Baker",
+        "year": "2005",
+        "unstructured": "Baker, A. H., Jessup, E. R., & Manteuffel, T. (2005). A technique for accelerating the convergence of restarted GMRES. SIAM Journal on Matrix Analysis and Applications, 26, 962–984.",
+        "journal-title": "SIAM Journal on Matrix Analysis and Applications"
+      },
+      {
+        "key": "9484_CR3",
+        "doi-asserted-by": "publisher",
+        "first-page": "418",
+        "DOI": "10.1006/jcph.2002.7176",
+        "volume": "182",
+        "author": "M Benzi",
+        "year": "2002",
+        "unstructured": "Benzi, M. (2002). Preconditioning techniques for large linear systems: A survey. Journal of Computational Physics, 182, 418–477.",
+        "journal-title": "Journal of Computational Physics"
+      },
+      {
+        "issue": "2",
+        "key": "9484_CR4",
+        "doi-asserted-by": "crossref",
+        "first-page": "936",
+        "DOI": "10.1086/301237",
+        "volume": "119",
+        "author": "S Bhowmick",
+        "year": "2000",
+        "unstructured": "Bhowmick, S., Eijkhout, V., Freund, Y., Fuentes, E., & Keyes, D. (2000). Application of machine learning in selecting sparse linear solvers. Astronomical Journal, 119(2), 936–944.",
+        "journal-title": "Astronomical Journal"
+      },
+      {
+        "key": "9484_CR5",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-1-4419-6935-4_10",
+        "volume-title": "Application of alternating decision trees in selecting sparse linear solvers",
+        "author": "S Bhowmick",
+        "year": "2011",
+        "unstructured": "Bhowmick, S., Eijkhout, V., Freund, Y., Fuentes, E., & Keyes, D. (2011). Application of alternating decision trees in selecting sparse linear solvers. New York: Springer."
+      },
+      {
+        "key": "9484_CR6",
+        "unstructured": "Chen, G., & Deng, Y. (2011). Some new methods of fitness function construction in feature selection of genetic algorithm and applications. Mechanical Science and Technology, 30(1), 124–128+132."
+      },
+      {
+        "key": "9484_CR7",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Chen, T.-Q., & Carlos, G. (2016). XGBoost: A scalable tree boosting system. Association for Computing Machinery.",
+        "DOI": "10.1145/2939672.2939785"
+      },
+      {
+        "key": "9484_CR8",
+        "unstructured": "Cipra, B.A. (2000). The best of the 20th century: Editors name top 10 algorithms. SIAM News.,33(4)."
+      },
+      {
+        "key": "9484_CR9",
+        "doi-asserted-by": "publisher",
+        "first-page": "2415",
+        "DOI": "10.1016/j.laa.2008.04.019",
+        "volume": "429",
+        "author": "D Darnella",
+        "year": "2008",
+        "unstructured": "Darnella, D., Morgan, R. B., & Wilcox, W. (2008). Deflated GMRES for systems with multiple shifts and multiple right-hand sides. Linear Algebra and Its Applications, 429, 2415–2434.",
+        "journal-title": "Linear Algebra and Its Applications"
+      },
+      {
+        "key": "9484_CR10",
+        "first-page": "1",
+        "volume": "38",
+        "author": "TA Davis",
+        "year": "2011",
+        "unstructured": "Davis, T. A., & Hu, Y. (2011). The University of Florida Sparse Matrix Collection. ACM Transactions on Mathematical Software, 38, 1–25.",
+        "journal-title": "ACM Transactions on Mathematical Software"
+      },
+      {
+        "issue": "4",
+        "key": "9484_CR11",
+        "doi-asserted-by": "publisher",
+        "first-page": "1",
+        "DOI": "10.1145/1462173.1462174",
+        "volume": "35",
+        "author": "V Eijkhout",
+        "year": "2003",
+        "unstructured": "Eijkhout, V., & Fuentes, E. (2003). A standard and software for numerical metadata. Acm Transactions on Mathematical Software, 35(4), 1–20.",
+        "journal-title": "Acm Transactions on Mathematical Software"
+      },
+      {
+        "key": "9484_CR12",
+        "unstructured": "Freund, Y., & Mason, L. (1999). The alternating decision tree learning algorithm. In ICML’99: Proceedings of the Sixteenth International Conference on Machine Learning, pp. 124–133."
+      },
+      {
+        "issue": "2",
+        "key": "9484_CR13",
+        "doi-asserted-by": "publisher",
+        "first-page": "495",
+        "DOI": "10.1137/110820713",
+        "volume": "34",
+        "author": "A Gaul",
+        "year": "2013",
+        "unstructured": "Gaul, A., Gutknecht, M. H., Liesen, J., & Nabben, R. (2013). A framework for deflated and augmented Krylov subpace methods. SIAM Journal on Matrix Analysis and Applications, 34(2), 495–518.",
+        "journal-title": "SIAM Journal on Matrix Analysis and Applications"
+      },
+      {
+        "key": "9484_CR14",
+        "unstructured": "Géron, A. (2019). Hands-on machine learning with Scikit-learn, Keras, and Tensorflow: Concepts, tools, and techniques to build intelligent systems (Second ed.). O’Reilly Media, Inc."
+      },
+      {
+        "issue": "2",
+        "key": "9484_CR15",
+        "doi-asserted-by": "publisher",
+        "first-page": "710",
+        "DOI": "10.1137/21M1401127",
+        "volume": "43",
+        "author": "L Giraud",
+        "year": "2022",
+        "unstructured": "Giraud, L., Jing, Y.-F., & Xiang, Y.-F. (2022). A block minimum residual norm subspace solver with partial convergence management for sequences of linear systems. SIAM Journal on Matrix Analysis and Applications, 43(2), 710–739.",
+        "journal-title": "SIAM Journal on Matrix Analysis and Applications"
+      },
+      {
+        "key": "9484_CR16",
+        "doi-asserted-by": "publisher",
+        "first-page": "1444",
+        "DOI": "10.1137/130923087",
+        "volume": "35",
+        "author": "MH Gutknecht",
+        "year": "2014",
+        "unstructured": "Gutknecht, M. H. (2014). Deflated and augmented Krylov subspace methods: A framework for deflated BiCG and related solvers. SIAM Journal on Matrix Analysis and Applications, 35, 1444–1466.",
+        "journal-title": "SIAM Journal on Matrix Analysis and Applications"
+      },
+      {
+        "key": "9484_CR17",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Holloway, A., & Chen, T.Y. (2007). Neural networks for predicting the behavior of preconditioned iterative solvers.",
+        "DOI": "10.1007/978-3-540-72584-8_39"
+      },
+      {
+        "issue": "5",
+        "key": "9484_CR18",
+        "doi-asserted-by": "publisher",
+        "first-page": "S750",
+        "DOI": "10.1137/15M1028406",
+        "volume": "38",
+        "author": "E Jessup",
+        "year": "2016",
+        "unstructured": "Jessup, E., Motter, P., Norris, B., & Sood, K. (2016). Performance-based numerical solver selection in the Lighthouse framework. SIAM Journal of Scientific Computing, 38(5), S750–S771.",
+        "journal-title": "SIAM Journal of Scientific Computing"
+      },
+      {
+        "key": "9484_CR19",
+        "volume-title": "Irrelevant features and the subset selection problem. In Machine Learning Proceedings",
+        "author": "GH John",
+        "year": "1994",
+        "unstructured": "John, G. H., Kohavi, R., & Pfleger, K. (1994). Irrelevant features and the subset selection problem. In Machine Learning Proceedings. San Francisco (CA): Morgan Kaufmann."
+      },
+      {
+        "key": "9484_CR20",
+        "doi-asserted-by": "publisher",
+        "first-page": "273",
+        "DOI": "10.1016/S0004-3702(97)00043-X",
+        "volume": "97",
+        "author": "R Kohavi",
+        "year": "1997",
+        "unstructured": "Kohavi, R., & John, G. H. (1997). Wrappers for feature subset selection. Artificial Intelligence, 97, 273–324.",
+        "journal-title": "Artificial Intelligence"
+      },
+      {
+        "key": "9484_CR21",
+        "volume-title": "Statistical learning method",
+        "author": "H Lee",
+        "year": "2012",
+        "unstructured": "Lee, H. (2012). Statistical learning method (2nd ed.). PeKing: Tsinghua University.",
+        "edition": "2"
+      },
+      {
+        "issue": "4",
+        "key": "9484_CR22",
+        "doi-asserted-by": "publisher",
+        "first-page": "491",
+        "DOI": "10.1109/TKDE.2005.66",
+        "volume": "17",
+        "author": "H Liu",
+        "year": "2005",
+        "unstructured": "Liu, H., & Yu, L. (2005). Toward integrating feature selection algorithms for classification and clustering. IEEE Transactions on Knowledge and Data Engineering, 17(4), 491–502.",
+        "journal-title": "IEEE Transactions on Knowledge and Data Engineering"
+      },
+      {
+        "issue": "1",
+        "key": "9484_CR23",
+        "doi-asserted-by": "publisher",
+        "first-page": "20",
+        "DOI": "10.1137/S1064827599364659",
+        "volume": "24",
+        "author": "RB Morgan",
+        "year": "2002",
+        "unstructured": "Morgan, R. B. (2002). GMRES with deflated restarting. SIAM Journal on Scientific Computing, 24(1), 20–37.",
+        "journal-title": "SIAM Journal on Scientific Computing"
+      },
+      {
+        "issue": "2",
+        "key": "9484_CR24",
+        "doi-asserted-by": "publisher",
+        "first-page": "222",
+        "DOI": "10.1016/j.apnum.2004.09.028",
+        "volume": "54",
+        "author": "RB Morgan",
+        "year": "2005",
+        "unstructured": "Morgan, R. B. (2005). Restarted block GMRES with deflation of eigenvalues. Applied Numerical Mathematics, 54(2), 222–236.",
+        "journal-title": "Applied Numerical Mathematics"
+      },
+      {
+        "key": "9484_CR25",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Motter, P., Sood, K., & Jessup, E. (2015). Lighthouse: An automated solver selection tool. Software Engineering for High Performance Computing in Computational Science and Engineering.",
+        "DOI": "10.1145/2830168.2830169"
+      },
+      {
+        "key": "9484_CR26",
+        "unstructured": "National Institute of Standards and Technology (2021). Matrix Market. available online at https://math.nist.gov/MatrixMarket/."
+      },
+      {
+        "key": "9484_CR27",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1137/1.9780898718003",
+        "volume-title": "Iterative methods for sparse linear systems",
+        "author": "Y Saad",
+        "year": "2003",
+        "unstructured": "Saad, Y. (2003). Iterative methods for sparse linear systems (2nd ed.). Philadelphia: SIAM.",
+        "edition": "2"
+      },
+      {
+        "issue": "4",
+        "key": "9484_CR28",
+        "doi-asserted-by": "publisher",
+        "first-page": "28",
+        "DOI": "10.1109/MCSE.2022.3214388",
+        "volume": "24",
+        "author": "Y Saad",
+        "year": "2023",
+        "unstructured": "Saad, Y. (2023). The origin and development of Krylov subspace methods. Computing in Science and Engineering, 24(4), 28–39.",
+        "journal-title": "Computing in Science and Engineering"
+      },
+      {
+        "key": "9484_CR29",
+        "first-page": "1",
+        "volume": "123",
+        "author": "Y Saad",
+        "year": "1986",
+        "unstructured": "Saad, Y., & Schultz, M. H. (1986). GMRES: A generalized minimal residual algorithm for solving nonsymmetric linear systems. SIAM Journal of Scientific and Statistical Computing, 123, 1–33.",
+        "journal-title": "SIAM Journal of Scientific and Statistical Computing"
+      },
+      {
+        "issue": "1–2",
+        "key": "9484_CR30",
+        "doi-asserted-by": "publisher",
+        "first-page": "1",
+        "DOI": "10.1016/S0377-0427(00)00412-X",
+        "volume": "123",
+        "author": "Y Saad",
+        "year": "2000",
+        "unstructured": "Saad, Y., & van der Vorst, H. A. (2000). Iterative solution of linear systems in the 20th century. Journal of Computational and Applied Mathematics, 123(1–2), 1–33.",
+        "journal-title": "Journal of Computational and Applied Mathematics"
+      },
+      {
+        "key": "9484_CR31",
+        "unstructured": "Si, S.-K. & Sun, X.-J. (2021). Mathematical modeling algorithms and applications (Third ed.). National Defence Industry Press."
+      },
+      {
+        "issue": "1",
+        "key": "9484_CR32",
+        "doi-asserted-by": "publisher",
+        "first-page": "1",
+        "DOI": "10.1002/nla.499",
+        "volume": "14",
+        "author": "V Simoncini",
+        "year": "2007",
+        "unstructured": "Simoncini, V., & Szyld, D. B. (2007). Numerical linear algebra with applications, 14(1), 1–59.",
+        "journal-title": "Numerical linear algebra with applications"
+      },
+      {
+        "key": "9484_CR33",
+        "unstructured": "Sood, K. (2019). Iterative solver selection techniques for sparse linear systems. Ph. D. thesis, University of Oregon."
+      },
+      {
+        "key": "9484_CR34",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Sood, K., Norris, B. & Jessup, E. (2015). Lighthouse: A taxonomy-based solver selection tool. In Proceedings of the 2nd International Workshop on Software Engineering for Parallel Systems, pp. 60–70.",
+        "DOI": "10.1145/2837476.2837485"
+      },
+      {
+        "key": "9484_CR35",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Sood, K., Norris, B., & Jessup, E. (2017). Comparative performance modeling of parallel preconditioned Krylov methods. 2017 IEEE 19th International Conference on High Performance Computing and Communications., 26–33.",
+        "DOI": "10.1109/HPCC-SmartCity-DSS.2017.4"
+      },
+      {
+        "key": "9484_CR36",
+        "unstructured": "Toth, B.A. (2009). Cost effective machine learning approaches for linear solver selection. Master’s thesis, The Pennsylvania State University."
+      },
+      {
+        "key": "9484_CR37",
+        "unstructured": "Witten, I.H., Frank, E. & Hall, M.A. (2011). Data mining: Practical machine learning tools and techniques (Third ed.). Elsevier."
+      },
+      {
+        "issue": "06",
+        "key": "9484_CR38",
+        "first-page": "51",
+        "volume": "150",
+        "author": "G-M Xia",
+        "year": "2007",
+        "unstructured": "Xia, G.-M., & Zeng, J.-C. (2007). A stochastic particle swarm optimization algorithm based on roulette selection genetic algorithm. Computer Engineering and Science, 150(06), 51–54.",
+        "journal-title": "Computer Engineering and Science"
+      },
+      {
+        "key": "9484_CR39",
+        "unstructured": "Xu, S. (2005). Study and design of an intelligent preconditioner recommendation system. Ph. D. thesis, University of Kentucky, Lexington, Kentucky."
+      },
+      {
+        "key": "9484_CR40",
+        "unstructured": "Xu, S. & Zhang, J. (2005). A data mining approach to matrix preconditioning problem. Technical report, University of Kentucky."
+      },
+      {
+        "key": "9484_CR41",
+        "unstructured": "Zhang, J. (2001). Performance of ILU preconditioners for stationary 3D Navier-Stokes simulation and the matrix mining project. Proceedings of the 2001 International Conference on Preconditioning Techniques for Large Sparse Matrix Problems in Scientific and Industrial Applications."
+      },
+      {
+        "key": "9484_CR42",
+        "unstructured": "Zou, H.-F. (2023a). The study of intelligent iterative methods for sparse linear algebraic equations based on graph neural networks. Ph. D. thesis, China Academy of Engineering Physis."
+      },
+      {
+        "issue": "3",
+        "key": "9484_CR43",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.amc.2023.127869",
+        "volume": "445",
+        "author": "Q-M Zou",
+        "year": "2023",
+        "unstructured": "Zou, Q.-M. (2023). GMRES algorithms over 35 years. Applied Mathematics and Computation, 445(3), 127869.",
+        "journal-title": "Applied Mathematics and Computation"
+      },
+      {
+        "key": "9484_CR44",
+        "unstructured": "Zou, H.-F., Xu, X.-W., Zhang, C.-S. & Mo, Z.-Y. (2023). AutoAMG($$\\theta $$): An auto-tuned AMG method based on deep learning for strong threshold. ArXiv, abs/2307.09879."
+      }
+    ],
+    "container-title": [
+      "Journal of Classification"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://link.springer.com/content/pdf/10.1007/s00357-024-09484-0.pdf",
+        "content-type": "application/pdf",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://link.springer.com/article/10.1007/s00357-024-09484-0/fulltext.html",
+        "content-type": "text/html",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://link.springer.com/content/pdf/10.1007/s00357-024-09484-0.pdf",
+        "content-type": "application/pdf",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2025,
+          3,
+          19
+        ]
+      ],
+      "date-time": "2025-03-19T08:10:24Z",
+      "timestamp": 1742371824000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://link.springer.com/10.1007/s00357-024-09484-0"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2024,
+          7,
+          6
+        ]
+      ]
+    },
+    "references-count": 44,
+    "journal-issue": {
+      "issue": "1",
+      "published-print": {
+        "date-parts": [
+          [
+            2025,
+            3
+          ]
+        ]
+      }
+    },
+    "alternative-id": [
+      "9484"
+    ],
+    "URL": "https://doi.org/10.1007/s00357-024-09484-0",
+    "relation": {},
+    "ISSN": [
+      "0176-4268",
+      "1432-1343"
+    ],
+    "issn-type": [
+      {
+        "value": "0176-4268",
+        "type": "print"
+      },
+      {
+        "value": "1432-1343",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2024,
+          7,
+          6
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "19 June 2024",
+        "order": 1,
+        "name": "accepted",
+        "label": "Accepted",
+        "group": {
+          "name": "ArticleHistory",
+          "label": "Article History"
+        }
+      },
+      {
+        "value": "6 July 2024",
+        "order": 2,
+        "name": "first_online",
+        "label": "First Online",
+        "group": {
+          "name": "ArticleHistory",
+          "label": "Article History"
+        }
+      },
+      {
+        "order": 1,
+        "name": "Ethics",
+        "group": {
+          "name": "EthicsHeading",
+          "label": "Declarations"
+        }
+      },
+      {
+        "value": "The authors declare no competing interests.",
+        "order": 2,
+        "name": "Ethics",
+        "group": {
+          "name": "EthicsHeading",
+          "label": "Conflict of Interest"
+        }
+      }
+    ]
+  }
+}

@@ -1,43 +1,18 @@
-# Manuscript evidence map
+# Manuscript evidence map — six-page revision
 
-## Second-round review revision — v5 / v1.2
+Main and supplementary numbers below identify the 3 October presentation. The scientific datasets are unchanged. Historical, controlled-extension and paired-calibration timings remain separate.
 
-This complete revision is identified by Zenodo v5, https://doi.org/10.5281/zenodo.22874266, and GitHub release https://github.com/liudong6/icemce2026-pde-solver-benchmark/releases/tag/v1.2-icemce2026-review-revision. The v4 DOI identifies the earlier baseline and controlled extension. This revision adds 378 paired callback-calibration solves, the complete nine-cell face-averaging table in the main paper, an explicit interface-resistance interpretation, and distinct scopes for historical, extension and calibration timings. Original raw files are unchanged. The primary Word/PDF manuscript highlights review changes in yellow.
-
-Reproduce the new tables without rerunning timings:
-
-```powershell
-python experiments/analyze_protocol_sensitivity.py
-```
-
-The prospective design is `experiments/protocol_sensitivity.md`; raw timings, configuration, source hashes and environment are in `results/raw/protocol_sensitivity`. Method quartiles, paired ratios, winner votes and the numerical audit are in `results/analysis/protocol_sensitivity`. To rerun measurements, use `python experiments/run_protocol_sensitivity.py --output results/raw/protocol_sensitivity_rerun` in an unused directory, with no other performance workload running. Existing evidence is never overwritten.
-
-All 378 recorded residuals are at most 1e-8, and all 189 mode pairs have identical solution hashes and iteration counts. Median solve-time inflation is 1.54–1.84 for CG, 1.58–1.77 for Jacobi, and 1.03–1.06 for AMG. The nine median winners agree between callbacks, but vote instability is retained. These results do not reconstruct historical cold-import/thread/order effects or establish a machine-independent crossover.
-
-
-Paths are relative to the extracted reproducibility artefact. This map identifies
-the numerical sources of the main results and the checks that bound their use.
-The baseline and controlled-extension timing protocols are different and must
-not be pooled. No new numerical experiment is required to regenerate the tables,
-figures or portfolio cost calculation from recorded data.
-
-## Main tables and figures
-
-| Manuscript item | Recorded evidence | Rebuild or calculation |
+| Current location | Evidence | Regeneration |
 |---|---|---|
-| Table 1; Figure 1: smooth convergence | `results/raw/convergence.csv` | Fit log(error) versus log(h) separately for each coefficient case; `experiments/make_paper_tables.py`, `experiments/make_all_figures.py` |
-| Table 2: aligned interface check | `results/raw/interface_verification.csv` | Compare `interface_flux` with `exact_flux` for each N and face average; the same table builder |
-| Table 3; Figure 2: descriptors and conditioning | `results/raw/solver_decision_map.csv`, `results/raw/conditioning.csv` | Table descriptors use N64; reported largest available condition estimates use N128. The two generators above preserve this distinction |
-| Table 4: baseline measured decisions | `results/raw/solver_decision_map.csv` | Group the 13 cases by N; count fastest converged methods and summarize `speedup_vs_cg`; table builder |
-| Table 5; Figure 3: baseline solver performance | `results/raw/solver_benchmark.csv` | Table uses N256; plot retains each recorded N; table/figure builders |
-| Figure 4: matched-field/source audit | `results/raw/counterfactual/confirmation.csv` | `experiments/analyze_counterfactual.py`; plotted medians and full five-run ranges, with no confidence-interval claim |
-| Tables 6 and 7: all face-average comparisons and paired callback calibration | `results/raw/averaging_sensitivity.csv`, `results/raw/protocol_sensitivity/timings.csv` | `experiments/analyze_protocol_sensitivity.py`; complete candidate quartiles, paired ratios and votes in `results/analysis/protocol_sensitivity` |
-| Table 8: all 12 interleaved translated pairs | `results/raw/counterfactual/portfolio_confirmation.csv` | `experiments/analyze_portfolio.py` produces per-position medians, all pair floors, and `paper/tables/portfolio_summary.tex` |
-| Table 9; Figures 5 and 6: stencil measurements | `results/raw/cpu_scaling.csv`, `results/raw/gpu_stencil.csv` | The baseline table/figure builders; CUDA is resident-data Jacobi and CPU variable-coefficient apply is a separate experiment |
+| Main Table 1; Supplement Table S6 | `results/raw/averaging_sensitivity.csv` | `experiments/analyze_protocol_sensitivity.py` |
+| Main Table 2; Supplement Table S7 | `results/raw/protocol_sensitivity/timings.csv` | Same analyser; all candidate quartiles, paired ratios and votes in `results/analysis/protocol_sensitivity` |
+| Main Table 3; Supplement Table S8 | `results/raw/counterfactual/portfolio_confirmation.csv` | `experiments/analyze_portfolio.py` |
+| Main Figure 1; original Supplement Figure S4 | `results/raw/counterfactual/confirmation.csv` | Compact: `tools/plot_compact_counterfactual.py`; original: `experiments/analyze_counterfactual.py`. Medians and full five-run ranges, no confidence-interval claim |
+| Main Section 2; Supplement Tables S1–S2 / Figure S1 | `results/raw/convergence.csv`, `interface_verification.csv` | `experiments/make_paper_tables.py`, `experiments/make_all_figures.py` |
+| Main Sections 2–3; Supplement Tables S3–S5 / Figures S2–S3 | `conditioning.csv`, `solver_decision_map.csv`, `solver_benchmark.csv` in `results/raw` | Same generators; preserve N128 spectral proxy for N256 |
+| Main Section 5; Supplement Table S9 / Figures S5–S6 | `results/raw/cpu_scaling.csv`, `gpu_stencil.csv` | Same generators; variable-coefficient CPU apply and resident-data Jacobi CUDA are distinct experiments |
 
-`tools/build_iop_docx.py` reads the same recorded inputs and the generated
-portfolio summary when building the editable Word tables. The LaTeX manuscript
-inputs generated files in `paper/tables/`.
+`tools/build_iop_docx.py` calls `tools/build_compact_manuscript.py` to build the Word main paper and synchronise LaTeX from `paper/compact_manuscript.txt` and `compact_references.json`. `tools/build_supplementary_methods.py` extracts complete methods/results from the retained pre-compression Word source, preserving tables, native equations and media. Full reference titles remain in that supplement, BibTeX and the audit. The current main retains 31 references, 18 recent and one preprint.
 
 ## Numerical statements in the text
 
@@ -75,7 +50,7 @@ In this list, `counterfactual/` abbreviates `results/raw/counterfactual/`.
   only. Classical AMG requires 11 iterations at both positions.
 - **11.91% and zero N192 median floor:**
   `results/analysis/counterfactual/portfolio_translation_floors.csv`;
-  recompute with `experiments/analyze_portfolio.py` and Equation 9. For every
+  recompute with `experiments/analyze_portfolio.py` and main Equation 3 / supplementary Equation S9. For every
   candidate, average its time divided by the per-position oracle time; take
   the smallest candidate average and subtract 1. The smallest median-based
   floor can be zero even when individual repeats have different winners.

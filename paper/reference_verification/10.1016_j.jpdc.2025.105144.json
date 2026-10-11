@@ -1,0 +1,996 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          18
+        ]
+      ],
+      "date-time": "2026-09-18T18:28:54Z",
+      "timestamp": 1789756134354,
+      "version": "4.0.1"
+    },
+    "reference-count": 61,
+    "publisher": "Elsevier BV",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2025,
+              11,
+              1
+            ]
+          ],
+          "date-time": "2025-11-01T00:00:00Z",
+          "timestamp": 1761955200000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2025,
+              11,
+              1
+            ]
+          ],
+          "date-time": "2025-11-01T00:00:00Z",
+          "timestamp": 1761955200000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://www.elsevier.com/legal/tdmrep-license"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2025,
+              11,
+              1
+            ]
+          ],
+          "date-time": "2025-11-01T00:00:00Z",
+          "timestamp": 1761955200000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-017"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2025,
+              11,
+              1
+            ]
+          ],
+          "date-time": "2025-11-01T00:00:00Z",
+          "timestamp": 1761955200000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-037"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2025,
+              11,
+              1
+            ]
+          ],
+          "date-time": "2025-11-01T00:00:00Z",
+          "timestamp": 1761955200000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-012"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2025,
+              11,
+              1
+            ]
+          ],
+          "date-time": "2025-11-01T00:00:00Z",
+          "timestamp": 1761955200000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-029"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2025,
+              11,
+              1
+            ]
+          ],
+          "date-time": "2025-11-01T00:00:00Z",
+          "timestamp": 1761955200000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-004"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/501100015956",
+        "name": "Special Project for Research and Development in Key areas of Guangdong Province",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "2024QT006"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "2024QT006"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/501100015956",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      },
+      {
+        "DOI": "10.13039/501100001809",
+        "name": "National Natural Science Foundation of China",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "U21A20461"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "U21A20461"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/501100001809",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      },
+      {
+        "DOI": "10.13039/501100001809",
+        "name": "National Natural Science Foundation of China",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "61872127"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "61872127"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/501100001809",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      },
+      {
+        "DOI": "10.13039/501100001809",
+        "name": "National Natural Science Foundation of China",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "61751204"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "61751204"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/501100001809",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "elsevier.com",
+        "sciencedirect.com"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [
+      "Journal of Parallel and Distributed Computing"
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2025,
+          11
+        ]
+      ]
+    },
+    "DOI": "10.1016/j.jpdc.2025.105144",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2025,
+          7,
+          2
+        ]
+      ],
+      "date-time": "2025-07-02T02:47:37Z",
+      "timestamp": 1751424457000
+    },
+    "page": "105144",
+    "update-policy": "https://doi.org/10.1016/elsevier_cm_policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 3,
+    "special_numbering": "C",
+    "title": [
+      "MM-AutoSolver: A multimodal machine learning method for the auto-selection of iterative solvers and preconditioners"
+    ],
+    "prefix": "10.1016",
+    "volume": "205",
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0009-0001-5972-4199",
+        "authenticated-orcid": false,
+        "given": "Hantao",
+        "family": "Xiong",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Wangdong",
+        "family": "Yang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0009-0006-5219-6289",
+        "authenticated-orcid": false,
+        "given": "Weiqing",
+        "family": "He",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-3329-0924",
+        "authenticated-orcid": false,
+        "given": "Shengle",
+        "family": "Lin",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0001-5224-4048",
+        "authenticated-orcid": false,
+        "given": "Keqin",
+        "family": "Li",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Kenli",
+        "family": "Li",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "78",
+    "reference": [
+      {
+        "issue": "2166",
+        "key": "10.1016/j.jpdc.2025.105144_br0010",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1098/rsta.2019.0053",
+        "article-title": "Preparing sparse solvers for exascale computing",
+        "volume": "378",
+        "author": "Anzt",
+        "year": "2020",
+        "journal-title": "Philos. Trans. R. Soc. A"
+      },
+      {
+        "key": "10.1016/j.jpdc.2025.105144_br0020",
+        "series-title": "Direct Methods for Sparse Linear Systems",
+        "author": "Davis",
+        "year": "2006"
+      },
+      {
+        "key": "10.1016/j.jpdc.2025.105144_br0030",
+        "series-title": "Iterative Methods for Sparse Linear Systems",
+        "author": "Saad",
+        "year": "2003"
+      },
+      {
+        "issue": "2",
+        "key": "10.1016/j.jpdc.2025.105144_br0040",
+        "doi-asserted-by": "crossref",
+        "first-page": "418",
+        "DOI": "10.1006/jcph.2002.7176",
+        "article-title": "Preconditioning techniques for large linear systems: a survey",
+        "volume": "182",
+        "author": "Benzi",
+        "year": "2002",
+        "journal-title": "J. Comput. Phys."
+      },
+      {
+        "key": "10.1016/j.jpdc.2025.105144_br0050",
+        "series-title": "Templates for the Solution of Linear Systems: Building Blocks for Iterative Methods",
+        "author": "Barrett",
+        "year": "1994"
+      },
+      {
+        "issue": "1",
+        "key": "10.1016/j.jpdc.2025.105144_br0060",
+        "first-page": "1",
+        "article-title": "The University of Florida sparse matrix collection",
+        "volume": "38",
+        "author": "Davis",
+        "year": "2011",
+        "journal-title": "ACM Trans. Math. Softw."
+      },
+      {
+        "key": "10.1016/j.jpdc.2025.105144_br0070",
+        "author": "Zou"
+      },
+      {
+        "key": "10.1016/j.jpdc.2025.105144_br0080",
+        "author": "Mitchell",
+        "year": "1997"
+      },
+      {
+        "key": "10.1016/j.jpdc.2025.105144_br0090",
+        "article-title": "Application of machine learning to the selection of sparse linear solvers",
+        "author": "Bhowmick",
+        "year": "2006",
+        "journal-title": "Int. J. High Perform. Comput. Appl."
+      },
+      {
+        "key": "10.1016/j.jpdc.2025.105144_br0100",
+        "series-title": "Computational Science–ICCS 2009: 9th International Conference, Baton Rouge, LA, USA, May 25-27, 2009, Proceedings, Part I",
+        "first-page": "463",
+        "article-title": "Towards low-cost, high-accuracy classifiers for linear solver selection",
+        "author": "Bhowmick",
+        "year": "2009"
+      },
+      {
+        "key": "10.1016/j.jpdc.2025.105144_br0110",
+        "series-title": "2012 IEEE 26th International Parallel and Distributed Processing Symposium Workshops & PhD Forum",
+        "first-page": "1915",
+        "article-title": "Dynamic linear solver selection for transient simulations using machine learning on distributed systems",
+        "author": "Eller",
+        "year": "2012"
+      },
+      {
+        "key": "10.1016/j.jpdc.2025.105144_br0120",
+        "doi-asserted-by": "crossref",
+        "first-page": "1332",
+        "DOI": "10.1016/j.procs.2013.05.300",
+        "article-title": "A sparse matrix library with automatic selection of iterative solvers and preconditioners",
+        "volume": "18",
+        "author": "Sakurai",
+        "year": "2013",
+        "journal-title": "Proc. Comput. Sci."
+      },
+      {
+        "issue": "5",
+        "key": "10.1016/j.jpdc.2025.105144_br0130",
+        "doi-asserted-by": "crossref",
+        "first-page": "S750",
+        "DOI": "10.1137/15M1028406",
+        "article-title": "Performance-based numerical solver selection in the lighthouse framework",
+        "volume": "38",
+        "author": "Jessup",
+        "year": "2016",
+        "journal-title": "SIAM J. Sci. Comput."
+      },
+      {
+        "key": "10.1016/j.jpdc.2025.105144_br0140",
+        "first-page": "1",
+        "article-title": "A new matrix feature selection strategy in machine learning models for certain Krylov solver prediction",
+        "author": "Sun",
+        "year": "2024",
+        "journal-title": "J. Classif."
+      },
+      {
+        "key": "10.1016/j.jpdc.2025.105144_br0150",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1016/j.cma.2024.117031",
+        "article-title": "Automated linear solver selection for simulation of multiphysics processes in porous media",
+        "volume": "426",
+        "author": "Zabegaev",
+        "year": "2024",
+        "journal-title": "Comput. Methods Appl. Mech. Eng."
+      },
+      {
+        "issue": "7553",
+        "key": "10.1016/j.jpdc.2025.105144_br0160",
+        "doi-asserted-by": "crossref",
+        "first-page": "436",
+        "DOI": "10.1038/nature14539",
+        "article-title": "Deep learning",
+        "volume": "521",
+        "author": "LeCun",
+        "year": "2015",
+        "journal-title": "Nature"
+      },
+      {
+        "key": "10.1016/j.jpdc.2025.105144_br0170",
+        "series-title": "2016 7th International Workshop on Performance Modeling, Benchmarking and Simulation of High Performance Computer Systems (PMBS)",
+        "first-page": "32",
+        "article-title": "Data-driven performance modeling of linear solvers for sparse matrices",
+        "author": "Yeom",
+        "year": "2016"
+      },
+      {
+        "key": "10.1016/j.jpdc.2025.105144_br0180",
+        "series-title": "2018 Sixth International Symposium on Computing and Networking Workshops (CANDARW)",
+        "first-page": "257",
+        "article-title": "Preconditioner auto-tuning using deep learning for sparse iterative algorithms",
+        "author": "Yamada",
+        "year": "2018"
+      },
+      {
+        "key": "10.1016/j.jpdc.2025.105144_br0190",
+        "series-title": "Proceedings of the 2022 SIAM Conference on Parallel Processing for Scientific Computing",
+        "first-page": "14",
+        "article-title": "Prediction of optimal solvers for sparse linear systems using deep learning",
+        "author": "Funk",
+        "year": "2022"
+      },
+      {
+        "key": "10.1016/j.jpdc.2025.105144_br0200",
+        "series-title": "NeurIPS 2022 Workshop: New Frontiers in Graph Learning",
+        "article-title": "Graph neural networks for selection of preconditioners and Krylov solvers",
+        "author": "Tang",
+        "year": "2022"
+      },
+      {
+        "key": "10.1016/j.jpdc.2025.105144_br0210",
+        "series-title": "Numerical Analysis",
+        "author": "Burden",
+        "year": "2011"
+      },
+      {
+        "key": "10.1016/j.jpdc.2025.105144_br0220",
+        "series-title": "2018 IEEE/ACM 9th Workshop on Latest Advances in Scalable Algorithms for Large-Scale Systems (ScalA)",
+        "first-page": "49",
+        "article-title": "Machine learning-aided numerical linear algebra: convolutional neural networks for the efficient preconditioner generation",
+        "author": "Götz",
+        "year": "2018"
+      },
+      {
+        "key": "10.1016/j.jpdc.2025.105144_br0230",
+        "series-title": "Proceedings of the 2022 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies: Tutorial Abstracts",
+        "first-page": "33",
+        "article-title": "Tutorial on multimodal machine learning",
+        "author": "Morency",
+        "year": "2022"
+      },
+      {
+        "issue": "4",
+        "key": "10.1016/j.jpdc.2025.105144_br0240",
+        "doi-asserted-by": "crossref",
+        "first-page": "3268",
+        "DOI": "10.1109/TITS.2020.3034239",
+        "article-title": "A hybrid deep learning based framework for component defect detection of moving trains",
+        "volume": "23",
+        "author": "Chen",
+        "year": "2020",
+        "journal-title": "IEEE Trans. Intell. Transp. Syst."
+      },
+      {
+        "issue": "4",
+        "key": "10.1016/j.jpdc.2025.105144_br0250",
+        "doi-asserted-by": "crossref",
+        "first-page": "541",
+        "DOI": "10.1162/neco.1989.1.4.541",
+        "article-title": "Backpropagation applied to handwritten zip code recognition",
+        "volume": "1",
+        "author": "LeCun",
+        "year": "1989",
+        "journal-title": "Neural Comput."
+      },
+      {
+        "key": "10.1016/j.jpdc.2025.105144_br0260",
+        "series-title": "Numerical Optimization",
+        "author": "Wright",
+        "year": "2006"
+      },
+      {
+        "key": "10.1016/j.jpdc.2025.105144_br0270",
+        "series-title": "Methods of Conjugate Gradients for Solving Linear Systems, vol. 49",
+        "author": "Hestenes",
+        "year": "1952"
+      },
+      {
+        "issue": "3",
+        "key": "10.1016/j.jpdc.2025.105144_br0280",
+        "doi-asserted-by": "crossref",
+        "first-page": "856",
+        "DOI": "10.1137/0907058",
+        "article-title": "Gmres: a generalized minimal residual algorithm for solving nonsymmetric linear systems",
+        "volume": "7",
+        "author": "Saad",
+        "year": "1986",
+        "journal-title": "SIAM J. Sci. Stat. Comput."
+      },
+      {
+        "key": "10.1016/j.jpdc.2025.105144_br0290",
+        "series-title": "Multigrid Methods",
+        "first-page": "73",
+        "article-title": "Algebraic multigrid",
+        "author": "Ruge",
+        "year": "1987"
+      },
+      {
+        "key": "10.1016/j.jpdc.2025.105144_br0300",
+        "series-title": "Numerical Analysis: Proceedings of the Dundee Conference on Numerical Analysis",
+        "first-page": "73",
+        "article-title": "Conjugate gradient methods for indefinite systems",
+        "author": "Fletcher",
+        "year": "2006"
+      },
+      {
+        "issue": "2",
+        "key": "10.1016/j.jpdc.2025.105144_br0310",
+        "doi-asserted-by": "crossref",
+        "first-page": "631",
+        "DOI": "10.1137/0913035",
+        "article-title": "Bi-cgstab: a fast and smoothly converging variant of bi-cg for the solution of nonsymmetric linear systems",
+        "volume": "13",
+        "author": "Van der Vorst",
+        "year": "1992",
+        "journal-title": "SIAM J. Sci. Stat. Comput."
+      },
+      {
+        "issue": "2",
+        "key": "10.1016/j.jpdc.2025.105144_br0320",
+        "doi-asserted-by": "crossref",
+        "first-page": "423",
+        "DOI": "10.1109/TPAMI.2018.2798607",
+        "article-title": "Multimodal machine learning: a survey and taxonomy",
+        "volume": "41",
+        "author": "Baltrušaitis",
+        "year": "2018",
+        "journal-title": "IEEE Trans. Pattern Anal. Mach. Intell."
+      },
+      {
+        "key": "10.1016/j.jpdc.2025.105144_br0330",
+        "doi-asserted-by": "crossref",
+        "first-page": "5633",
+        "DOI": "10.1007/s00521-019-04311-9",
+        "article-title": "Multi-task cascade deep convolutional neural networks for large-scale commodity recognition",
+        "volume": "32",
+        "author": "Zou",
+        "year": "2020",
+        "journal-title": "Neural Comput. Appl."
+      },
+      {
+        "issue": "12",
+        "key": "10.1016/j.jpdc.2025.105144_br0340",
+        "doi-asserted-by": "crossref",
+        "first-page": "9236",
+        "DOI": "10.1109/TPAMI.2021.3125995",
+        "article-title": "Af: an association-based fusion method for multi-modal classification",
+        "volume": "44",
+        "author": "Liang",
+        "year": "2022",
+        "journal-title": "IEEE Trans. Pattern Anal. Mach. Intell."
+      },
+      {
+        "key": "10.1016/j.jpdc.2025.105144_br0350",
+        "doi-asserted-by": "crossref",
+        "first-page": "8083",
+        "DOI": "10.1109/TIP.2020.3010631",
+        "article-title": "Latent complete row space recovery for multi-view subspace clustering",
+        "volume": "29",
+        "author": "Tao",
+        "year": "2020",
+        "journal-title": "IEEE Trans. Image Process."
+      },
+      {
+        "issue": "1",
+        "key": "10.1016/j.jpdc.2025.105144_br0360",
+        "doi-asserted-by": "crossref",
+        "first-page": "4",
+        "DOI": "10.1109/TNNLS.2020.2978386",
+        "article-title": "A comprehensive survey on graph neural networks",
+        "volume": "32",
+        "author": "Wu",
+        "year": "2020",
+        "journal-title": "IEEE Trans. Neural Netw. Learn. Syst."
+      },
+      {
+        "key": "10.1016/j.jpdc.2025.105144_br0370",
+        "series-title": "Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition",
+        "first-page": "3431",
+        "article-title": "Fully convolutional networks for semantic segmentation",
+        "author": "Long",
+        "year": "2015"
+      },
+      {
+        "key": "10.1016/j.jpdc.2025.105144_br0380",
+        "series-title": "Proceedings of the ACM International Conference on Supercomputing",
+        "first-page": "94",
+        "article-title": "Ia-spgemm: an input-aware auto-tuning framework for parallel sparse matrix-matrix multiplication",
+        "author": "Xie",
+        "year": "2019"
+      },
+      {
+        "issue": "1",
+        "key": "10.1016/j.jpdc.2025.105144_br0390",
+        "doi-asserted-by": "crossref",
+        "first-page": "159",
+        "DOI": "10.1109/TPDS.2021.3090328",
+        "article-title": "A pattern-based spgemm library for multi-core and many-core architectures",
+        "volume": "33",
+        "author": "Xie",
+        "year": "2021",
+        "journal-title": "IEEE Trans. Parallel Distrib. Syst."
+      },
+      {
+        "key": "10.1016/j.jpdc.2025.105144_br0400",
+        "series-title": "Proceedings of the Twenty-First Annual Symposium on Parallelism in Algorithms and Architectures",
+        "first-page": "233",
+        "article-title": "Parallel sparse matrix-vector and matrix-transpose-vector multiplication using compressed sparse blocks",
+        "author": "Buluç",
+        "year": "2009"
+      },
+      {
+        "issue": "4",
+        "key": "10.1016/j.jpdc.2025.105144_br0410",
+        "doi-asserted-by": "crossref",
+        "first-page": "1",
+        "DOI": "10.1145/1462173.1462174",
+        "article-title": "A standard and software for numerical metadata",
+        "volume": "35",
+        "author": "Eijkhout",
+        "year": "2009",
+        "journal-title": "ACM Trans. Math. Softw."
+      },
+      {
+        "issue": "3–4",
+        "key": "10.1016/j.jpdc.2025.105144_br0420",
+        "first-page": "251",
+        "article-title": "New development in FreeFEM++",
+        "volume": "20",
+        "author": "Hecht",
+        "year": "2012",
+        "journal-title": "J. Numer. Math."
+      },
+      {
+        "key": "10.1016/j.jpdc.2025.105144_br0430",
+        "series-title": "International Workshop on Coupled Methods in Numerical Dynamics",
+        "first-page": "1",
+        "article-title": "OpenFOAM: a C++ library for complex physics simulations",
+        "author": "Jasak",
+        "year": "2007"
+      },
+      {
+        "key": "10.1016/j.jpdc.2025.105144_br0440",
+        "author": "Balay"
+      },
+      {
+        "issue": "5",
+        "key": "10.1016/j.jpdc.2025.105144_br0450",
+        "doi-asserted-by": "crossref",
+        "first-page": "67",
+        "DOI": "10.1109/MM.2021.3085578",
+        "article-title": "Kunpeng 920: the first 7-nm chiplet-based 64-core arm soc for cloud services",
+        "volume": "41",
+        "author": "Xia",
+        "year": "2021",
+        "journal-title": "IEEE MICRO"
+      },
+      {
+        "key": "10.1016/j.jpdc.2025.105144_br0460",
+        "series-title": "Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining",
+        "first-page": "785",
+        "article-title": "Xgboost: a scalable tree boosting system",
+        "author": "Chen",
+        "year": "2016"
+      },
+      {
+        "key": "10.1016/j.jpdc.2025.105144_br0470",
+        "series-title": "ICML",
+        "first-page": "124",
+        "article-title": "The alternating decision tree learning algorithm",
+        "volume": "vol. 99",
+        "author": "Freund",
+        "year": "1999"
+      },
+      {
+        "key": "10.1016/j.jpdc.2025.105144_br0480",
+        "series-title": "12th USENIX Symposium on Operating Systems Design and Implementation",
+        "first-page": "265",
+        "article-title": "TensorFlow: a system for large-scale machine learning",
+        "author": "Abadi",
+        "year": "2016"
+      },
+      {
+        "key": "10.1016/j.jpdc.2025.105144_br0490",
+        "doi-asserted-by": "crossref",
+        "first-page": "273",
+        "DOI": "10.1023/A:1022627411411",
+        "article-title": "Support-vector networks",
+        "volume": "20",
+        "author": "Cortes",
+        "year": "1995",
+        "journal-title": "Mach. Learn."
+      },
+      {
+        "key": "10.1016/j.jpdc.2025.105144_br0500",
+        "series-title": "European Conference on Computational Learning Theory",
+        "first-page": "23",
+        "article-title": "A decision-theoretic generalization of on-line learning and an application to boosting",
+        "author": "Freund",
+        "year": "1995"
+      },
+      {
+        "issue": "1",
+        "key": "10.1016/j.jpdc.2025.105144_br0510",
+        "doi-asserted-by": "crossref",
+        "first-page": "21",
+        "DOI": "10.1109/TIT.1967.1053964",
+        "article-title": "Nearest neighbor pattern classification",
+        "volume": "13",
+        "author": "Cover",
+        "year": "1967",
+        "journal-title": "IEEE Trans. Inf. Theory"
+      },
+      {
+        "issue": "1",
+        "key": "10.1016/j.jpdc.2025.105144_br0520",
+        "first-page": "713",
+        "article-title": "Naïve Bayes",
+        "volume": "15",
+        "author": "Webb",
+        "year": "2010",
+        "journal-title": "Encycl. Mach. Learn."
+      },
+      {
+        "key": "10.1016/j.jpdc.2025.105144_br0530",
+        "series-title": "New Advances in Machine Learning",
+        "first-page": "117",
+        "article-title": "Machine learning for multi-stage selection of numerical methods",
+        "author": "Eijkhout",
+        "year": "2010"
+      },
+      {
+        "key": "10.1016/j.jpdc.2025.105144_br0540",
+        "series-title": "Iterative solver selection techniques for sparse linear systems",
+        "author": "Sood",
+        "year": "2019"
+      },
+      {
+        "key": "10.1016/j.jpdc.2025.105144_br0550",
+        "series-title": "Proceedings of the 3rd International Workshop on Software Engineering for High Performance Computing in Computational Science and Engineering",
+        "first-page": "16",
+        "article-title": "Lighthouse: an automated solver selection tool",
+        "author": "Motter",
+        "year": "2015"
+      },
+      {
+        "key": "10.1016/j.jpdc.2025.105144_br0560",
+        "series-title": "2017 IEEE 19th International Conference on High Performance Computing and Communications; IEEE 15th International Conference on Smart City; IEEE 3rd International Conference on Data Science and Systems (HPCC/SmartCity/DSS)",
+        "first-page": "26",
+        "article-title": "Comparative performance modeling of parallel preconditioned Krylov methods",
+        "author": "Sood",
+        "year": "2017"
+      },
+      {
+        "key": "10.1016/j.jpdc.2025.105144_br0570",
+        "series-title": "Computational Science–ICCS 2007: 7th International Conference, Beijing, China, May 27-30, 2007, Proceedings, Part I 7",
+        "first-page": "302",
+        "article-title": "Neural networks for predicting the behavior of preconditioned iterative solvers",
+        "author": "Holloway",
+        "year": "2007"
+      },
+      {
+        "key": "10.1016/j.jpdc.2025.105144_br0580",
+        "series-title": "Computational Science–ICCS 2008: 8th International Conference, Kraków, Poland, June 23-25, 2008, Proceedings, Part I 8",
+        "first-page": "955",
+        "article-title": "On using reinforcement learning to solve sparse linear systems",
+        "author": "Kuefler",
+        "year": "2008"
+      },
+      {
+        "key": "10.1016/j.jpdc.2025.105144_br0590",
+        "doi-asserted-by": "crossref",
+        "first-page": "237",
+        "DOI": "10.1613/jair.301",
+        "article-title": "Reinforcement learning: a survey",
+        "volume": "4",
+        "author": "Kaelbling",
+        "year": "1996",
+        "journal-title": "J. Artif. Intell. Res."
+      },
+      {
+        "key": "10.1016/j.jpdc.2025.105144_br0600",
+        "series-title": "Proceedings of the 2008 Conference on Empirical Methods in Natural Language Processing",
+        "first-page": "897",
+        "article-title": "A structured vector space model for word meaning in context",
+        "author": "Erk",
+        "year": "2008"
+      },
+      {
+        "key": "10.1016/j.jpdc.2025.105144_br0610",
+        "series-title": "Deep Learning",
+        "author": "Goodfellow",
+        "year": "2016"
+      }
+    ],
+    "container-title": [
+      "Journal of Parallel and Distributed Computing"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://api.elsevier.com/content/article/PII:S074373152500111X?httpAccept=text/xml",
+        "content-type": "text/xml",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://api.elsevier.com/content/article/PII:S074373152500111X?httpAccept=text/plain",
+        "content-type": "text/plain",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2026,
+          5,
+          11
+        ]
+      ],
+      "date-time": "2026-05-11T14:34:06Z",
+      "timestamp": 1778510046000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://linkinghub.elsevier.com/retrieve/pii/S074373152500111X"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2025,
+          11
+        ]
+      ]
+    },
+    "references-count": 61,
+    "alternative-id": [
+      "S074373152500111X"
+    ],
+    "URL": "https://doi.org/10.1016/j.jpdc.2025.105144",
+    "relation": {},
+    "ISSN": [
+      "0743-7315"
+    ],
+    "issn-type": [
+      {
+        "value": "0743-7315",
+        "type": "print"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2025,
+          11
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "Elsevier",
+        "name": "publisher",
+        "label": "This article is maintained by"
+      },
+      {
+        "value": "MM-AutoSolver: A multimodal machine learning method for the auto-selection of iterative solvers and preconditioners",
+        "name": "articletitle",
+        "label": "Article Title"
+      },
+      {
+        "value": "Journal of Parallel and Distributed Computing",
+        "name": "journaltitle",
+        "label": "Journal Title"
+      },
+      {
+        "value": "https://doi.org/10.1016/j.jpdc.2025.105144",
+        "name": "articlelink",
+        "label": "CrossRef DOI link to publisher maintained version"
+      },
+      {
+        "value": "article",
+        "name": "content_type",
+        "label": "Content Type"
+      },
+      {
+        "value": "© 2025 Elsevier Inc. All rights are reserved, including those for text and data mining, AI training, and similar technologies.",
+        "name": "copyright",
+        "label": "Copyright"
+      }
+    ],
+    "article-number": "105144"
+  }
+}

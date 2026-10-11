@@ -1,0 +1,845 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          7,
+          30
+        ]
+      ],
+      "date-time": "2026-07-30T12:41:37Z",
+      "timestamp": 1785415297756,
+      "version": "3.56.0"
+    },
+    "reference-count": 69,
+    "publisher": "MDPI AG",
+    "issue": "11",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2026,
+              5,
+              30
+            ]
+          ],
+          "date-time": "2026-05-30T00:00:00Z",
+          "timestamp": 1780099200000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
+    "funder": [
+      {
+        "name": "Ministry of Science and Higher Education of the Republic of Kazakhstan",
+        "award": [
+          "AP23488807"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "AP23488807"
+            ]
+          }
+        ]
+      },
+      {
+        "award": [
+          "AP23488807"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "AP23488807"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "https://ror.org/05tyne317",
+            "id-type": "ROR",
+            "asserted-by": "publisher"
+          }
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "Applied Sciences"
+    ],
+    "abstract": "<jats:p>Polymer-augmented waterflooding is a key enhanced oil recovery technique whose simulation remains computationally demanding at a high spatial resolution. This paper presents a fully GPU-resident parallel solver for the one-dimensional Buckley–Leverett polymer-flooding problem within an Implicit-Pressure–Explicit-Saturation framework. The solver combines Jacobi iteration for pressure, first-order upwind flux splitting for saturation, and a first-order upwind flux-splitting update for polymer mass with explicit concentration recovery inside a coupled Picard–IMPES iteration. Two CUDA implementations are compared: a global-memory baseline and a shared-memory variant that stages a per-block pressure tile with halo cells on chip. Both kernels were profiled on an NVIDIA GeForce RTX 2080 Ti over problem sizes from N=65,536 to N=67,108,864 and block sizes 128, 256, 512, and 1024. The two GPU implementations match the serial reference within 2×10−8, and peak speed-ups are 20.2× (global) and 20.1× (shared). Per-kernel Nsight Compute profiling classifies every kernel in both builds as compute-bound: SM throughput is 54–83% of peak and DRAM throughput 3–29% of peak. The bottleneck is the FP64 pipeline of consumer Turing hardware (FP64 throughput is one thirty-second of FP32); three FP64 divisions per cell, from inline polymer-modified mobility recomputation, saturate the FP64 unit. Shared-memory tiling cannot improve performance because it acts on memory traffic rather than on compute throughput. The result therefore characterizes a specific regime, namely FP64 one-dimensional, low-reuse transport stencils on consumer-class NVIDIA GPUs with reduced FP64 throughput, and is not a universal property of CUDA shared memory.</jats:p>",
+    "DOI": "10.3390/app16115449",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2026,
+          6,
+          3
+        ]
+      ],
+      "date-time": "2026-06-03T00:50:28Z",
+      "timestamp": 1780447828000
+    },
+    "page": "5449",
+    "update-policy": "https://doi.org/10.3390/mdpi_crossmark_policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 0,
+    "title": [
+      "A CUDA Performance Study of Global- and Shared-Memory Kernels for the Buckley–Leverett Polymer-Flooding Problem"
+    ],
+    "prefix": "10.3390",
+    "volume": "16",
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0009-0002-3451-415X",
+        "authenticated-orcid": false,
+        "given": "Yerlan",
+        "family": "Makhmut",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Department of Computer Science, Al-Farabi Kazakh National University, Almaty 050040, Kazakhstan"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-8865-3676",
+        "authenticated-orcid": false,
+        "given": "Timur",
+        "family": "Imankulov",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Computer Science, Al-Farabi Kazakh National University, Almaty 050040, Kazakhstan"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Sergei",
+        "family": "Gorlatch",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Computer Science, University of Münster, 48149 Münster, Germany"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Bazargul",
+        "family": "Matkerim",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Computer Science, Al-Farabi Kazakh National University, Almaty 050040, Kazakhstan"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "1968",
+    "published-online": {
+      "date-parts": [
+        [
+          2026,
+          5,
+          30
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "ref_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Willhite, G.P. (1986). Waterflooding. SPE Textbook Series, Society of Petroleum Engineers.",
+        "DOI": "10.2118/9781555630058"
+      },
+      {
+        "key": "ref_2",
+        "doi-asserted-by": "crossref",
+        "first-page": "491",
+        "DOI": "10.1080/15583724.2014.982821",
+        "article-title": "Review on Polymer Flooding: Rheology, Adsorption, Stability, and Field Applications of Various Polymer Systems",
+        "volume": "55",
+        "author": "Kamal",
+        "year": "2015",
+        "journal-title": "Polym. Rev."
+      },
+      {
+        "key": "ref_3",
+        "doi-asserted-by": "crossref",
+        "first-page": "1219",
+        "DOI": "10.1007/s10596-017-9624-5",
+        "article-title": "Fully Implicit Simulation of Polymer Flooding with MRST",
+        "volume": "21",
+        "author": "Bao",
+        "year": "2017",
+        "journal-title": "Comput. Geosci."
+      },
+      {
+        "key": "ref_4",
+        "doi-asserted-by": "crossref",
+        "first-page": "108995",
+        "DOI": "10.1016/j.jcp.2019.108995",
+        "article-title": "Numerical Simulations of Polymer Flooding Process in Porous Media on Distributed-Memory Parallel Computers",
+        "volume": "400",
+        "author": "Zhong",
+        "year": "2020",
+        "journal-title": "J. Comput. Phys."
+      },
+      {
+        "key": "ref_5",
+        "doi-asserted-by": "crossref",
+        "first-page": "991",
+        "DOI": "10.2118/163599-PA",
+        "article-title": "Fast Simulation of Polymer Injection in Heavy-Oil Reservoirs on the Basis of Topological Sorting and Sequential Splitting",
+        "volume": "19",
+        "author": "Lie",
+        "year": "2014",
+        "journal-title": "SPE J."
+      },
+      {
+        "key": "ref_6",
+        "doi-asserted-by": "crossref",
+        "first-page": "159",
+        "DOI": "10.1016/j.camwa.2020.05.014",
+        "article-title": "The Open Porous Media Flow Reservoir Simulator",
+        "volume": "81",
+        "author": "Rasmussen",
+        "year": "2021",
+        "journal-title": "Comput. Math. Appl."
+      },
+      {
+        "key": "ref_7",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Yu, S., Liu, H., Chen, Z.J., Hsieh, B., and Shao, L. (2012, January 4–7). GPU-Based Parallel Reservoir Simulation for Large-Scale Simulation Problems. Proceedings of the SPE Europec/EAGE Annual Conference, Copenhagen, Denmark.",
+        "DOI": "10.2118/152271-MS"
+      },
+      {
+        "key": "ref_8",
+        "doi-asserted-by": "crossref",
+        "first-page": "199",
+        "DOI": "10.1007/978-3-319-05789-7_16",
+        "article-title": "GPU-Based Parallel Reservoir Simulators",
+        "volume": "Volume 98",
+        "author": "Erhel",
+        "year": "2014",
+        "journal-title": "Domain Decomposition Methods in Science and Engineering XXI; Lecture Notes in Computational Science and Engineering"
+      },
+      {
+        "key": "ref_9",
+        "doi-asserted-by": "crossref",
+        "first-page": "2",
+        "DOI": "10.1016/j.cpc.2016.04.010",
+        "article-title": "A CUDA Based Parallel Multi-Phase Oil Reservoir Simulator",
+        "volume": "206",
+        "author": "Zaza",
+        "year": "2016",
+        "journal-title": "Comput. Phys. Commun."
+      },
+      {
+        "key": "ref_10",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Middya, U., Manea, A., Alhubail, M., Ferguson, T., Byer, T., and Dogru, A. (2021). A Massively Parallel Reservoir Simulator on the GPU Architecture. Proceedings of the SPE Reservoir Simulation Conference, Society of Petroleum Engineers.",
+        "DOI": "10.2118/203918-MS"
+      },
+      {
+        "key": "ref_11",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Cao, H., Zaydullin, R., Liao, T., Gohaud, N., Obi, E., and Darche, G. (2021). Adding GPU Acceleration to an Industrial CPU-Based Simulator, Development Strategy and Results. Proceedings of the SPE Reservoir Simulation Conference, Society of Petroleum Engineers.",
+        "DOI": "10.2118/203936-MS"
+      },
+      {
+        "key": "ref_12",
+        "unstructured": "Qiu, T.D., Thune, A., Blatt, M., Rustad, A.B., and Nane, R. (2023). An Evaluation and Comparison of GPU Hardware and Solver Libraries for Accelerating the OPM Flow Reservoir Simulator. arXiv."
+      },
+      {
+        "key": "ref_13",
+        "doi-asserted-by": "crossref",
+        "first-page": "7740",
+        "DOI": "10.21105/joss.07740",
+        "article-title": "gpu-ISTL-Extending OPM Flow with GPU Linear Solvers",
+        "volume": "10",
+        "author": "Lye",
+        "year": "2025",
+        "journal-title": "J. Open Source Softw."
+      },
+      {
+        "key": "ref_14",
+        "unstructured": "NVIDIA Corporation (2018). NVIDIA Turing GPU Architecture Whitepaper; White paper, NVIDIA Corporation."
+      },
+      {
+        "key": "ref_15",
+        "unstructured": "NVIDIA Corporation (Turing Tuning Guide, 2026). Turing Tuning Guide, Version 13.1.2."
+      },
+      {
+        "key": "ref_16",
+        "doi-asserted-by": "crossref",
+        "first-page": "1368",
+        "DOI": "10.2118/21208-PA",
+        "article-title": "Simulation of Compositional Reservoir Phenomena on a Distributed-Memory Parallel Computer",
+        "volume": "43",
+        "author": "Killough",
+        "year": "1991",
+        "journal-title": "J. Pet. Technol."
+      },
+      {
+        "key": "ref_17",
+        "doi-asserted-by": "crossref",
+        "first-page": "400",
+        "DOI": "10.2118/51969-PA",
+        "article-title": "Falcon: A Production Quality Distributed Memory Reservoir Simulator",
+        "volume": "1",
+        "author": "Shiralkar",
+        "year": "1998",
+        "journal-title": "Spe Reserv. Eval. Eng."
+      },
+      {
+        "key": "ref_18",
+        "doi-asserted-by": "crossref",
+        "first-page": "224",
+        "DOI": "10.1016/j.jcp.2004.05.014",
+        "article-title": "Parallel Computation for Reservoir Thermal Simulation of Multicomponent and Multiphase Fluid Flow",
+        "volume": "201",
+        "author": "Ma",
+        "year": "2004",
+        "journal-title": "J. Comput. Phys."
+      },
+      {
+        "key": "ref_19",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Dogru, A.H., Fung, L.S.K., Middya, U., Al-Shaalan, T.M., Pita, J.A., HemanthKumar, K., Su, H.J., Tan, J.C., Hoy, H., and Dreiman, W.T. (2009, January 2–4). A Next-Generation Parallel Reservoir Simulator for Giant Reservoirs. Proceedings of the SPE Reservoir Simulation Symposium, The Woodlands, TX, USA.",
+        "DOI": "10.2118/119272-MS"
+      },
+      {
+        "key": "ref_20",
+        "doi-asserted-by": "crossref",
+        "first-page": "2",
+        "DOI": "10.1016/j.cpc.2019.07.011",
+        "article-title": "Parallel Reservoir Simulators for Fully Implicit Complementarity Formulation of Multicomponent Compressible Flows",
+        "volume": "244",
+        "author": "Yang",
+        "year": "2019",
+        "journal-title": "Comput. Phys. Commun."
+      },
+      {
+        "key": "ref_21",
+        "doi-asserted-by": "crossref",
+        "first-page": "109312",
+        "DOI": "10.1016/j.jcp.2020.109312",
+        "article-title": "Fully Implicit Hybrid Two-Level Domain Decomposition Algorithms for Two-Phase Flows in Porous Media on 3D Unstructured Grids",
+        "volume": "409",
+        "author": "Luo",
+        "year": "2020",
+        "journal-title": "J. Comput. Phys."
+      },
+      {
+        "key": "ref_22",
+        "doi-asserted-by": "crossref",
+        "first-page": "111440",
+        "DOI": "10.1016/j.jcp.2022.111440",
+        "article-title": "Scalable Semismooth Newton Methods with Multilevel Domain Decomposition for Subsurface Flow and Reactive Transport in Porous Media",
+        "volume": "467",
+        "author": "Cheng",
+        "year": "2022",
+        "journal-title": "J. Comput. Phys."
+      },
+      {
+        "key": "ref_23",
+        "doi-asserted-by": "crossref",
+        "first-page": "105183",
+        "DOI": "10.1016/j.compfluid.2021.105183",
+        "article-title": "Parallel Multilevel Domain Decomposition Preconditioners for Monolithic Solution of Non-Isothermal Flow in Reservoir Simulation",
+        "volume": "232",
+        "author": "Zhang",
+        "year": "2022",
+        "journal-title": "Comput. Fluids"
+      },
+      {
+        "key": "ref_24",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Toselli, A., and Widlund, O.B. (2005). Domain Decomposition Methods—Algorithms and Theory, Springer. Springer Series in Computational Mathematics.",
+        "DOI": "10.1007/b137868"
+      },
+      {
+        "key": "ref_25",
+        "doi-asserted-by": "crossref",
+        "first-page": "528",
+        "DOI": "10.1007/s11227-013-1015-7",
+        "article-title": "Recent Progress and Challenges in Exploiting Graphics Processors in Computational Fluid Dynamics",
+        "volume": "67",
+        "author": "Niemeyer",
+        "year": "2014",
+        "journal-title": "J. Supercomput."
+      },
+      {
+        "key": "ref_26",
+        "doi-asserted-by": "crossref",
+        "first-page": "13",
+        "DOI": "10.1109/MM.2008.57",
+        "article-title": "Parallel Computing Experiences with CUDA",
+        "volume": "28",
+        "author": "Garland",
+        "year": "2008",
+        "journal-title": "IEEE Micro"
+      },
+      {
+        "key": "ref_27",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Piscaglia, F., and Ghioldi, F. (2023). GPU Acceleration of CFD Simulations in OpenFOAM. Aerospace, 10.",
+        "DOI": "10.3390/aerospace10090792"
+      },
+      {
+        "key": "ref_28",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Herrero-Pérez, D., and Martínez-Barberá, H. (2025). Multi-GPU Acceleration for Finite Element Analysis in Structural Mechanics. Appl. Sci., 15.",
+        "DOI": "10.3390/app15031095"
+      },
+      {
+        "key": "ref_29",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Nascimento, E., Magalhães, E., Azevedo, A., Paes, L.E.S., and Oliveira, A. (2024). An Implementation of LASER Beam Welding Simulation on Graphics Processing Unit Using CUDA. Computation, 12.",
+        "DOI": "10.3390/computation12040083"
+      },
+      {
+        "key": "ref_30",
+        "first-page": "59",
+        "article-title": "Parallel Numerical Simulation of Two-Phase Flow Model in Porous Media Using Distributed and Shared Memory Architectures",
+        "volume": "53",
+        "author": "Monsivais",
+        "year": "2014",
+        "journal-title": "Geofís. Int."
+      },
+      {
+        "key": "ref_31",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Kang, Z., Deng, Z., Han, W., and Zhang, D. (2018). Parallel Reservoir Simulation with OpenACC and Domain Decomposition. Algorithms, 11.",
+        "DOI": "10.3390/a11120213"
+      },
+      {
+        "key": "ref_32",
+        "first-page": "351",
+        "article-title": "Comparative Analysis of Parallel Algorithms for Solving Oil Recovery Problem Using CUDA and OpenCL",
+        "volume": "12",
+        "author": "Imankulov",
+        "year": "2021",
+        "journal-title": "Int. J. Nonlinear Anal. Appl."
+      },
+      {
+        "key": "ref_33",
+        "first-page": "4895",
+        "article-title": "High-Performance Computing in Oil Recovery Simulation Based on CUDA",
+        "volume": "1",
+        "author": "Beisembetov",
+        "year": "2014",
+        "journal-title": "Blucher Mech. Eng. Proc."
+      },
+      {
+        "key": "ref_34",
+        "doi-asserted-by": "crossref",
+        "first-page": "107",
+        "DOI": "10.2118/942107-G",
+        "article-title": "Mechanism of Fluid Displacement in Sands",
+        "volume": "146",
+        "author": "Buckley",
+        "year": "1942",
+        "journal-title": "Trans. AIME"
+      },
+      {
+        "key": "ref_35",
+        "unstructured": "Aziz, K., and Settari, A. (1979). Petroleum Reservoir Simulation, Applied Science Publishers."
+      },
+      {
+        "key": "ref_36",
+        "first-page": "38",
+        "article-title": "The Interrelation Between Gas and Oil Relative Permeabilities",
+        "volume": "19",
+        "author": "Corey",
+        "year": "1954",
+        "journal-title": "Prod. Mon."
+      },
+      {
+        "key": "ref_37",
+        "doi-asserted-by": "crossref",
+        "first-page": "77",
+        "DOI": "10.2516/ogst/2020063",
+        "article-title": "A Review on Polymer, Gas, Surfactant and Nanoparticle Adsorption Modeling in Porous Media",
+        "volume": "75",
+        "author": "Mohammed",
+        "year": "2020",
+        "journal-title": "Oil Gas Sci. Technol. Rev. D’Ifp Energies Nouv."
+      },
+      {
+        "key": "ref_38",
+        "first-page": "3",
+        "article-title": "Some Modern Methods for Solving Grid Equations",
+        "volume": "27",
+        "author": "Samarskii",
+        "year": "1983",
+        "journal-title": "Izv. Vyss. Uchebnykh Zaved. Mat."
+      },
+      {
+        "key": "ref_39",
+        "unstructured": "NVIDIA Corporation (2024). CUDA C++ Programming Guide, Release 12.6, NVIDIA Corporation."
+      },
+      {
+        "key": "ref_40",
+        "unstructured": "NVIDIA Corporation (2024). CUDA Runtime API: API Reference Manual, Version 12.6, NVIDIA Corporation."
+      },
+      {
+        "key": "ref_41",
+        "doi-asserted-by": "crossref",
+        "first-page": "3202",
+        "DOI": "10.1016/j.jpdc.2014.07.003",
+        "article-title": "Kokkos: Enabling Manycore Performance Portability Through Polymorphic Memory Access Patterns",
+        "volume": "74",
+        "author": "Edwards",
+        "year": "2014",
+        "journal-title": "J. Parallel Distrib. Comput."
+      },
+      {
+        "key": "ref_42",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Beckingsale, D.A., Burmark, J., Hornung, R., Jones, H., Killian, W., Kunen, A.J., Pearce, O., Robinson, P., Ryujin, B.S., and Scogland, T.R.W. (2019, January 22). RAJA: Portable Performance for Large-Scale Scientific Applications. Proceedings of the 2019 IEEE/ACM International Workshop on Performance, Portability and Productivity in HPC (P3HPC), Denver, CO, USA.",
+        "DOI": "10.1109/P3HPC49587.2019.00012"
+      },
+      {
+        "key": "ref_43",
+        "doi-asserted-by": "crossref",
+        "first-page": "338",
+        "DOI": "10.1016/j.jcp.2017.12.028",
+        "article-title": "Accelerating Solutions of One-Dimensional Unsteady PDEs with GPU-Based Swept Time-Space Decomposition",
+        "volume": "357",
+        "author": "Magee",
+        "year": "2018",
+        "journal-title": "J. Comput. Phys."
+      },
+      {
+        "key": "ref_44",
+        "unstructured": "NVIDIA Corporation (2009). NVIDIA’s Next Generation CUDA Compute Architecture: Fermi, NVIDIA Corporation. [1.1th ed.]. White paper."
+      },
+      {
+        "key": "ref_45",
+        "unstructured": "NVIDIA Corporation (2012). NVIDIA GeForce GTX 680: The Fastest, Most Efficient GPU Ever Built, NVIDIA Corporation. [1st ed.]. Technology overview/Kepler architecture white paper."
+      },
+      {
+        "key": "ref_46",
+        "unstructured": "NVIDIA Corporation (2014). NVIDIA GeForce GTX 980: Featuring Maxwell, The Most Advanced GPU Ever Made; GM204/second-generation Maxwell white paper, NVIDIA Corporation."
+      },
+      {
+        "key": "ref_47",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Ryoo, S., Rodrigues, C.I., Baghsorkhi, S.S., Stone, S.S., Kirk, D.B., and Hwu, W.m.W. (2008, January 20–23). Optimization Principles and Application Performance Evaluation of a Multithreaded GPU Using CUDA. Proceedings of the 13th ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming, New York, NY, USA.",
+        "DOI": "10.1145/1345206.1345220"
+      },
+      {
+        "key": "ref_48",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Chi, J., Liu, F., Jin, J., Mason, D.G., and Crozier, S. (September, January 31). GPU Accelerated FDTD Solver and Its Application in MRI. Proceedings of the 2010 Annual International Conference of the IEEE Engineering in Medicine and Biology Society (EMBC), Buenos Aires, Argentina.",
+        "DOI": "10.1109/IEMBS.2010.5627497"
+      },
+      {
+        "key": "ref_49",
+        "doi-asserted-by": "crossref",
+        "first-page": "1789",
+        "DOI": "10.1109/TBME.2011.2116020",
+        "article-title": "GPU-Accelerated FDTD Modeling of Radio-Frequency Field-Tissue Interactions in High-Field MRI",
+        "volume": "58",
+        "author": "Chi",
+        "year": "2011",
+        "journal-title": "IEEE Trans. Biomed. Eng."
+      },
+      {
+        "key": "ref_50",
+        "doi-asserted-by": "crossref",
+        "first-page": "163",
+        "DOI": "10.1016/j.simpat.2012.03.004",
+        "article-title": "A Lattice-Boltzmann Solver for 3D Fluid Simulation on GPU",
+        "volume": "25",
+        "author": "Rinaldi",
+        "year": "2012",
+        "journal-title": "Simul. Model. Pract. Theory"
+      },
+      {
+        "key": "ref_51",
+        "doi-asserted-by": "crossref",
+        "first-page": "2376",
+        "DOI": "10.1016/j.cpc.2012.06.005",
+        "article-title": "Optimizations of a GPU Accelerated Heat Conduction Equation by a Programming of CUDA Fortran from an Analysis of a PTX File",
+        "volume": "183",
+        "author": "Satake",
+        "year": "2012",
+        "journal-title": "Comput. Phys. Commun."
+      },
+      {
+        "key": "ref_52",
+        "doi-asserted-by": "crossref",
+        "first-page": "65",
+        "DOI": "10.1145/1498765.1498785",
+        "article-title": "Roofline: An Insightful Visual Performance Model for Multicore Architectures",
+        "volume": "52",
+        "author": "Williams",
+        "year": "2009",
+        "journal-title": "Commun. ACM"
+      },
+      {
+        "key": "ref_53",
+        "doi-asserted-by": "crossref",
+        "first-page": "e5547",
+        "DOI": "10.1002/cpe.5547",
+        "article-title": "Hierarchical Roofline Analysis for GPUs: Accelerating Performance Optimization for the NERSC-9 Perlmutter System",
+        "volume": "32",
+        "author": "Yang",
+        "year": "2020",
+        "journal-title": "Concurr. Comput. Pract. Exp."
+      },
+      {
+        "key": "ref_54",
+        "unstructured": "Jia, Z., Maggioni, M., Smith, J., and Scarpazza, D.P. (2019). Dissecting the NVidia Turing T4 GPU via Microbenchmarking. arXiv."
+      },
+      {
+        "key": "ref_55",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Vizitiu, A., Itu, L., Lazar, L., and Suciu, C. (2014, January 17–19). Double Precision Stencil Computations on Kepler GPUs. Proceedings of the 2014 18th International Conference on System Theory, Control and Computing (ICSTCC), Sinaia, Romania.",
+        "DOI": "10.1109/ICSTCC.2014.6982402"
+      },
+      {
+        "key": "ref_56",
+        "doi-asserted-by": "crossref",
+        "first-page": "51",
+        "DOI": "10.1007/978-3-030-36592-9_5",
+        "article-title": "GPU Implementation of a Stencil Code with More Than 90% of the Peak Theoretical Performance",
+        "volume": "Volume 1129",
+        "author": "Voevodin",
+        "year": "2019",
+        "journal-title": "Proceedings of the Supercomputing; Communications in Computer and Information Science"
+      },
+      {
+        "key": "ref_57",
+        "doi-asserted-by": "crossref",
+        "first-page": "326",
+        "DOI": "10.1016/j.ins.2021.11.042",
+        "article-title": "An Efficient GPU Implementation and Scaling for Higher-Order 3D Stencils",
+        "volume": "586",
+        "author": "Anjum",
+        "year": "2022",
+        "journal-title": "Inf. Sci."
+      },
+      {
+        "key": "ref_58",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Che, S., Sheaffer, J.W., Boyer, M., Szafaryn, L.G., Wang, L., and Skadron, K. (2010, January 2–4). A Characterization of the Rodinia Benchmark Suite with Comparison to Contemporary CMP Workloads. Proceedings of the 2010 IEEE International Symposium on Workload Characterization (IISWC), Atlanta, GA, USA.",
+        "DOI": "10.1109/IISWC.2010.5650274"
+      },
+      {
+        "key": "ref_59",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Bakhoda, A., Yuan, G.L., Fung, W.W.L., Wong, H., and Aamodt, T.M. (2009, January 19–21). Analyzing CUDA Workloads Using a Detailed GPU Simulator. Proceedings of the 2009 IEEE International Symposium on Performance Analysis of Systems and Software (ISPASS), Boston, MA, USA.",
+        "DOI": "10.1109/ISPASS.2009.4919648"
+      },
+      {
+        "key": "ref_60",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Haidar, A., Tomov, S., Dongarra, J., and Higham, N.J. (2018, January 11–16). Harnessing GPU Tensor Cores for Fast FP16 Arithmetic to Speed Up Mixed-Precision Iterative Refinement Solvers. Proceedings of the SC18: International Conference for High Performance Computing, Networking, Storage and Analysis, Dallas, TX, USA.",
+        "DOI": "10.1109/SC.2018.00050"
+      },
+      {
+        "key": "ref_61",
+        "first-page": "389",
+        "article-title": "Accelerating a Three-Dimensional Finite-Difference Wave Propagation Code Using GPU Graphics Cards",
+        "volume": "182",
+        "author": "Komatitsch",
+        "year": "2010",
+        "journal-title": "Geophys. J. Int."
+      },
+      {
+        "key": "ref_62",
+        "doi-asserted-by": "crossref",
+        "first-page": "819",
+        "DOI": "10.1177/1094342017696562",
+        "article-title": "Leveraging the Accelerated Processing Units for Seismic Imaging: A Performance and Power Efficiency Comparison Against CPUs and GPUs",
+        "volume": "32",
+        "author": "Said",
+        "year": "2018",
+        "journal-title": "Int. J. High Perform. Comput. Appl."
+      },
+      {
+        "key": "ref_63",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Volkov, V., and Demmel, J.W. (2008, January 15–21). Benchmarking GPUs to Tune Dense Linear Algebra. Proceedings of the 2008 ACM/IEEE Conference on Supercomputing, Piscataway, NJ, USA. SC ’08.",
+        "DOI": "10.1109/SC.2008.5214359"
+      },
+      {
+        "key": "ref_64",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Bell, N., and Garland, M. (2009, January 14–20). Implementing Sparse Matrix-Vector Multiplication on Throughput-Oriented Processors. Proceedings of the Conference on High Performance Computing Networking, Storage and Analysis, New York, NY, USA. SC ’09.",
+        "DOI": "10.1145/1654059.1654078"
+      },
+      {
+        "key": "ref_65",
+        "doi-asserted-by": "crossref",
+        "first-page": "C123",
+        "DOI": "10.1137/110838844",
+        "article-title": "Exposing Fine-Grained Parallelism in Algebraic Multigrid Methods",
+        "volume": "34",
+        "author": "Bell",
+        "year": "2012",
+        "journal-title": "SIAM J. Sci. Comput."
+      },
+      {
+        "key": "ref_66",
+        "doi-asserted-by": "crossref",
+        "first-page": "1542",
+        "DOI": "10.1021/ct200909j",
+        "article-title": "Routine Microsecond Molecular Dynamics Simulations with AMBER on GPUs. 1. Generalized Born",
+        "volume": "8",
+        "author": "Williamson",
+        "year": "2012",
+        "journal-title": "J. Chem. Theory Comput."
+      },
+      {
+        "key": "ref_67",
+        "doi-asserted-by": "crossref",
+        "first-page": "044130",
+        "DOI": "10.1063/5.0014475",
+        "article-title": "Scalable Molecular Dynamics on CPU and GPU Architectures with NAMD",
+        "volume": "153",
+        "author": "Phillips",
+        "year": "2020",
+        "journal-title": "J. Chem. Phys."
+      },
+      {
+        "key": "ref_68",
+        "doi-asserted-by": "crossref",
+        "first-page": "312",
+        "DOI": "10.1177/10943420211008288",
+        "article-title": "GPU-Accelerated Molecular Dynamics: State-of-Art Software Performance and Porting from NVIDIA CUDA to AMD HIP",
+        "volume": "35",
+        "author": "Kondratyuk",
+        "year": "2021",
+        "journal-title": "Int. J. High Perform. Comput. Appl."
+      },
+      {
+        "key": "ref_69",
+        "doi-asserted-by": "crossref",
+        "first-page": "1441005",
+        "DOI": "10.1142/S0129626414410059",
+        "article-title": "High-Level Programming of Stencil Computations on Multi-GPU Systems Using the SkelCL Library",
+        "volume": "24",
+        "author": "Steuwer",
+        "year": "2014",
+        "journal-title": "Parallel Process. Lett."
+      }
+    ],
+    "container-title": [
+      "Applied Sciences"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://www.mdpi.com/2076-3417/16/11/5449/pdf",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2026,
+          6,
+          3
+        ]
+      ],
+      "date-time": "2026-06-03T18:26:48Z",
+      "timestamp": 1780511208000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://www.mdpi.com/2076-3417/16/11/5449"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          5,
+          30
+        ]
+      ]
+    },
+    "references-count": 69,
+    "journal-issue": {
+      "issue": "11",
+      "published-online": {
+        "date-parts": [
+          [
+            2026,
+            6
+          ]
+        ]
+      }
+    },
+    "alternative-id": [
+      "app16115449"
+    ],
+    "URL": "https://doi.org/10.3390/app16115449",
+    "relation": {},
+    "ISSN": [
+      "2076-3417"
+    ],
+    "issn-type": [
+      {
+        "value": "2076-3417",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2026,
+          5,
+          30
+        ]
+      ]
+    }
+  }
+}

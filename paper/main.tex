@@ -1,280 +1,160 @@
 \documentclass[10pt]{article}
-
 \usepackage[a4paper,top=4cm,bottom=2.7cm,left=2.5cm,right=2.5cm]{geometry}
-\usepackage{amsmath,amssymb}
-\usepackage{booktabs}
-\usepackage{graphicx}
-\usepackage{url}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,booktabs,graphicx,url}
 \usepackage[hidelinks]{hyperref}
 \setlength{\emergencystretch}{2em}
-
 \title{A Coefficient-Aware Finite-Difference Benchmark for Solver Selection and CPU/GPU Stencil Scaling in Heat-Conduction Simulation}
-
-\author{Dong Liu*\\
-University of Nottingham Ningbo China\\
-Ningbo, China\\
-\texttt{ssydl3@nottingham.edu.cn}}
-
+\author{Dong Liu* and Yuanxin Wang\\University of Nottingham Ningbo China\\Ningbo, China\\\texttt{ssydl3@nottingham.edu.cn}}
 \date{}
-
 \begin{document}
 \maketitle
-
 \begin{abstract}
-Sparse solves for variable-coefficient heat conduction depend on coefficient geometry, forcing, preconditioner setup, and implementation. We present a verified finite-difference benchmark with an invariant-preserving audit of solver-choice claims. Smooth manufactured solutions recover second-order convergence and an aligned interface test verifies flux treatment. Beyond a baseline coefficient-family comparison, matched binary fields hold contrast, material fraction, total variation, and maximum log-gradient fixed. In a controlled N = 192, contrast-1000 case, translating the same two-island field by one grid point raises Jacobi-PCG iterations from 403 to 677 and reverses the setup-inclusive winner from Jacobi to AMG in all five repeats. Reflection-invariant Krylov subspaces explain why an odd source can avoid slow island modes; source perturbations and an independent motif family test this interpretation. An interleaved audit with classical AMG confirms that reversal locations depend on the candidate solver set. All 2956 controlled extension solves satisfy an independently checked relative residual below 1e-8. The resulting audit exposes limits of translation-invariant coefficient descriptors without proposing a new solver-selection algorithm. A separate paired callback calibration quantifies monitoring overhead without treating historical and controlled timings as interchangeable. CPU/CUDA measurements separately quantify stencil scaling; GPU claims remain restricted to resident-data kernels. Raw CSV files, scripts, tests, and generated outputs support the numerical and performance claims.
+We present a verified finite-difference heat-conduction benchmark that tests whether coefficient summaries distinguish solver choices. Matched binary fields preserve contrast, material fraction, total variation and maximum log-gradient. At contrast 1000 and grid size 192, translating a two-island field by one node raises Jacobi-PCG iterations from 403 to 677 and reverses the setup-inclusive winner in all five repeats. Source symmetry explains the avoided slow modes; a classical-AMG audit shows that decision boundaries depend on the candidate set. All 2956 controlled extension solves pass an independent residual check. Smooth and aligned-interface tests verify the discretisation, while a paired calibration quantifies callback overhead separately from historical timings. CPU/CUDA results concern stencil execution with resident GPU data. The contribution is a reproducible audit of conditional solver costs, not a new selection algorithm.
 \end{abstract}
-
-\section{Introduction}
-
-Discretising heat conduction with spatially varying conductivity produces sparse linear systems whose solution cost depends on the coefficient field, mesh resolution, forcing and preconditioning. Repeated stencil evaluations introduce a separate implementation cost. A useful benchmark must verify the discretisation and specify which parts of these computations are timed.
-
-We test whether coefficient summaries and grid resolution distinguish the measured solver choices. Matched coefficient fields, translations and source perturbations provide controlled tests of their limitations.
-
-The benchmark solves the steady heat-conduction equation with spatially varying conductivity. Manufactured solutions verify the smooth cases; inclusion, layered and checkerboard fields test the solvers with discontinuous conductivity. The implementation uses Python, NumPy, SciPy, PyAMG, Numba, and Numba-CUDA for sparse solves and CPU/GPU stencil implementations \cite{Virtanen2020,Harris2020,Lam2015,Bell2023}.
-
-Prior numerical-analysis texts establish the convergence properties of finite-difference discretisations and the role of Krylov and multigrid methods in sparse PDE solves \cite{Strikwerda2004,Hestenes1952,Saad2003,Briggs2000,Ruge1987}. Recent sparse and PDE solver studies further underline that preconditioning, sparse matrix execution, and accelerator mapping remain active constraints for modern workloads \cite{Bernaschi2026EnergySparseMultiGPU,Welter2026HDGGPUPreconditioning}; recent AMG and diffusion-solver work targets communication cost and coefficient difficulty more directly \cite{Yuan2025CRAMG,Green2022AnisotropicDiffusionSolver}. General reproducible-benchmarking work provides principles for automated reruns and evidence retention \cite{Koskela2023ReproBenchmark}. Here, numerical verification, coefficient descriptors and archived timings connect solver choices to the tested PDE and implementation. Combining PDE verification with performance benchmarking is established practice.
-
-The contribution is a controlled audit within an existing finite-difference benchmark. Numerical verification and baseline solver/stencil measurements establish the implementation. An exact matched-field construction then tests whether standard coefficient descriptors distinguish solver difficulty. Translation controls preserve shape and topology as well as scalar descriptors, while forcing and transpose controls separate source symmetry from matrix and implementation effects. The resulting counterexamples are connected to preconditioned spectra and setup-inclusive costs. The study introduces no new PDE, discretisation, Krylov method, AMG algorithm, or GPU kernel; coefficient-aware denotes an auditable interpretation of measured cases, not an online selection algorithm.
-
-\section{Related Work}
-
-The closest benchmark precedents already combine elliptic problems and solver performance. HPGMG-FV solves variable-coefficient elliptic problems on Cartesian grids and supports CPU and accelerator execution \cite{SPECHPGMG2021}. AMG2023 benchmarks finite-difference diffusion with BoomerAMG and Krylov methods; its performance denominator includes setup time plus a specified number of solves \cite{LLNLAMG2023}. Setup-inclusive timing is therefore an established practice. The present study addresses a narrower question through a small coefficient-family grid, explicit interface checks, and a complete record of measured solver choices. These systems provide methodological context; no performance comparison against HPGMG or hypre is claimed.
-
-Finite-difference methods provide a direct route from elliptic and parabolic PDEs to sparse linear systems on structured grids \cite{Strikwerda2004}. For self-adjoint diffusion operators, conservative flux forms are especially useful because face-based coefficient averaging preserves the symmetry and locality expected by Krylov methods. Once discretised, the main computational problem is sparse linear algebra rather than pointwise equation evaluation.
-
-The conjugate-gradient method remains a baseline solver for symmetric positive definite systems \cite{Hestenes1952,Saad2003}. Its performance depends strongly on spectral conditioning, which generally deteriorates under mesh refinement and can be strongly affected by coefficient contrast and geometry. Multigrid methods reduce this sensitivity by addressing error components across scales \cite{Briggs2000}. Algebraic multigrid extends that idea to matrix-defined problems without requiring a hand-built geometric hierarchy \cite{Ruge1987}. In this study, PyAMG is used as an accessible Python implementation of algebraic multigrid \cite{Bell2023}.
-
-Performance portability is a separate concern. NumPy provides high-level array operations, SciPy provides sparse linear algebra, and Numba compiles numerical Python kernels to machine code \cite{Harris2020,Virtanen2020,Lam2015}. CUDA exposes massively parallel GPU execution, but launch overhead and data movement can erase speedups on small problems \cite{NvidiaCudaGuide2026,NumbaCudaDocs2026}. Recent stencil and CUDA kernel studies report sensitivity to memory traffic, kernel structure, and problem size \cite{Pekkila2025StencilGPUs,Makhmut2026CUDABuckleyLeverett}. The benchmark therefore reports GPU results as resident-data kernel measurements for repeated updates where data stay on the device, and it keeps raw evidence for independent reruns \cite{Koskela2023ReproBenchmark}.
-
-High-contrast preconditioning and isolated-island modes already have analytical foundations \cite{Aksoylu2008,AksoyluYeter2009}. Krylov convergence depends on the spectral distribution and its excitation by the initial residual, so a condition number alone can be misleading \cite{Carson2024}. Recent material-aware smoothed aggregation explicitly targets heterogeneous interfaces \cite{Firmbach2026}. More generally, algorithm-selection studies recognise performance variation among instances with identical features \cite{Ewald2011}. Our extension applies these established ideas to an exact matched-field and translation audit, quantifying their consequences for verified heat-conduction solves and setup-inclusive choices. Neither source dependence nor feature insufficiency is claimed as a new general theorem.
-
-\section{Mathematical Model and Discretisation}
-
-The model problem is the steady heat-conduction equation
+\section{Introduction and context}
+Variable-coefficient heat conduction couples discretisation accuracy to sparse-solver cost. Using SciPy, NumPy, Numba and PyAMG \cite{Virtanen2020,Harris2020,Lam2015,Bell2023}, we audit when coefficient summaries fail to distinguish the fastest verified solve. Finite differences, conjugate gradients (CG) and algebraic multigrid (AMG) are established methods \cite{Strikwerda2004,Hestenes1952,Saad2003,Ruge1987}. Recent work addresses sparse multi-GPU efficiency and GPU PDE preconditioning \cite{Bernaschi2026EnergySparseMultiGPU,Welter2026HDGGPUPreconditioning}, communication-reduced AMG and anisotropic diffusion \cite{Yuan2025CRAMG,Green2022AnisotropicDiffusionSolver}, and reproducible benchmarking \cite{Koskela2023ReproBenchmark}. HPGMG-FV and AMG2023 already combine elliptic problems with performance measurements, including setup costs \cite{SPECHPGMG2021,LLNLAMG2023}; we do not claim this combination as new.\par
+Hierarchy quality can affect AMG convergence beyond scalar contrast \cite{DAmbra2023Coarsening}. Ginkgo separates linear-operator algorithms from architecture-specific backends \cite{Anzt2022Ginkgo}, while stencil and CUDA studies expose sensitivity to memory traffic and kernel design \cite{Pekkila2025StencilGPUs,Makhmut2026CUDABuckleyLeverett}. Three-precision AMG and adaptive-precision matrix-vector products further motivate explicit arithmetic settings \cite{Tsai2023ThreePrecision,Graillat2024AdaptivePrecision}; our experiments use float64. High-contrast island modes \cite{Aksoylu2008,AksoyluYeter2010}, source-dependent Krylov convergence \cite{Carson2024} and material-aware aggregation \cite{Firmbach2026} supply the numerical context. Feature-based solver prediction \cite{Funk2022SolverPrediction}, cheaper feature selection \cite{Sun2025FeatureSelection}, multimodal solver/preconditioner selection \cite{Xiong2025MMAutoSolver} and online multiphysics solver choice \cite{Zabegaev2024SolverSelection} pursue selection policies. We instead test descriptor sufficiency with exact matched-field controls, without training a selector or benchmarking those policies.\par
+Our contribution is the controlled connection between preserved coefficient invariants, forcing symmetry and measured setup-inclusive choices. Rigid translations preserve shape and connectivity as well as scalar descriptors; source and candidate-solver controls identify why a coefficient-only decision map cannot be reused uncritically.\par
+\section{Operator, verification and timing}
+On a uniform N-by-N grid of the unit square, with h = 1/(N \ensuremath{-} 1), positive conductivity k and homogeneous Dirichlet boundaries, the conservative operator is\par
 \begin{equation}
-    -\nabla\cdot(k(x,y)\nabla u(x,y)) = f(x,y), \quad (x,y)\in (0,1)^2,
-    \label{eq:pde}
+-\nabla\!\cdot(k\nabla u)=f,\quad \Omega=(0,1)^2,\quad u|_{\partial\Omega}=0,\qquad (Au)_i=h^{-2}\!\sum_{j\sim i}k_{ij}(u_i-u_j).
 \end{equation}
-with homogeneous Dirichlet boundary conditions unless otherwise stated. The coefficient $k(x,y)$ represents spatially varying thermal conductivity. The smooth test uses
+The sum runs over four neighbours; shared positive face weights make the interior matrix symmetric positive definite. Arithmetic faces define the historical nodal graph-diffusion benchmark. For physical interfaces, two equal half-links in series instead give the harmonic conductivity \cite{Patankar1980}:\par
 \begin{equation}
-    k(x,y)=1+0.5\sin(2\pi x)\sin(2\pi y),
+k_H=\frac{2ab}{a+b},\qquad k_A=\frac{a+b}{2},\qquad k_A-k_H=\frac{(a-b)^2}{2(a+b)}.
 \end{equation}
-and the high-contrast stress test uses a circular inclusion,
-\begin{equation}
-    k(x,y)=1+99\,\mathbf{1}_{(x-0.5)^2+(y-0.5)^2<0.15^2}.
-\end{equation}
-For the decision-map study, this pair is expanded into a parameterised coefficient grid. The smooth family uses $k=1+a\sin(2\pi x)\sin(2\pi y)$ with $a=(C_k-1)/(C_k+1)$, giving target contrast $C_k$. The inclusion, layered, and checkerboard families use piecewise values in $\{1,C_k\}$ with $C_k\in\{10,30,100\}$, while the smooth family uses $C_k\in\{3,10,30\}$ and the constant case gives $C_k=1$. The layered field changes at $y=1/2$; the checkerboard uses eight blocks per coordinate direction. The circle has radius 0.15 and centre $(1/2,1/2)$.
-
-To report contrast, coefficient sharpness, and coefficient geometry separately, each coefficient field is summarised by
-\begin{equation}
-    C_k=\frac{\max k}{\min k},\qquad
-    G_k^{(h)}=\|\nabla_h\log k\|_{\infty},\qquad
-    V_k=\frac{\sum |\Delta_x k|+\sum |\Delta_y k|}{N-1},
-    \label{eq:difficulty}
-\end{equation}
-Here $G_k^{(h)}$ is the maximum nodal Euclidean magnitude of the log-gradient, using centred interior differences and first-order one-sided boundary differences. Here $\Delta_x k$ and $\Delta_y k$ are unscaled nearest-neighbour differences over all nodal pairs in each coordinate direction; $V_k$ divides their absolute sums by $N-1$ and is used only as a grid-normalised total-variation proxy. For discontinuous coefficient fields, $G_k^{(h)}$ depends on the grid spacing and is interpreted at fixed $N$ rather than as a continuous invariant. Small-grid spectral evidence is also recorded through computed condition-number estimates $\kappa(A)=\lambda_{\max}(A)/\lambda_{\min}(A)$.
-
-The domain is discretised on an $N\times N$ uniform grid with spacing $h=1/(N-1)$. Interior unknowns are ordered lexicographically. For an interior node $(i,j)$, the conservative five-point stencil is
-\begin{align}
-(Au)_{i,j} ={}&
-k_{i+1/2,j}\frac{u_{i,j}-u_{i+1,j}}{h^2}
-+k_{i-1/2,j}\frac{u_{i,j}-u_{i-1,j}}{h^2} \nonumber\\
-&+k_{i,j+1/2}\frac{u_{i,j}-u_{i,j+1}}{h^2}
-+k_{i,j-1/2}\frac{u_{i,j}-u_{i,j-1}}{h^2},
-\label{eq:stencil}
-\end{align}
-where face coefficients use arithmetic averages of adjacent nodal values in the main two-dimensional decision map. Arithmetic averaging defines the primary two-dimensional benchmark operator; harmonic averaging probes sensitivity to the interface treatment. For discontinuous coefficient fields, harmonic face averaging is also implemented and tested as a sensitivity check, because it matches the series-resistance interpretation of one-dimensional layered conduction. The shared positive face weights give a sum of weighted squared nodal differences in the discrete energy. With boundary values fixed, both choices produce sparse symmetric positive definite systems for positive $k$ and homogeneous Dirichlet boundaries.
-
-Arithmetic faces are retained to preserve the specified nodal graph-diffusion benchmark and its historical comparisons, not because they are the preferred interface law for composite heat conduction. Interface conductivity is a standard numerical heat-transfer issue \cite{Patankar1980}. For two half-links of equal length with conductivities a and b, continuity of flux gives the series resistance h/(2a) + h/(2b), hence $k_H = 2ab/(a+b)$, whereas $k_A=(a+b)/2$. Their difference is $(a-b)^2/[2(a+b)]$: it is $O(h^2)$ for smooth positive conductivity, but need not be small at a jump. At contrast c = 100, $k_A/k_H=(c+1)^2/(4c)=25.5025$ on a mixed link. This is a local conductance ratio under the half-link interface assumption, not a global temperature-error estimate. Thus the arithmetic high-contrast results describe solver behaviour for that discrete operator; they do not validate composite-material heat flux. Harmonic averaging has the correct aligned series-resistance interpretation, while a curved interface requires additional geometric treatment. The matched-field audit includes both averages so that its conclusions are not restricted to arithmetic faces.
-
-For smooth convergence verification, the exact solution is
-\begin{equation}
-    u_{\mathrm{exact}}(x,y)=\sin(\pi x)\sin(\pi y),
-\end{equation}
-and $f$ is generated analytically for the constant and smooth coefficient cases. Errors are reported as the interior-node root-mean-square (normalised discrete $L^2$) and maximum norms. The observed convergence rate is obtained by a least-squares fit of $\log(e)$ against $\log(h)$. A separate one-dimensional verification problem uses $k(x)=k_1$ for $x<1/2$ and $k(x)=k_2$ for $x>1/2$ with $u(0)=0$ and $u(1)=1$. Its analytic solution is piecewise linear and satisfies continuity of both $u$ and $k u_x$ at the interface; this test isolates whether arithmetic and harmonic face averages respect the expected interface flux.
-
-\section{Solver and Implementation Methods}
-
-The assembled sparse matrix is solved with three methods: unpreconditioned CG, Jacobi-preconditioned CG, and algebraic-multigrid preconditioned CG. The AMG case uses the tested PyAMG default smoothed-aggregation hierarchy as a V-cycle preconditioner for SciPy CG; this should be read as one concrete AMG configuration rather than a claim about all AMG parameter choices. The recorded PyAMG 5.3.0 defaults use symmetric strength, standard aggregation, Jacobi prolongation smoothing with omega = 4/3, symmetric block Gauss-Seidel pre/post smoothing, at most ten levels, and a coarse-grid limit of ten unknowns. Historical runs did not fix the random starts used in PyAMG spectral-radius estimation, so exact hierarchy-dependent results can vary across reruns. Manufactured-solution runs use a relative residual tolerance of $10^{-11}$ so that solver error does not dominate discretisation error; solver-comparison runs use SciPy CG with relative tolerance $10^{-8}$, zero absolute tolerance, the default zero initial guess, and a maximum of 12000 iterations in the decision map. The baseline coefficient-family solver comparisons use the same deterministic unit right-hand side at a given grid size, so the right-hand side is controlled across cases. The controlled extension below separately varies the right-hand side, which can excite different spectral components. The reported time separates preconditioner setup from iterative solve time and also gives the total time. Matrix assembly and right-hand-side construction are excluded from these times. Iterative solve times include a callback that recomputes the true relative residual after every iteration, adding one sparse matrix-vector product and norm evaluations per iteration. The reported selections and speedups therefore apply to this monitored implementation. Methods are run in a fixed order, and the first AMG setup in a fresh process also includes the PyAMG import; these timings do not isolate hierarchy construction from first-use overhead. BLAS thread settings and processor power states were not recorded, limiting exact performance replication. Failed convergence would be recorded as a structured row in the raw CSV artefact, although all baseline benchmark cases converged.
-
-Three evidence groups have distinct timing meanings \cite{Hoefler2015}. Historical coefficient-family results include a true-residual evaluation at every iteration, fixed method order and the first PyAMG import inside setup; their thread settings were not recorded. The controlled matched-field extension uses warm imports, shuffled order, one BLAS thread, paired setup seeds and count-only callbacks, with rtol = 1e-9 and independently checked residual at most 1e-8. The new callback calibration holds the arithmetic operator, unit source, three candidate methods, rtol = 1e-8, warm imports, one BLAS thread and setup seeds fixed, changing only the callback within each pair. All three groups exclude matrix assembly and source construction, and include fresh preconditioner setup in total time. Historical speedups are monitored-implementation results; translation reversals and empirical cost floors are within-extension comparisons. Neither time ratios nor winner boundaries are pooled across these groups. The calibration estimates callback sensitivity under its stated conditions; it cannot retrospectively separate historical import, ordering, threading or machine-state effects.
-
-Matrix-free performance is measured with a separate stencil apply matching Eq.~\eqref{eq:stencil}. Three CPU paths are compared: NumPy vectorisation, Numba serial compilation, and Numba parallel compilation with controlled thread counts. Throughput is reported as an estimated stencil bandwidth using a fixed byte model: 11 double-precision values per interior point for the variable-coefficient stencil, or 88 bytes per point. The Jacobi crossover uses five double-precision values per interior point, or 40 bytes per point. These estimates are operational metrics for comparing implementations of the same stencil family, not hardware peak-bandwidth or direct DRAM-transaction claims.
-
-The CUDA experiment uses a repeated Jacobi update rather than the full variable-coefficient operator. This isolates a simple memory-bound stencil and avoids conflating kernel throughput with sparse-solver algorithmics. CPU and GPU arrays are allocated once, one batch is used for warm-up, and timing continues for at least three batches and 0.2 s. CUDA uses 16 by 16 thread blocks and the Numba CPU baseline uses four threads. These are within-run averages, not independent timing replicates. CUDA timings use a host wall-clock timer around resident-data batches of 20 updates, including Python launch overhead and device synchronisation after each batch. Allocation, compilation warm-up, and host-device transfers are excluded. This boundary matches repeated time-stepping or smoother-like updates where data remain resident on the device, but it should not be read as end-to-end application speedup.
-
-For a single solve, the decision map compares setup-plus-solve times. For coefficient case $c$, grid size $N$, and method set $\mathcal{S}$, it selects
-\begin{equation}
-    s^*(c,N)=\arg\min_{s\in\mathcal{S}}\left[T_{\mathrm{setup}}(s,c,N)+T_{\mathrm{solve}}(s,c,N)\right],
-    \label{eq:decision}
-\end{equation}
-among converged runs. This is a retrospective measured comparison: all candidates have already been run, and the winning time excludes the cost of evaluating the other candidates. This makes one-time AMG setup cost visible rather than treating iteration count as the only outcome. It is not a repeated-right-hand-side reuse model; such a model would require an explicit solve count $m$.
-
-We report Spearman rank correlations between $C_k$, $G_k^{(h)}$, $V_k$, the available-grid condition estimate, CG iterations, and the speedup of the selected solver over CG. The coefficient set is a designed benchmark grid rather than a random sample from a defined population, so rank correlations are treated as descriptive association diagnostics rather than population-level inferential estimates. Pooled rows summarise all case-size entries but are not treated as independent samples because the same coefficient family appears at multiple grid sizes. Fixed-$N$ rows provide the safer coefficient-level reading and include deterministic case-resampling intervals. Iteration-count associations are treated as the primary solver-difficulty diagnostic; associations with selected-solver speedup are secondary and exploratory because the full decision grid uses a single timing pass per cell. Permutation $p$-values are archived in the CSV as diagnostics rather than used to claim pairwise descriptor separation. Timing stability is assessed by repeating selected decision-map cases five times and then reporting the solver chosen by median total time, the per-repeat vote fraction, and the relative interquartile range of the selected method. The full decision grid remains a single-pass benchmark, while the repeat check probes whether the most important decisions are robust or near ties. The hardware crossover model is similarly bounded: for the repeated Jacobi kernel it fits $T(n)=\alpha+\beta n$, where $n=(N-2)^2$, and archives the global four-point fit as an exploratory summary rather than a validated local crossover model.
-
-\section{Experiments and Results}
-
-All experiments were run on Windows 11 with Python 3.12.9, NumPy 2.4.6, SciPy 1.18.1, Numba 0.67.0, PyAMG 5.3.0, and Numba-CUDA 0.30.4. The machine used an AMD Ryzen 9 7940HS w/ Radeon 780M Graphics CPU with 8 physical cores and 16 logical processors, approximately 16 GB of system memory reported by the operating system as 15.2 GB usable, and an NVIDIA GeForce RTX 4060 Laptop GPU with compute capability 8.9. The exact raw CSV outputs, environment metadata, and scripts are included in the supplementary artefact. The decision map covers 13 coefficient cases, three grid sizes, and three Krylov/preconditioner choices. The spectral conditioning study uses $N=32,64,128$. Extremal eigenvalues of the unpreconditioned matrix are estimated with SciPy eigsh (smallest/largest algebraic eigenvalue, tolerance 1e-6, maximum 20000 iterations). These estimates do not describe the preconditioned operator; the N = 256 correlations using an N = 128 spectral proxy are cross-resolution diagnostics. The rank-correlation analysis uses all 39 case-size decisions and three fixed-grid strata of 13 cases; condition numbers are matched to $N=64$ and $N=128$ where available, and the $N=128$ condition estimate is used as the maximum-available case-level spectral proxy for $N=256$. The repeated timing check uses five repeats for one constant case and four nonconstant representative cases at each of the three decision-grid sizes, covering 15 case-size cells. The face-averaging sensitivity study reruns the three discontinuous $C_k=100$ stress cases with arithmetic and harmonic face averages at $N=64,128,256$.
-
-\subsection{Verification and Coefficient Difficulty}
-
-The manufactured-solution study confirms the expected second-order behaviour of the finite-difference scheme. Table~\ref{tab:convergence} reports fitted rates using $N=32,64,128,256$ with a CG residual tolerance of $10^{-11}$. Both the constant and smooth variable-coefficient cases produced $L^2$ rates close to two. Figure~\ref{fig:convergence} gives the same result as a log-log error plot.
-
-\input{tables/convergence_summary}
-
-\begin{figure}[t]
+The difference is O(h\ensuremath{^{2}}) for smooth positive k, but kA/kH = 25.5025 at contrast 100. This local conductance ratio is not a temperature-error estimate. Arithmetic stress tests therefore characterise the specified operator rather than validating composite-material flux; harmonic averaging resolves the aligned resistance model, but not a curved interface cutting cells. Both averages enter the matched-field audit.\par
+With exact solution sin(\ensuremath{\pi}x)sin(\ensuremath{\pi}y), constant and smooth-variable tests give fitted L\ensuremath{^{2}} orders 2.01 and 2.02 over N = 32--256. The aligned one-dimensional interface test gives harmonic flux errors of \ensuremath{5.11\times10^{-15}}--\ensuremath{4.91\times10^{-14}}, versus arithmetic errors decreasing from 0.0633 to 0.00749. Full verification tables, coefficient definitions and implementation details appear in Supplement S1--S3. At N = 128 and contrast 100, inclusion and checkerboard condition estimates differ (\ensuremath{6.43\times10^{5}} versus \ensuremath{3.12\times10^{4}}), already showing that contrast alone is insufficient.\par
+All runs use one Windows 11 workstation (Ryzen 9 7940HS, 16 GB RAM, RTX 4060 Laptop GPU). The principal candidates are CG, Jacobi-PCG (J) and default PyAMG 5.3.0 smoothed-aggregation PCG (SA). Selection minimises fresh preconditioner setup plus solve time; assembly and source construction are excluded, as is the cost of testing other candidates. Three protocols must be distinguished \cite{Hoefler2015}. Historical comparisons use a unit source, rtol = \ensuremath{1\times10^{-8}}, per-iteration true-residual callbacks, fixed order and first-use PyAMG import inside setup; threads and power states were not recorded. The controlled extension uses warm imports, shuffled order, one BLAS thread, paired setup seeds and count-only callbacks, with rtol = \ensuremath{1\times10^{-9}}. Calibration holds these controlled execution settings fixed at rtol = \ensuremath{1\times10^{-8}} and changes only the callback within each pair. Zero initial guesses and zero absolute tolerances apply; extension acceptance requires an independent relative residual \ensuremath{\leq}\ensuremath{1\times10^{-8}}. Timings and winner boundaries are compared within protocols, never pooled across them. Full defaults and iteration limits are in Supplement S2; environment versions are in S3.\par
+\section{Interface and callback sensitivity}
+The historical single-pass map spans 13 coefficient cases and three sizes: J wins at N = 64 and SA at N = 128, 256. The winner is constant across coefficient families at each size, so the map does not show a predictive benefit beyond resolution. Five-repeat checks retain the median winner in every repeat in 14/15 cells; constant N = 64 is a near tie (J median advantage 1.03\ensuremath{\times}, CG wins 4/5). For constant k, Jacobi is scalar scaling and gives no spectral improvement. Table 1 retains all nine face-average comparisons: matching winners do not establish physical equivalence, timing stability or equal solution accuracy.\par
+\begin{table}[htbp]
 \centering
-\includegraphics[width=0.84\linewidth]{figures/convergence_l2.png}
-\caption{Manufactured-solution convergence of the finite-difference operator.}
-\label{fig:convergence}
-\end{figure}
+\caption{All contrast-100 historical face checks: arithmetic/harmonic iterations and setup-inclusive winners (J = Jacobi-PCG; SA = smoothed-aggregation PCG). Single timing passes; no uncertainty estimate.}
+\label{tab:face-main}
+\small
+\begin{tabular}{llllll}
+\toprule
+Case & $N$ & CG & J & SA & Winner \\
+\midrule
+Inclusion & 64 & 796/725 & 129/129 & 10/10 & J/J \\
+Inclusion & 128 & 1963/1891 & 264/263 & 12/11 & SA/SA \\
+Inclusion & 256 & 4370/4326 & 535/535 & 12/12 & SA/SA \\
+Layered & 64 & 1136/1120 & 164/181 & 9/9 & J/J \\
+Layered & 128 & 2447/2442 & 325/367 & 10/10 & SA/SA \\
+Layered & 256 & 5055/5054 & 657/715 & 10/10 & SA/SA \\
+Checkerboard & 64 & 443/557 & 171/190 & 13/28 & J/J \\
+Checkerboard & 128 & 1050/1308 & 350/388 & 17/32 & SA/SA \\
+Checkerboard & 256 & 2268/2809 & 718/783 & 17/31 & SA/SA \\
+\bottomrule
+\end{tabular}
+\end{table}
 
-The discontinuous-interface check in Table~\ref{tab:interface-verification} isolates a different error mechanism. For an aligned one-dimensional two-material conduction problem, harmonic face averaging reproduced the analytic interface flux to roundoff, while arithmetic averaging showed a grid-refined interface error. This does not make harmonic averaging a universal choice for all multidimensional discontinuities, but it prevents the benchmark from relying only on smooth manufactured-solution evidence.
-
-\input{tables/interface_verification_summary}
-
-Table~\ref{tab:difficulty} reports representative coefficient descriptors. The spectral evidence confirms that contrast alone is not a complete difficulty measure. At $N=128$, the inclusion case with $C_k=100$ had a computed condition-number estimate of $6.43\times10^5$, while the checkerboard case with the same contrast had a much smaller estimate of $3.12\times10^4$ under this discretisation. Figure~\ref{fig:conditioning} shows the same effect across the measured coefficient grid.
-
-\input{tables/coefficient_difficulty_summary}
-
-\begin{figure}[t]
+Calibration uses arithmetic faces and a unit source for constant, inclusion and checkerboard fields (contrast 100 for the latter two), three sizes, three methods, two callbacks and seven shuffled repeats (378 solves). Every solve passes the independent \ensuremath{1\times10^{-8}} check; all 189 paired solutions have identical hashes and iteration counts. Monitored/count-only solve-time ratios span 1.54--1.84 for CG, 1.58--1.77 for J and 1.03--1.06 for SA (Table 2). All nine median winners agree across callbacks, but constant N = 256 has only 3/7 count-only SA wins. Median optimality and majority voting differ. Several N = 128 winners differ from the historical map under both callbacks: callback removal alone cannot explain the change. Calibration neither measures cold-import overhead nor controls operating-system, power or thermal variation.\par
+\begin{table}[htbp]
 \centering
-\includegraphics[width=0.84\linewidth]{figures/conditioning.png}
-\caption{Computed condition-number response to coefficient contrast and coefficient geometry.}
-\label{fig:conditioning}
-\end{figure}
+\caption{All callback-calibration cells. Winners: method, median total ms and wins/7. Last columns: paired median monitored/count-only solve-time ratios.}
+\label{tab:protocol}
+\small
+\begin{tabular}{lllllll}
+\toprule
+Case & $N$ & Monitored & Count-only & CG & J & SA \\
+\midrule
+Constant & 64 & CG 5.64 (7/7) & CG 3.55 (5/7) & 1.58 & 1.58 & 1.05 \\
+Constant & 128 & CG 31.22 (6/7) & CG 19.11 (7/7) & 1.67 & 1.70 & 1.04 \\
+Constant & 256 & SA 141.18 (7/7) & SA 147.70 (3/7) & 1.84 & 1.76 & 1.04 \\
+Inclusion & 64 & J 6.67 (7/7) & J 4.12 (7/7) & 1.63 & 1.62 & 1.03 \\
+Inclusion & 128 & J 38.28 (7/7) & J 22.34 (7/7) & 1.72 & 1.61 & 1.04 \\
+Inclusion & 256 & SA 156.23 (7/7) & SA 152.34 (6/7) & 1.79 & 1.77 & 1.03 \\
+Checkerboard & 64 & J 8.69 (6/7) & J 5.63 (7/7) & 1.54 & 1.59 & 1.04 \\
+Checkerboard & 128 & J 50.18 (5/7) & J 29.65 (7/7) & 1.73 & 1.65 & 1.06 \\
+Checkerboard & 256 & SA 192.31 (7/7) & SA 180.24 (7/7) & 1.79 & 1.67 & 1.06 \\
+\bottomrule
+\end{tabular}
+\end{table}
 
-The supplementary rank-correlation table distinguishes pooled size effects from fixed-grid coefficient comparisons. The matched condition estimate has pooled correlation 0.94 with selected-solver speedup, but fixed-grid samples contain only 13 cases and their case-resampling intervals overlap. These are descriptive ordering signals, not population confidence guarantees. The matched-field audit below tests descriptor sufficiency directly, rather than inferring it from pooled correlation.
-
-
-\subsection{Solver Decision Map and Preconditioner Effect}
-
-The single-pass setup-inclusive decision map records a resolution-dependent outcome. Within each grid size the winning class is the same across all tested coefficient fields, so this map supplies no evidence that descriptors improve prediction of the winner beyond resolution alone. Over the 13 coefficient cases, Jacobi-PCG was fastest in every $N=64$ run, while AMG-PCG was fastest in every $N=128$ and $N=256$ run. Table~\ref{tab:decision-summary} summarises this transition. The median speedup of the selected solver over CG increased from $2.79\times$ at $N=64$ to $7.80\times$ at $N=256$, and the largest speedup reached $25.72\times$ for the layered $C_k=100$ case. Because each decision-map cell uses one timing pass, this map is interpreted together with the repeated representative cases below.
-
-\input{tables/decision_summary}
-
-
-The complete arithmetic/harmonic sensitivity results are reported below in Table~
-ef{tab:face-main}.
-
-
-
-The supplementary timing-stability table reports all 15 case-size cells in the existing repeated-timing dataset. The median-best solver also won all five individual repeats in 14 cells: Jacobi-PCG for the four nonconstant N = 64 cases, and AMG-PCG for all five cases at both N = 128 and N = 256. The constant N = 64 cell is a near tie: the median favours Jacobi-PCG by only $1.03\times$, while CG wins four repeats. For constant conductivity on this uniform grid, the diagonal is a scalar multiple of the identity; Jacobi therefore does not improve the spectral condition number and yields equivalent CG iterates in exact arithmetic. The archived single-pass CG and Jacobi-PCG iteration counts agree at all three sizes. Their small-grid timing difference is not evidence of an iteration-reduction benefit.
-
-
-
-Solver behaviour changed substantially when the coefficient field became high contrast. At $N=256$, unpreconditioned CG required 4370 iterations in the high-contrast case, compared with 770 iterations in the smooth case. Jacobi preconditioning reduced the high-contrast iteration count to 535, while AMG-PCG reduced it to 12. Total time fell from 6.155 s for CG to 0.288 s for AMG-PCG in the high-contrast case. Table~\ref{tab:solver} summarises the finest-grid comparison, and Fig.~\ref{fig:solver_runtime} shows total-time scaling across grid sizes. The iteration-scaling figure is retained in the supplementary artefact.
-
-\input{tables/solver_summary}
-
-\begin{figure}[t]
-\centering
-\includegraphics[width=0.84\linewidth]{figures/solver_runtime.png}
-\caption{Total setup plus solve time for CG, Jacobi-PCG, and AMG-PCG.}
-\label{fig:solver_runtime}
-\end{figure}
-
-
-The complete face-averaging check in Table \ref{tab:face-main} reports all nine historical case-size cells. Arithmetic/harmonic iteration counts differ substantially, including AMG changes for checkerboard fields, although the setup-inclusive winner is unchanged in these single passes. Agreement of winners does not establish physical equivalence of the operators, timing stability, or identical solution accuracy. The aligned one-dimensional verification and the two-dimensional solver-cost sensitivity answer separate questions.
-
-\input{tables/face_sensitivity_main}
-
-\subsection{Paired Callback Calibration}
-
-A prospective calibration covers constant, inclusion and checkerboard conductivity (contrast 100 for the latter two), N = 64, 128, 256, three methods, two callback modes and seven repeats: 378 recorded solves. Each repeat shuffles all 54 jobs; each solve constructs a fresh preconditioner with a seed matched across callback modes. Every run satisfies the independent residual threshold of 1e-8. All 189 paired solutions have identical byte hashes and iteration counts. Median paired monitored/count-only solve-time ratios range from 1.54 to 1.84 for CG, 1.58 to 1.77 for Jacobi-PCG, and 1.03 to 1.06 for AMG-PCG. These method-dependent penalties change reported speedups even when the median winner is unchanged.
-
-Table \ref{tab:protocol} reports every case-size cell, including vote instability. The median winner agrees between callbacks in all nine cells. At constant N = 256, however, count-only AMG wins only three of seven repeats despite having the lowest method median; the median winner and majority vote answer different questions. The archived method summaries retain setup, solve and total-time quartiles for all candidates. Several N = 128 winners differ from the historical map under both callback modes, so callback removal alone cannot explain the historical-to-calibration difference. No universal N = 128 AMG crossover is inferred. The calibration does not measure cold-import overhead or control operating-system, power or thermal variation.
-
-\input{tables/protocol_sensitivity}
-
-\subsection{Matched-Field and Forcing Audit}
-
-Matched fields. Two 2-by-8 binary motifs contain 12 high cells and 20 high/low boundary edges but have one and two connected components, respectively. Integer dilation by s = N/16 and low-conductivity padding embed each motif in the unit square. The high phase has k = c and the background k = 1. For the tested grids, both fields have $12s^2$ high nodes, mean 1 + (c - 1)$12s^2$/$N^2$, total variation (c - 1)20s/(N - 1), and maximum log-gradient $\sqrt{2}(N-1)\log(c)/2$. These counting identities are checked after embedding. A one-node translation preserves these quantities, component sizes, shape, and topology; it changes position relative to the source and boundary. Matching these invariants does not isolate topology as the sole cause of a performance difference.
-
-\begin{figure}[t]
-\centering
-\includegraphics[width=\linewidth]{figures/counterfactual_audit.png}
-\caption{Matched coefficient motifs and the forcing/translation audit. Bars show median setup-plus-solve times; whiskers span five runs. Iteration counts are annotated. The fields share scalar coefficient descriptors, while a rigid translation also preserves shape and connectivity.}
-\label{fig:counterfactual}
-\end{figure}
-
-Controlled protocol. Following an exploratory 576-solve screen, confirmation uses c = 1000 and N = 96, 128, 192; centered, jointly transposed, and one-node x-shifted configurations; arithmetic and harmonic faces; and four unit-norm sources: constant, sin(2 pi x)sin(pi y), sin(pi x)sin(2 pi y), and a fixed-seed Gaussian vector. Jacobi-PCG and default SA-PCG each use five fresh setups per case, paired recorded setup seeds, shuffled method/source order, warm imports, and one BLAS thread. SA uses symmetric strength with theta = 0 and retains hierarchy diagnostics (keep=True). Count-only callbacks avoid the baseline residual-monitor overhead. CG uses rtol = 1e-9, zero initial guess, and at most 8000 iterations; an independent true relative residual must be at most 1e-8. Assembly and source construction are shared and excluded. The two timing protocols are not pooled.
-
-A separate 3-by-6 motif family samples four connected and four disconnected patterns before observing their solver outcomes, retaining 12 occupied cells and 20 interface edges. It supplies 640 solves at N = 128, 192. This is a balanced constructed family, not a random sample of engineering materials. An additional 132-solve perturbation study varies translation direction and source admixtures with three repeats. The 1440 confirmation, 640 independent-family, and 132 perturbation solves all pass the true-residual check; the largest residual is below 3e-9. The pilot archive retains 84 failed acceptance checks, mainly at higher contrast or the CG iteration limit. No failed pilot timing is relabelled as a successful solve.
-
-Mechanism. Let R reflect interior nodes in x and let D be the diagonal of A. If RA = AR, then R also commutes with D and the symmetrically scaled matrix S. For an odd source Rb = -b, every vector in the zero-start Krylov space generated by S and the scaled source g is odd. It is orthogonal to x-even eigenvectors in exact arithmetic. The centered two-island field satisfies this identity; its two slowest Jacobi-scaled modes are x-even. At N = 64 and c = 10000, computed squared source overlaps are below 1e-30 for both face averages. A transpose of both operator and source preserves Jacobi iteration counts, whereas translating the field in x breaks the reflection identity. This is a standard invariant-subspace explanation, not new convergence theory.
-
+\section{Matched-field, forcing and solver-set audit}
+Two 2-by-8 motifs have 12 high cells and 20 interface edges, but one or two connected components (Figure 1). High/background conductivities are c/1. Dilation by s = N/16 and low-conductivity padding give 12s\ensuremath{^{2}} high nodes, mean 1 + (c \ensuremath{-} 1)12s\ensuremath{^{2}}/N\ensuremath{^{2}}, total-variation proxy (c \ensuremath{-} 1)20s/(N \ensuremath{-} 1), and maximum nodal log-gradient \ensuremath{\sqrt{2}}(N \ensuremath{-} 1)log(c)/2. Total variation sums absolute nearest-neighbour differences and divides by N \ensuremath{-} 1; the log-gradient uses centred interior and one-sided boundary differences. For jumps it is a fixed-grid descriptor. These identities are checked after embedding. A one-node translation preserves them, component sizes and shape, while changing alignment with the source and boundary. Comparing different motifs alone does not isolate topology causally.\par
+After a 576-solve exploratory screen, confirmation uses c = 1000, N = 96, 128, 192, centred/\allowbreak{}transposed/\allowbreak{}x-shifted configurations, both face averages and four unit-norm sources: constant, sin(2\ensuremath{\pi}x)sin(\ensuremath{\pi}y), sin(\ensuremath{\pi}x)sin(2\ensuremath{\pi}y) and fixed-seed Gaussian. J and SA each have five fresh paired setups. The 1440 confirmation solves, 640 solves from eight prespecified 3-by-6 motifs, and 132 translation/source-perturbation solves pass acceptance (maximum residual <\ensuremath{3\times10^{-9}}). The independent family balances four connected and four disconnected patterns; it is not a random material sample. The pilot retains 84 failed acceptance checks, excluded from successful timings.\par
+Let R reflect interior nodes in x, D = diag(A), S = \ensuremath{D^{-1/2}} A \ensuremath{D^{-1/2}}, and g = \ensuremath{D^{-1/2}}b. When RA = AR and Rb = \ensuremath{-}b, the zero-start Krylov space generated by S and g is odd and orthogonal to x-even eigenvectors. The centred two-island field has two slow x-even Jacobi-scaled modes; computed squared source overlaps are <\ensuremath{1\times10^{-30}} at N = 64, c = 10000 for both face averages. Joint transposition preserves J iterations, whereas x translation breaks reflection symmetry. This is an invariant-subspace explanation, not new convergence theory.\par
+\begin{figure}[htbp]\centering
+\includegraphics[width=\linewidth]{figures/compact_counterfactual.png}
+\caption{Matched motifs (left); two-island source/alignment sensitivity at N = 192, c = 1000, harmonic faces (right). Bars: median setup + solve time; whiskers: five-run range; labels: iterations.}\end{figure}
+At N = 192 with harmonic faces and odd-x forcing, J changes from 403 iterations/72.2 ms to 677/125.1 ms after translation; SA changes from 17/101.0 ms to 16/97.5 ms. Each position retains its winner in all five repeats. A random source on the centred operator gives J 949 iterations/166.2 ms versus SA 15/94.3 ms. Adding only \ensuremath{1\times10^{-8}} of a constant component to the odd source raises J from 403 to 569 iterations. A y translation can preserve x reflection while changing the remaining spectrum; parity alone is not a runtime predictor.\par
+Stable per-repeat winners occur in 124/144 confirmation cells and 55/64 independent-family cells; only 2/48 centred/shifted pairs reverse consistently in all five repeats. The result is a counterexample, not a prevalence estimate. Any deterministic choice restricted to the preserved invariants must select the same method for both positions. For measured median total time T(j,s), its least equally weighted excess cost over portfolio P is\par
 \begin{equation}
- S=D^{-1/2}AD^{-1/2},\qquad g=D^{-1/2}b,\qquad Rb=-b.
+E(P)=\min_{s\in P}\left[\frac12\sum_{j=0}^1\frac{T(j,s)}{\min_{t\in P}T(j,t)}\right]-1.
 \end{equation}
-
-
-
-Figure~\ref{fig:counterfactual} shows a concrete decision consequence at N = 192 with harmonic faces and c = 1000. For the odd-x source, the centered two-island field takes 403 Jacobi iterations and 72.2 ms, versus 17 AMG-PCG iterations and 101.0 ms. A one-node x translation increases Jacobi to 677 iterations and 125.1 ms, while AMG-PCG takes 16 iterations and 97.5 ms. Each winner is unchanged across the five repeats. With the same centered operator but a random source, Jacobi takes 949 iterations and 166.2 ms, and AMG-PCG takes 15 iterations and 94.3 ms. These are measured medians on this workstation, not universal crossover thresholds.
-
-The full confirmation has a consistent per-repeat winner in 124 of 144 cells; the independent motif family has 55 of 64. Only two of the 48 centered-versus-x-shifted pairs reverse their winner consistently in all five repeats, so the reversal is a counterexample rather than a population-frequency claim. For the odd-x example within the Jacobi/SA portfolio, any deterministic rule restricted to the preserved coefficient invariants must choose the same method for both positions. Let T(j,s) be the median setup-plus-solve time for position j and candidate s in portfolio P. The least excess cost of a fixed choice across the equally weighted pair is E(P), defined below. For the two-method example, 1 + E(P) = 1.142. This empirical floor is not a statistical lower confidence bound, a bound for other solver portfolios, or a proposed selector. The raw tables include all pairs, unstable cells, and both methods.
-\begin{equation}
- E(P)=\min_{s\in P}\left[\frac{1}{2}\sum_{j=0}^{1}
- \frac{T(j,s)}{\min_{t\in P}T(j,t)}\right]-1.
- \label{eq:empirical-floor}
-\end{equation}
-
-
-Source perturbations test the interpretation without changing A: at N = 192, adding a constant component of amplitude 1e-8 to the unit odd source raises Jacobi from 403 to 569 iterations under the same stopping tolerance. A y translation preserves x reflection but can change the remaining spectrum and other symmetry sectors; parity alone is therefore not a complete runtime predictor. Offline spectra use symmetric Jacobi scaling and the nonsymmetric operator BA for the AMG inverse preconditioner B. Small-grid dense symmetrisation checks validate the numerical spectral procedure. Neither eigenvalue computations nor the reflection audit is included in a claimed low-cost selection policy.
-
-Candidate-solver sensitivity. A separate 240-solve screen adds SA with symmetric-strength theta = 0.25 and classical Ruge-Stueben AMG with classical strength theta = 0.25. A subsequent 504-solve confirmation compares Jacobi, SA with theta = 0, and classical AMG at N = 128, 160, 192, using the two-island motif and the previously tested symmetric 3-by-6 anchor, whose three rows are each 110011. Each of seven repeats interleaves both field positions, both sources, both motifs, and all three methods at a fixed N. All 744 solves pass the same residual acceptance check; their timings are not pooled with earlier stages. The confirmation has 17 of 24 cells with the same winner in every repeat, and three of 12 translated pairs reverse their winner in all seven repeats. Table~\ref{tab:portfolio-audit} reports all 12 pairs, including unstable cells and zero floors. For the original motif at N = 128 with odd-x forcing, centered Jacobi and classical AMG take 24.3 and 36.8 ms; after translation they take 42.3 and 34.2 ms. Jacobi iterations rise from 266 to 450, while classical AMG takes 11 in both positions. The three-method empirical excess-cost floor for this pair is 11.91%. At N = 192, classical AMG has the lowest median time at both positions, giving zero median-based floor for that pair, although the centered winner is not identical in all repeats. Thus translation sensitivity survives a stronger baseline, but its measured decision boundary and cost consequence depend on the candidate solver set.
-
-\input{tables/portfolio_summary}
-
-\subsection{CPU and CUDA Stencil Scaling}
-
-At $N=2048$, NumPy required 0.1813 s per apply, while Numba serial required 0.005325 s and Numba parallel with four threads required 0.003725 s. Increasing thread count beyond four did not improve the largest case in this run; the measurements alone do not distinguish memory-system limits from scheduling overhead.
-
-The CUDA Jacobi benchmark measures the resident-data update cost. At $N=512$, GPU and CPU kernel times were essentially equal. At $N=1024$, CUDA reached $1.52\times$ speedup. At $N=2048$ and $N=4096$, the speedups increased to $3.23\times$ and $3.51\times$, respectively. The measurements describe this kernel and workstation. They do not imply the same speedup for an end-to-end sparse solver.
-
-\input{tables/performance_summary}
-
-\begin{figure}[t]
+For this J/SA pair, E(P) = 14.2\%. This empirical quantity is neither a statistical lower confidence bound nor a bound for other portfolios. A 240-solve screen and 504-solve interleaved confirmation add classical Ruge--Stüben AMG (strength threshold 0.25). Confirmation compares J, default SA and classical AMG at N = 128, 160, 192, for both positions, odd-x/random sources and two motifs: the original two-island field and a 3-by-6 anchor with rows 110011. All 744 solves pass acceptance. In seven-repeat confirmation, 17/24 cells retain the same winner across all seven repeats and 3/12 pairs reverse consistently (Table 3). For the original motif at N = 128 with odd-x forcing, centred J/classical-AMG times are 24.3/36.8 ms, versus 42.3/34.2 ms after translation; J iterations rise 266\ensuremath{\to}450 while classical AMG takes 11 in both. E(P) = 11.91\%. At N = 192, classical AMG wins both median comparisons and the floor is zero, with an unstable centred winner. The stronger baseline changes the decision boundary and cost consequence; these timings are not pooled with earlier stages.\par
+\begin{table}[t]
 \centering
-\includegraphics[width=0.84\linewidth]{figures/cpu_scaling.png}
-\caption{Estimated CPU stencil bandwidth for the variable-coefficient stencil apply.}
-\label{fig:cpu_scaling}
-\end{figure}
+\caption{All 12 interleaved translated pairs. RS = classical AMG-PCG; SA also competed. Stable: each position retains its winner in all seven repeats. E(P) uses medians even for unstable pairs; it is not a confidence bound.}
+\label{tab:portfolio-audit}
+\begin{tabular}{rlllllr}
+\toprule
+$N$ & Motif & Source & Centered & Shifted & Stable & $E(P)$ (\%) \\
+\midrule
+128 & 3x6 & Odd-x & J & RS & Yes & 12.42 \\
+128 & 3x6 & Random & RS & RS & Yes & 0.00 \\
+128 & 2x8 & Odd-x & J & RS & Yes & 11.91 \\
+128 & 2x8 & Random & RS & RS & Yes & 0.00 \\
+160 & 3x6 & Odd-x & J & RS & Yes & 9.69 \\
+160 & 3x6 & Random & RS & RS & No & 0.00 \\
+160 & 2x8 & Odd-x & J & RS & No & 4.86 \\
+160 & 2x8 & Random & RS & RS & Yes & 0.00 \\
+192 & 3x6 & Odd-x & RS & RS & No & 0.00 \\
+192 & 3x6 & Random & RS & RS & Yes & 0.00 \\
+192 & 2x8 & Odd-x & RS & RS & No & 0.00 \\
+192 & 2x8 & Random & RS & RS & Yes & 0.00 \\
+\bottomrule
+\end{tabular}
+\end{table}
 
-\begin{figure}[t]
-\centering
-\includegraphics[width=0.84\linewidth]{figures/gpu_crossover.png}
-\caption{CUDA kernel-only speedup for repeated Jacobi updates relative to a four-thread Numba CPU baseline.}
-\label{fig:gpu_crossover}
-\end{figure}
-
-The measured timings are approximately equal at N = 512, and CUDA is faster at N = 1024. The supplementary artefact retains the exploratory four-point linear fit. Its negative CPU-time prediction at the measured N = 512 point invalidates its use as a crossover-location estimate; no fitted hardware-selection threshold is claimed.
-
-\section{Discussion}
-
-The matched-field audit qualifies the baseline resolution-dependent decision map. The original monitored runs show the expected setup-versus-iteration trade-off, but their uniform winner at each resolution does not establish descriptor sufficiency. In the controlled extension, a rigid translation or a source perturbation changes the effective Krylov workload while retaining the listed coefficient invariants. The practical recommendation is to test forcing, alignment, and candidate-solver sensitivity before interpreting a coefficient-stratified timing map as a reusable decision rule. The classical-AMG check shows why a cost floor established for two methods must be recomputed when the portfolio changes. Symmetric sources can be physically appropriate; their fast solves should be reported as workload-specific evidence, not treated as an error or extrapolated to arbitrary forcing.
-
-For physical composite-conduction use, the face law must be chosen from the interface geometry and resistance model before comparing solvers. The arithmetic benchmark is not evidence of accurate cross-interface flux at high contrast. For performance use, the callback calibration shows that an iteration monitor can disproportionately penalise inexpensive iterations; solver rankings and their uncertainty must therefore be reported with the callback, setup and execution protocol.
-
-The coefficient descriptors are empirical summaries, not conditioning theory. Their uncertainty intervals overlap, and small fixed-grid strata do not establish a reliable ordering of predictive importance. Pooled correlations also reflect resolution; N = 256 uses an N = 128 condition estimate. Case-resampling intervals describe sensitivity to this constructed dataset, not population confidence or performance on unseen geometries.
-
-The stencil measurements demonstrate implementation and size effects. Nonmonotone CPU scaling is consistent with bandwidth or scheduling limits, but no hardware counters separate these causes. CUDA timings include launch and final synchronisation with data resident on the device. They exclude transfer costs and full sparse solves; the four-point fit cannot validate a crossover threshold.
-
-The scope is two-dimensional structured grids, synthetic coefficients and one workstation. Harmonic averaging does not resolve curved interfaces cutting grid cells. Industrial geometries, unstructured finite elements and transient multiphysics remain outside the evidence. The contribution is a reproducible audit of numerical correctness and conditional solver costs, not production solver robustness.
-
-\section{Reproducibility Artefact}
-
-The previously published baseline and controlled extension are archived at \url{https://doi.org/10.5281/zenodo.22668106}, with the earlier baseline at \url{https://doi.org/10.5281/zenodo.22303525}. The present revision additionally supplies the callback calibration in \path{results/raw/protocol_sensitivity}, its prospective protocol in \path{experiments/protocol_sensitivity.md}, and complete generated summaries in \path{results/analysis/protocol_sensitivity} through the accompanying supplementary package. The complete revised artefact, including these calibration files, is archived at \url{https://doi.org/10.5281/zenodo.22874266} (version v5). Raw histories are retained unchanged. Run \path{experiments/analyze_protocol_sensitivity.py} to regenerate the two new tables from the recorded CSV files. Recorded configurations and source hashes document the calibration. The reproduction instructions distinguish historical monitored runs from controlled count-only runs and preserve pilot failures. Tests check flux-energy identities, matched descriptors, reflection invariance and transpose equivalence. CPU-only tests explicitly skip unavailable CUDA tests; CUDA-required mode treats missing GPU support as an error. Timing reruns may differ with machine state.
-
-\section{Conclusion}
-
-In the controlled heat-conduction tests, preserving scalar coefficient descriptors, shape and connectivity does not guarantee the same fastest solver: source and alignment changes can alter the measured setup-inclusive choice. The classical-AMG comparison shows that the reversal also depends on the candidate solver set. These findings support checking forcing, alignment and candidate solvers before reusing a coefficient-based decision map, alongside operator verification, complete setup timing and retention of failed solves. The CPU/CUDA experiments provide separate stencil measurements, with GPU results limited to resident data on the tested workstation. The study introduces no new numerical algorithm or universal selection rule.
-
+\section{Stencil scaling and implications}
+At N = 2048, variable-coefficient stencil times are 0.1813 s (NumPy), 0.005325 s (Numba serial) and 0.003725 s (Numba, four threads); more threads did not improve the largest case. Separate resident-data Jacobi updates give CUDA/CPU speedups near 1 at N = 512, then 1.52\ensuremath{\times}, 3.23\ensuremath{\times} and 3.51\ensuremath{\times} at N = 1024, 2048, 4096. CPU uses four threads and CUDA 16-by-16 blocks. Host-clock timings include launch and final synchronisation of 20-update batches, excluding allocation, compilation and transfers. At least three batches and 0.2 s yield within-run averages, not independent replicates. These are kernel results, not end-to-end sparse-solver speedups. Full curves and byte models are in Supplement S3.5 and S2, respectively. A four-point linear fit predicts a negative CPU time at N = 512 and cannot establish a crossover threshold.\par
+The audit shows why forcing, alignment and candidate solvers must be checked before reusing coefficient-based choices. Physical interpretation additionally requires a justified interface law, and timing interpretation requires the callback and setup protocol. Evidence remains limited to synthetic structured 2D problems and one workstation. Descriptive correlations have overlapping resampling intervals and resolution confounding (N = 256 uses an N = 128 spectral proxy); they do not establish descriptor rankings or population confidence. Neither production robustness nor universal solver thresholds follow from these measurements.\par
+\section{Reproducibility}
+Numerical evidence and scripts, including callback calibration, are archived at \url{https://doi.org/10.5281/zenodo.22874266} (v5). The accompanying supplement retains complete tables, plots, protocols and failures; the present compression changes presentation only. Tests cover flux energy, matched descriptors, reflection and transposition, with explicit CPU-only/CUDA-required modes. Timing reruns remain machine-state dependent.\par
+\section*{Author contributions}
+Dong Liu led the conceptualization, formulation of the benchmark problems, numerical-method selection, and development of the finite-difference and CPU/GPU benchmarking workflow. He designed the numerical verification, computational-cost comparisons, and repeated-run experiments, and led the computational analysis and interpretation of the findings. He drafted and integrated the manuscript, with primary responsibility for verifying its scientific claims and defining their scope and limitations.\par
+Yuanxin Wang contributed to the execution and verification of the solver-comparison experiments, comparing conjugate-gradient and preconditioned conjugate-gradient methods across different grid resolutions and conductivity distributions. He compiled iteration counts, preconditioner setup times, and solve times, and checked numerical outputs using the independent residual-verification procedure to support cost comparisons among runs meeting the prescribed accuracy criterion. He helped assess whether the fastest method remained consistent across repeated runs and how relative solver performance changed under different problem settings. He also contributed to comparative figures, interpretation of the corresponding results and their scope and limitations, and manuscript revision.\par
 \section*{Acknowledgements}
-
 The author used OpenAI GPT-5 for editorial assistance and DeepSeek V4 Pro through Claude Code for language polishing. OpenAI GPT-6 Astra assisted with experimental design, code implementation, numerical analysis and manuscript preparation. The author independently reviewed the controlled experiments, including their derivations, timing boundaries and failure cases, and takes responsibility for the code, results, references and final manuscript.
-
-\bibliographystyle{unsrt}
-\bibliography{references}
-
+\begin{thebibliography}{99}
+\small\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
+\bibitem{Virtanen2020} Virtanen P et al 2020 Nature Methods 17 261--272. doi:10.1038/s41592-019-0686-2
+\bibitem{Harris2020} Harris C R et al 2020 Nature 585 357--362. doi:10.1038/s41586-020-2649-2
+\bibitem{Lam2015} Lam S K, Pitrou A and Seibert S 2015 Proc. LLVM-HPC 1--6. doi:10.1145/2833157.2833162
+\bibitem{Bell2023} Bell N, Olson L N, Schroder J and Southworth B 2023 J. Open Source Softw. 8 5495. doi:10.21105/joss.05495
+\bibitem{Strikwerda2004} Strikwerda J C 2004 Finite Difference Schemes and Partial Differential Equations, 2nd edn (SIAM). doi:10.1137/1.9780898717938
+\bibitem{Hestenes1952} Hestenes M R and Stiefel E 1952 J. Res. Natl Bur. Stand. 49 409--436. doi:10.6028/jres.049.044
+\bibitem{Saad2003} Saad Y 2003 Iterative Methods for Sparse Linear Systems, 2nd edn (SIAM). doi:10.1137/1.9780898718003
+\bibitem{Ruge1987} Ruge J W and Stuben K 1987 Algebraic multigrid, in Multigrid Methods, ed S F McCormick (SIAM) 73--130. doi:10.1137/1.9781611971057.ch4
+\bibitem{Bernaschi2026EnergySparseMultiGPU} Bernaschi M, Celestini A, Richelli G and D'Ambra P 2026 Future Gener. Comput. Syst. 183 108519. doi:10.1016/j.future.2026.108519
+\bibitem{Welter2026HDGGPUPreconditioning} Welter A and Nguyen N C 2026 Comput. Methods Appl. Mech. Eng. 456 118951. doi:10.1016/j.cma.2026.118951
+\bibitem{Yuan2025CRAMG} Yuan F et al 2025 Proc. Int. Conf. Supercomputing 397--411. doi:10.1145/3721145.3725764
+\bibitem{Green2022AnisotropicDiffusionSolver} Green D, Hu X, Lore J, Mu L and Stowell M L 2022 Comput. Phys. Commun. 276 108333. doi:10.1016/j.cpc.2022.108333
+\bibitem{Koskela2023ReproBenchmark} Koskela T et al 2023 Proc. SC Workshops 609--618. doi:10.1145/3624062.3624133
+\bibitem{SPECHPGMG2021} SPEC 2021 SPEChpc 734.hpgmgfv\_m. \url{https://www.spec.org/hpc2021/docs/benchmarks/734.hpgmgfv_m.html} (accessed 8 September 2026)
+\bibitem{LLNLAMG2023} LLNL n.d. AMG2023. \url{https://software.llnl.gov/benchmarks/10_amg/amg.html} (accessed 8 September 2026)
+\bibitem{DAmbra2023Coarsening} D'Ambra P, Durastante F, Filippone S and Zikatanov L 2023 Comput. Math. Appl. 144 290--305. doi:10.1016/j.camwa.2023.06.026
+\bibitem{Anzt2022Ginkgo} Anzt H et al 2022 ACM Trans. Math. Softw. 48 2:1--2:33. doi:10.1145/3480935
+\bibitem{Pekkila2025StencilGPUs} Pekkila J, Lappi O, Robertsen F and Korpi-Lagg M J 2025 Concurr. Comput. Pract. Exp. 37 e70129. doi:10.1002/cpe.70129
+\bibitem{Makhmut2026CUDABuckleyLeverett} Makhmut Y, Imankulov T, Gorlatch S and Matkerim B 2026 Appl. Sci. 16 5449. doi:10.3390/app16115449
+\bibitem{Tsai2023ThreePrecision} Tsai Y-H M, Beams N and Anzt H 2023 Future Gener. Comput. Syst. 149 280--293. doi:10.1016/j.future.2023.07.024
+\bibitem{Graillat2024AdaptivePrecision} Graillat S, Jézéquel F, Mary T and Molina R 2024 SIAM J. Sci. Comput. 46 C30--C56. doi:10.1137/22M1522619
+\bibitem{Aksoylu2008} Aksoylu B, Graham I G, Klie H and Scheichl R 2008 Comput. Vis. Sci. 11 319--331. doi:10.1007/s00791-008-0105-1
+\bibitem{AksoyluYeter2010} Aksoylu B and Yeter Z 2010 Comput. Vis. Sci. 13 229--245. doi:10.1007/s00791-010-0140-6
+\bibitem{Carson2024} Carson E, Liesen J and Strakos Z 2024 Linear Algebra Appl. 692 241--291. doi:10.1016/j.laa.2024.04.003
+\bibitem{Firmbach2026} Firmbach M et al 2026 arXiv:2602.05686 (preprint). doi:10.48550/arXiv.2602.05686
+\bibitem{Funk2022SolverPrediction} Funk Y, Götz M and Anzt H 2022 Proc. SIAM Conf. Parallel Processing for Scientific Computing 14--24. doi:10.1137/1.9781611977141.2
+\bibitem{Sun2025FeatureSelection} Sun H-B, Jing Y-F and Xu X-W 2025 J. Classification 42 72--89. doi:10.1007/s00357-024-09484-0
+\bibitem{Xiong2025MMAutoSolver} Xiong H et al 2025 J. Parallel Distrib. Comput. 205 105144. doi:10.1016/j.jpdc.2025.105144
+\bibitem{Zabegaev2024SolverSelection} Zabegaev Y, Keilegavlen E, Iversen E and Berre I 2024 Comput. Methods Appl. Mech. Eng. 426 117031. doi:10.1016/j.cma.2024.117031
+\bibitem{Patankar1980} Patankar S V 1980 Numerical Heat Transfer and Fluid Flow (New York: Hemisphere). ISBN:9780891165224
+\bibitem{Hoefler2015} Hoefler T and Belli R 2015 Proc. SC 73:1--73:12. doi:10.1145/2807591.2807644
+\end{thebibliography}
 \end{document}

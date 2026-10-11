@@ -1,0 +1,900 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          18
+        ]
+      ],
+      "date-time": "2026-09-18T18:28:48Z",
+      "timestamp": 1789756128877,
+      "version": "4.0.1"
+    },
+    "reference-count": 61,
+    "publisher": "Elsevier BV",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2024,
+              6,
+              1
+            ]
+          ],
+          "date-time": "2024-06-01T00:00:00Z",
+          "timestamp": 1717200000000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2024,
+              6,
+              1
+            ]
+          ],
+          "date-time": "2024-06-01T00:00:00Z",
+          "timestamp": 1717200000000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://www.elsevier.com/legal/tdmrep-license"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2024,
+              4,
+              29
+            ]
+          ],
+          "date-time": "2024-04-29T00:00:00Z",
+          "timestamp": 1714348800000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "http://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/501100005416",
+        "name": "Norges Forskningsråd",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "308733"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "308733"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/501100005416",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "elsevier.com",
+        "sciencedirect.com"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [
+      "Computer Methods in Applied Mechanics and Engineering"
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2024,
+          6
+        ]
+      ]
+    },
+    "DOI": "10.1016/j.cma.2024.117031",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2024,
+          5,
+          8
+        ]
+      ],
+      "date-time": "2024-05-08T17:20:41Z",
+      "timestamp": 1715188841000
+    },
+    "page": "117031",
+    "update-policy": "https://doi.org/10.1016/elsevier_cm_policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 6,
+    "special_numbering": "C",
+    "title": [
+      "Automated linear solver selection for simulation of multiphysics processes in porous media"
+    ],
+    "prefix": "10.1016",
+    "volume": "426",
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0009-0006-7095-3044",
+        "authenticated-orcid": false,
+        "given": "Yury",
+        "family": "Zabegaev",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-0333-9507",
+        "authenticated-orcid": false,
+        "given": "Eirik",
+        "family": "Keilegavlen",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Einar",
+        "family": "Iversen",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-0212-7959",
+        "authenticated-orcid": false,
+        "given": "Inga",
+        "family": "Berre",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "78",
+    "reference": [
+      {
+        "issue": "03",
+        "key": "10.1016/j.cma.2024.117031_b1",
+        "doi-asserted-by": "crossref",
+        "first-page": "219",
+        "DOI": "10.2118/50939-PA",
+        "article-title": "A coupled reservoir and geomechanical simulation system",
+        "volume": "3",
+        "author": "Settari",
+        "year": "1998",
+        "journal-title": "SPE J."
+      },
+      {
+        "key": "10.1016/j.cma.2024.117031_b2",
+        "doi-asserted-by": "crossref",
+        "first-page": "55",
+        "DOI": "10.1016/j.cma.2016.01.008",
+        "article-title": "Block-partitioned solvers for coupled poromechanics: A unified framework",
+        "volume": "303",
+        "author": "White",
+        "year": "2016",
+        "journal-title": "Comput. Methods Appl. Mech. Engrg."
+      },
+      {
+        "key": "10.1016/j.cma.2024.117031_b3",
+        "doi-asserted-by": "crossref",
+        "first-page": "101",
+        "DOI": "10.1016/j.aml.2016.12.019",
+        "article-title": "Robust fixed stress splitting for Biot’s equations in heterogeneous media",
+        "volume": "68",
+        "author": "Both",
+        "year": "2017",
+        "journal-title": "Appl. Math. Lett."
+      },
+      {
+        "issue": "200",
+        "key": "10.1016/j.cma.2024.117031_b4",
+        "doi-asserted-by": "crossref",
+        "first-page": "2094",
+        "DOI": "10.1016/j.cma.2011.02.011",
+        "article-title": "Stability and convergence of sequential methods for coupled flow and geomechanics: Drained and undrained splits",
+        "volume": "23",
+        "author": "Kim",
+        "year": "2011",
+        "journal-title": "Comput. Methods Appl. Mech. Engrg."
+      },
+      {
+        "issue": "200",
+        "key": "10.1016/j.cma.2024.117031_b5",
+        "doi-asserted-by": "crossref",
+        "first-page": "1591",
+        "DOI": "10.1016/j.cma.2010.12.022",
+        "article-title": "Stability and convergence of sequential methods for coupled flow and geomechanics: Fixed-stress and fixed-strain splits",
+        "volume": "13",
+        "author": "Kim",
+        "year": "2011",
+        "journal-title": "Comput. Methods Appl. Mech. Engrg."
+      },
+      {
+        "key": "10.1016/j.cma.2024.117031_b6",
+        "doi-asserted-by": "crossref",
+        "first-page": "455",
+        "DOI": "10.1007/s10596-012-9318-y",
+        "article-title": "Convergence of iterative coupling for coupled flow and geomechanics",
+        "volume": "17",
+        "author": "Mikelić",
+        "year": "2013",
+        "journal-title": "Comput. Geosci."
+      },
+      {
+        "key": "10.1016/j.cma.2024.117031_b7",
+        "doi-asserted-by": "crossref",
+        "first-page": "179",
+        "DOI": "10.1002/nme.6130",
+        "article-title": "On the optimization of the fixed-stress splitting for Biot’s equations",
+        "volume": "120",
+        "author": "Storvik",
+        "year": "2018",
+        "journal-title": "Internat. J. Numer. Methods Engrg."
+      },
+      {
+        "issue": "5",
+        "key": "10.1016/j.cma.2024.117031_b8",
+        "doi-asserted-by": "crossref",
+        "first-page": "817",
+        "DOI": "10.1137/0910049",
+        "article-title": "Mathematical structure of compositional reservoir simulation",
+        "volume": "10",
+        "author": "Trangenstein",
+        "year": "1989",
+        "journal-title": "SIAM J. Sci. Stat. Comput."
+      },
+      {
+        "key": "10.1016/j.cma.2024.117031_b9",
+        "series-title": "Proc. of SPE Reservoir Simulation Symposium",
+        "first-page": "SPE",
+        "article-title": "Incomplete Gaussian elimination as a preconditioning for generalized conjugate gradient acceleration",
+        "author": "Wallis",
+        "year": "1983"
+      },
+      {
+        "key": "10.1016/j.cma.2024.117031_b10",
+        "series-title": "Proc. of SPE Reservoir Simulation Symposium",
+        "first-page": "SPE",
+        "article-title": "Constrained residual acceleration of conjugate residual methods",
+        "author": "Wallis",
+        "year": "1985"
+      },
+      {
+        "issue": "3",
+        "key": "10.1016/j.cma.2024.117031_b11",
+        "doi-asserted-by": "crossref",
+        "first-page": "905",
+        "DOI": "10.1137/S106482750240443X",
+        "article-title": "Iterative solution methods for modeling multiphase flow in porous media fully implicitly",
+        "volume": "25",
+        "author": "Lacroix",
+        "year": "2003",
+        "journal-title": "SIAM J. Sci. Comput."
+      },
+      {
+        "key": "10.1016/j.cma.2024.117031_b12",
+        "series-title": "Proc. of SPE Reservoir Simulation Symposium",
+        "first-page": "SPE",
+        "article-title": "Algebraic Multigrid Methods (AMG) for the efficient solution of fully implicit formulations in reservoir simulation",
+        "author": "Stüben",
+        "year": "2007"
+      },
+      {
+        "key": "10.1016/j.cma.2024.117031_b13",
+        "first-page": "SPE",
+        "article-title": "Parallel scalable unstructured CPR-type linear solver for reservoir simulation",
+        "volume": "vol. All Days",
+        "author": "Cao",
+        "year": "2005"
+      },
+      {
+        "issue": "04",
+        "key": "10.1016/j.cma.2024.117031_b14",
+        "doi-asserted-by": "crossref",
+        "first-page": "726",
+        "DOI": "10.2118/163608-PA",
+        "article-title": "Preconditioning for efficiently applying algebraic multigrid in fully implicit reservoir simulations",
+        "volume": "19",
+        "author": "Gries",
+        "year": "2014",
+        "journal-title": "SPE J."
+      },
+      {
+        "key": "10.1016/j.cma.2024.117031_b15",
+        "doi-asserted-by": "crossref",
+        "unstructured": "G. Li, J. Wallis, G. Shaw, A Parallel Linear Solver Algorithm for Solving Difficult Large Scale Thermal Models, in: Proc. of SPE Reservoir Simulation Symposium, 2015, pp. SPE–173207–MS.",
+        "DOI": "10.2118/173207-MS"
+      },
+      {
+        "key": "10.1016/j.cma.2024.117031_b16",
+        "doi-asserted-by": "crossref",
+        "first-page": "636",
+        "DOI": "10.1016/j.jcp.2019.06.038",
+        "article-title": "A block preconditioner for non-isothermal flow in porous media",
+        "volume": "395",
+        "author": "Roy",
+        "year": "2019",
+        "journal-title": "J. Comput. Phys."
+      },
+      {
+        "key": "10.1016/j.cma.2024.117031_b17",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1016/j.jcp.2020.109607",
+        "article-title": "Multi-stage preconditioners for thermal–compositional–reactive flow in porous media",
+        "volume": "418",
+        "author": "Cremon",
+        "year": "2020",
+        "journal-title": "J. Comput. Phys."
+      },
+      {
+        "issue": "4",
+        "key": "10.1016/j.cma.2024.117031_b18",
+        "doi-asserted-by": "crossref",
+        "first-page": "B1014",
+        "DOI": "10.1137/19M1292023",
+        "article-title": "A Constrained Pressure-Temperature Residual (CPTR) method for non-isothermal multiphase flow in porous media",
+        "volume": "42",
+        "author": "Roy",
+        "year": "2020",
+        "journal-title": "SIAM J. Sci. Comput."
+      },
+      {
+        "key": "10.1016/j.cma.2024.117031_b19",
+        "first-page": "65",
+        "article-title": "The algorithm selection problem",
+        "volume": "vol. 15",
+        "author": "Rice",
+        "year": "1976"
+      },
+      {
+        "key": "10.1016/j.cma.2024.117031_b20",
+        "doi-asserted-by": "crossref",
+        "first-page": "1",
+        "DOI": "10.1145/1456650.1456656",
+        "article-title": "Cross-disciplinary perspectives on meta-learning for algorithm selection",
+        "volume": "41",
+        "author": "Smith-Miles",
+        "year": "2009",
+        "journal-title": "ACM Comput. Surv."
+      },
+      {
+        "key": "10.1016/j.cma.2024.117031_b21",
+        "doi-asserted-by": "crossref",
+        "first-page": "41",
+        "DOI": "10.1016/j.artint.2016.04.003",
+        "article-title": "ASlib: A benchmark library for algorithm selection",
+        "volume": "237",
+        "author": "Bischl",
+        "year": "2016",
+        "journal-title": "Artificial Intelligence"
+      },
+      {
+        "issue": "5",
+        "key": "10.1016/j.cma.2024.117031_b22",
+        "doi-asserted-by": "crossref",
+        "first-page": "S750",
+        "DOI": "10.1137/15M1028406",
+        "article-title": "Performance-based numerical solver selection in the lighthouse framework",
+        "volume": "38",
+        "author": "Jessup",
+        "year": "2016",
+        "journal-title": "SIAM J. Sci. Comput."
+      },
+      {
+        "issue": "4",
+        "key": "10.1016/j.cma.2024.117031_b23",
+        "doi-asserted-by": "crossref",
+        "first-page": "447",
+        "DOI": "10.1145/235815.235820",
+        "article-title": "PYTHIA: A knowledge-based system to select scientific algorithms",
+        "volume": "22",
+        "author": "Weerawarana",
+        "year": "1996",
+        "journal-title": "ACM Trans. Math. Software"
+      },
+      {
+        "issue": "2.3",
+        "key": "10.1016/j.cma.2024.117031_b24",
+        "doi-asserted-by": "crossref",
+        "first-page": "223",
+        "DOI": "10.1147/rd.502.0223",
+        "article-title": "Self-Adapting Numerical Software (SANS) effort",
+        "volume": "50",
+        "author": "Dongarra",
+        "year": "2006",
+        "journal-title": "IBM J. Res. Dev."
+      },
+      {
+        "key": "10.1016/j.cma.2024.117031_b25",
+        "series-title": "Software Automatic Tuning",
+        "first-page": "153",
+        "article-title": "Application of alternating decision trees in selecting sparse linear solvers",
+        "author": "Bhowmick",
+        "year": "2011"
+      },
+      {
+        "key": "10.1016/j.cma.2024.117031_b26",
+        "series-title": "2012 IEEE 26th International Parallel and Distributed Processing Symposium Workshops & PhD Forum",
+        "first-page": "1915",
+        "article-title": "Dynamic linear solver selection for transient simulations using machine learning on distributed systems",
+        "author": "Eller",
+        "year": "2012"
+      },
+      {
+        "key": "10.1016/j.cma.2024.117031_b27",
+        "unstructured": "Z. Tang, H. Zhang, J. Chen, Graph Neural Networks for Selection of Preconditioners and Krylov Solvers, in: NeurIPS 2022 Workshop: New Frontiers in Graph Learning, 2022, pp. 1–11."
+      },
+      {
+        "key": "10.1016/j.cma.2024.117031_b28",
+        "series-title": "Proceedings of the 26th ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming",
+        "first-page": "234",
+        "article-title": "GPTune: Multitask learning for autotuning exascale applications",
+        "author": "Liu",
+        "year": "2021"
+      },
+      {
+        "key": "10.1016/j.cma.2024.117031_b29",
+        "series-title": "Proceedings of the 42nd ACM SIGPLAN International Conference on Programming Language Design and Implementation",
+        "first-page": "1280",
+        "article-title": "Bliss: auto-tuning complex applications using a pool of diverse lightweight learning models",
+        "author": "Roy",
+        "year": "2021"
+      },
+      {
+        "key": "10.1016/j.cma.2024.117031_b30",
+        "series-title": "Gaussian Processes for Machine Learning",
+        "author": "Rasmussen",
+        "year": "2006"
+      },
+      {
+        "key": "10.1016/j.cma.2024.117031_b31",
+        "series-title": "Proc. of SPE Reservoir Simulation Symposium",
+        "first-page": "SPE",
+        "article-title": "Linear solver performance optimization in reservoir simulation studies",
+        "author": "Mishev",
+        "year": "2009"
+      },
+      {
+        "key": "10.1016/j.cma.2024.117031_b32",
+        "series-title": "Parallel Computational Fluid Dynamics 2005",
+        "first-page": "277",
+        "article-title": "Parallel adaptive solvers in compressible PETSc-FUN3D simulations*",
+        "author": "Bhowmick",
+        "year": "2006"
+      },
+      {
+        "key": "10.1016/j.cma.2024.117031_b33",
+        "doi-asserted-by": "crossref",
+        "first-page": "670",
+        "DOI": "10.2118/105789-PA",
+        "article-title": "An efficient algebraic multigrid solver strategy for adaptive implicit methods in OilReservoir simulation",
+        "volume": "15",
+        "author": "Clees",
+        "year": "2010",
+        "journal-title": "SPE J."
+      },
+      {
+        "key": "10.1016/j.cma.2024.117031_b34",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1016/j.cma.2021.113989",
+        "article-title": "Machine learning acceleration for nonlinear solvers applied to multiphase porous media flow",
+        "volume": "384",
+        "author": "Silva",
+        "year": "2021",
+        "journal-title": "Comput. Methods Appl. Mech. Engrg."
+      },
+      {
+        "issue": "3",
+        "key": "10.1016/j.cma.2024.117031_b35",
+        "doi-asserted-by": "crossref",
+        "first-page": "1567",
+        "DOI": "10.1137/08073706X",
+        "article-title": "A posteriori error estimates including algebraic error: computable upper bounds and stopping criteria for iterative solvers",
+        "volume": "32",
+        "author": "Jiranek",
+        "year": "2010",
+        "journal-title": "SIAM J. Sci. Comput."
+      },
+      {
+        "key": "10.1016/j.cma.2024.117031_b36",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1016/j.cam.2019.06.028",
+        "article-title": "Adaptive asynchronous time-stepping, stopping criteria, and a posteriori error estimates for fixed-stress iterative schemes for coupled poromechanics problems",
+        "volume": "364",
+        "author": "Ahmed",
+        "year": "2020",
+        "journal-title": "J. Comput. Appl. Math."
+      },
+      {
+        "key": "10.1016/j.cma.2024.117031_b37",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1016/j.jcp.2023.112570",
+        "article-title": "Algebraic multiscale grid coarsening using unsupervised machine learning for subsurface flow simulation",
+        "volume": "496",
+        "author": "Ramesh Kumar",
+        "year": "2024",
+        "journal-title": "J. Comput. Phys."
+      },
+      {
+        "issue": "3",
+        "key": "10.1016/j.cma.2024.117031_b38",
+        "doi-asserted-by": "crossref",
+        "first-page": "S199",
+        "DOI": "10.1137/21M1430030",
+        "article-title": "Learning optimal multigrid smoothers via neural networks",
+        "volume": "45",
+        "author": "Huang",
+        "year": "2023",
+        "journal-title": "SIAM J. Sci. Comput."
+      },
+      {
+        "issue": "1",
+        "key": "10.1016/j.cma.2024.117031_b39",
+        "doi-asserted-by": "crossref",
+        "first-page": "1",
+        "DOI": "10.1007/s10013-022-00597-w",
+        "article-title": "Accelerating algebraic multigrid methods via artificial neural networks",
+        "volume": "51",
+        "author": "Antonietti",
+        "year": "2023",
+        "journal-title": "Vietnam J. Math."
+      },
+      {
+        "key": "10.1016/j.cma.2024.117031_b40",
+        "doi-asserted-by": "crossref",
+        "first-page": "45",
+        "DOI": "10.1016/j.camwa.2023.11.015",
+        "article-title": "Agglomeration of polygonal grids using graph neural networks with applications to multigrid solvers",
+        "volume": "154",
+        "author": "Antonietti",
+        "year": "2024",
+        "journal-title": "Comput. Math. Appl."
+      },
+      {
+        "issue": "04",
+        "key": "10.1016/j.cma.2024.117031_b41",
+        "first-page": "5256",
+        "article-title": "Bayesian optimization for categorical and category-specific continuous inputs",
+        "volume": "34",
+        "author": "Nguyen",
+        "year": "2020",
+        "journal-title": "Proc. Int. AAAI Conf."
+      },
+      {
+        "issue": "1",
+        "key": "10.1016/j.cma.2024.117031_b42",
+        "doi-asserted-by": "crossref",
+        "first-page": "148",
+        "DOI": "10.1109/JPROC.2015.2494218",
+        "article-title": "Taking the human out of the loop: A review of Bayesian optimization",
+        "volume": "104",
+        "author": "Shahriari",
+        "year": "2016",
+        "journal-title": "Proc. IEEE"
+      },
+      {
+        "issue": "5",
+        "key": "10.1016/j.cma.2024.117031_b43",
+        "doi-asserted-by": "crossref",
+        "first-page": "1189",
+        "DOI": "10.1214/aos/1013203451",
+        "article-title": "Greedy function approximation: A gradient boosting machine",
+        "volume": "29",
+        "author": "Friedman",
+        "year": "2001",
+        "journal-title": "Ann. Statist."
+      },
+      {
+        "key": "10.1016/j.cma.2024.117031_b44",
+        "series-title": "Poromechanics",
+        "author": "Coussy",
+        "year": "2004"
+      },
+      {
+        "key": "10.1016/j.cma.2024.117031_b45",
+        "series-title": "Petroleum Reservoir Simulation",
+        "author": "Aziz",
+        "year": "1979"
+      },
+      {
+        "issue": "2",
+        "key": "10.1016/j.cma.2024.117031_b46",
+        "doi-asserted-by": "crossref",
+        "first-page": "942",
+        "DOI": "10.1137/15M1014280",
+        "article-title": "Stable cell-centered finite volume discretization for Biot equations",
+        "volume": "54",
+        "author": "Nordbotten",
+        "year": "2016",
+        "journal-title": "SIAM J. Numer. Anal."
+      },
+      {
+        "key": "10.1016/j.cma.2024.117031_b47",
+        "series-title": "Numerical Mathematics and Advanced Applications ENUMATH 2017",
+        "first-page": "789",
+        "article-title": "Numerical investigation on the fixed-stress splitting scheme for Biot’s equations: Optimality of the tuning parameter",
+        "author": "Both",
+        "year": "2019"
+      },
+      {
+        "issue": "03",
+        "key": "10.1016/j.cma.2024.117031_b48",
+        "first-page": "183",
+        "article-title": "Interpretation of well-block pressures in numerical reservoir simulation(includes associated paper 6988 )",
+        "volume": "18",
+        "author": "Peaceman",
+        "year": "1978",
+        "journal-title": "SPE J."
+      },
+      {
+        "key": "10.1016/j.cma.2024.117031_b49",
+        "article-title": "Well flow models for various numerical methods",
+        "volume": "6",
+        "author": "Chen",
+        "year": "2009",
+        "journal-title": "Int. J. Numer. Anal. Mode."
+      },
+      {
+        "key": "10.1016/j.cma.2024.117031_b50",
+        "series-title": "Runscripts for the Manuscript ‘Automated Solver Selection for Simulation of Multiphysics Processes in Porous Media’",
+        "author": "Zabegaev",
+        "year": "2024"
+      },
+      {
+        "key": "10.1016/j.cma.2024.117031_b51",
+        "doi-asserted-by": "crossref",
+        "first-page": "243",
+        "DOI": "10.1007/s10596-020-10002-5",
+        "article-title": "PorePy: An open-source software for simulation of multiphysics processes in fractured porous media",
+        "volume": "25",
+        "author": "Keilegavlen",
+        "year": "2021",
+        "journal-title": "Comput. Geosci."
+      },
+      {
+        "key": "10.1016/j.cma.2024.117031_b52",
+        "first-page": "2825",
+        "article-title": "Scikit-learn: Machine learning in Python",
+        "volume": "12",
+        "author": "Pedregosa",
+        "year": "2011",
+        "journal-title": "J. Mach. Learn. Res."
+      },
+      {
+        "key": "10.1016/j.cma.2024.117031_b53",
+        "doi-asserted-by": "crossref",
+        "first-page": "261",
+        "DOI": "10.1038/s41592-019-0686-2",
+        "article-title": "SciPy 1.0: Fundamental algorithms for scientific computing in Python",
+        "volume": "17",
+        "author": "Virtanen",
+        "year": "2020",
+        "journal-title": "Nat. Methods."
+      },
+      {
+        "issue": "87",
+        "key": "10.1016/j.cma.2024.117031_b54",
+        "doi-asserted-by": "crossref",
+        "first-page": "5495",
+        "DOI": "10.21105/joss.05495",
+        "article-title": "PyAMG: Algebraic multigrid solvers in Python",
+        "volume": "8",
+        "author": "Bell",
+        "year": "2023",
+        "journal-title": "J. Open Source Softw."
+      },
+      {
+        "key": "10.1016/j.cma.2024.117031_b55",
+        "series-title": "PETSc/TAO Users Manual",
+        "author": "Balay",
+        "year": "2023"
+      },
+      {
+        "issue": "9",
+        "key": "10.1016/j.cma.2024.117031_b56",
+        "doi-asserted-by": "crossref",
+        "first-page": "1124",
+        "DOI": "10.1016/j.advwatres.2011.04.013",
+        "article-title": "Parallel distributed computing using python",
+        "volume": "34",
+        "author": "Dalcin",
+        "year": "2011",
+        "journal-title": "Adv. Water Resour."
+      },
+      {
+        "issue": "1",
+        "key": "10.1016/j.cma.2024.117031_b57",
+        "doi-asserted-by": "crossref",
+        "first-page": "155",
+        "DOI": "10.1016/S0168-9274(01)00115-5",
+        "article-title": "BoomerAMG: A parallel algebraic multigrid solver and preconditioner",
+        "volume": "41",
+        "author": "Henson",
+        "year": "2002",
+        "journal-title": "Appl. Numer. Math."
+      },
+      {
+        "key": "10.1016/j.cma.2024.117031_b58",
+        "first-page": "5631",
+        "article-title": "Scalable thompson sampling using sparse Gaussian process models",
+        "volume": "vol. 34",
+        "author": "Vakili",
+        "year": "2021"
+      },
+      {
+        "issue": "7",
+        "key": "10.1016/j.cma.2024.117031_b59",
+        "doi-asserted-by": "crossref",
+        "first-page": "287",
+        "DOI": "10.1680/geot.1953.3.7.287",
+        "article-title": "Consolidation des sols (Étude Mathématique)",
+        "volume": "3",
+        "author": "Mandel",
+        "year": "1953",
+        "journal-title": "Géotechnique"
+      },
+      {
+        "issue": "04",
+        "key": "10.1016/j.cma.2024.117031_b60",
+        "doi-asserted-by": "crossref",
+        "first-page": "308",
+        "DOI": "10.2118/72469-PA",
+        "article-title": "Tenth SPE comparative solution project: A comparison of upscaling techniques",
+        "volume": "4",
+        "author": "Christie",
+        "year": "2001",
+        "journal-title": "SPE Reserv. Eval. Eng."
+      },
+      {
+        "key": "10.1016/j.cma.2024.117031_b61",
+        "first-page": "4",
+        "article-title": "Prediction of heavy oil viscosity",
+        "volume": "vol. 2",
+        "author": "Bennison",
+        "year": "1998"
+      }
+    ],
+    "container-title": [
+      "Computer Methods in Applied Mechanics and Engineering"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://api.elsevier.com/content/article/PII:S0045782524002871?httpAccept=text/xml",
+        "content-type": "text/xml",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://api.elsevier.com/content/article/PII:S0045782524002871?httpAccept=text/plain",
+        "content-type": "text/plain",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2024,
+          5,
+          19
+        ]
+      ],
+      "date-time": "2024-05-19T09:26:01Z",
+      "timestamp": 1716110761000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://linkinghub.elsevier.com/retrieve/pii/S0045782524002871"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2024,
+          6
+        ]
+      ]
+    },
+    "references-count": 61,
+    "alternative-id": [
+      "S0045782524002871"
+    ],
+    "URL": "https://doi.org/10.1016/j.cma.2024.117031",
+    "relation": {},
+    "ISSN": [
+      "0045-7825"
+    ],
+    "issn-type": [
+      {
+        "value": "0045-7825",
+        "type": "print"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2024,
+          6
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "Elsevier",
+        "name": "publisher",
+        "label": "This article is maintained by"
+      },
+      {
+        "value": "Automated linear solver selection for simulation of multiphysics processes in porous media",
+        "name": "articletitle",
+        "label": "Article Title"
+      },
+      {
+        "value": "Computer Methods in Applied Mechanics and Engineering",
+        "name": "journaltitle",
+        "label": "Journal Title"
+      },
+      {
+        "value": "https://doi.org/10.1016/j.cma.2024.117031",
+        "name": "articlelink",
+        "label": "CrossRef DOI link to publisher maintained version"
+      },
+      {
+        "value": "article",
+        "name": "content_type",
+        "label": "Content Type"
+      },
+      {
+        "value": "© 2024 The Author(s). Published by Elsevier B.V.",
+        "name": "copyright",
+        "label": "Copyright"
+      }
+    ],
+    "article-number": "117031"
+  }
+}

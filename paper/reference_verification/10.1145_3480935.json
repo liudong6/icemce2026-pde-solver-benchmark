@@ -1,0 +1,570 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          16
+        ]
+      ],
+      "date-time": "2026-09-16T19:33:54Z",
+      "timestamp": 1789587234083,
+      "version": "build-2803163510"
+    },
+    "reference-count": 30,
+    "publisher": "Association for Computing Machinery (ACM)",
+    "issue": "1",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2022,
+              2,
+              16
+            ]
+          ],
+          "date-time": "2022-02-16T00:00:00Z",
+          "timestamp": 1644969600000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://www.acm.org/publications/policies/copyright_policy#Background"
+      }
+    ],
+    "funder": [
+      {
+        "name": "Impuls und Vernetzungsfond of the Helmholtz Association",
+        "award": [
+          "VH-NG-1241"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "VH-NG-1241"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "MINECO",
+        "award": [
+          "TIN2017-82972-R"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "TIN2017-82972-R"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "FEDER and the H2020 EU FETHPC",
+        "award": [
+          "732631"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "732631"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Exascale Computing",
+        "award": [
+          "17-SC-20-SC"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "17-SC-20-SC"
+            ]
+          }
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "dl.acm.org"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [
+      "ACM Trans. Math. Softw."
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2022,
+          3,
+          31
+        ]
+      ]
+    },
+    "abstract": "<jats:p>\n                    In this article, we present\n                    <jats:sc>Ginkgo</jats:sc>\n                    , a modern C++ math library for scientific high performance computing. While classical linear algebra libraries act on matrix and vector objects,\n                    <jats:sc>Ginkgo</jats:sc>\n                    ’s design principle abstracts all functionality as “linear operators,” motivating the notation of a “linear operator algebra library.”\n                    <jats:sc>Ginkgo</jats:sc>\n                    ’s current focus is oriented toward providing sparse linear algebra functionality for high performance graphics processing unit (GPU) architectures, but given the library design, this focus can be easily extended to accommodate other algorithms and hardware architectures. We introduce this sophisticated software architecture that separates core algorithms from architecture-specific backends and provide details on extensibility and sustainability measures. We also demonstrate\n                    <jats:sc>Ginkgo</jats:sc>\n                    ’s usability by providing examples on how to use its functionality inside the MFEM and deal.ii finite element ecosystems. Finally, we offer a practical demonstration of\n                    <jats:sc>Ginkgo</jats:sc>\n                    ’s high performance on state-of-the-art GPU architectures.\n                  </jats:p>",
+    "DOI": "10.1145/3480935",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2022,
+          2,
+          16
+        ]
+      ],
+      "date-time": "2022-02-16T09:50:38Z",
+      "timestamp": 1645005038000
+    },
+    "page": "1-33",
+    "update-policy": "https://doi.org/10.1145/crossmark-policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 75,
+    "title": [
+      "<scp>Ginkgo</scp>\n                    : A Modern Linear Operator Algebra Framework for High Performance Computing"
+    ],
+    "prefix": "10.1145",
+    "volume": "48",
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0000-0003-2177-952X",
+        "authenticated-orcid": false,
+        "given": "Hartwig",
+        "family": "Anzt",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Karlsruhe Institute of Technology, Germany and Innovative Computing Laboratory, University of Tennessee, Eggenstein-Leopoldshafen, Germany"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-1560-921X",
+        "authenticated-orcid": false,
+        "given": "Terry",
+        "family": "Cojean",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Karlsruhe Institute of Technology, Eggenstein-Leopoldshafen, Germany"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Goran",
+        "family": "Flegar",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Universidad Jaime I, Castellón de la Plana, Spain"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Fritz",
+        "family": "Göbel",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Karlsruhe Institute of Technology, Eggenstein-Leopoldshafen, Germany"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Thomas",
+        "family": "Grützmacher",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Karlsruhe Institute of Technology, Eggenstein-Leopoldshafen, Germany"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Pratik",
+        "family": "Nayak",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Karlsruhe Institute of Technology, Eggenstein-Leopoldshafen, Germany"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Tobias",
+        "family": "Ribizel",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Karlsruhe Institute of Technology, Eggenstein-Leopoldshafen, Germany"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Yuhsiang Mike",
+        "family": "Tsai",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Karlsruhe Institute of Technology, Eggenstein-Leopoldshafen, Germany"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Enrique S.",
+        "family": "Quintana-Ortí",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Universitat Politècnica de València, Valencia, Spain"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "320",
+    "published-online": {
+      "date-parts": [
+        [
+          2022,
+          2,
+          16
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "e_1_3_3_2_2",
+        "unstructured": "2020. Suite Sparse Matrix Collection. Retrieved from http://faculty.cse.tamu.edu/davis/suitesparse.html."
+      },
+      {
+        "key": "e_1_3_3_3_2",
+        "unstructured": "(accessed in April 2020). Mix in. Portland Pattern Repository."
+      },
+      {
+        "key": "e_1_3_3_4_2",
+        "unstructured": "(accessed in April 2020). Object slicing. Portland Pattern Repository."
+      },
+      {
+        "key": "e_1_3_3_5_2",
+        "unstructured": "(accessed in April 2020). xSDK Examples Retrieved from https://xsdk.info/release-0-5-0/."
+      },
+      {
+        "key": "e_1_3_3_6_2",
+        "unstructured": "(accessed in April 2020b). xSDK: Extreme-scale Scientific Software Development Kit Retrieved from https://xsdk.info/."
+      },
+      {
+        "key": "e_1_3_3_7_2",
+        "unstructured": "(accessed in August 2018). Better Scientific SoftwareRetrieved from https://bssw.io/."
+      },
+      {
+        "key": "e_1_3_3_8_2",
+        "unstructured": "(accessed in August 2018). Google Test. Retrieved from https://github.com/google/googletest."
+      },
+      {
+        "key": "e_1_3_3_9_2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1515/jnma-2018-0054"
+      },
+      {
+        "key": "e_1_3_3_10_2",
+        "doi-asserted-by": "crossref",
+        "unstructured": "E. AndersonZ. Bai C. Bischof S. Blackford J. Demmel J. Dongarra J. Du Croz A. Greenbaum S. Hammarling A. McKenney and D. Sorensen. 1999. LAPACK users’ guide. Society for Industrial and Applied Mathematics 3rd. ed. Philadelphia",
+        "DOI": "10.1137/1.9780898719604"
+      },
+      {
+        "key": "e_1_3_3_11_2",
+        "unstructured": "R. Anderson J. Andrej A. Barker J. Bramwell J.-S. Camier J. Cerveny V. Dobrev Y. Dudouit A. Fisher T. Kolev W. Pazner M. Stowell V. Tomov J. Dahm D. Medina and S. Zampini. 2019. Mfem: A modular finite element methods library. https://www.sciencedirect.com/science/article/abs/pii/S0898122120302583?via%3Dihub"
+      },
+      {
+        "key": "e_1_3_3_12_2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3324989.3325719"
+      },
+      {
+        "key": "e_1_3_3_13_2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-662-48096-0_50"
+      },
+      {
+        "key": "e_1_3_3_14_2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1137/16M1079506"
+      },
+      {
+        "key": "e_1_3_3_15_2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.21105/joss.02260"
+      },
+      {
+        "key": "e_1_3_3_16_2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1002/cpe.4460"
+      },
+      {
+        "key": "e_1_3_3_17_2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.parco.2017.12.006"
+      },
+      {
+        "key": "e_1_3_3_18_2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.parco.2017.10.003"
+      },
+      {
+        "key": "e_1_3_3_19_2",
+        "first-page": "231",
+        "volume-title": "2019 IEEE International Parallel and Distributed Processing Symposium",
+        "author": "Anzt H.",
+        "year": "2019",
+        "unstructured": "H. Anzt, T. Ribizel, G. Flegar, E. Chow, and J. Dongarra. 2019. ParILUT - a parallel threshold ILU for GPUs. 2019 IEEE International Parallel and Distributed Processing Symposium. 231–241."
+      },
+      {
+        "key": "e_1_3_3_20_2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-319-20119-1_1"
+      },
+      {
+        "key": "e_1_3_3_21_2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.5555/229227.229229"
+      },
+      {
+        "key": "e_1_3_3_22_2",
+        "doi-asserted-by": "crossref",
+        "first-page": "489",
+        "DOI": "10.1007/978-3-319-46079-6_34",
+        "volume-title": "High Performance Computing",
+        "author": "Deakin T.",
+        "year": "2016",
+        "unstructured": "T. Deakin, J. Price, M. Martineau, and S. McIntosh-Smith. 2016. GPU-STREAM v2.0: Benchmarking the achievable memory bandwidth of many-core processors across diverse parallel programming models. In M. Taufer, B. Mohr, and J. M. Kunkel, editorsHigh Performance Computing, Springer. 489–507."
+      },
+      {
+        "key": "e_1_3_3_23_2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3441850"
+      },
+      {
+        "key": "e_1_3_3_24_2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.5555/186897"
+      },
+      {
+        "key": "e_1_3_3_25_2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-030-57675-2_34"
+      },
+      {
+        "key": "e_1_3_3_26_2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1177/1094342019846287"
+      },
+      {
+        "key": "e_1_3_3_27_2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.5555/186897"
+      },
+      {
+        "key": "e_1_3_3_28_2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/355841.355847"
+      },
+      {
+        "key": "e_1_3_3_29_2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.5555/829576"
+      },
+      {
+        "key": "e_1_3_3_30_2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-030-50743-5_16"
+      },
+      {
+        "key": "e_1_3_3_31_2",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Y. M. Tsai T. Cojean T. Ribizel and H. Anzt. 2020b. Preparing ginkgo for amd gpus – a testimonial on porting cuda code to hip. https://link.springer.com/chapter/10.1007/978-3-030-71593-9_9",
+        "DOI": "10.1007/978-3-030-71593-9_9"
+      }
+    ],
+    "container-title": [
+      "ACM Transactions on Mathematical Software"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://dl.acm.org/doi/10.1145/3480935",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://dl.acm.org/doi/pdf/10.1145/3480935",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2025,
+          6,
+          17
+        ]
+      ],
+      "date-time": "2025-06-17T16:18:23Z",
+      "timestamp": 1750177103000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://dl.acm.org/doi/10.1145/3480935"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2022,
+          2,
+          16
+        ]
+      ]
+    },
+    "references-count": 30,
+    "journal-issue": {
+      "issue": "1",
+      "published-print": {
+        "date-parts": [
+          [
+            2022,
+            3,
+            31
+          ]
+        ]
+      }
+    },
+    "alternative-id": [
+      "10.1145/3480935"
+    ],
+    "URL": "https://doi.org/10.1145/3480935",
+    "relation": {},
+    "ISSN": [
+      "0098-3500",
+      "1557-7295"
+    ],
+    "issn-type": [
+      {
+        "value": "0098-3500",
+        "type": "print"
+      },
+      {
+        "value": "1557-7295",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2022,
+          2,
+          16
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "2020-05-01",
+        "order": 0,
+        "name": "received",
+        "label": "Received",
+        "group": {
+          "name": "publication_history",
+          "label": "Publication History"
+        }
+      },
+      {
+        "value": "2021-08-01",
+        "order": 1,
+        "name": "accepted",
+        "label": "Accepted",
+        "group": {
+          "name": "publication_history",
+          "label": "Publication History"
+        }
+      },
+      {
+        "value": "2022-02-16",
+        "order": 2,
+        "name": "published",
+        "label": "Published",
+        "group": {
+          "name": "publication_history",
+          "label": "Publication History"
+        }
+      }
+    ]
+  }
+}

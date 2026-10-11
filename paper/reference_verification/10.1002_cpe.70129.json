@@ -1,0 +1,741 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          9
+        ]
+      ],
+      "date-time": "2026-09-09T05:26:00Z",
+      "timestamp": 1788931560120,
+      "version": "build-2803163510"
+    },
+    "reference-count": 74,
+    "publisher": "Wiley",
+    "issue": "12-14",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2025,
+              5,
+              26
+            ]
+          ],
+          "date-time": "2025-05-26T00:00:00Z",
+          "timestamp": 1748217600000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "http://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/501100002341",
+        "name": "Academy of Finland",
+        "doi-asserted-by": "publisher",
+        "id": [
+          {
+            "id": "10.13039/501100002341",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      },
+      {
+        "DOI": "10.13039/501100016031",
+        "name": "ReSoLVE Center of Excellence",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "307411"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "307411"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/501100016031",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      },
+      {
+        "DOI": "10.13039/100010663",
+        "name": "European Research Council",
+        "doi-asserted-by": "publisher",
+        "id": [
+          {
+            "id": "10.13039/100010663",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      },
+      {
+        "DOI": "10.13039/100019180",
+        "name": "HORIZON EUROPE European Research Council",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "818665"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "818665"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/100019180",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      },
+      {
+        "DOI": "10.13039/100009450",
+        "name": "KAUTE-Säätiö",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "20240173"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "20240173"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/100009450",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "onlinelibrary.wiley.com"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [
+      "Concurrency and Computation"
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2025,
+          6,
+          25
+        ]
+      ]
+    },
+    "abstract": "<jats:title>ABSTRACT</jats:title>\n                  <jats:p>Over the last ten years, graphics processors have become the de facto accelerator for data‐parallel tasks in various branches of high‐performance computing, including machine learning and computational sciences. However, with the recent introduction of AMD‐manufactured graphics processors to the world's fastest supercomputers, tuning strategies established for previous hardware generations must be re‐evaluated. In this study, we evaluate the performance and energy efficiency of stencil computations on modern datacenter graphics processors and propose a tuning strategy for fusing cache‐heavy stencil kernels. The studied cases comprise both synthetic and practical applications, which involve the evaluation of linear and nonlinear stencil functions in one to three dimensions. Our experiments reveal that AMD and Nvidia graphics processors exhibit key differences in both hardware and software, necessitating platform‐specific tuning to reach their full computational potential.</jats:p>",
+    "DOI": "10.1002/cpe.70129",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2025,
+          5,
+          26
+        ]
+      ],
+      "date-time": "2025-05-26T22:25:24Z",
+      "timestamp": 1748298324000
+    },
+    "update-policy": "https://doi.org/10.1002/crossmark_policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 4,
+    "title": [
+      "Stencil Computations on AMD and Nvidia Graphics Processors: Performance and Tuning Strategies"
+    ],
+    "prefix": "10.1002",
+    "volume": "37",
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0000-0002-1974-7150",
+        "authenticated-orcid": false,
+        "given": "Johannes",
+        "family": "Pekkilä",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Department of Computer Science Aalto University  Espoo Finland"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-3182-8161",
+        "authenticated-orcid": false,
+        "given": "Oskar",
+        "family": "Lappi",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Computer Science University of Helsinki  Helsinki Finland"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Fredrik",
+        "family": "Robertsén",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "CSC—IT Center for Science Ltd  Espoo Finland"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Maarit J.",
+        "family": "Korpi‐Lagg",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Computer Science Aalto University  Espoo Finland"
+          },
+          {
+            "name": "Max Planck Institute for Solar System Research  Göttingen Germany"
+          },
+          {
+            "name": "Nordita KTH Royal Institute of Technology and Stockholm University  Stockholm Sweden"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "311",
+    "published-online": {
+      "date-parts": [
+        [
+          2025,
+          5,
+          26
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "e_1_2_14_2_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1038/scientificamerican1070‐120"
+      },
+      {
+        "key": "e_1_2_14_3_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1090/qam/10680"
+      },
+      {
+        "key": "e_1_2_14_4_1",
+        "volume-title": "Learning Semantic Image Representations at a Large Scale",
+        "author": "Jia Y.",
+        "year": "2014"
+      },
+      {
+        "key": "e_1_2_14_5_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ACCESS.2019.2918851"
+      },
+      {
+        "key": "e_1_2_14_6_1",
+        "first-page": "1",
+        "volume-title": "SC ‐ International Conference for High Performance Computing, Networking, Storage and Analysis",
+        "author": "Datta K.",
+        "year": "2008"
+      },
+      {
+        "key": "e_1_2_14_7_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.parco.2022.102904"
+      },
+      {
+        "key": "e_1_2_14_8_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1177/10943420221143775"
+      },
+      {
+        "key": "e_1_2_14_9_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.3847/1538‐4365/aac49e"
+      },
+      {
+        "key": "e_1_2_14_10_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.3847/0067‐0049/223/1/11"
+      },
+      {
+        "key": "e_1_2_14_11_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1063/5.0018516"
+      },
+      {
+        "key": "e_1_2_14_12_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1038/s42256‐022‐00463‐x"
+      },
+      {
+        "key": "e_1_2_14_13_1",
+        "unstructured": "V.PandeandFolding@home “Pande Laboratory Sony Nvidia ATI Technologies Joseph Coffland Cauldron Development ”2000 foldingathome.org."
+      },
+      {
+        "key": "e_1_2_14_14_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1038/nature24270"
+      },
+      {
+        "key": "e_1_2_14_15_1",
+        "first-page": "1877",
+        "volume-title": "Proceedings of the 34th International Conference on Neural Information Processing Systems NIPS'20",
+        "author": "Brown T. B.",
+        "year": "2020"
+      },
+      {
+        "key": "e_1_2_14_16_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3467017"
+      },
+      {
+        "key": "e_1_2_14_17_1",
+        "unstructured": "Nvidia “Nvidia A100 Tensor Core GPU Architecture ”2020 https://images.nvidia.com/aem‐dam/en‐zz/Solutions/data‐center/nvidia‐ampere‐architecture‐whitepaper.pdf."
+      },
+      {
+        "key": "e_1_2_14_18_1",
+        "unstructured": "AMD “HIP Documentation ”2024 https://rocm.docs.amd.com/_/downloads/HIP/en/docs‐6.1.0/pdf/."
+      },
+      {
+        "key": "e_1_2_14_19_1",
+        "unstructured": "Nvidia “CUDA C++ Programming Guide ”2023 https://docs.nvidia.com/cuda/pdf/CUDA_C_Programming_Guide.pdf."
+      },
+      {
+        "key": "e_1_2_14_20_1",
+        "unstructured": "Khronos Group “The OpenCL Specification ”2024 https://registry.khronos.org/OpenCL/specs/3.0‐unified/pdf/OpenCL_API.pdf."
+      },
+      {
+        "key": "e_1_2_14_21_1",
+        "unstructured": "AMD “AMD CDNA 2 Architecture ”2022 https://www.amd.com/content/dam/amd/en/documents/instinct‐business‐docs/white‐papers/amd‐cdna2‐white‐paper.pdf."
+      },
+      {
+        "key": "e_1_2_14_22_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/383259.383274"
+      },
+      {
+        "key": "e_1_2_14_23_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1141911.1141947"
+      },
+      {
+        "key": "e_1_2_14_24_1",
+        "unstructured": "Nvidia “PTX ISA ”2023 https://docs.nvidia.com/cuda/pdf/ptx_isa_8.5.pdf."
+      },
+      {
+        "key": "e_1_2_14_25_1",
+        "volume-title": "Computer Architecture: A Quantitative Approach",
+        "author": "Hennessy J. L.",
+        "year": "2017"
+      },
+      {
+        "key": "e_1_2_14_26_1",
+        "unstructured": "Nvidia “Nvidia Ampere GA102 GPU Architecture ”2020 https://www.nvidia.com/content/PDF/nvidia‐ampere‐ga‐102‐gpu‐architecture‐whitepaper‐v2.1.pdf."
+      },
+      {
+        "key": "e_1_2_14_27_1",
+        "unstructured": "AMD “AMD Instinct MI100 Accelerator ”2020 http://www.amd.com/system/files/documents/instinct‐mi100‐brochure.pdf."
+      },
+      {
+        "key": "e_1_2_14_28_1",
+        "unstructured": "AMD “RDNA Architecture ”2019 https://www.amd.com/system/files/documents/rdna‐whitepaper.pdf."
+      },
+      {
+        "key": "e_1_2_14_29_1",
+        "unstructured": "Nvidia “CUDA C++ Best Practices Guide ”2023 https://docs.nvidia.com/cuda/pdf/CUDA_C_Best_Practices_Guide.pdf."
+      },
+      {
+        "key": "e_1_2_14_30_1",
+        "volume-title": "Dissecting the NVIDIA Volta GPU Architecture via Microbenchmarking",
+        "author": "Jia Z.",
+        "year": "2018"
+      },
+      {
+        "key": "e_1_2_14_31_1",
+        "unstructured": "AMD “AMD Instinct MI200 Instruction Set Architecture: Reference Guide ”2022 https://www.amd.com/content/dam/amd/en/documents/instinct‐tech‐docs/instruction‐set‐architectures/instinct‐mi200‐cdna2‐instruction‐set‐architecture.pdf."
+      },
+      {
+        "key": "e_1_2_14_32_1",
+        "volume-title": "Understanding Latency Hiding on GPUs",
+        "author": "Volkov V.",
+        "year": "2016"
+      },
+      {
+        "key": "e_1_2_14_33_1",
+        "unstructured": "J.Dongarra E.Strohmaier H.Simon andH.Meuer “TOP500 ”2024 top500.org."
+      },
+      {
+        "key": "e_1_2_14_34_1",
+        "unstructured": "O. R. N.Laboratory “U.S. Department of Energy Frontier Supercomputer ”2022 https://www.olcf.ornl.gov/frontier/."
+      },
+      {
+        "key": "e_1_2_14_35_1",
+        "unstructured": "LUMI Supercomputer “European High‐Performance Computing Joint Undertaking LUMI Consortium ”2022 https://www.lumi‐supercomputer.eu/."
+      },
+      {
+        "key": "e_1_2_14_36_1",
+        "unstructured": "Nvidia “Volta Tuning Guide ”2023 https://docs.nvidia.com/cuda/pdf/Volta_Tuning_Guide.pdf."
+      },
+      {
+        "key": "e_1_2_14_37_1",
+        "unstructured": "Nvidia “Nvidia Tesla V100 GPU Architecture ”2017 https://images.nvidia.com/content/volta‐architecture/pdf/volta‐architecture‐whitepaper.pdf."
+      },
+      {
+        "key": "e_1_2_14_38_1",
+        "unstructured": "AMD “AMD CDNA Architecture ”2020 https://www.amd.com/system/files/documents/amd‐cdna‐whitepaper.pdf/."
+      },
+      {
+        "key": "e_1_2_14_39_1",
+        "unstructured": "AMD “AMD Instinct MI100 Instruction Set Architecture ”2020 https://www.amd.com/content/dam/amd/en/documents/instinct‐tech‐docs/instruction‐set‐architectures/instinct‐mi100‐cdna1‐shader‐instruction‐set‐architecture.pdf."
+      },
+      {
+        "key": "e_1_2_14_40_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1137/07070111X"
+      },
+      {
+        "key": "e_1_2_14_41_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSP.2017.2690524"
+      },
+      {
+        "key": "e_1_2_14_42_1",
+        "volume-title": "Concrete Mathematics: A Foundation for Computer Science",
+        "author": "Graham R. L.",
+        "year": "1994"
+      },
+      {
+        "key": "e_1_2_14_43_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/B978-044482537-7/50007-3"
+      },
+      {
+        "key": "e_1_2_14_44_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/bs.hna.2016.10.004"
+      },
+      {
+        "key": "e_1_2_14_45_1",
+        "unstructured": "Nvidia “Floating Point and IEEE 754 ”2023 https://docs.nvidia.com/cuda/pdf/Floating_Point_on_NVIDIA_GPU.pdf."
+      },
+      {
+        "key": "e_1_2_14_46_1",
+        "volume-title": "Tenth International Workshop on Frontiers in Handwriting Recognition",
+        "author": "Chellapilla K.",
+        "year": "2006"
+      },
+      {
+        "key": "e_1_2_14_47_1",
+        "unstructured": "Nvidia “Optimizing Convolutional Layers ”2023 https://docs.nvidia.com/deeplearning/performance/pdf/Optimizing‐Convolutional‐Layers‐User‐Guide.pdf."
+      },
+      {
+        "key": "e_1_2_14_48_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1201/9780203493137.ch9"
+      },
+      {
+        "key": "e_1_2_14_49_1",
+        "volume-title": "Deep Learning",
+        "author": "Goodfellow I.",
+        "year": "2016"
+      },
+      {
+        "key": "e_1_2_14_50_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/B978-0-12-385963-1.00036-8"
+      },
+      {
+        "key": "e_1_2_14_51_1",
+        "volume-title": "cuDNN: Efficient Primitives for Deep Learning",
+        "author": "Chetlur S.",
+        "year": "2014"
+      },
+      {
+        "key": "e_1_2_14_52_1",
+        "volume-title": "MIOpen: An Open Source Library for Deep Learning Primitives",
+        "author": "Khan J.",
+        "year": "2019"
+      },
+      {
+        "key": "e_1_2_14_53_1",
+        "volume-title": "Astaroth: A Library for Stencil Computations on Graphics Processing Units",
+        "author": "Pekkilä J.",
+        "year": "2019"
+      },
+      {
+        "key": "e_1_2_14_54_1",
+        "volume-title": "Magnetic Phenomena of the Interstellar Medium in Theory and Observation",
+        "author": "Väisälä M. S.",
+        "year": "2017"
+      },
+      {
+        "key": "e_1_2_14_55_1",
+        "unstructured": "J.Pekkilä M.Väisälä M.Korpi‐Lagg et al. “Astaroth ‐ A Scalable Multi‐GPU Library for Stencil Computations ”2024 https://bitbucket.org/jpekkila/astaroth."
+      },
+      {
+        "key": "e_1_2_14_56_1",
+        "volume-title": "A Task Scheduler for Astaroth, the Astrophysics Simulation Framework",
+        "author": "Lappi O.",
+        "year": "2021"
+      },
+      {
+        "key": "e_1_2_14_57_1",
+        "unstructured": "AMD “AMD CDNA 3 Architecture ”2023 https://www.amd.com/content/dam/amd/en/documents/instinct‐tech‐docs/white‐papers/amd‐cdna‐3‐white‐paper.pdf."
+      },
+      {
+        "key": "e_1_2_14_58_1",
+        "unstructured": "Nvidia “cuDNN Developer Guide ”2023 https://docs.nvidia.com/deeplearning/cudnn/pdf/cuDNN‐Developer‐Guide.pdf."
+      },
+      {
+        "key": "e_1_2_14_59_1",
+        "unstructured": "Nvidia “Kernel Profiling Guide ”2023 https://docs.nvidia.com/nsight‐compute/pdf/ProfilingGuide.pdf."
+      },
+      {
+        "key": "e_1_2_14_60_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/10968987_3"
+      },
+      {
+        "key": "e_1_2_14_61_1",
+        "unstructured": "CSC “GPU Energy Usage Counter for AMD/ROCm ”2024 https://github.com/mvsjober/gpu‐energy‐amd."
+      },
+      {
+        "key": "e_1_2_14_62_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/P3HPC56579.2022.00016"
+      },
+      {
+        "key": "e_1_2_14_63_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.tbench.2021.100005"
+      },
+      {
+        "key": "e_1_2_14_64_1",
+        "volume-title": "Cray User Group 2022 Proceedings",
+        "author": "Melesse Vergara V.",
+        "year": "2022"
+      },
+      {
+        "key": "e_1_2_14_65_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3079856.3080246"
+      },
+      {
+        "key": "e_1_2_14_66_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.cpc.2022.108292"
+      },
+      {
+        "key": "e_1_2_14_67_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1038/s41598‐023‐39192‐5"
+      },
+      {
+        "key": "e_1_2_14_68_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2786763.2694364"
+      },
+      {
+        "key": "e_1_2_14_69_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1513895.1513905"
+      },
+      {
+        "key": "e_1_2_14_70_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CGO.2006.13"
+      },
+      {
+        "key": "e_1_2_14_71_1",
+        "first-page": "191",
+        "volume-title": "SC'14: Proceedings of the International Conference for High Performance Computing, Networking, Storage and Analysis SC'14",
+        "author": "Wahib M.",
+        "year": "2014"
+      },
+      {
+        "key": "e_1_2_14_72_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1088149.1088197"
+      },
+      {
+        "key": "e_1_2_14_73_1",
+        "unstructured": "OpenAI ChatGPT 2024 chat.openai.com."
+      },
+      {
+        "key": "e_1_2_14_74_1",
+        "unstructured": "Microsoft Microsoft Copilot 2024 copilot.microsoft.com."
+      },
+      {
+        "key": "e_1_2_14_75_1",
+        "volume-title": "Instructions for Reproducing the Results",
+        "author": "Pekkilä J.",
+        "year": "2024"
+      }
+    ],
+    "container-title": [
+      "Concurrency and Computation: Practice and Experience"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://onlinelibrary.wiley.com/doi/pdf/10.1002/cpe.70129",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2025,
+          6,
+          6
+        ]
+      ],
+      "date-time": "2025-06-06T01:37:36Z",
+      "timestamp": 1749173856000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://onlinelibrary.wiley.com/doi/10.1002/cpe.70129"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2025,
+          5,
+          26
+        ]
+      ]
+    },
+    "references-count": 74,
+    "journal-issue": {
+      "issue": "12-14",
+      "published-print": {
+        "date-parts": [
+          [
+            2025,
+            6,
+            25
+          ]
+        ]
+      }
+    },
+    "alternative-id": [
+      "10.1002/cpe.70129"
+    ],
+    "URL": "https://doi.org/10.1002/cpe.70129",
+    "archive": [
+      "Portico"
+    ],
+    "relation": {},
+    "ISSN": [
+      "1532-0626",
+      "1532-0634"
+    ],
+    "issn-type": [
+      {
+        "value": "1532-0626",
+        "type": "print"
+      },
+      {
+        "value": "1532-0634",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2025,
+          5,
+          26
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "2024-06-05",
+        "order": 0,
+        "name": "received",
+        "label": "Received",
+        "group": {
+          "name": "publication_history",
+          "label": "Publication History"
+        }
+      },
+      {
+        "value": "2025-05-07",
+        "order": 2,
+        "name": "accepted",
+        "label": "Accepted",
+        "group": {
+          "name": "publication_history",
+          "label": "Publication History"
+        }
+      },
+      {
+        "value": "2025-05-26",
+        "order": 3,
+        "name": "published",
+        "label": "Published",
+        "group": {
+          "name": "publication_history",
+          "label": "Publication History"
+        }
+      }
+    ],
+    "article-number": "e70129"
+  }
+}

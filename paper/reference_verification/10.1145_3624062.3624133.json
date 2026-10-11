@@ -1,0 +1,515 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          1,
+          10
+        ]
+      ],
+      "date-time": "2026-01-10T01:50:35Z",
+      "timestamp": 1768009835244,
+      "version": "3.49.0"
+    },
+    "publisher-location": "New York, NY, USA",
+    "reference-count": 29,
+    "publisher": "ACM",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2023,
+              11,
+              12
+            ]
+          ],
+          "date-time": "2023-11-12T00:00:00Z",
+          "timestamp": 1699747200000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://creativecommons.org/licenses/by-nc/4.0/"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/100014013",
+        "name": "UK Research and Innovation",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "EPX0318291"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "EPX0318291"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/100014013",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "dl.acm.org"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [],
+    "published-print": {
+      "date-parts": [
+        [
+          2023,
+          11,
+          12
+        ]
+      ]
+    },
+    "DOI": "10.1145/3624062.3624133",
+    "type": "proceedings-article",
+    "created": {
+      "date-parts": [
+        [
+          2023,
+          11,
+          10
+        ]
+      ],
+      "date-time": "2023-11-10T13:53:39Z",
+      "timestamp": 1699624419000
+    },
+    "page": "609-618",
+    "update-policy": "https://doi.org/10.1145/crossmark-policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 6,
+    "title": [
+      "Principles for Automated and Reproducible Benchmarking"
+    ],
+    "prefix": "10.1145",
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0000-0002-5813-6539",
+        "authenticated-orcid": false,
+        "given": "Tuomas",
+        "family": "Koskela",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Advanced Research Computing, University College London, United Kingdom"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-5045-7987",
+        "authenticated-orcid": false,
+        "given": "Ilektra",
+        "family": "Christidi",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Advanced Research Computing, University College London, United Kingdom"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-7218-2873",
+        "authenticated-orcid": false,
+        "given": "Mosè",
+        "family": "Giordano",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Advanced Research Computing, University College London, United Kingdom"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0009-0003-8066-5458",
+        "authenticated-orcid": false,
+        "given": "Emily",
+        "family": "Dubrovska",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Advanced Research Computing, University College London, United Kingdom"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-0268-7032",
+        "authenticated-orcid": false,
+        "given": "Jamie",
+        "family": "Quinn",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Advanced Research Computing, University College London, United Kingdom"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-6253-9154",
+        "authenticated-orcid": false,
+        "given": "Christopher",
+        "family": "Maynard",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "University of Reading, United Kingdom and Met Office, UK, United Kingdom"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0009-0001-3735-5687",
+        "authenticated-orcid": false,
+        "given": "Dave",
+        "family": "Case",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "National Centre for Atmospheric Science (NCAS), UK, United Kingdom and University of Reading, United Kingdom"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-0351-2055",
+        "authenticated-orcid": false,
+        "given": "Kaan",
+        "family": "Olgu",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "University of Bristol, United Kingdom"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-6439-4171",
+        "authenticated-orcid": false,
+        "given": "Tom",
+        "family": "Deakin",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "University of Bristol, United Kingdom"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      }
+    ],
+    "member": "320",
+    "published-online": {
+      "date-parts": [
+        [
+          2023,
+          11,
+          12
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "e_1_3_2_2_1_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Mark F. Adams Jed Brown John Shalf Brian Van Straalen Erich Strohmaier and Samuel Williams. 2014. HPGMG 1.0: A Benchmark for Ranking High Performance Computing Systems. Technical Report. LBNL 6630E.",
+        "DOI": "10.2172/1131029"
+      },
+      {
+        "key": "e_1_3_2_2_2_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.jpdc.2019.02.007"
+      },
+      {
+        "key": "e_1_3_2_2_3_1",
+        "first-page": "8",
+        "article-title": "Twelve ways to fool the masses when giving performance results on parallel computers",
+        "volume": "4",
+        "author": "Bailey H.",
+        "year": "1991",
+        "unstructured": "David H. Bailey. 1991. Twelve ways to fool the masses when giving performance results on parallel computers. Supercomputing Review 4, 8 (August 1991), 54–55.",
+        "journal-title": "Supercomputing Review"
+      },
+      {
+        "key": "e_1_3_2_2_4_1",
+        "volume-title": "Bokeh: Python library for interactive visualization. Bokeh Contributors. https://bokeh.pydata.org/en/latest/",
+        "author": "Team Bokeh Development",
+        "year": "2018",
+        "unstructured": "Bokeh Development Team. 2018. Bokeh: Python library for interactive visualization. Bokeh Contributors. https://bokeh.pydata.org/en/latest/"
+      },
+      {
+        "key": "e_1_3_2_2_5_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CCGrid54584.2022.00077"
+      },
+      {
+        "key": "e_1_3_2_2_6_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Paul Stewart Crozier Heidi K Thornquist Robert W Numrich Alan B Williams Harold Carter Edwards Eric Richard Keiter Mahesh Rajan James M Willenbring Douglas W Doerfler and Michael Allen Heroux. 2009. Improving performance via mini-applications.Technical Report. Sandia National Laboratories (SNL) Albuquerque NM and Livermore CA ….",
+        "DOI": "10.2172/993908"
+      },
+      {
+        "key": "e_1_3_2_2_7_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/P3HPC49587.2019.00006"
+      },
+      {
+        "key": "e_1_3_2_2_8_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/P3HPC51967.2020.00006"
+      },
+      {
+        "key": "e_1_3_2_2_9_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1504/IJCSE.2018.095847"
+      },
+      {
+        "key": "e_1_3_2_2_10_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1177/1094342015593158"
+      },
+      {
+        "key": "e_1_3_2_2_11_1",
+        "unstructured": "Exascale Computing Project. 2019. Software Technology Update. Technical Report. United States Department of Energy Office of Science and National Nuclear Security Administration."
+      },
+      {
+        "key": "e_1_3_2_2_12_1",
+        "unstructured": "Exascale Proxy Applications Project. 2022. Proxy App Quality Standards and Best Practices. Available at https://proxyapps.exascaleproject.org/standards/ (2023/07/31)."
+      },
+      {
+        "key": "e_1_3_2_2_13_1",
+        "unstructured": "ExCALIBUR. 2022. About ExCALIBUR. Available at https://excalibur.ac.uk/about-excalibur/ (2023/07/31)."
+      },
+      {
+        "key": "e_1_3_2_2_14_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/MCSE.2023.3263458"
+      },
+      {
+        "key": "e_1_3_2_2_15_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2807591.2807623"
+      },
+      {
+        "key": "e_1_3_2_2_16_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.25561/104839"
+      },
+      {
+        "key": "e_1_3_2_2_17_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2807591.2807644"
+      },
+      {
+        "key": "e_1_3_2_2_18_1",
+        "volume-title": "Tools and Techniques for High Performance Computing",
+        "author": "Karakasis Vasileios",
+        "unstructured": "Vasileios Karakasis, Theofilos Manitaras, Victor Holanda Rusu, Rafael Sarmiento-Pérez, Christopher Bignamini, Matthias Kraushaar, Andreas Jocksch, Samuel Omlin, Guilherme Peretti-Pezzi, João P. S. C. Augusto, Brian Friesen, Yun He, Lisa Gerhardt, Brandon Cook, Zhi-Qiang You, Samuel Khuvis, and Karen Tomko. 2020. Enabling Continuous Testing of HPC Systems Using ReFrame. In Tools and Techniques for High Performance Computing, Guido Juckeland and Sunita Chandrasekaran (Eds.). Springer International Publishing, Cham, 49–68."
+      },
+      {
+        "key": "e_1_3_2_2_19_1",
+        "volume-title": "Keyes and Office of Science",
+        "author": "E.",
+        "year": "2004",
+        "unstructured": "David E. Keyes and Office of Science. 2004. A Science-based Case for Large-scale Simulation Volume 2. U.S. Department of Energy, Washington, DC, Chapter 10 Plasma Science: Taming a Star, 123–134."
+      },
+      {
+        "key": "e_1_3_2_2_20_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/PMBS56514.2022.00009"
+      },
+      {
+        "key": "e_1_3_2_2_21_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Piotr Luszczek Jack J. Dongarra David Koester Rolf Rabenseifner Bob Lucas Jeremy Kepner John McCalpin David Bailey and Daisuke Takahashi11. 2005. Introduction to the HPC Challenge Benchmark Suite. In Supercomputing. 12 pages.",
+        "DOI": "10.1145/1188455.1188677"
+      },
+      {
+        "key": "e_1_3_2_2_22_1",
+        "volume-title": "Memory Bandwidth and Machine Balance in Current High Performance Computers",
+        "author": "McCalpin D.",
+        "year": "1995",
+        "unstructured": "John D. McCalpin. 1995. Memory Bandwidth and Machine Balance in Current High Performance Computers. IEEE Computer Society Technical Committee on Computer Architecture (TCCA) Newsletter (December 1995), 19–25."
+      },
+      {
+        "key": "e_1_3_2_2_23_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1002/cpe.5569"
+      },
+      {
+        "key": "e_1_3_2_2_24_1",
+        "doi-asserted-by": "publisher",
+        "unstructured": "The pandas development team. 2020. pandas-dev/pandas: Pandas. pandas-dev. https://doi.org/10.5281/zenodo.3509134",
+        "DOI": "10.5281/zenodo.3509134"
+      },
+      {
+        "key": "e_1_3_2_2_25_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.future.2017.08.007"
+      },
+      {
+        "key": "e_1_3_2_2_26_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.5281/zenodo.7733678"
+      },
+      {
+        "key": "e_1_3_2_2_27_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/MCSE.2021.3097276"
+      },
+      {
+        "key": "e_1_3_2_2_28_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/MCSE.2021.3096678"
+      },
+      {
+        "key": "e_1_3_2_2_29_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/P3HPC.2018.00005"
+      }
+    ],
+    "event": {
+      "name": "SC-W 2023: Workshops of The International Conference on High Performance Computing, Network, Storage, and Analysis",
+      "location": "Denver CO USA",
+      "acronym": "SC-W 2023"
+    },
+    "container-title": [
+      "Proceedings of the SC '23 Workshops of the International Conference on High Performance Computing, Network, Storage, and Analysis"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "https://dl.acm.org/doi/10.1145/3624062.3624133",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://dl.acm.org/doi/pdf/10.1145/3624062.3624133",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2025,
+          8,
+          21
+        ]
+      ],
+      "date-time": "2025-08-21T03:01:08Z",
+      "timestamp": 1755745268000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://dl.acm.org/doi/10.1145/3624062.3624133"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2023,
+          11,
+          12
+        ]
+      ]
+    },
+    "references-count": 29,
+    "alternative-id": [
+      "10.1145/3624062.3624133",
+      "10.1145/3624062"
+    ],
+    "URL": "https://doi.org/10.1145/3624062.3624133",
+    "relation": {},
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2023,
+          11,
+          12
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "2023-11-12",
+        "order": 3,
+        "name": "published",
+        "label": "Published",
+        "group": {
+          "name": "publication_history",
+          "label": "Publication History"
+        }
+      }
+    ]
+  }
+}

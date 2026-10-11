@@ -1,0 +1,477 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          10
+        ]
+      ],
+      "date-time": "2026-09-10T21:26:34Z",
+      "timestamp": 1789075594566,
+      "version": "build-2803163510"
+    },
+    "reference-count": 21,
+    "publisher": "The Open Journal",
+    "issue": "87",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2023,
+              7,
+              4
+            ]
+          ],
+          "date-time": "2023-07-04T00:00:00Z",
+          "timestamp": 1688428800000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "http://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2023,
+              7,
+              4
+            ]
+          ],
+          "date-time": "2023-07-04T00:00:00Z",
+          "timestamp": 1688428800000
+        },
+        "content-version": "am",
+        "delay-in-days": 0,
+        "URL": "http://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2023,
+              7,
+              4
+            ]
+          ],
+          "date-time": "2023-07-04T00:00:00Z",
+          "timestamp": 1688428800000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "http://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "JOSS"
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2023,
+          7,
+          4
+        ]
+      ]
+    },
+    "DOI": "10.21105/joss.05495",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2023,
+          7,
+          4
+        ]
+      ],
+      "date-time": "2023-07-04T12:58:55Z",
+      "timestamp": 1688475535000
+    },
+    "page": "5495",
+    "source": "Crossref",
+    "is-referenced-by-count": 33,
+    "title": [
+      "PyAMG: Algebraic Multigrid Solvers in Python"
+    ],
+    "prefix": "10.21105",
+    "volume": "8",
+    "author": [
+      {
+        "given": "Nathan",
+        "family": "Bell",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-5283-6104",
+        "authenticated-orcid": false,
+        "given": "Luke N.",
+        "family": "Olson",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-1076-9206",
+        "authenticated-orcid": false,
+        "given": "Jacob",
+        "family": "Schroder",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-0283-4928",
+        "authenticated-orcid": false,
+        "given": "Ben",
+        "family": "Southworth",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "8722",
+    "reference": [
+      {
+        "key": "cfamg:1987",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1137/1.9781611971057",
+        "article-title": "Algebraic multigrid (AMG)",
+        "volume": "3",
+        "author": "Ruge",
+        "year": "1987",
+        "unstructured": "Ruge, J. W., & Stüben, K. (1987).\nAlgebraic multigrid (AMG). In S. F. McCormick (Ed.), Multigrid methods\n(Vol. 3, pp. 73–130). SIAM.\nhttps://doi.org/10.1137/1.9781611971057",
+        "journal-title": "Multigrid methods"
+      },
+      {
+        "issue": "3",
+        "key": "aggamg:1996",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/BF02238511",
+        "article-title": "Algebraic multigrid by smoothed aggregation\nfor second and fourth order elliptic problems",
+        "volume": "56",
+        "author": "Vaněk",
+        "year": "1996",
+        "unstructured": "Vaněk, P., Mandel, J., & Brezina,\nM. (1996). Algebraic multigrid by smoothed aggregation for second and\nfourth order elliptic problems. Computing, 56(3), 179–196.\nhttps://doi.org/10.1007/BF02238511",
+        "journal-title": "Computing"
+      },
+      {
+        "issue": "2",
+        "key": "adaptiveamg:2005",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1137/050626272",
+        "article-title": "Adaptive smoothed aggregation (\\alpha SA)\nmultigrid",
+        "volume": "47",
+        "author": "Brezina",
+        "year": "2005",
+        "unstructured": "Brezina, M., Falgout, R., MacLachlan,\nS., Manteuffel, T., McCormick, S., & Ruge, J. (2005). Adaptive\nsmoothed aggregation (\\alpha SA) multigrid. SIAM Review, 47(2), 317–346.\nhttps://doi.org/10.1137/050626272",
+        "journal-title": "SIAM review"
+      },
+      {
+        "issue": "5",
+        "key": "rootnodeamg:2017",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1137/16M1082706",
+        "article-title": "A root-node–based algebraic multigrid\nmethod",
+        "volume": "39",
+        "author": "Manteuffel",
+        "year": "2017",
+        "unstructured": "Manteuffel, T. A., Olson, L. N.,\nSchroder, J. B., & Southworth, B. S. (2017). A root-node–based\nalgebraic multigrid method. SIAM Journal on Scientific Computing, 39(5),\nS723–S756. https://doi.org/10.1137/16M1082706",
+        "journal-title": "SIAM Journal on Scientific\nComputing"
+      },
+      {
+        "key": "encamg",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-540-70529-1_337",
+        "article-title": "Multigrid methods: algebraic",
+        "author": "Olson",
+        "year": "2015",
+        "unstructured": "Olson, L. (2015). Multigrid methods:\nalgebraic. In B. Engquist (Ed.), Encyclopedia of applied and\ncomputational mathematics (pp. 977–981). Springer Berlin Heidelberg.\nhttps://doi.org/10.1007/978-3-540-70529-1_337",
+        "journal-title": "Encyclopedia of applied and computational\nmathematics"
+      },
+      {
+        "key": "encmg",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-540-70529-1_338",
+        "article-title": "Multigrid methods: geometric",
+        "author": "Olson",
+        "year": "2015",
+        "unstructured": "Olson, L. (2015). Multigrid methods:\ngeometric. In B. Engquist (Ed.), Encyclopedia of applied and\ncomputational mathematics (pp. 981–987). Springer Berlin Heidelberg.\nhttps://doi.org/10.1007/978-3-540-70529-1_338",
+        "journal-title": "Encyclopedia of applied and computational\nmathematics"
+      },
+      {
+        "key": "mgtutorial",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1137/1.9780898719505",
+        "volume-title": "A multigrid tutorial",
+        "author": "Briggs",
+        "year": "2000",
+        "unstructured": "Briggs, W. L., Henson, V. E., &\nMcCormick, S. F. (2000). A multigrid tutorial (Second). Society for\nIndustrial and Applied Mathematics.\nhttps://doi.org/10.1137/1.9780898719505"
+      },
+      {
+        "key": "mgbook",
+        "isbn-type": "print",
+        "volume-title": "Multigrid",
+        "author": "Trottenberg",
+        "year": "2001",
+        "unstructured": "Trottenberg, U., Oosterlee, C. W.,\n& Schüller, A. (2001). Multigrid (p. xvi+631). Academic Press, Inc.,\nSan Diego, CA. ISBN: 0-12-701070-X",
+        "ISBN": "https://id.crossref.org/isbn/012701070X"
+      },
+      {
+        "issue": "6",
+        "key": "amgintro",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/MCSE.2006.105",
+        "article-title": "An introduction to algebraic\nmultigrid",
+        "volume": "8",
+        "author": "Falgout",
+        "year": "2006",
+        "unstructured": "Falgout, R. D. (2006). An\nintroduction to algebraic multigrid. Computing in Science &\nEngineering, 8(6), 24–33.\nhttps://doi.org/10.1109/MCSE.2006.105",
+        "journal-title": "Computing in Science &\nEngineering"
+      },
+      {
+        "issue": "1",
+        "key": "henson2002155",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/S0168-9274(01)00115-5",
+        "article-title": "BoomerAMG: A parallel algebraic multigrid\nsolver and preconditioner",
+        "volume": "41",
+        "author": "Henson",
+        "year": "2002",
+        "unstructured": "Henson, V. E., & Yang, U. M.\n(2002). BoomerAMG: A parallel algebraic multigrid solver and\npreconditioner. Applied Numerical Mathematics, 41(1), 155–177.\nhttps://doi.org/10.1016/S0168-9274(01)00115-5",
+        "journal-title": "Applied Numerical Mathematics",
+        "ISSN": "https://id.crossref.org/issn/0168-9274",
+        "issn-type": "print"
+      },
+      {
+        "key": "hypre",
+        "article-title": "High performance\npreconditioners",
+        "author": "hypre",
+        "year": "2022",
+        "unstructured": "hypre. (2022). High performance\npreconditioners.\nhttps://github.com/hypre-space/hypre"
+      },
+      {
+        "key": "trilinos-website",
+        "volume-title": "Trilinos Project website",
+        "author": "Trilinos Project Team",
+        "year": "2020",
+        "unstructured": "Trilinos Project Team. (2020).\nTrilinos Project website.\nhttps://trilinos.github.io"
+      },
+      {
+        "key": "muelu-website",
+        "volume-title": "MueLu Project website",
+        "author": "MueLu Project Team",
+        "year": "2020",
+        "unstructured": "MueLu Project Team. (2020). MueLu\nProject website.\nhttps://trilinos.github.io/muelu.html"
+      },
+      {
+        "key": "petsc-web-page",
+        "article-title": "PETSc Web page",
+        "author": "Balay",
+        "year": "2021",
+        "unstructured": "Balay, S., Abhyankar, S., Adams, M.\nF., Benson, S., Brown, J., Brune, P., Buschelman, K., Constantinescu, E.\nM., Dalcin, L., Dener, A., Eijkhout, V., Gropp, W. D., Hapla, V., Isaac,\nT., Jolivet, P., Karpeev, D., Kaushik, D., Knepley, M. G., Kong, F., …\nZhang, J. (2021). PETSc Web page.\nhttps://petsc.org/"
+      },
+      {
+        "key": "cusp",
+        "article-title": "Cusp: Generic parallel algorithms for sparse\nmatrix and graph computations",
+        "author": "Dalton",
+        "year": "2014",
+        "unstructured": "Dalton, S., Bell, N., Olson, L.,\n& Garland, M. (2014). Cusp: Generic parallel algorithms for sparse\nmatrix and graph computations.\nhttp://cusplibrary.github.io/"
+      },
+      {
+        "issue": "5",
+        "key": "amgx",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1137/140980260",
+        "article-title": "AmgX: A library for GPU accelerated algebraic\nmultigrid and preconditioned iterative methods",
+        "volume": "37",
+        "author": "Naumov",
+        "year": "2015",
+        "unstructured": "Naumov, M., Arsaev, M., Castonguay,\nP., Cohen, J., Demouth, J., Eaton, J., Layton, S., Markovskiy, N.,\nReguly, I., Sakharnykh, N., Sellappan, V., & Strzodka, R. (2015).\nAmgX: A library for GPU accelerated algebraic multigrid and\npreconditioned iterative methods. SIAM Journal on Scientific Computing,\n37(5), S602–S626.\nhttps://doi.org/10.1137/140980260",
+        "journal-title": "SIAM Journal on Scientific\nComputing"
+      },
+      {
+        "issue": "5",
+        "key": "amgcl",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1134/s1995080219050056",
+        "article-title": "AMGCL: An efficient, flexible, and extensible\nalgebraic multigrid implementation",
+        "volume": "40",
+        "author": "Demidov",
+        "year": "2019",
+        "unstructured": "Demidov, D. (2019). AMGCL: An\nefficient, flexible, and extensible algebraic multigrid implementation.\nLobachevskii Journal of Mathematics, 40(5), 535–546.\nhttps://doi.org/10.1134/s1995080219050056",
+        "journal-title": "Lobachevskii Journal of\nMathematics",
+        "ISSN": "https://id.crossref.org/issn/1818-9962",
+        "issn-type": "print"
+      },
+      {
+        "issue": "4",
+        "key": "amggpu",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1137/110838844",
+        "article-title": "Exposing fine-grained parallelism in\nalgebraic multigrid methods",
+        "volume": "34",
+        "author": "Bell",
+        "year": "2012",
+        "unstructured": "Bell, N., Dalton, S., & Olson, L.\nN. (2012). Exposing fine-grained parallelism in algebraic multigrid\nmethods. SIAM Journal on Scientific Computing, 34(4), C123–C152.\nhttps://doi.org/10.1137/110838844",
+        "journal-title": "SIAM Journal on Scientific\nComputing"
+      },
+      {
+        "issue": "6",
+        "key": "notay:2010",
+        "article-title": "An aggregation-based algebraic multigrid\nmethod",
+        "volume": "37",
+        "author": "Notay",
+        "year": "2010",
+        "unstructured": "Notay, Y. (2010). An\naggregation-based algebraic multigrid method. Electronic Transactions on\nNumerical Analysis, 37(6), 123–146.\nhttps://etna.math.kent.edu/vol.37.2010/pp123-146.dir/pp123-146.html",
+        "journal-title": "Electronic transactions on numerical\nanalysis"
+      },
+      {
+        "issue": "6",
+        "key": "air1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1137/17M1144350",
+        "article-title": "Nonsymmetric algebraic multigrid based on\nlocal approximate ideal restriction (\\ell AIR)",
+        "volume": "40",
+        "author": "Manteuffel",
+        "year": "2018",
+        "unstructured": "Manteuffel, T. A., Ruge, J., &\nSouthworth, B. S. (2018). Nonsymmetric algebraic multigrid based on\nlocal approximate ideal restriction (\\ell AIR). SIAM Journal on\nScientific Computing, 40(6), A4105–A4130.\nhttps://doi.org/10.1137/17M1144350",
+        "journal-title": "SIAM Journal on Scientific\nComputing"
+      },
+      {
+        "issue": "5",
+        "key": "air2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1137/18M1193761",
+        "article-title": "Nonsymmetric reduction-based algebraic\nmultigrid",
+        "volume": "41",
+        "author": "Manteuffel",
+        "year": "2019",
+        "unstructured": "Manteuffel, T. A., Münzenmaier, S.,\nRuge, J., & Southworth, B. (2019). Nonsymmetric reduction-based\nalgebraic multigrid. SIAM Journal on Scientific Computing, 41(5),\nS242–S268. https://doi.org/10.1137/18M1193761",
+        "journal-title": "SIAM Journal on Scientific\nComputing"
+      }
+    ],
+    "container-title": [
+      "Journal of Open Source Software"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "https://joss.theoj.org/papers/10.21105/joss.05495.pdf",
+        "content-type": "application/pdf",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2023,
+          7,
+          4
+        ]
+      ],
+      "date-time": "2023-07-04T12:59:01Z",
+      "timestamp": 1688475541000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://joss.theoj.org/papers/10.21105/joss.05495"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2023,
+          7,
+          4
+        ]
+      ]
+    },
+    "references-count": 21,
+    "journal-issue": {
+      "issue": "87",
+      "published-online": {
+        "date-parts": [
+          [
+            2023,
+            7
+          ]
+        ]
+      }
+    },
+    "alternative-id": [
+      "10.21105/joss.05495"
+    ],
+    "URL": "https://doi.org/10.21105/joss.05495",
+    "relation": {
+      "has-review": [
+        {
+          "id-type": "uri",
+          "id": "https://github.com/openjournals/joss-reviews/issues/5495",
+          "asserted-by": "subject"
+        }
+      ],
+      "references": [
+        {
+          "id-type": "doi",
+          "id": "10.5281/zenodo.8109414",
+          "asserted-by": "subject"
+        }
+      ]
+    },
+    "ISSN": [
+      "2475-9066"
+    ],
+    "issn-type": [
+      {
+        "value": "2475-9066",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2023,
+          7,
+          4
+        ]
+      ]
+    }
+  }
+}

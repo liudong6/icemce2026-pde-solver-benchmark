@@ -1,5 +1,17 @@
 # ICEMCE 2026 Submission Checklist
 
+Current delivery: **v7 / v1.3-six-page-author-update**, https://doi.org/10.5281/zenodo.23291818. [GitHub release](https://github.com/liudong6/icemce2026-pde-solver-benchmark/releases/tag/v1.3-six-page-author-update).
+
+## Author contribution update — 11 October 2026
+
+The 11 October author update adds Yuanxin Wang as the second author, sharing Dong Liu's affiliation (University of Nottingham Ningbo China, Ningbo 315100, China), and inserts the agreed Author contributions statement. Dong Liu remains the corresponding author. The main manuscript remains six pages; scientific content, references and the existing AI disclosure are unchanged. This update is included in the v7 release (https://doi.org/10.5281/zenodo.23291818).
+
+## Six-page compression — prepared 3 October 2026, included in v7
+
+This compression revision reduces the main manuscript from 15 to 6 pages while retaining three complete review-evidence tables, a compact core figure, all 31 references and the unchanged AI disclosure. Detailed methods, all nine original result tables and six original figures are preserved in the accompanying 13-page supplement. The body uses the template's 11 pt font; A4 margins are unchanged. Numerical data, scientific code and original figures/tables are unchanged. The reference requirements remain satisfied: 18/31 from 2022–2026, 17/31 recent formal papers, and 1/31 preprint. Yellow highlighting retains the reference-review comparison baseline. This revision is included in v7; this archive update does not submit it to a conference.
+
+See `paper/COMPRESSION_REPORT.md` for the content map. `paper/SUPPLEMENTARY_METHODS_AND_RESULTS.docx` and `.pdf` are separate companion files. The preceding public delivery is Zenodo v6 (https://doi.org/10.5281/zenodo.22908710); the numerical evidence is archived in v5 (https://doi.org/10.5281/zenodo.22874266). The current presentation and author update is identified by https://doi.org/10.5281/zenodo.23291818.
+
 ## Second-round review revision — v5 / v1.2
 
 This complete revision is identified by Zenodo v5, https://doi.org/10.5281/zenodo.22874266, and GitHub release https://github.com/liudong6/icemce2026-pde-solver-benchmark/releases/tag/v1.2-icemce2026-review-revision. The v4 DOI identifies the earlier baseline and controlled extension. This revision adds 378 paired callback-calibration solves, the complete nine-cell face-averaging table in the main paper, an explicit interface-resistance interpretation, and distinct scopes for historical, extension and calibration timings. Original raw files are unchanged. The primary Word/PDF manuscript highlights review changes in yellow.
@@ -83,7 +95,7 @@ All 378 recorded residuals are at most 1e-8, and all 189 mode pairs have identic
 - [x] Do not present harmonic averaging as a universal discretisation for curved or non-grid-aligned material interfaces.
 - [x] Do not use the exploratory `N≈755` fit intersection as a hardware-selection threshold; the CPU fit predicts a negative time at the measured `N=512` point.
 - [x] Separate the historical monitored protocol from the new warm-import, shuffled-order, count-only protocol; do not pool their timing conclusions.
-- [x] Distinguish the older baseline DOI, published v4 extension DOI, and the presently unpublished callback calibration.
+- [x] Distinguish the older baseline DOI, published v4 extension DOI, and the callback calibration published in v5.
 - [x] Preserve published v4 DOI 10.5281/zenodo.22668106 as the identity of the earlier extension. The 20 September calibration is assigned v5 DOI 10.5281/zenodo.22874266.
 - [ ] Publish a new GitHub/Zenodo version for this local 20 September revision and retain its receipt. The prior v4 release is unchanged.
 - [x] On 9 September 2026, inspect the conference-linked submission platform at https://www.ais.cn/attendees/index/FYEY3M: it announces a third-round full-paper deadline of 18 September 2026 at 23:59, IOP Journal of Physics: Conference Series publication, and a single-column manuscript of at least six full pages. This newer platform notice differs from the English homepage's 15 August deadline.

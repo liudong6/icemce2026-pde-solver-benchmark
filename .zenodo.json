@@ -5,10 +5,14 @@
   "creators": [
     {
       "name": "Liu, Dong",
-      "affiliation": "University of Nottingham Ningbo China"
+      "affiliation": "University of Nottingham Ningbo China, Ningbo 315100, China"
+    },
+    {
+      "name": "Wang, Yuanxin",
+      "affiliation": "University of Nottingham Ningbo China, Ningbo 315100, China"
     }
   ],
-  "description": "This archive contains the manuscript, source code, raw CSV evidence, generated figures and tables, environment requirements, and prior verification records for a reproducible finite-difference benchmark of solver selection and CPU/GPU stencil scaling in heat-conduction simulation. Version v6 publishes the revised author-to-reviewer response in a two-page Word document and a matching Markdown source, and updates all delivery packages and manifests. The response addresses face averaging and the interpretation of distinct timing protocols. The manuscript, scientific code, raw measurements and numerical results are unchanged from version v5 (10.5281/zenodo.22874266). No new numerical experiments were performed for v6. Citations to v5 within the unchanged manuscript and the response identify the experimental evidence already archived there. Version v6 is identified by 10.5281/zenodo.22908710. The retained evidence includes the original benchmark, controlled matched-field and candidate-solver audits, and the 378-solve paired callback calibration from v5. Earlier published versions are preserved. The historical repository ZIP filename does not indicate its current contents; the included release note and manifests identify this version. The full submission bundle is hosted on GitHub, while the six Zenodo core files cover all of its substantive materials. This release performs no conference submission.",
+  "description": "Version v7 publishes the six-page main manuscript, the separate 13-page Supplementary Methods and Results, the reference revision (31 references), and the agreed author-contribution statement. Authors are Dong Liu and Yuanxin Wang, both affiliated with University of Nottingham Ningbo China, Ningbo 315100, China; Dong Liu is the corresponding author. The main manuscript was condensed from 15 to six pages while retaining the core evidence and all references. Complete methods, nine original result tables and six original figures are retained in the supplement. The existing AI disclosure is preserved. Scientific code and original numerical measurements are unchanged; no new performance experiments were run for this release. The numerical-evidence DOI 10.5281/zenodo.22874266 remains intentionally cited in the manuscript. This complete delivery is identified by 10.5281/zenodo.23291818. It supersedes the v6 delivery (10.5281/zenodo.22908710) without replacing historical records. Current reviewer responses and historical previous-round responses are distinctly labelled. Reproducibility archives include source files, raw CSV evidence, environment requirements, reference audits and checksum manifests. The repository ZIP retains its historical v1.0 filename; its release notes and manifest identify the current contents. The full one-click submission bundle is available on GitHub; the Zenodo core files cover its substantive contents. This is a public archive update, not a conference acceptance or submission.",
   "keywords": [
     "heat conduction",
     "finite difference method",
@@ -23,14 +27,14 @@
   ],
   "access_right": "open_access",
   "license": "mit",
-  "version": "v6",
+  "version": "v7",
   "related_identifiers": [
     {
-      "identifier": "https://github.com/liudong6/icemce2026-pde-solver-benchmark/releases/tag/v1.2.1-reviewer-response",
+      "identifier": "https://github.com/liudong6/icemce2026-pde-solver-benchmark/releases/tag/v1.3-six-page-author-update",
       "relation": "isSupplementTo",
       "scheme": "url"
     }
   ],
-  "doi": "10.5281/zenodo.22908710",
-  "publication_date": "2026-09-23"
+  "doi": "10.5281/zenodo.23291818",
+  "publication_date": "2026-10-11"
 }

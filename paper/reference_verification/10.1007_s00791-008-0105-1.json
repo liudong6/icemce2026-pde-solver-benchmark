@@ -1,0 +1,459 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          3,
+          6
+        ]
+      ],
+      "date-time": "2026-03-06T10:29:07Z",
+      "timestamp": 1772792947831,
+      "version": "3.50.1"
+    },
+    "reference-count": 26,
+    "publisher": "Springer Science and Business Media LLC",
+    "issue": "4-6",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2008,
+              3,
+              27
+            ]
+          ],
+          "date-time": "2008-03-27T00:00:00Z",
+          "timestamp": 1206576000000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "http://www.springer.com/tdm"
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "Comput. Visual Sci."
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2008,
+          9
+        ]
+      ]
+    },
+    "DOI": "10.1007/s00791-008-0105-1",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2008,
+          3,
+          26
+        ]
+      ],
+      "date-time": "2008-03-26T08:50:17Z",
+      "timestamp": 1206521417000
+    },
+    "page": "319-331",
+    "source": "Crossref",
+    "is-referenced-by-count": 26,
+    "title": [
+      "Towards a rigorously justified algebraic preconditioner for high-contrast diffusion problems"
+    ],
+    "prefix": "10.1007",
+    "volume": "11",
+    "author": [
+      {
+        "given": "Burak",
+        "family": "Aksoylu",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Ivan G.",
+        "family": "Graham",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Hector",
+        "family": "Klie",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Robert",
+        "family": "Scheichl",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      }
+    ],
+    "member": "297",
+    "published-online": {
+      "date-parts": [
+        [
+          2008,
+          3,
+          27
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "105_CR1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Aarnes, J.E.: Modelling of multiscale structures in flow simulations for petroleum reservoirs. In: Geometric Modelling, Numerical Simulation, and Optimization Applied Mathematics at SINTEF, pp. 307–360. Springer, New York (2007)",
+        "DOI": "10.1007/978-3-540-68783-2_10"
+      },
+      {
+        "issue": "1",
+        "key": "105_CR2",
+        "doi-asserted-by": "crossref",
+        "first-page": "63",
+        "DOI": "10.1007/s102550200004",
+        "volume": "18",
+        "author": "J.E. Aarnes",
+        "year": "2002",
+        "unstructured": "Aarnes, J.E., Hou, T.Y.: Multiscale domain decomposition methods for elliptic problems with high aspect ratios. Acta Math. Appl. Sin. 18(1), 63–76 (2002)",
+        "journal-title": "Acta Math. Appl. Sin."
+      },
+      {
+        "key": "105_CR3",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Aksoylu, B., Klie, H.: A family of physics-based preconditioners for solving elliptic equations on highly heterogeneous media. Appl. Numer. Mathe., 2008 (in press)",
+        "DOI": "10.1016/j.apnum.2008.06.002"
+      },
+      {
+        "key": "105_CR4",
+        "volume-title": "Domain decomposition methods. In Acta Numerica",
+        "author": "T.F. Chan",
+        "year": "2004",
+        "unstructured": "Chan, T.F., Mathew, T.: Domain decomposition methods. In Acta Numerica. Cambridge University Press, London (2004)"
+      },
+      {
+        "key": "105_CR5",
+        "doi-asserted-by": "crossref",
+        "first-page": "308",
+        "DOI": "10.2118/72469-PA",
+        "volume": "12",
+        "author": "M.A. Christie",
+        "year": "2001",
+        "unstructured": "Christie, M.A., Blunt, M.J.: Tenth SPE Comparative Solution Project: A Comparison of Upscaling Techniques. SPE Reserv. Eng. 12, 308–317 (2001)",
+        "journal-title": "SPE Reserv. Eng."
+      },
+      {
+        "key": "105_CR6",
+        "doi-asserted-by": "crossref",
+        "first-page": "258",
+        "DOI": "10.1006/jcph.2000.6593",
+        "volume": "164",
+        "author": "K.A. Cliffe",
+        "year": "2000",
+        "unstructured": "Cliffe, K.A., Graham, I.G., Scheichl, R., Stals, L.: Parallel computation of flow in heterogeneous media modelled by mixed finite elements. J. Comp. Phys. 164, 258–282 (2000)",
+        "journal-title": "J. Comp. Phys."
+      },
+      {
+        "key": "105_CR7",
+        "doi-asserted-by": "crossref",
+        "first-page": "211",
+        "DOI": "10.1146/annurev.fluid.37.061903.175748",
+        "volume": "37",
+        "author": "M.G. Gerritsen",
+        "year": "2005",
+        "unstructured": "Gerritsen, M.G., Durlofsky, L.J.: Modeling fluid flow in oil reservoirs. Annu. Rev. Fluid. Mech 37, 211–238 (2005)",
+        "journal-title": "Annu. Rev. Fluid. Mech"
+      },
+      {
+        "key": "105_CR8",
+        "volume-title": "Matrix Computations",
+        "author": "G.H. Golub",
+        "year": "1989",
+        "unstructured": "Golub, G.H., Van Loan, C.F.: Matrix Computations. Johns Hopkins University Press, Baltimore (1989)"
+      },
+      {
+        "key": "105_CR9",
+        "unstructured": "Graham, I.G., Hagger, M.J.: Additive Schwarz, CG and discontinuous coefficients. In: Espedal, M., Bjørstad, P., Keyes, D.E. (eds.) Proc. 9th Intern. Confer. on Domain Decomposition Methods. Bergen, Norway (1998)"
+      },
+      {
+        "issue": "6",
+        "key": "105_CR10",
+        "doi-asserted-by": "crossref",
+        "first-page": "2041",
+        "DOI": "10.1137/S1064827596305593",
+        "volume": "20",
+        "author": "I.G. Graham",
+        "year": "1999",
+        "unstructured": "Graham, I.G., Hagger, M.J.: Unstructured additive Schwarz- conjugate gradient method for elliptic problems with highly discontinuous coefficients. SIAM J. Sci. Comp. 20(6), 2041–2066 (1999)",
+        "journal-title": "SIAM J. Sci. Comp."
+      },
+      {
+        "key": "105_CR11",
+        "doi-asserted-by": "crossref",
+        "first-page": "589",
+        "DOI": "10.1007/s00211-007-0074-1",
+        "volume": "106",
+        "author": "I.G. Graham",
+        "year": "2007",
+        "unstructured": "Graham, I.G., Lechner, P., Scheichl, R.: Domain decomposition for multiscale PDEs. Numer. Math. 106, 589–626 (2007)",
+        "journal-title": "Numer. Math."
+      },
+      {
+        "key": "105_CR12",
+        "volume-title": "Iterative Solution of Large Sparse Systems of Equations",
+        "author": "W. Hackbusch",
+        "year": "1993",
+        "unstructured": "Hackbusch, W.: Iterative Solution of Large Sparse Systems of Equations. Springer, New York (1993)"
+      },
+      {
+        "key": "105_CR13",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Khoromskij, B.N., Wittum, G.: Numerical Solution of Elliptic Differential Equations by Reduction to the Interface. In: Lecture Notes in Computer Science and Engineering, vol. 36. Springer, New York (2004)",
+        "DOI": "10.1007/978-3-642-18777-3"
+      },
+      {
+        "key": "105_CR14",
+        "unstructured": "Klie, H.: Krylov-Secant methods for solving Large Scale Systems of Coupled Nonlinear Parabolic Equations. Ph.D. thesis, Dept. of Computational and Applied Mathematics, Rice University, Houston, TX (1996)"
+      },
+      {
+        "key": "105_CR15",
+        "doi-asserted-by": "crossref",
+        "first-page": "421",
+        "DOI": "10.1016/j.jcp.2005.09.024",
+        "volume": "214",
+        "author": "P. Ming",
+        "year": "2006",
+        "unstructured": "Ming, P., Ye, X.: Numerical methods for multiscale elliptic problems. J. Comput. Phys. 214, 421–445 (2006)",
+        "journal-title": "J. Comput. Phys."
+      },
+      {
+        "key": "105_CR16",
+        "doi-asserted-by": "crossref",
+        "first-page": "1742",
+        "DOI": "10.1137/040608246",
+        "volume": "27",
+        "author": "R. Nabben",
+        "year": "2006",
+        "unstructured": "Nabben, R., Vuik, C.: A comparison of deflation and the balancing preconditioner. SIAM J. Sci. Comp. 27, 1742–1759 (2006)",
+        "journal-title": "SIAM J. Sci. Comp."
+      },
+      {
+        "key": "105_CR17",
+        "doi-asserted-by": "crossref",
+        "first-page": "184",
+        "DOI": "10.1007/s10040-004-0427-0",
+        "volume": "13",
+        "author": "B. Nœtinger",
+        "year": "2005",
+        "unstructured": "Nœtinger, B., Artus, V., Zargar, G.: The future of stochastic and upscaling methods in hydrogeology. Hydrogeol. J. 13, 184–201 (2005)",
+        "journal-title": "Hydrogeol. J."
+      },
+      {
+        "key": "105_CR18",
+        "doi-asserted-by": "crossref",
+        "first-page": "559",
+        "DOI": "10.1007/s211-001-8015-y",
+        "volume": "88",
+        "author": "M. Brezina",
+        "year": "2001",
+        "unstructured": "Brezina, M., Vanek, P., Mandel, J.: Convergence of algebraic multigrid based on smoothed aggregation. Numer. Math. 88, 559–579 (2001)",
+        "journal-title": "Numer. Math."
+      },
+      {
+        "key": "105_CR19",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Ruge, J.W., Stüben, K.: Algebraic multigrid. In: Multigrid Methods, Frontiers Appl. Math., vol. 3, pp. 73–130. SIAM, Philadelphia (1987)",
+        "DOI": "10.1137/1.9781611971057.ch4"
+      },
+      {
+        "key": "105_CR20",
+        "doi-asserted-by": "crossref",
+        "first-page": "223",
+        "DOI": "10.1016/S0309-1708(98)00014-1",
+        "volume": "22",
+        "author": "T. Scheibe",
+        "year": "1998",
+        "unstructured": "Scheibe, T., Yabusaki, S.: Scaling of flow and transport behavior in heterogeneous groundwater systems. Adv. Water Resour. 22, 223–238 (1998)",
+        "journal-title": "Adv. Water Resour."
+      },
+      {
+        "key": "105_CR21",
+        "unstructured": "Scheichl, R.: A rigorously justified algebraic preconditioner for high-contrast diffusion problems. in preparation, 2008"
+      },
+      {
+        "issue": "4",
+        "key": "105_CR22",
+        "doi-asserted-by": "crossref",
+        "first-page": "319",
+        "DOI": "10.1007/s00607-007-0237-z",
+        "volume": "80",
+        "author": "R. Scheichl",
+        "year": "2007",
+        "unstructured": "Scheichl, R., Vainikko, E.: Additive Schwarz and aggregation-based coarsening for elliptic problems with highly variable coefficients. Computing 80(4), 319–343 (2007)",
+        "journal-title": "Computing"
+      },
+      {
+        "key": "105_CR23",
+        "doi-asserted-by": "crossref",
+        "first-page": "385",
+        "DOI": "10.1006/jcph.1999.6255",
+        "volume": "152",
+        "author": "C. Vuik",
+        "year": "1999",
+        "unstructured": "Vuik, C., Segal, A., Meijerink, J.A.: An efficient preconditioned CG method for the solution of a class of layered problems with extreme contrasts of coefficients. J. Comp. Phys. 152, 385–403 (1999)",
+        "journal-title": "J. Comp. Phys."
+      },
+      {
+        "key": "105_CR24",
+        "first-page": "1",
+        "volume": "44",
+        "author": "A. Guadagnini",
+        "year": "2006",
+        "unstructured": "Guadagnini, A., Sanchez-Vila, X., Carrera, J.: Representative hydraulic conductivities in saturated groundwater flow. Rev. Geophys. 44, 1–46 (2006)",
+        "journal-title": "Rev. Geophys."
+      },
+      {
+        "key": "105_CR25",
+        "doi-asserted-by": "crossref",
+        "first-page": "343",
+        "DOI": "10.1023/A:1022318926559",
+        "volume": "51",
+        "author": "L.J. Durlofsky",
+        "year": "2003",
+        "unstructured": "Durlofsky, L.J., Wen, X.H., Edwards, M.G.: Upscaling of channel systems in two dimensions using flow-based grids. Transp. Porous Media 51, 343–366 (2003)",
+        "journal-title": "Transp. Porous Media"
+      },
+      {
+        "key": "105_CR26",
+        "unstructured": "Xu, J., Zhu, Y.: Uniform convergent multigrid methods for elliptic problems with strongly discontinuous coefficients. Technical Report Technical Report No. AM311, Dept of Mathematics, Penn State, Pennsilvania, USA (2007)"
+      }
+    ],
+    "container-title": [
+      "Computing and Visualization in Science"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "http://link.springer.com/content/pdf/10.1007/s00791-008-0105-1.pdf",
+        "content-type": "application/pdf",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "http://link.springer.com/article/10.1007/s00791-008-0105-1/fulltext.html",
+        "content-type": "text/html",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "http://link.springer.com/content/pdf/10.1007/s00791-008-0105-1",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2019,
+          5,
+          29
+        ]
+      ],
+      "date-time": "2019-05-29T02:46:08Z",
+      "timestamp": 1559097968000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "http://link.springer.com/10.1007/s00791-008-0105-1"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2008,
+          3,
+          27
+        ]
+      ]
+    },
+    "references-count": 26,
+    "journal-issue": {
+      "issue": "4-6",
+      "published-print": {
+        "date-parts": [
+          [
+            2008,
+            9
+          ]
+        ]
+      }
+    },
+    "alternative-id": [
+      "105"
+    ],
+    "URL": "https://doi.org/10.1007/s00791-008-0105-1",
+    "relation": {},
+    "ISSN": [
+      "1432-9360",
+      "1433-0369"
+    ],
+    "issn-type": [
+      {
+        "value": "1432-9360",
+        "type": "print"
+      },
+      {
+        "value": "1433-0369",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2008,
+          3,
+          27
+        ]
+      ]
+    }
+  }
+}

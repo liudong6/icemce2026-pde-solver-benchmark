@@ -1,0 +1,1392 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          12
+        ]
+      ],
+      "date-time": "2026-09-12T03:11:20Z",
+      "timestamp": 1789182680672,
+      "version": "build-2803163510"
+    },
+    "reference-count": 114,
+    "publisher": "Elsevier BV",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2024,
+              7,
+              1
+            ]
+          ],
+          "date-time": "2024-07-01T00:00:00Z",
+          "timestamp": 1719792000000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2024,
+              7,
+              1
+            ]
+          ],
+          "date-time": "2024-07-01T00:00:00Z",
+          "timestamp": 1719792000000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://www.elsevier.com/legal/tdmrep-license"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2024,
+              4,
+              4
+            ]
+          ],
+          "date-time": "2024-04-04T00:00:00Z",
+          "timestamp": 1712188800000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "http://creativecommons.org/licenses/by-nc/4.0/"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/100010663",
+        "name": "European Research Council",
+        "doi-asserted-by": "publisher",
+        "id": [
+          {
+            "id": "10.13039/100010663",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "elsevier.com",
+        "sciencedirect.com"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [
+      "Linear Algebra and its Applications"
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2024,
+          7
+        ]
+      ]
+    },
+    "DOI": "10.1016/j.laa.2024.04.003",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2024,
+          4,
+          8
+        ]
+      ],
+      "date-time": "2024-04-08T12:09:06Z",
+      "timestamp": 1712578146000
+    },
+    "page": "241-291",
+    "update-policy": "https://doi.org/10.1016/elsevier_cm_policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 18,
+    "special_numbering": "C",
+    "title": [
+      "Towards understanding CG and GMRES through examples"
+    ],
+    "prefix": "10.1016",
+    "volume": "692",
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0000-0001-9469-7467",
+        "authenticated-orcid": false,
+        "given": "Erin",
+        "family": "Carson",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Jörg",
+        "family": "Liesen",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Zdeněk",
+        "family": "Strakoš",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "78",
+    "reference": [
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0010",
+        "doi-asserted-by": "crossref",
+        "first-page": "636",
+        "DOI": "10.1007/BF02510405",
+        "article-title": "Krylov sequences of maximal length and convergence of GMRES",
+        "volume": "38",
+        "author": "Arioli",
+        "year": "1998",
+        "journal-title": "BIT"
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0020",
+        "doi-asserted-by": "crossref",
+        "first-page": "17",
+        "DOI": "10.1090/qam/42792",
+        "article-title": "The principle of minimized iteration in the solution of the matrix eigenvalue problem",
+        "volume": "9",
+        "author": "Arnoldi",
+        "year": "1951",
+        "journal-title": "Q. Appl. Math."
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0030",
+        "doi-asserted-by": "crossref",
+        "first-page": "1542",
+        "DOI": "10.1137/0727091",
+        "article-title": "A taxonomy for conjugate gradient methods",
+        "volume": "27",
+        "author": "Ashby",
+        "year": "1990",
+        "journal-title": "SIAM J. Numer. Anal."
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0040",
+        "doi-asserted-by": "crossref",
+        "first-page": "418",
+        "DOI": "10.1006/jcph.2002.7176",
+        "article-title": "Preconditioning techniques for large linear systems: a survey",
+        "volume": "182",
+        "author": "Benzi",
+        "year": "2002",
+        "journal-title": "J. Comput. Phys."
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0050",
+        "doi-asserted-by": "crossref",
+        "first-page": "21",
+        "DOI": "10.1016/0024-3795(94)00081-6",
+        "article-title": "The methods of Vorobyev and Lanczos",
+        "volume": "234",
+        "author": "Brezinski",
+        "year": "1996",
+        "journal-title": "Linear Algebra Appl."
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0060",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1098/rsta.2019.0050",
+        "article-title": "On the cost of iterative computations",
+        "volume": "378",
+        "author": "Carson",
+        "year": "2020",
+        "journal-title": "Philos. Trans. R. Soc. A"
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0070",
+        "series-title": "Communication-avoiding Krylov subspace methods in theory and practice",
+        "author": "Carson",
+        "year": "2015"
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0080",
+        "doi-asserted-by": "crossref",
+        "first-page": "A3549",
+        "DOI": "10.1137/16M1103361",
+        "article-title": "The numerical stability analysis of pipelined conjugate gradient methods: historical context and methodology",
+        "volume": "40",
+        "author": "Carson",
+        "year": "2018",
+        "journal-title": "SIAM J. Sci. Comput."
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0090",
+        "author": "Colbrook"
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0100",
+        "doi-asserted-by": "crossref",
+        "first-page": "489",
+        "DOI": "10.1137/20M1330944",
+        "article-title": "Computing spectral measures of self-adjoint operators",
+        "volume": "63",
+        "author": "Colbrook",
+        "year": "2021",
+        "journal-title": "SIAM Rev."
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0110",
+        "doi-asserted-by": "crossref",
+        "first-page": "1103",
+        "DOI": "10.1137/0710092",
+        "article-title": "Use of fast direct methods for the efficient numerical solution of nonseparable elliptic equations",
+        "volume": "10",
+        "author": "Concus",
+        "year": "1973",
+        "journal-title": "SIAM J. Numer. Anal."
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0120",
+        "doi-asserted-by": "crossref",
+        "first-page": "426",
+        "DOI": "10.1137/17M1117872",
+        "article-title": "Analyzing the effect of local rounding error propagation on the maximal attainable accuracy of the pipelined conjugate gradient method",
+        "volume": "39",
+        "author": "Cools",
+        "year": "2018",
+        "journal-title": "SIAM J. Matrix Anal. Appl."
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0130",
+        "doi-asserted-by": "crossref",
+        "first-page": "309",
+        "DOI": "10.1007/BF01732607",
+        "article-title": "Numerical stability of GMRES",
+        "volume": "35",
+        "author": "Drkošová",
+        "year": "1995",
+        "journal-title": "BIT"
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0140",
+        "doi-asserted-by": "crossref",
+        "first-page": "205",
+        "DOI": "10.1002/nla.1680020303",
+        "article-title": "Krylov subspace approximation of eigenpairs and matrix functions in exact and computer arithmetic",
+        "volume": "2",
+        "author": "Druskin",
+        "year": "1995",
+        "journal-title": "Numer. Linear Algebra Appl."
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0150",
+        "doi-asserted-by": "crossref",
+        "first-page": "83",
+        "DOI": "10.1016/j.laa.2014.02.044",
+        "article-title": "On investigating GMRES convergence using unitary matrices",
+        "volume": "450",
+        "author": "Duintjer Tebbens",
+        "year": "2014",
+        "journal-title": "Linear Algebra Appl."
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0160",
+        "doi-asserted-by": "crossref",
+        "first-page": "203",
+        "DOI": "10.1006/jmva.1996.1653",
+        "article-title": "The probability that a random real Gaussian matrix has k real eigenvalues, related distributions, and the circular law",
+        "volume": "60",
+        "author": "Edelman",
+        "year": "1997",
+        "journal-title": "J. Multivar. Anal."
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0170",
+        "doi-asserted-by": "crossref",
+        "first-page": "261",
+        "DOI": "10.1137/120891393",
+        "article-title": "IFISS: a computational laboratory for investigating incompressible flow problems",
+        "volume": "56",
+        "author": "Elman",
+        "year": "2014",
+        "journal-title": "SIAM Rev."
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0180",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1093/acprof:oso/9780199678792.001.0001",
+        "article-title": "Finite Elements and Fast Iterative Solvers: with Applications in Incompressible Fluid Dynamics",
+        "author": "Elman",
+        "year": "2014"
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0190",
+        "doi-asserted-by": "crossref",
+        "first-page": "259",
+        "DOI": "10.1137/S003614450139961",
+        "article-title": "The tortoise and the hare restart GMRES",
+        "volume": "45",
+        "author": "Embree",
+        "year": "2003",
+        "journal-title": "SIAM Rev."
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0200",
+        "doi-asserted-by": "crossref",
+        "first-page": "707",
+        "DOI": "10.1137/S0895479895286748",
+        "article-title": "Minimal residual method stronger than polynomial preconditioning",
+        "volume": "17",
+        "author": "Faber",
+        "year": "1996",
+        "journal-title": "SIAM J. Matrix Anal. Appl."
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0210",
+        "doi-asserted-by": "crossref",
+        "first-page": "1500",
+        "DOI": "10.1137/13091066X",
+        "article-title": "Properties of worst-case GMRES",
+        "volume": "34",
+        "author": "Faber",
+        "year": "2013",
+        "journal-title": "SIAM J. Matrix Anal. Appl."
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0220",
+        "doi-asserted-by": "crossref",
+        "first-page": "109",
+        "DOI": "10.1016/0196-8858(90)90007-L",
+        "article-title": "On the theory of equivalent operators and application to the numerical solution of uniformly elliptic partial differential equations",
+        "volume": "11",
+        "author": "Faber",
+        "year": "1990",
+        "journal-title": "Adv. Appl. Math."
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0230",
+        "series-title": "Numerical Analysis (Proc 6th Biennial Dundee Conf., Univ. Dundee, Dundee, 1975)",
+        "first-page": "73",
+        "article-title": "Conjugate gradient methods for indefinite systems",
+        "volume": "vol. 506",
+        "author": "Fletcher",
+        "year": "1976"
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0240",
+        "doi-asserted-by": "crossref",
+        "first-page": "299",
+        "DOI": "10.1090/S0002-9904-1953-09718-X",
+        "article-title": "Solving linear algebraic equations can be interesting",
+        "volume": "59",
+        "author": "Forsythe",
+        "year": "1953",
+        "journal-title": "Bull. Am. Math. Soc."
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0250",
+        "doi-asserted-by": "crossref",
+        "first-page": "57",
+        "DOI": "10.1017/S0962492900002245",
+        "article-title": "Iterative solution of linear systems",
+        "volume": "1",
+        "author": "Freund",
+        "year": "1992",
+        "journal-title": "Acta Numer."
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0260",
+        "doi-asserted-by": "crossref",
+        "first-page": "315",
+        "DOI": "10.1007/BF01385726",
+        "article-title": "QMR: a quasi-minimal residual method for non-Hermitian linear systems",
+        "volume": "60",
+        "author": "Freund",
+        "year": "1991",
+        "journal-title": "Numer. Math."
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0270",
+        "series-title": "Trans. Second Math. Congress, II",
+        "first-page": "45",
+        "article-title": "On the algebraic analysis of Krylov's method of transforming the secular equation",
+        "author": "Gantmacher",
+        "year": "1934"
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0280",
+        "series-title": "Analysis of Krylov subspace methods",
+        "author": "Gergelits",
+        "year": "2013"
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0290",
+        "series-title": "International Conference on High Performance Computing in Science and Engineering",
+        "first-page": "73",
+        "article-title": "Relating computed and exact entities in methods based on Lanczos tridiagonalization",
+        "author": "Gergelits",
+        "year": "2017"
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0300",
+        "doi-asserted-by": "crossref",
+        "first-page": "1369",
+        "DOI": "10.1137/18M1212458",
+        "article-title": "Laplacian preconditioning of elliptic PDEs: localization of the eigenvalues of the discretized operator",
+        "volume": "57",
+        "author": "Gergelits",
+        "year": "2019",
+        "journal-title": "SIAM J. Numer. Anal."
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0310",
+        "doi-asserted-by": "crossref",
+        "first-page": "301",
+        "DOI": "10.1007/s11075-022-01263-5",
+        "article-title": "Numerical approximation of the spectrum of self-adjoint operators in operator preconditioning",
+        "volume": "91",
+        "author": "Gergelits",
+        "year": "2022",
+        "journal-title": "Numer. Algorithms"
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0320",
+        "doi-asserted-by": "crossref",
+        "first-page": "87",
+        "DOI": "10.1007/s00211-005-0615-4",
+        "article-title": "Rounding error analysis of the classical Gram-Schmidt orthogonalization process",
+        "volume": "101",
+        "author": "Giraud",
+        "year": "2005",
+        "journal-title": "Numer. Math."
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0330",
+        "doi-asserted-by": "crossref",
+        "first-page": "687",
+        "DOI": "10.1007/BF02510247",
+        "article-title": "Matrices, moments and quadrature. II. How to compute the norm of the error in iterative methods",
+        "volume": "37",
+        "author": "Golub",
+        "year": "1997",
+        "journal-title": "BIT"
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0340",
+        "doi-asserted-by": "crossref",
+        "first-page": "50",
+        "DOI": "10.1137/1031003",
+        "article-title": "Some history of the conjugate gradient and Lanczos algorithms: 1948–1976",
+        "volume": "31",
+        "author": "Golub",
+        "year": "1989",
+        "journal-title": "SIAM Rev."
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0350",
+        "doi-asserted-by": "crossref",
+        "first-page": "241",
+        "DOI": "10.1007/BF02142693",
+        "article-title": "Estimates in quadratic formulas",
+        "volume": "8",
+        "author": "Golub",
+        "year": "1994",
+        "journal-title": "Numer. Algorithms"
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0360",
+        "series-title": "The State of the Art in Numerical Analysis",
+        "first-page": "63",
+        "article-title": "Closer to the solution: iterative linear solvers",
+        "volume": "vol. 63",
+        "author": "Golub",
+        "year": "1997"
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0370",
+        "doi-asserted-by": "crossref",
+        "first-page": "147",
+        "DOI": "10.1007/BF01386013",
+        "article-title": "Chebyshev semi-iterative methods, successive over-relaxation iterative methods, and second order Richardson iterative methods. I",
+        "volume": "3",
+        "author": "Golub",
+        "year": "1961",
+        "journal-title": "Numer. Math."
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0380",
+        "doi-asserted-by": "crossref",
+        "first-page": "157",
+        "DOI": "10.1007/BF01386014",
+        "article-title": "Chebyshev semi-iterative methods, successive over-relaxation iterative methods, and second order Richardson iterative methods. II",
+        "volume": "3",
+        "author": "Golub",
+        "year": "1961",
+        "journal-title": "Numer. Math."
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0390",
+        "doi-asserted-by": "crossref",
+        "first-page": "221",
+        "DOI": "10.1090/S0025-5718-69-99647-1",
+        "article-title": "Calculation of Gauss quadrature rules",
+        "volume": "23",
+        "author": "Golub",
+        "year": "1969",
+        "journal-title": "Math. Comput."
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0400",
+        "doi-asserted-by": "crossref",
+        "first-page": "655",
+        "DOI": "10.1063/1.1664624",
+        "article-title": "Error bounds in equilibrium statistical mechanics",
+        "volume": "9",
+        "author": "Gordon",
+        "year": "1968",
+        "journal-title": "J. Math. Phys."
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0410",
+        "doi-asserted-by": "crossref",
+        "first-page": "213",
+        "DOI": "10.1216/RMJ-1974-4-2-213",
+        "article-title": "Matrix interpretations and applications of the continued fraction algorithm",
+        "volume": "4",
+        "author": "Gragg",
+        "year": "1974",
+        "journal-title": "Rocky Mt. J. Math."
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0420",
+        "doi-asserted-by": "crossref",
+        "first-page": "181",
+        "DOI": "10.1007/BF01399553",
+        "article-title": "Comparison of splittings used with the conjugate gradient algorithm",
+        "volume": "33",
+        "author": "Greenbaum",
+        "year": "1979",
+        "journal-title": "Numer. Math."
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0430",
+        "doi-asserted-by": "crossref",
+        "first-page": "7",
+        "DOI": "10.1016/0024-3795(89)90285-1",
+        "article-title": "Behavior of slightly perturbed Lanczos and conjugate-gradient recurrences",
+        "volume": "113",
+        "author": "Greenbaum",
+        "year": "1989",
+        "journal-title": "Linear Algebra Appl."
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0440",
+        "article-title": "Iterative Methods for Solving Linear Systems",
+        "volume": "vol. 17",
+        "author": "Greenbaum",
+        "year": "1997"
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0450",
+        "doi-asserted-by": "crossref",
+        "first-page": "348",
+        "DOI": "10.1137/0915024",
+        "article-title": "Max-min properties of matrix factor norms",
+        "volume": "15",
+        "author": "Greenbaum",
+        "year": "1994",
+        "journal-title": "SIAM J. Sci. Comput."
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0460",
+        "doi-asserted-by": "crossref",
+        "first-page": "465",
+        "DOI": "10.1137/S0895479894275030",
+        "article-title": "Any nonincreasing convergence curve is possible for GMRES",
+        "volume": "17",
+        "author": "Greenbaum",
+        "year": "1996",
+        "journal-title": "SIAM J. Matrix Anal. Appl."
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0470",
+        "doi-asserted-by": "crossref",
+        "first-page": "121",
+        "DOI": "10.1137/0613011",
+        "article-title": "Predicting the behavior of finite precision Lanczos and conjugate gradient computations",
+        "volume": "13",
+        "author": "Greenbaum",
+        "year": "1992",
+        "journal-title": "SIAM J. Matrix Anal. Appl."
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0480",
+        "series-title": "Recent Advances in Iterative Methods",
+        "first-page": "95",
+        "article-title": "Matrices that generate the same Krylov residual spaces",
+        "volume": "vol. 60",
+        "author": "Greenbaum",
+        "year": "1994"
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0490",
+        "doi-asserted-by": "crossref",
+        "first-page": "359",
+        "DOI": "10.1137/0915025",
+        "article-title": "GMRES/CR and Arnoldi/Lanczos as matrix approximation problems",
+        "volume": "15",
+        "author": "Greenbaum",
+        "year": "1994",
+        "journal-title": "SIAM J. Sci. Comput."
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0500",
+        "doi-asserted-by": "crossref",
+        "first-page": "213",
+        "DOI": "10.1137/S0895479897331862",
+        "article-title": "Accuracy of two three-term and three two-term recurrences for Krylov space solvers",
+        "volume": "22",
+        "author": "Gutknecht",
+        "year": "2000",
+        "journal-title": "SIAM J. Matrix Anal. Appl."
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0510",
+        "article-title": "Iterative Solution of Large Sparse Systems of Equations",
+        "volume": "vol. 95",
+        "author": "Hackbusch",
+        "year": "1994"
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0520",
+        "series-title": "Iterative Methods for Solving Linear Problems in Hilbert Space",
+        "author": "Hayes",
+        "year": "1954"
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0530",
+        "doi-asserted-by": "crossref",
+        "first-page": "409",
+        "DOI": "10.6028/jres.049.044",
+        "article-title": "Methods of conjugate gradients for solving linear systems",
+        "volume": "49",
+        "author": "Hestenes",
+        "year": "1952",
+        "journal-title": "J. Res. Natl. Bur. Stand."
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0540",
+        "doi-asserted-by": "crossref",
+        "first-page": "57",
+        "DOI": "10.1007/s11075-019-00671-4",
+        "article-title": "Decomposition into subspaces preconditioning: abstract framework",
+        "volume": "83",
+        "author": "Hrnčíř",
+        "year": "2020",
+        "journal-title": "Numer. Algorithms"
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0550",
+        "doi-asserted-by": "crossref",
+        "first-page": "61",
+        "DOI": "10.1093/imamat/20.1.61",
+        "article-title": "Influence of the eigenvalue spectrum on the convergence rate of the conjugate gradient method",
+        "volume": "20",
+        "author": "Jennings",
+        "year": "1977",
+        "journal-title": "J. Inst. Math. Appl."
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0560",
+        "doi-asserted-by": "crossref",
+        "first-page": "427",
+        "DOI": "10.1137/0915029",
+        "article-title": "A robust GMRES-based adaptive polynomial preconditioning algorithm for nonsymmetric linear systems",
+        "volume": "15",
+        "author": "Joubert",
+        "year": "1994",
+        "journal-title": "SIAM J. Sci. Comput."
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0570",
+        "doi-asserted-by": "crossref",
+        "first-page": "839",
+        "DOI": "10.1090/S0002-9939-1952-0055794-4",
+        "article-title": "Convergence of a method of solving linear problems",
+        "volume": "3",
+        "author": "Karush",
+        "year": "1952",
+        "journal-title": "Proc. Am. Math. Soc."
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0580",
+        "first-page": "491",
+        "article-title": "On the numerical solution of the equation by which the frequency of small oscillations is determined in technical problems",
+        "volume": "4",
+        "author": "Krylov",
+        "year": "1931",
+        "journal-title": "Izv. Akad. Nauk SSSR, Ser. Fiz.-Mat."
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0590",
+        "doi-asserted-by": "crossref",
+        "first-page": "306",
+        "DOI": "10.1137/S089547989935527X",
+        "article-title": "Which eigenvalues are found by the Lanczos method?",
+        "volume": "22",
+        "author": "Kuijlaars",
+        "year": "2000",
+        "journal-title": "SIAM J. Matrix Anal. Appl."
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0600",
+        "article-title": "An optimal preconditioned FFT-accelerated finite element solver for homogenization",
+        "volume": "446",
+        "author": "Ladecký",
+        "year": "2023",
+        "journal-title": "Appl. Math. Comput."
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0610",
+        "doi-asserted-by": "crossref",
+        "first-page": "21",
+        "DOI": "10.21136/AM.2020.0217-19",
+        "article-title": "Guaranteed two-sided bounds on all eigenvalues of preconditioned diffusion and elasticity problems solved by the finite element method",
+        "volume": "66",
+        "author": "Ladecký",
+        "year": "2021",
+        "journal-title": "Appl. Math."
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0620",
+        "doi-asserted-by": "crossref",
+        "first-page": "255",
+        "DOI": "10.6028/jres.045.026",
+        "article-title": "An iteration method for the solution of the eigenvalue problem of linear differential and integral operators",
+        "volume": "45",
+        "author": "Lanczos",
+        "year": "1950",
+        "journal-title": "J. Res. Natl. Bur. Stand."
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0630",
+        "doi-asserted-by": "crossref",
+        "first-page": "33",
+        "DOI": "10.6028/jres.049.006",
+        "article-title": "Solution of systems of linear equations by minimized iterations",
+        "volume": "49",
+        "author": "Lanczos",
+        "year": "1952",
+        "journal-title": "J. Res. Natl. Bur. Stand."
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0640",
+        "series-title": "Proceedings of the Association for Computing Machinery, Toronto, 1952, Sauls Lithograph Co. (for the Association for Computing Machinery), Washington, D. C.",
+        "first-page": "124",
+        "article-title": "Chebyshev polynomials in the solution of large-scale linear systems",
+        "author": "Lanczos",
+        "year": "1953"
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0650",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1016/j.jcp.2021.110931",
+        "article-title": "Elimination of ringing artifacts by finite-element projection in FFT-based homogenization",
+        "volume": "453",
+        "author": "Leute",
+        "year": "2022",
+        "journal-title": "J. Comput. Phys."
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0660",
+        "doi-asserted-by": "crossref",
+        "first-page": "1989",
+        "DOI": "10.1137/S1064827503430746",
+        "article-title": "GMRES convergence analysis for a convection-diffusion model problem",
+        "volume": "26",
+        "author": "Liesen",
+        "year": "2005",
+        "journal-title": "SIAM J. Sci. Comput."
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0670",
+        "series-title": "Krylov Subspace Methods, Numerical Mathematics and Scientific Computation. Principles and Analysis",
+        "author": "Liesen",
+        "year": "2013"
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0680",
+        "first-page": "153",
+        "article-title": "Convergence analysis of Krylov subspace methods",
+        "volume": "27",
+        "author": "Liesen",
+        "year": "2004",
+        "journal-title": "GAMM Mitt. Ges. Angew. Math. Mech."
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0690",
+        "first-page": "159",
+        "article-title": "Max-min and min-max approximation problems for normal matrices revisited",
+        "volume": "41",
+        "author": "Liesen",
+        "year": "2014",
+        "journal-title": "Electron. Trans. Numer. Anal."
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0700",
+        "doi-asserted-by": "crossref",
+        "first-page": "34",
+        "DOI": "10.1137/130934283",
+        "article-title": "Approximating spectral densities of large matrices",
+        "volume": "58",
+        "author": "Lin",
+        "year": "2016",
+        "journal-title": "SIAM Rev."
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0710",
+        "first-page": "903",
+        "article-title": "On Krylov's method for transforming the secular equation",
+        "volume": "7",
+        "author": "Luzin",
+        "year": "1931",
+        "journal-title": "Izv. Akad. Nauk SSSR, Ser. Fiz.-Mat."
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0720",
+        "article-title": "Preconditioning and the Conjugate Gradient Method in the Context of Solving PDEs",
+        "volume": "vol. 1",
+        "author": "Málek",
+        "year": "2015"
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0730",
+        "article-title": "The Lanczos and Conjugate Gradient Algorithms. From Theory to Finite Precision Computations",
+        "volume": "vol. 19",
+        "author": "Meurant",
+        "year": "2006"
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0740",
+        "doi-asserted-by": "crossref",
+        "first-page": "1353",
+        "DOI": "10.1007/s11075-019-00851-2",
+        "article-title": "On prescribing the convergence behavior of the conjugate gradient algorithm",
+        "volume": "84",
+        "author": "Meurant",
+        "year": "2020",
+        "journal-title": "Numer. Algorithms"
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0750",
+        "article-title": "Krylov Methods for Nonsymmetric Linear Systems—from Theory to Computations",
+        "volume": "vol. 57",
+        "author": "Meurant",
+        "year": "2020"
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0760",
+        "doi-asserted-by": "crossref",
+        "first-page": "1337",
+        "DOI": "10.1007/s11075-021-01078-w",
+        "article-title": "Accurate error estimation in CG",
+        "volume": "88",
+        "author": "Meurant",
+        "year": "2021",
+        "journal-title": "Numer. Algorithms"
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0770",
+        "doi-asserted-by": "crossref",
+        "first-page": "471",
+        "DOI": "10.1017/S096249290626001X",
+        "article-title": "The Lanczos and conjugate gradient algorithms in finite precision arithmetic",
+        "volume": "15",
+        "author": "Meurant",
+        "year": "2006",
+        "journal-title": "Acta Numer."
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0780",
+        "doi-asserted-by": "crossref",
+        "first-page": "631",
+        "DOI": "10.1137/S0036144502409093",
+        "article-title": "Convergence of adaptive finite element methods",
+        "volume": "44",
+        "author": "Morin",
+        "year": "2002",
+        "journal-title": "SIAM Rev."
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0790",
+        "doi-asserted-by": "crossref",
+        "first-page": "1969",
+        "DOI": "10.1137/S1064827599355153",
+        "article-title": "A note on preconditioning for indefinite linear systems",
+        "volume": "21",
+        "author": "Murphy",
+        "year": "2000",
+        "journal-title": "SIAM J. Sci. Comput."
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0800",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1137/23M1600992",
+        "article-title": "A simple formula for the generalized spectrum of second order self-adjoint differential operators",
+        "author": "Nielsen",
+        "year": "2024",
+        "journal-title": "SIAM Rev."
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0810",
+        "doi-asserted-by": "crossref",
+        "first-page": "24",
+        "DOI": "10.1093/imanum/drm018",
+        "article-title": "Preconditioning by inverting the Laplacian: an analysis of the eigenvalues",
+        "volume": "29",
+        "author": "Nielsen",
+        "year": "2009",
+        "journal-title": "IMA J. Numer. Anal."
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0820",
+        "doi-asserted-by": "crossref",
+        "first-page": "301",
+        "DOI": "10.1007/BF01385754",
+        "article-title": "On the convergence rate of the conjugate gradients in presence of rounding errors",
+        "volume": "65",
+        "author": "Notay",
+        "year": "1993",
+        "journal-title": "Numer. Math."
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0830",
+        "doi-asserted-by": "crossref",
+        "first-page": "235",
+        "DOI": "10.1016/0024-3795(80)90167-6",
+        "article-title": "Accuracy and effectiveness of the Lanczos algorithm for the symmetric eigenproblem",
+        "volume": "34",
+        "author": "Paige",
+        "year": "1980",
+        "journal-title": "Linear Algebra Appl."
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0840",
+        "doi-asserted-by": "crossref",
+        "first-page": "264",
+        "DOI": "10.1137/050630416",
+        "article-title": "Modified Gram-Schmidt (MGS), least squares, and backward stability of MGS-GMRES",
+        "volume": "28",
+        "author": "Paige",
+        "year": "2006",
+        "journal-title": "SIAM J. Matrix Anal. Appl."
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0850",
+        "doi-asserted-by": "crossref",
+        "first-page": "617",
+        "DOI": "10.1137/0712047",
+        "article-title": "Solution of sparse indefinite systems of linear equations",
+        "volume": "12",
+        "author": "Paige",
+        "year": "1975",
+        "journal-title": "SIAM J. Numer. Anal."
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0860",
+        "doi-asserted-by": "crossref",
+        "first-page": "93",
+        "DOI": "10.1007/s002110100317",
+        "article-title": "Bounds for the least squares distance using scaled total least squares",
+        "volume": "91",
+        "author": "Paige",
+        "year": "2002",
+        "journal-title": "Numer. Math."
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0870",
+        "doi-asserted-by": "crossref",
+        "first-page": "1898",
+        "DOI": "10.1137/S1064827500381239",
+        "article-title": "Residual and backward error bounds in minimum residual Krylov subspace methods",
+        "volume": "23",
+        "author": "Paige",
+        "year": "2002",
+        "journal-title": "SIAM J. Sci. Comput."
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0880",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1002/gamm.202000015",
+        "article-title": "Preconditioners for Krylov subspace methods: an overview",
+        "volume": "43",
+        "author": "Pearson",
+        "year": "2020",
+        "journal-title": "GAMM-Mitt."
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0890",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1002/nla.2382",
+        "article-title": "Two-sided guaranteed bounds to individual eigenvalues of preconditioned finite element and finite difference problems",
+        "volume": "28",
+        "author": "Pultarová",
+        "year": "2021",
+        "journal-title": "Numer. Linear Algebra Appl."
+      },
+      {
+        "issue": "164",
+        "key": "10.1016/j.laa.2024.04.003_br0900",
+        "doi-asserted-by": "crossref",
+        "first-page": "153",
+        "DOI": "10.1016/0024-3795(92)90374-J",
+        "article-title": "Eigenvalues and pseudo-eigenvalues of Toeplitz matrices",
+        "volume": "162",
+        "author": "Reichel",
+        "year": "1992",
+        "journal-title": "Linear Algebra Appl."
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0910",
+        "series-title": "Large Sparse Sets of Linear Equations (Proc. Conf., St. Catherine's Coll., Oxford, 1970)",
+        "first-page": "231",
+        "article-title": "On the method of conjugate gradients for the solution of large sparse systems of linear equations",
+        "author": "Reid",
+        "year": "1971"
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0920",
+        "doi-asserted-by": "crossref",
+        "first-page": "1",
+        "DOI": "10.1016/0010-4655(79)90064-X",
+        "article-title": "l2 discretization of atomic and molecular electronic continua: moment, quadrature and j-matrix techniques",
+        "volume": "17",
+        "author": "Reinhardt",
+        "year": "1979",
+        "journal-title": "Comput. Phys. Commun."
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0930",
+        "doi-asserted-by": "crossref",
+        "first-page": "543",
+        "DOI": "10.1145/321406.321416",
+        "article-title": "On the compatibility of a given solution with the data of a linear system",
+        "volume": "14",
+        "author": "Rigal",
+        "year": "1967",
+        "journal-title": "J. Assoc. Comput. Mach."
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0940",
+        "doi-asserted-by": "crossref",
+        "first-page": "105",
+        "DOI": "10.1090/S0025-5718-1981-0616364-6",
+        "article-title": "Krylov subspace methods for solving large unsymmetric linear systems",
+        "volume": "37",
+        "author": "Saad",
+        "year": "1981",
+        "journal-title": "Math. Comput."
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0950",
+        "series-title": "Cornelius Lanczos Collected Published Papers with Commentaries, vol. VI",
+        "first-page": "3-527",
+        "article-title": "Commentary on Lanczos's “Chebyshev polynomials in the solution of large-scale linear systems”",
+        "author": "Saad",
+        "year": "1998"
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0960",
+        "series-title": "Iterative Methods for Sparse Linear Systems",
+        "author": "Saad",
+        "year": "2003"
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0970",
+        "doi-asserted-by": "crossref",
+        "first-page": "856",
+        "DOI": "10.1137/0907058",
+        "article-title": "GMRES: a generalized minimal residual algorithm for solving nonsymmetric linear systems",
+        "volume": "7",
+        "author": "Saad",
+        "year": "1986",
+        "journal-title": "SIAM J. Sci. Stat. Comput."
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0980",
+        "doi-asserted-by": "crossref",
+        "first-page": "1173",
+        "DOI": "10.1103/PhysRevLett.16.1173",
+        "article-title": "Analyticity as a useful computational tool",
+        "volume": "16",
+        "author": "Schlessinger",
+        "year": "1966",
+        "journal-title": "Phys. Rev. Lett."
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br0990",
+        "unstructured": "G.W. Stewart, Lanczos and linear systems, University of Maryland, Preprint UMIACS-TR-91, 1991."
+      },
+      {
+        "issue": "156",
+        "key": "10.1016/j.laa.2024.04.003_br1000",
+        "doi-asserted-by": "crossref",
+        "first-page": "535",
+        "DOI": "10.1016/0024-3795(91)90393-B",
+        "article-title": "On the real convergence rate of the conjugate gradient method",
+        "volume": "154",
+        "author": "Strakoš",
+        "year": "1991",
+        "journal-title": "Linear Algebra Appl."
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br1010",
+        "doi-asserted-by": "crossref",
+        "first-page": "363",
+        "DOI": "10.1007/s11075-008-9237-0",
+        "article-title": "Model reduction using the Vorobyev moment problem",
+        "volume": "51",
+        "author": "Strakoš",
+        "year": "2009",
+        "journal-title": "Numer. Algorithms"
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br1020",
+        "first-page": "56",
+        "article-title": "On error estimation in the conjugate gradient method and why it works in finite precision computations",
+        "volume": "13",
+        "author": "Strakoš",
+        "year": "2002",
+        "journal-title": "Electron. Trans. Numer. Anal."
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br1030",
+        "doi-asserted-by": "crossref",
+        "first-page": "789",
+        "DOI": "10.1007/s10543-005-0032-1",
+        "article-title": "Error estimation in preconditioned conjugate gradients",
+        "volume": "45",
+        "author": "Strakoš",
+        "year": "2005",
+        "journal-title": "BIT"
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br1040",
+        "doi-asserted-by": "crossref",
+        "first-page": "30",
+        "DOI": "10.1137/S089547989427909X",
+        "article-title": "GMRES vs. ideal GMRES",
+        "volume": "18",
+        "author": "Toh",
+        "year": "1997",
+        "journal-title": "SIAM J. Matrix Anal. Appl."
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br1050",
+        "series-title": "Numerical Analysis 1991",
+        "first-page": "234",
+        "article-title": "Pseudospectra of matrices",
+        "volume": "vol. 260",
+        "author": "Trefethen",
+        "year": "1992"
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br1060",
+        "series-title": "Numerical Linear Algebra",
+        "author": "Trefethen",
+        "year": "1997"
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br1070",
+        "series-title": "Spectra and Pseudospectra. The Behavior of Nonnormal Matrices and Operators",
+        "author": "Trefethen",
+        "year": "2005"
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br1080",
+        "doi-asserted-by": "crossref",
+        "first-page": "543",
+        "DOI": "10.1007/BF01389450",
+        "article-title": "The rate of convergence of conjugate gradients",
+        "volume": "48",
+        "author": "van der Sluis",
+        "year": "1986",
+        "journal-title": "Numer. Math."
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br1090",
+        "doi-asserted-by": "crossref",
+        "first-page": "631",
+        "DOI": "10.1137/0913035",
+        "article-title": "Bi-CGSTAB: a fast and smoothly converging variant of Bi-CG for the solution of nonsymmetric linear systems",
+        "volume": "13",
+        "author": "van der Vorst",
+        "year": "1992",
+        "journal-title": "SIAM J. Sci. Stat. Comput."
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br1100",
+        "article-title": "Iterative Krylov Methods for Large Linear Systems",
+        "volume": "vol. 13",
+        "author": "van der Vorst",
+        "year": "2003"
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br1110",
+        "series-title": "Methods of Moments in Applied Mathematics",
+        "author": "Vorobyev",
+        "year": "1965"
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br1120",
+        "series-title": "Approximation Methods for Navier-Stokes Problems (Proc. Sympos., Univ. Paderborn, Paderborn, 1979)",
+        "first-page": "543",
+        "article-title": "Numerical experiments with a multiple grid and a preconditioned Lanczos type method",
+        "volume": "vol. 771",
+        "author": "Wesseling",
+        "year": "1980"
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br1130",
+        "series-title": "The Algebraic Eigenvalue Problem, Monographs on Numerical Analysis",
+        "author": "Wilkinson",
+        "year": "1988"
+      },
+      {
+        "key": "10.1016/j.laa.2024.04.003_br1140",
+        "series-title": "Rounding Errors in Algebraic Processes",
+        "author": "Wilkinson",
+        "year": "1994"
+      }
+    ],
+    "container-title": [
+      "Linear Algebra and its Applications"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://api.elsevier.com/content/article/PII:S0024379524001381?httpAccept=text/xml",
+        "content-type": "text/xml",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://api.elsevier.com/content/article/PII:S0024379524001381?httpAccept=text/plain",
+        "content-type": "text/plain",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2024,
+          5,
+          31
+        ]
+      ],
+      "date-time": "2024-05-31T14:04:00Z",
+      "timestamp": 1717164240000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://linkinghub.elsevier.com/retrieve/pii/S0024379524001381"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2024,
+          7
+        ]
+      ]
+    },
+    "references-count": 114,
+    "alternative-id": [
+      "S0024379524001381"
+    ],
+    "URL": "https://doi.org/10.1016/j.laa.2024.04.003",
+    "relation": {},
+    "ISSN": [
+      "0024-3795"
+    ],
+    "issn-type": [
+      {
+        "value": "0024-3795",
+        "type": "print"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2024,
+          7
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "Elsevier",
+        "name": "publisher",
+        "label": "This article is maintained by"
+      },
+      {
+        "value": "Towards understanding CG and GMRES through examples",
+        "name": "articletitle",
+        "label": "Article Title"
+      },
+      {
+        "value": "Linear Algebra and its Applications",
+        "name": "journaltitle",
+        "label": "Journal Title"
+      },
+      {
+        "value": "https://doi.org/10.1016/j.laa.2024.04.003",
+        "name": "articlelink",
+        "label": "CrossRef DOI link to publisher maintained version"
+      },
+      {
+        "value": "article",
+        "name": "content_type",
+        "label": "Content Type"
+      },
+      {
+        "value": "© 2024 The Author(s). Published by Elsevier Inc.",
+        "name": "copyright",
+        "label": "Copyright"
+      }
+    ]
+  }
+}

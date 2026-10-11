@@ -1,0 +1,18 @@
+{
+  "icemce2026_iop_manuscript": {
+    "pages": 15,
+    "bytes": 2510615
+  },
+  "RESPONSE_TO_REVIEWERS": {
+    "pages": 1,
+    "bytes": 99713
+  },
+  "reference_count": 31,
+  "citation_order_consistent": true,
+  "ai_disclosure_unchanged": true,
+  "ai_disclosure_not_highlighted": true,
+  "math_objects_unchanged": 13,
+  "data_tables_unchanged": true,
+  "protected_files_unchanged": 170,
+  "highlight_baseline_sha256": "68c67487354dc014241d43a8703ac98b44149a4f0aec1172f59d49bafc0d6f25"
+}

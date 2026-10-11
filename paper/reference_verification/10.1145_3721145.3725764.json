@@ -1,0 +1,540 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          7,
+          2
+        ]
+      ],
+      "date-time": "2026-07-02T23:48:33Z",
+      "timestamp": 1783036113350,
+      "version": "3.54.6"
+    },
+    "publisher-location": "New York, NY, USA",
+    "reference-count": 42,
+    "publisher": "ACM",
+    "content-domain": {
+      "domain": [
+        "dl.acm.org"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [],
+    "published-print": {
+      "date-parts": [
+        [
+          2025,
+          6,
+          8
+        ]
+      ]
+    },
+    "DOI": "10.1145/3721145.3725764",
+    "type": "proceedings-article",
+    "created": {
+      "date-parts": [
+        [
+          2025,
+          8,
+          22
+        ]
+      ],
+      "date-time": "2025-08-22T12:57:17Z",
+      "timestamp": 1755867437000
+    },
+    "page": "397-411",
+    "update-policy": "https://doi.org/10.1145/crossmark-policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 2,
+    "title": [
+      "CRAMG: A Communication-Reduced Algebraic Multigrid Method"
+    ],
+    "prefix": "10.1145",
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0009-0003-9022-0727",
+        "authenticated-orcid": false,
+        "given": "Fan",
+        "family": "Yuan",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "School of Mathematics and Computer Science, Xiangtan University, Xiangtan, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0009-0007-9821-171X",
+        "authenticated-orcid": false,
+        "given": "Xiaojian",
+        "family": "Yang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "College of Computer Science and Technology, National University of Defense Technology, Changsha, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-0404-0638",
+        "authenticated-orcid": false,
+        "given": "Yunqing",
+        "family": "Huang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "School of Mathematics and Computer Science, Xiangtan University, Xiangtan, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0001-6243-8479",
+        "authenticated-orcid": false,
+        "given": "Dezun",
+        "family": "Dong",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "College of Computer Science and Technology, National University of Defense Technology, Changsha, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-4876-2368",
+        "authenticated-orcid": false,
+        "given": "Chuanfu",
+        "family": "Xu",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "College of Computer Science and Technology, National University of Defense Technology, Changsha, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-3745-7541",
+        "authenticated-orcid": false,
+        "given": "Jie",
+        "family": "Liu",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "College of Computer Science and Technology, National University of Defense Technology, Changsha, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-0097-7017",
+        "authenticated-orcid": false,
+        "given": "Xiaoqiang",
+        "family": "Yue",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "School of Mathematics and Computer Science, Xiangtan University, Xiangtan, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0001-7827-6304",
+        "authenticated-orcid": false,
+        "given": "Shengguo",
+        "family": "Li",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "College of Computer Science and Technology, National University of Defense Technology, Changsha, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-7210-9350",
+        "authenticated-orcid": false,
+        "given": "Hongxia",
+        "family": "Wang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Mathematics, National University of Defense Technology, Changsha, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "320",
+    "published-online": {
+      "date-parts": [
+        [
+          2025,
+          8,
+          22
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "e_1_3_3_1_2_2",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Christie Alappat Achim Basermann Alan R. Bishop Holger Fehske Georg Hager Olaf Schenk Jonas Thies and Gerhard Wellein. 2020. A Recursive Algebraic Coloring Technique for Hardware-efficient Symmetric Sparse Matrix-vector Multiplication. ACM Trans. Parallel Comput. 7 3 Article 19 (June 2020) 37 pages. https://doi.org/10.1145/3399732",
+        "DOI": "10.1145/3399732"
+      },
+      {
+        "key": "e_1_3_3_1_3_2",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Allison H. Baker Robert D. Falgout Tzanio V. Kolev and Ulrike Meier Yang. 2011. Multigrid Smoothers for Ultraparallel Computing. SIAM Journal on Scientific Computing 33 5 (2011) 2864–2887. https://doi.org/10.1137/100798806",
+        "DOI": "10.1137/100798806"
+      },
+      {
+        "key": "e_1_3_3_1_4_2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-1-4471-2437-5_13"
+      },
+      {
+        "key": "e_1_3_3_1_5_2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/IPDPS.2011.35"
+      },
+      {
+        "key": "e_1_3_3_1_6_2",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Satish Balay Shrirang Abhyankar Mark Adams Jed Brown Peter Brune Kris Buschelman Lisandro Dalcin Alp Dener Victor Eijkhout William Gropp et al. 2019. PETSc users manual. (2019).",
+        "DOI": "10.2172/1577437"
+      },
+      {
+        "key": "e_1_3_3_1_7_2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3673038.3673061"
+      },
+      {
+        "key": "e_1_3_3_1_8_2",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Amanda Bienz Robert D Falgout William Gropp Luke N Olson and Jacob B Schroder. 2016. Reducing parallel communication in algebraic multigrid through sparsification. SIAM Journal on Scientific Computing 38 5 (2016) S332–S357.",
+        "DOI": "10.1137/15M1026341"
+      },
+      {
+        "key": "e_1_3_3_1_9_2",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Amanda Bienz William D Gropp and Luke N Olson. 2020. Reducing communication in algebraic multigrid with multi-step node aware communication. The International Journal of High Performance Computing Applications 34 5 (2020) 547–561.",
+        "DOI": "10.1177/1094342020925535"
+      },
+      {
+        "key": "e_1_3_3_1_10_2",
+        "unstructured": "Amanda Bienz and Luke N Olson. 2017. RAPtor: parallel algebraic multigrid v0. 1. Release 0.1 (2017)."
+      },
+      {
+        "key": "e_1_3_3_1_11_2",
+        "doi-asserted-by": "crossref",
+        "unstructured": "James H Bramble Joseph E Pasciak and Jinchao Xu. 1990. Parallel multilevel preconditioners. Mathematics of computation 55 191 (1990) 1–22.",
+        "DOI": "10.1090/S0025-5718-1990-1023042-6"
+      },
+      {
+        "key": "e_1_3_3_1_12_2",
+        "unstructured": "William L. Briggs. 1987. A multigrid tutorial. https://api.semanticscholar.org/CorpusID:33704151"
+      },
+      {
+        "key": "e_1_3_3_1_13_2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3624062.3624111"
+      },
+      {
+        "key": "e_1_3_3_1_14_2",
+        "doi-asserted-by": "crossref",
+        "unstructured": "T. Davis and Y. Hu. 2011. The University of Florida Sparse Matrix Collection. ACM Trans. Math. Softw. 38 1 (2011) 1:1–1:25.",
+        "DOI": "10.1145/2049662.2049663"
+      },
+      {
+        "key": "e_1_3_3_1_15_2",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Hans De Sterck Robert D. Falgout Joshua W. Nolting and Ulrike Meier Yang. 2008. Distance-two interpolation for parallel algebraic multigrid. Numerical Linear Algebra with Applications 15 2-3 (2008) 115–139. https://doi.org/10.1002/nla.559",
+        "DOI": "10.1002/nla.559"
+      },
+      {
+        "key": "e_1_3_3_1_16_2",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Hans De Sterck Ulrike Meier Yang and Jeffrey J Heys. 2006. Reducing complexity in parallel algebraic multigrid preconditioners. SIAM J. Matrix Anal. Appl. 27 4 (2006) 1019–1039.",
+        "DOI": "10.1137/040615729"
+      },
+      {
+        "key": "e_1_3_3_1_17_2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/SC41404.2022.00071"
+      },
+      {
+        "key": "e_1_3_3_1_18_2",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Robert D. Falgout and Jacob B. Schroder. 2014. Non-Galerkin Coarse Grids for Algebraic Multigrid. SIAM Journal on Scientific Computing 36 3 (2014) C309–C334. https://doi.org/10.1137/130931539",
+        "DOI": "10.1137/130931539"
+      },
+      {
+        "key": "e_1_3_3_1_19_2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/3-540-47789-6_66"
+      },
+      {
+        "key": "e_1_3_3_1_20_2",
+        "unstructured": "Yuan Fan and Li Shengguo. 2022. YHAMG. https://gitee.com/e-level-parallel-algorithm/yhamg"
+      },
+      {
+        "key": "e_1_3_3_1_21_2",
+        "doi-asserted-by": "crossref",
+        "unstructured": "L Fournier and S Lanteri. 2001. Multiplicative and additive parallel multigrid algorithms for the acceleration of compressible flow computations on unstructured meshes. Applied Numerical Mathematics 36 4 (2001) 401–426.",
+        "DOI": "10.1016/S0168-9274(00)00017-9"
+      },
+      {
+        "key": "e_1_3_3_1_22_2",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Eldad Haber Matthias Chung and Felix Herrmann. 2012. An Effective Method for Parameter Estimation with PDE Constraints with Multiple Right-Hand Sides. SIAM Journal on Optimization 22 3 (2012) 739–757. https://doi.org/10.1137/11081126X",
+        "DOI": "10.1137/11081126X"
+      },
+      {
+        "key": "e_1_3_3_1_23_2",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Michael A Heroux Roscoe A Bartlett Vicki E Howle Robert J Hoekstra Jonathan J Hu Tamara G Kolda Richard B Lehoucq Kevin R Long Roger P Pawlowski Eric T Phipps et al. 2005. An overview of the Trilinos project. ACM Transactions on Mathematical Software (TOMS) 31 3 (2005) 397–423.",
+        "DOI": "10.1145/1089014.1089021"
+      },
+      {
+        "key": "e_1_3_3_1_24_2",
+        "unstructured": "George Karypis Kirk Schloegel and Vipin Kumar. 1997. Parmetis parallel graph partitioning and sparse matrix ordering library. https://api.semanticscholar.org/CorpusID:9818727"
+      },
+      {
+        "key": "e_1_3_3_1_25_2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/HiPC.2017.00047"
+      },
+      {
+        "key": "e_1_3_3_1_26_2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3581784.3607074"
+      },
+      {
+        "key": "e_1_3_3_1_27_2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/SC41406.2024.00054"
+      },
+      {
+        "key": "e_1_3_3_1_28_2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1137/1.9781611971057.ch4"
+      },
+      {
+        "key": "e_1_3_3_1_29_2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.5555/829576"
+      },
+      {
+        "key": "e_1_3_3_1_30_2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2063384.2063487"
+      },
+      {
+        "key": "e_1_3_3_1_31_2",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Klaus Stüben. 2000. Algebraic Multigrid (AMG) : An Introduction With Applications.",
+        "DOI": "10.1016/B978-0-444-50616-0.50012-9"
+      },
+      {
+        "key": "e_1_3_3_1_32_2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/SC.2000.10008"
+      },
+      {
+        "key": "e_1_3_3_1_33_2",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Petr Vanvek Marian Brezina and Jan Mandel. 2001. Convergence of algebraic multigrid based on smoothed aggregation. Numer. Math. 88 (2001) 559–579.",
+        "DOI": "10.1007/s211-001-8015-y"
+      },
+      {
+        "key": "e_1_3_3_1_34_2",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Panayot Vassilevski and Ulrike Yang. 2014. Reducing communication in algebraic multigrid using additive variants. Numerical Linear Algebra with Applications 21 (03 2014). https://doi.org/10.1002/nla.1928",
+        "DOI": "10.1002/nla.1928"
+      },
+      {
+        "key": "e_1_3_3_1_35_2",
+        "volume-title": "Multilevel block factorization preconditioners: Matrix-based analysis and algorithms for solving finite element equations",
+        "author": "Vassilevski Panayot S",
+        "year": "2008",
+        "unstructured": "Panayot S Vassilevski. 2008. Multilevel block factorization preconditioners: Matrix-based analysis and algorithms for solving finite element equations. Springer Science & Business Media."
+      },
+      {
+        "key": "e_1_3_3_1_36_2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/IPDPS.2014.119"
+      },
+      {
+        "key": "e_1_3_3_1_37_2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/IPDPS.2019.00021"
+      },
+      {
+        "key": "e_1_3_3_1_38_2",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Ulrike Meier Yang. 2004. On the use of relaxation parameters in hybrid smoothers. Numerical Linear Algebra with Applications 11 (2004). https://doi.org/10.1002/nla.375",
+        "DOI": "10.1002/nla.375"
+      },
+      {
+        "key": "e_1_3_3_1_39_2",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Ulrike Meier Yang. 2010. On long range interpolation operators for aggressive coarsening. Numerical Linear Algebra with Applications 17 2-3 (2010) 453–472. https://doi.org/10.1002/nla.689",
+        "DOI": "10.1002/nla.689"
+      },
+      {
+        "key": "e_1_3_3_1_40_2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3577193.3593726"
+      },
+      {
+        "key": "e_1_3_3_1_41_2",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Fan Yuan Xiaojian Yang Shengguo Li Dezun Dong Chun Huang and Zheng Wang. 2024. Optimizing Multi-Grid Preconditioned Conjugate Gradient Method on Multi-Cores. IEEE Transactions on Parallel and Distributed Systems 35 5 (2024) 768–779. https://doi.org/10.1109/TPDS.2024.3372473",
+        "DOI": "10.1109/TPDS.2024.3372473"
+      },
+      {
+        "key": "e_1_3_3_1_42_2",
+        "doi-asserted-by": "crossref",
+        "unstructured": "L.P. Zhang and Z.J. Wang. 2004. A block LU-SGS implicit dual time-stepping algorithm for hybrid dynamic meshes. Computers & Fluids 33 7 (2004) 891–916. https://doi.org/10.1016/j.compfluid.2003.10.004",
+        "DOI": "10.1016/j.compfluid.2003.10.004"
+      },
+      {
+        "key": "e_1_3_3_1_43_2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3458817.3476158"
+      }
+    ],
+    "event": {
+      "name": "ICS '25: 2025 International Conference on Supercomputing",
+      "location": "Salt Lake City USA",
+      "acronym": "ICS '25",
+      "sponsor": [
+        "SIGARCH ACM Special Interest Group on Computer Architecture"
+      ]
+    },
+    "container-title": [
+      "Proceedings of the 39th ACM International Conference on Supercomputing"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "https://dl.acm.org/doi/pdf/10.1145/3721145.3725764",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2025,
+          8,
+          22
+        ]
+      ],
+      "date-time": "2025-08-22T13:00:47Z",
+      "timestamp": 1755867647000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://dl.acm.org/doi/10.1145/3721145.3725764"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2025,
+          6,
+          8
+        ]
+      ]
+    },
+    "references-count": 42,
+    "alternative-id": [
+      "10.1145/3721145.3725764",
+      "10.1145/3721145"
+    ],
+    "URL": "https://doi.org/10.1145/3721145.3725764",
+    "relation": {},
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2025,
+          6,
+          8
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "2025-08-22",
+        "order": 3,
+        "name": "published",
+        "label": "Published",
+        "group": {
+          "name": "publication_history",
+          "label": "Publication History"
+        }
+      }
+    ]
+  }
+}

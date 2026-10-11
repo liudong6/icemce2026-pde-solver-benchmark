@@ -1,135 +1,423 @@
 {
   "baseline": "C:\\Users\\25872\\Desktop\\ieee\\tools\\review_baseline.docx",
-  "changed_blocks": 21,
-  "highlighted_runs": 169,
+  "changed_blocks": 69,
+  "highlighted_runs": 475,
   "text_unchanged": true,
   "math_unchanged": true,
   "changes": [
     {
+      "block": 1,
+      "type": "paragraph",
+      "spans": 1,
+      "text": "Dong Liu* and Yuanxin Wang"
+    },
+    {
+      "block": 4,
+      "type": "paragraph",
+      "spans": 51,
+      "text": "Abstract. We present a verified finite-difference heat-conduction benchmark that tests whether coefficient summaries distinguish solver choices. Matched binary fields preserve cont"
+    },
+    {
       "block": 5,
       "type": "paragraph",
       "spans": 1,
-      "text": "Abstract. Sparse solves for variable-coefficient heat conduction depend on coefficient geometry, forcing, preconditioner setup, and implementation. We present a verified finite-dif"
+      "text": "1. Introduction and context"
     },
     {
-      "block": 30,
+      "block": 6,
       "type": "paragraph",
       "spans": 1,
-      "text": "Arithmetic faces are retained to preserve the specified nodal graph-diffusion benchmark and its historical comparisons, not because they are the preferred interface law for composi"
+      "text": "Variable-coefficient heat conduction couples discretisation accuracy to sparse-solver cost. Using SciPy, NumPy, Numba and PyAMG [1,2,3,4], we audit when coefficient summaries fail "
+    },
+    {
+      "block": 7,
+      "type": "paragraph",
+      "spans": 1,
+      "text": "Hierarchy quality can affect AMG convergence beyond scalar contrast [16]. Ginkgo separates linear-operator algorithms from architecture-specific backends [17], while stencil and CU"
+    },
+    {
+      "block": 8,
+      "type": "paragraph",
+      "spans": 1,
+      "text": "Our contribution is the controlled connection between preserved coefficient invariants, forcing symmetry and measured setup-inclusive choices. Rigid translations preserve shape and"
+    },
+    {
+      "block": 9,
+      "type": "paragraph",
+      "spans": 3,
+      "text": "2. Operator, verification and timing"
+    },
+    {
+      "block": 10,
+      "type": "paragraph",
+      "spans": 1,
+      "text": "On a uniform N-by-N grid of the unit square, with h = 1/(N − 1), positive conductivity k and homogeneous Dirichlet boundaries, the conservative operator is"
+    },
+    {
+      "block": 11,
+      "type": "paragraph",
+      "spans": 1,
+      "text": "−∇·(k∇u) = f,  Ω = (0,1)2,  u|∂Ω = 0,    (Au)i = h−2Σj∼ikij(ui − uj).    (1)"
+    },
+    {
+      "block": 12,
+      "type": "paragraph",
+      "spans": 1,
+      "text": "The sum runs over four neighbours; shared positive face weights make the interior matrix symmetric positive definite. Arithmetic faces define the historical nodal graph-diffusion b"
+    },
+    {
+      "block": 13,
+      "type": "paragraph",
+      "spans": 1,
+      "text": "kH = 2aba+b,    kA = a+b2,    kA − kH = (a−b)22(a+b).    (2)"
+    },
+    {
+      "block": 14,
+      "type": "paragraph",
+      "spans": 1,
+      "text": "The difference is O(h²) for smooth positive k, but kA/kH = 25.5025 at contrast 100. This local conductance ratio is not a temperature-error estimate. Arithmetic stress tests theref"
+    },
+    {
+      "block": 15,
+      "type": "paragraph",
+      "spans": 1,
+      "text": "With exact solution sin(πx)sin(πy), constant and smooth-variable tests give fitted L² orders 2.01 and 2.02 over N = 32–256. The aligned one-dimensional interface test gives harmoni"
+    },
+    {
+      "block": 16,
+      "type": "paragraph",
+      "spans": 1,
+      "text": "All runs use one Windows 11 workstation (Ryzen 9 7940HS, 16 GB RAM, RTX 4060 Laptop GPU). The principal candidates are CG, Jacobi-PCG (J) and default PyAMG 5.3.0 smoothed-aggregati"
+    },
+    {
+      "block": 17,
+      "type": "paragraph",
+      "spans": 1,
+      "text": "3. Interface and callback sensitivity"
+    },
+    {
+      "block": 18,
+      "type": "paragraph",
+      "spans": 1,
+      "text": "The historical single-pass map spans 13 coefficient cases and three sizes: J wins at N = 64 and SA at N = 128, 256. The winner is constant across coefficient families at each size,"
+    },
+    {
+      "block": 19,
+      "type": "paragraph",
+      "spans": 12,
+      "text": "Table 1. All contrast-100 historical face checks: arithmetic/harmonic iterations and setup-inclusive winners (J = Jacobi-PCG; SA = smoothed-aggregation PCG). Single timing passes; "
+    },
+    {
+      "block": 22,
+      "type": "paragraph",
+      "spans": 36,
+      "text": "Calibration uses arithmetic faces and a unit source for constant, inclusion and checkerboard fields (contrast 100 for the latter two), three sizes, three methods, two callbacks and"
+    },
+    {
+      "block": 23,
+      "type": "paragraph",
+      "spans": 9,
+      "text": "Table 2. All callback-calibration cells. Winners: method, median total ms and wins/7. Last columns: paired median monitored/count-only solve-time ratios."
+    },
+    {
+      "block": 26,
+      "type": "paragraph",
+      "spans": 3,
+      "text": "4. Matched-field, forcing and solver-set audit"
+    },
+    {
+      "block": 27,
+      "type": "paragraph",
+      "spans": 26,
+      "text": "Two 2-by-8 motifs have 12 high cells and 20 interface edges, but one or two connected components (Figure 1). High/background conductivities are c/1. Dilation by s = N/16 and low-co"
+    },
+    {
+      "block": 28,
+      "type": "paragraph",
+      "spans": 1,
+      "text": "After a 576-solve exploratory screen, confirmation uses c = 1000, N = 96, 128, 192, centred/transposed/x-shifted configurations, both face averages and four unit-norm sources: cons"
+    },
+    {
+      "block": 29,
+      "type": "paragraph",
+      "spans": 1,
+      "text": "Let R reflect interior nodes in x, D = diag(A), S = D−1/2 A D−1/2, and g = D−1/2b. When RA = AR and Rb = −b, the zero-start Krylov space generated by S and g is odd and orthogonal "
+    },
+    {
+      "block": 31,
+      "type": "paragraph",
+      "spans": 1,
+      "text": "Figure 1. Matched motifs (left); two-island source/alignment sensitivity at N = 192, c = 1000, harmonic faces (right). Bars: median setup + solve time; whiskers: five-run range; la"
+    },
+    {
+      "block": 32,
+      "type": "paragraph",
+      "spans": 1,
+      "text": "At N = 192 with harmonic faces and odd-x forcing, J changes from 403 iterations/72.2 ms to 677/125.1 ms after translation; SA changes from 17/101.0 ms to 16/97.5 ms. Each position "
+    },
+    {
+      "block": 33,
+      "type": "paragraph",
+      "spans": 25,
+      "text": "Stable per-repeat winners occur in 124/144 confirmation cells and 55/64 independent-family cells; only 2/48 centred/shifted pairs reverse consistently in all five repeats. The resu"
+    },
+    {
+      "block": 34,
+      "type": "paragraph",
+      "spans": 1,
+      "text": "E(P) = mins ∈ P [12 Σj=0,1 T(j,s)mint ∈ P T(j,t)] − 1    (3)"
     },
     {
       "block": 35,
       "type": "paragraph",
+      "spans": 50,
+      "text": "For this J/SA pair, E(P) = 14.2%. This empirical quantity is neither a statistical lower confidence bound nor a bound for other portfolios. A 240-solve screen and 504-solve interle"
+    },
+    {
+      "block": 36,
+      "type": "paragraph",
+      "spans": 8,
+      "text": "Table 3. All 12 interleaved translated pairs. RS = classical AMG-PCG; SA also competed. Stable: each position retains its winner in all seven repeats. E(P) uses medians even for un"
+    },
+    {
+      "block": 37,
+      "type": "table",
+      "spans": 91,
+      "text": "NMotifSourceCentredShiftedStableE(P), %1283x6Odd-xJRSYes12.421283x6RandomRSRSYes0.001282x8Odd-xJRSYes11.911282x8RandomRSRSYes0.001603x6Odd-xJRSYes9.691603x6RandomRSRSNo0.001602x8Od"
+    },
+    {
+      "block": 39,
+      "type": "paragraph",
+      "spans": 2,
+      "text": "5. Stencil scaling and implications"
+    },
+    {
+      "block": 40,
+      "type": "paragraph",
       "spans": 1,
-      "text": "Three evidence groups have distinct timing meanings [27]. Historical coefficient-family results include a true-residual evaluation at every iteration, fixed method order and the fi"
+      "text": "At N = 2048, variable-coefficient stencil times are 0.1813 s (NumPy), 0.005325 s (Numba serial) and 0.003725 s (Numba, four threads); more threads did not improve the largest case."
+    },
+    {
+      "block": 41,
+      "type": "paragraph",
+      "spans": 1,
+      "text": "The audit shows why forcing, alignment and candidate solvers must be checked before reusing coefficient-based choices. Physical interpretation additionally requires a justified int"
+    },
+    {
+      "block": 42,
+      "type": "paragraph",
+      "spans": 1,
+      "text": "6. Reproducibility"
+    },
+    {
+      "block": 43,
+      "type": "paragraph",
+      "spans": 1,
+      "text": "Numerical evidence and scripts, including callback calibration, are archived at https://doi.org/10.5281/zenodo.22874266 (v5). The accompanying supplement retains complete tables, p"
+    },
+    {
+      "block": 44,
+      "type": "paragraph",
+      "spans": 1,
+      "text": "Author contributions"
+    },
+    {
+      "block": 45,
+      "type": "paragraph",
+      "spans": 1,
+      "text": "Dong Liu led the conceptualization, formulation of the benchmark problems, numerical-method selection, and development of the finite-difference and CPU/GPU benchmarking workflow. H"
+    },
+    {
+      "block": 46,
+      "type": "paragraph",
+      "spans": 1,
+      "text": "Yuanxin Wang contributed to the execution and verification of the solver-comparison experiments, comparing conjugate-gradient and preconditioned conjugate-gradient methods across d"
+    },
+    {
+      "block": 50,
+      "type": "paragraph",
+      "spans": 1,
+      "text": "[1] Virtanen P et al 2020 Nature Methods 17 261–272. doi:10.1038/s41592-019-0686-2"
+    },
+    {
+      "block": 51,
+      "type": "paragraph",
+      "spans": 1,
+      "text": "[2] Harris C R et al 2020 Nature 585 357–362. doi:10.1038/s41586-020-2649-2"
+    },
+    {
+      "block": 52,
+      "type": "paragraph",
+      "spans": 2,
+      "text": "[3] Lam S K, Pitrou A and Seibert S 2015 Proc. LLVM-HPC 1–6. doi:10.1145/2833157.2833162"
+    },
+    {
+      "block": 53,
+      "type": "paragraph",
+      "spans": 2,
+      "text": "[4] Bell N, Olson L N, Schroder J and Southworth B 2023 J. Open Source Softw. 8 5495. doi:10.21105/joss.05495"
+    },
+    {
+      "block": 54,
+      "type": "paragraph",
+      "spans": 1,
+      "text": "[5] Strikwerda J C 2004 Finite Difference Schemes and Partial Differential Equations, 2nd edn (SIAM). doi:10.1137/1.9780898717938"
+    },
+    {
+      "block": 55,
+      "type": "paragraph",
+      "spans": 6,
+      "text": "[6] Hestenes M R and Stiefel E 1952 J. Res. Natl Bur. Stand. 49 409–436. doi:10.6028/jres.049.044"
+    },
+    {
+      "block": 56,
+      "type": "paragraph",
+      "spans": 1,
+      "text": "[7] Saad Y 2003 Iterative Methods for Sparse Linear Systems, 2nd edn (SIAM). doi:10.1137/1.9780898718003"
+    },
+    {
+      "block": 57,
+      "type": "paragraph",
+      "spans": 5,
+      "text": "[8] Ruge J W and Stuben K 1987 Algebraic multigrid, in Multigrid Methods, ed S F McCormick (SIAM) 73–130. doi:10.1137/1.9781611971057.ch4"
+    },
+    {
+      "block": 58,
+      "type": "paragraph",
+      "spans": 5,
+      "text": "[9] Bernaschi M, Celestini A, Richelli G and D’Ambra P 2026 Future Gener. Comput. Syst. 183 108519. doi:10.1016/j.future.2026.108519"
+    },
+    {
+      "block": 59,
+      "type": "paragraph",
+      "spans": 5,
+      "text": "[10] Welter A and Nguyen N C 2026 Comput. Methods Appl. Mech. Eng. 456 118951. doi:10.1016/j.cma.2026.118951"
+    },
+    {
+      "block": 60,
+      "type": "paragraph",
+      "spans": 4,
+      "text": "[11] Yuan F et al 2025 Proc. Int. Conf. Supercomputing 397–411. doi:10.1145/3721145.3725764"
+    },
+    {
+      "block": 61,
+      "type": "paragraph",
+      "spans": 4,
+      "text": "[12] Green D, Hu X, Lore J, Mu L and Stowell M L 2022 Comput. Phys. Commun. 276 108333. doi:10.1016/j.cpc.2022.108333"
+    },
+    {
+      "block": 62,
+      "type": "paragraph",
+      "spans": 2,
+      "text": "[13] Koskela T et al 2023 Proc. SC Workshops 609–618. doi:10.1145/3624062.3624133"
+    },
+    {
+      "block": 63,
+      "type": "paragraph",
+      "spans": 5,
+      "text": "[14] SPEC 2021 SPEChpc 734.hpgmgfv_m. https://www.spec.org/hpc2021/docs/benchmarks/734.hpgmgfv_m.html (accessed 8 September 2026)"
+    },
+    {
+      "block": 64,
+      "type": "paragraph",
+      "spans": 4,
+      "text": "[15] LLNL n.d. AMG2023. https://software.llnl.gov/benchmarks/10_amg/amg.html (accessed 8 September 2026)"
+    },
+    {
+      "block": 65,
+      "type": "paragraph",
+      "spans": 1,
+      "text": "[16] D’Ambra P, Durastante F, Filippone S and Zikatanov L 2023 Comput. Math. Appl. 144 290–305. doi:10.1016/j.camwa.2023.06.026"
+    },
+    {
+      "block": 66,
+      "type": "paragraph",
+      "spans": 1,
+      "text": "[17] Anzt H et al 2022 ACM Trans. Math. Softw. 48 2:1–2:33. doi:10.1145/3480935"
+    },
+    {
+      "block": 67,
+      "type": "paragraph",
+      "spans": 5,
+      "text": "[18] Pekkila J, Lappi O, Robertsen F and Korpi-Lagg M J 2025 Concurr. Comput. Pract. Exp. 37 e70129. doi:10.1002/cpe.70129"
     },
     {
       "block": 68,
       "type": "paragraph",
+      "spans": 3,
+      "text": "[19] Makhmut Y, Imankulov T, Gorlatch S and Matkerim B 2026 Appl. Sci. 16 5449. doi:10.3390/app16115449"
+    },
+    {
+      "block": 69,
+      "type": "paragraph",
       "spans": 1,
-      "text": "The complete arithmetic/harmonic sensitivity results are reported below in Table 6."
+      "text": "[20] Tsai Y-H M, Beams N and Anzt H 2023 Future Gener. Comput. Syst. 149 280–293. doi:10.1016/j.future.2023.07.024"
+    },
+    {
+      "block": 70,
+      "type": "paragraph",
+      "spans": 1,
+      "text": "[21] Graillat S, Jézéquel F, Mary T and Molina R 2024 SIAM J. Sci. Comput. 46 C30–C56. doi:10.1137/22M1522619"
+    },
+    {
+      "block": 71,
+      "type": "paragraph",
+      "spans": 5,
+      "text": "[22] Aksoylu B, Graham I G, Klie H and Scheichl R 2008 Comput. Vis. Sci. 11 319–331. doi:10.1007/s00791-008-0105-1"
+    },
+    {
+      "block": 72,
+      "type": "paragraph",
+      "spans": 1,
+      "text": "[23] Aksoylu B and Yeter Z 2010 Comput. Vis. Sci. 13 229–245. doi:10.1007/s00791-010-0140-6"
+    },
+    {
+      "block": 73,
+      "type": "paragraph",
+      "spans": 3,
+      "text": "[24] Carson E, Liesen J and Strakos Z 2024 Linear Algebra Appl. 692 241–291. doi:10.1016/j.laa.2024.04.003"
+    },
+    {
+      "block": 74,
+      "type": "paragraph",
+      "spans": 3,
+      "text": "[25] Firmbach M et al 2026 arXiv:2602.05686 (preprint). doi:10.48550/arXiv.2602.05686"
+    },
+    {
+      "block": 75,
+      "type": "paragraph",
+      "spans": 1,
+      "text": "[26] Funk Y, Götz M and Anzt H 2022 Proc. SIAM Conf. Parallel Processing for Scientific Computing 14–24. doi:10.1137/1.9781611977141.2"
     },
     {
       "block": 76,
       "type": "paragraph",
       "spans": 1,
-      "text": "The complete face-averaging check in Table 6 reports all nine historical case-size cells. Arithmetic/harmonic iteration counts differ substantially, including AMG changes for check"
+      "text": "[27] Sun H-B, Jing Y-F and Xu X-W 2025 J. Classification 42 72–89. doi:10.1007/s00357-024-09484-0"
     },
     {
       "block": 77,
       "type": "paragraph",
       "spans": 1,
-      "text": "Table 6. Complete contrast-100 face-averaging check under the historical monitored protocol. Entries are arithmetic/harmonic iteration counts and setup-inclusive winners (J = Jacob"
+      "text": "[28] Xiong H et al 2025 J. Parallel Distrib. Comput. 205 105144. doi:10.1016/j.jpdc.2025.105144"
     },
     {
       "block": 78,
-      "type": "table",
-      "spans": 60,
-      "text": "CaseNCGJSAWinnerInclusion64796/725129/12910/10J/JInclusion1281963/1891264/26312/11SA/SAInclusion2564370/4326535/53512/12SA/SALayered641136/1120164/1819/9J/JLayered1282447/2442325/3"
+      "type": "paragraph",
+      "spans": 1,
+      "text": "[29] Zabegaev Y, Keilegavlen E, Iversen E and Berre I 2024 Comput. Methods Appl. Mech. Eng. 426 117031. doi:10.1016/j.cma.2024.117031"
+    },
+    {
+      "block": 79,
+      "type": "paragraph",
+      "spans": 1,
+      "text": "[30] Patankar S V 1980 Numerical Heat Transfer and Fluid Flow (New York: Hemisphere). ISBN:9780891165224"
     },
     {
       "block": 80,
       "type": "paragraph",
       "spans": 1,
-      "text": "5.3. Paired Callback Calibration"
-    },
-    {
-      "block": 81,
-      "type": "paragraph",
-      "spans": 1,
-      "text": "A prospective calibration covers constant, inclusion and checkerboard conductivity (contrast 100 for the latter two), N = 64, 128, 256, three methods, two callback modes and seven "
-    },
-    {
-      "block": 82,
-      "type": "paragraph",
-      "spans": 1,
-      "text": "Table 7 reports every case-size cell, including vote instability. The median winner agrees between callbacks in all nine cells. At constant N = 256, however, count-only AMG wins on"
-    },
-    {
-      "block": 83,
-      "type": "paragraph",
-      "spans": 1,
-      "text": "Table 7. Paired callback calibration. Winner entries give method, median total milliseconds and votes out of seven. Last columns give median paired monitored/count-only solve-time "
-    },
-    {
-      "block": 84,
-      "type": "table",
-      "spans": 70,
-      "text": "CaseNMonitoredCount-onlyCGJSAConstant64CG 5.64 (7/7)CG 3.55 (5/7)1.581.581.05Constant128CG 31.22 (6/7)CG 19.11 (7/7)1.671.701.04Constant256SA 141.18 (7/7)SA 147.70 (3/7)1.841.761.0"
-    },
-    {
-      "block": 86,
-      "type": "paragraph",
-      "spans": 1,
-      "text": "5.4. Matched-Field and Forcing Audit"
-    },
-    {
-      "block": 98,
-      "type": "paragraph",
-      "spans": 1,
-      "text": "Candidate-solver sensitivity. A separate 240-solve screen adds SA with symmetric-strength theta = 0.25 and classical Ruge-Stueben AMG with classical strength theta = 0.25. A subseq"
-    },
-    {
-      "block": 99,
-      "type": "paragraph",
-      "spans": 1,
-      "text": "Table 8. All 12 translated pairs in the interleaved confirmation. Winners use median total time: J = Jacobi-PCG, RS = classical AMG-PCG; SA was also a candidate. Stable means both "
-    },
-    {
-      "block": 102,
-      "type": "paragraph",
-      "spans": 1,
-      "text": "5.5. CPU and CUDA Stencil Scaling"
-    },
-    {
-      "block": 105,
-      "type": "paragraph",
-      "spans": 1,
-      "text": "Table 9. Representative stencil-throughput measurements. CPU entries use the variable-coefficient operator at N = 2048; CUDA entries are kernel-only Jacobi steps with arrays reside"
-    },
-    {
-      "block": 115,
-      "type": "paragraph",
-      "spans": 1,
-      "text": "For physical composite-conduction use, the face law must be chosen from the interface geometry and resistance model before comparing solvers. The arithmetic benchmark is not eviden"
-    },
-    {
-      "block": 120,
-      "type": "paragraph",
-      "spans": 17,
-      "text": "The previously published baseline and controlled extension are archived at https://doi.org/10.5281/zenodo.22668106, with the earlier baseline at https://doi.org/10.5281/zenodo.2230"
-    },
-    {
-      "block": 151,
-      "type": "paragraph",
-      "spans": 1,
-      "text": "[26] Patankar S V 1980 Numerical Heat Transfer and Fluid Flow 1st edn (New York: Hemisphere). ISBN:9780891165224"
-    },
-    {
-      "block": 152,
-      "type": "paragraph",
-      "spans": 1,
-      "text": "[27] Hoefler T and Belli R 2015 Scientific benchmarking of parallel computing systems: twelve ways to tell the masses when reporting performance results Proc. International Confere"
+      "text": "[31] Hoefler T and Belli R 2015 Proc. SC 73:1–73:12. doi:10.1145/2807591.2807644"
     }
   ]
 }

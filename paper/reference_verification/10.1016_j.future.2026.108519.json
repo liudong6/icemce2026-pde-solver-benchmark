@@ -1,0 +1,717 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          6,
+          2
+        ]
+      ],
+      "date-time": "2026-06-02T14:25:20Z",
+      "timestamp": 1780410320883,
+      "version": "3.54.1"
+    },
+    "reference-count": 42,
+    "publisher": "Elsevier BV",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2026,
+              10,
+              1
+            ]
+          ],
+          "date-time": "2026-10-01T00:00:00Z",
+          "timestamp": 1790812800000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2026,
+              10,
+              1
+            ]
+          ],
+          "date-time": "2026-10-01T00:00:00Z",
+          "timestamp": 1790812800000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://www.elsevier.com/legal/tdmrep-license"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2026,
+              4,
+              16
+            ]
+          ],
+          "date-time": "2026-04-16T00:00:00Z",
+          "timestamp": 1776297600000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "http://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/501100000780",
+        "name": "European Commission",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "101144014"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "101144014"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/501100000780",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      },
+      {
+        "DOI": "10.13039/100009133",
+        "name": "Karlsruhe Institute of Technology",
+        "doi-asserted-by": "publisher",
+        "id": [
+          {
+            "id": "10.13039/100009133",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      },
+      {
+        "DOI": "10.13039/501100024370",
+        "name": "Ministero dell'Istruzione dell'Università e della Ricerca",
+        "doi-asserted-by": "publisher",
+        "id": [
+          {
+            "id": "10.13039/501100024370",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      },
+      {
+        "DOI": "10.13039/100031478",
+        "name": "NextGenerationEU",
+        "doi-asserted-by": "publisher",
+        "id": [
+          {
+            "id": "10.13039/100031478",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "elsevier.com",
+        "sciencedirect.com"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [
+      "Future Generation Computer Systems"
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2026,
+          10
+        ]
+      ]
+    },
+    "DOI": "10.1016/j.future.2026.108519",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2026,
+          4,
+          16
+        ]
+      ],
+      "date-time": "2026-04-16T07:01:49Z",
+      "timestamp": 1776322909000
+    },
+    "page": "108519",
+    "update-policy": "https://doi.org/10.1016/elsevier_cm_policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 0,
+    "special_numbering": "C",
+    "title": [
+      "On the energy efficiency of sparse matrix computations on multi-GPU clusters"
+    ],
+    "prefix": "10.1016",
+    "volume": "183",
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0000-0003-3661-9836",
+        "authenticated-orcid": false,
+        "given": "Massimo",
+        "family": "Bernaschi",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-8493-4550",
+        "authenticated-orcid": false,
+        "given": "Alessandro",
+        "family": "Celestini",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Giorgio",
+        "family": "Richelli",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-2047-4986",
+        "authenticated-orcid": false,
+        "given": "Pasqua",
+        "family": "D’Ambra",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "78",
+    "reference": [
+      {
+        "key": "10.1016/j.future.2026.108519_b1",
+        "unstructured": "Electricity 2025. Analysis and forecast to 2027, https://www.iea.org/reports/electricity-2025."
+      },
+      {
+        "key": "10.1016/j.future.2026.108519_b2",
+        "doi-asserted-by": "crossref",
+        "first-page": "1",
+        "DOI": "10.3389/fhpcp.2025.1520207",
+        "article-title": "Energy-aware operation of HPC systems in Germany",
+        "volume": "3",
+        "author": "Suarez",
+        "year": "2025",
+        "journal-title": "Front. High Perform. Comput."
+      },
+      {
+        "key": "10.1016/j.future.2026.108519_b3",
+        "series-title": "Green500",
+        "year": "2025"
+      },
+      {
+        "issue": "3",
+        "key": "10.1016/j.future.2026.108519_b4",
+        "doi-asserted-by": "crossref",
+        "first-page": "1",
+        "DOI": "10.1145/2962131",
+        "article-title": "Understanding GPU power: A survey of profiling, modeling, and simulation methods",
+        "volume": "49",
+        "author": "Bridges",
+        "year": "2016",
+        "journal-title": "ACM Comput. Surv."
+      },
+      {
+        "issue": "5",
+        "key": "10.1016/j.future.2026.108519_b5",
+        "doi-asserted-by": "crossref",
+        "first-page": "375",
+        "DOI": "10.1177/1094342016672081",
+        "article-title": "On the performance and energy efficiency of sparse linear algebra on GPUs",
+        "volume": "31",
+        "author": "Anzt",
+        "year": "2017",
+        "journal-title": "Int. J. High Perform. Comput. Appl."
+      },
+      {
+        "key": "10.1016/j.future.2026.108519_b6",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1016/j.jnca.2025.104326",
+        "article-title": "Next-generation AI for advanced threat detection and security enhancement in DNS over HTTPS",
+        "volume": "244",
+        "author": "Ali",
+        "year": "2025",
+        "journal-title": "J. Netw. Comput. Appl."
+      },
+      {
+        "key": "10.1016/j.future.2026.108519_b7",
+        "series-title": "Top500",
+        "year": "2025"
+      },
+      {
+        "key": "10.1016/j.future.2026.108519_b8",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1016/j.micpro.2022.104679",
+        "article-title": "Towards EXtreme scale technologies and accelerators for euROhpc hw/sw supercomputing applications for exascale: The TEXTAROSSA approach",
+        "volume": "95",
+        "author": "Agosta",
+        "year": "2022",
+        "journal-title": "Microprocess. Microsyst."
+      },
+      {
+        "key": "10.1016/j.future.2026.108519_b9",
+        "series-title": "2024 27th Euromicro Conference on Digital System Design",
+        "first-page": "526",
+        "article-title": "The TEXTAROSSA project: Cool all the way down to the hardware",
+        "author": "Filgueras",
+        "year": "2024"
+      },
+      {
+        "key": "10.1016/j.future.2026.108519_b10",
+        "doi-asserted-by": "crossref",
+        "first-page": "13533",
+        "DOI": "10.1007/s11227-024-05989-y",
+        "article-title": "Alya toward exascale: algorithmic scalability using PSCToolkit",
+        "volume": "80",
+        "author": "Owen",
+        "year": "2024",
+        "journal-title": "J. Supercomput."
+      },
+      {
+        "key": "10.1016/j.future.2026.108519_b11",
+        "series-title": "Proceedings of the Platform for Advanced Scientific Computing Conference",
+        "article-title": "PETScML: Second-order solvers for training regression problems in scientific machine learning",
+        "author": "Zampini",
+        "year": "2024"
+      },
+      {
+        "key": "10.1016/j.future.2026.108519_b12",
+        "article-title": "Proactive and privacy-preserving defense for DNS over HTTPS via federated AI attestation (PAFA-doh)",
+        "volume": "196",
+        "author": "Ali",
+        "year": "2026",
+        "journal-title": "Neural Netw."
+      },
+      {
+        "key": "10.1016/j.future.2026.108519_b13",
+        "series-title": "2013 IEEE International Symposium on Workload Characterization",
+        "first-page": "56",
+        "article-title": "Quantifying the energy cost of data movement in scientific applications",
+        "author": "Kestor",
+        "year": "2013"
+      },
+      {
+        "issue": "12",
+        "key": "10.1016/j.future.2026.108519_b14",
+        "doi-asserted-by": "crossref",
+        "first-page": "66",
+        "DOI": "10.1145/3554977",
+        "article-title": "The evolution of mathematical software",
+        "volume": "65",
+        "author": "Dongarra",
+        "year": "2022",
+        "journal-title": "Commun. ACM"
+      },
+      {
+        "key": "10.1016/j.future.2026.108519_b15",
+        "series-title": "2024 IEEE 35th International Conference on Application-Specific Systems, Architectures and Processors",
+        "first-page": "143",
+        "article-title": "Analyzing GPU energy consumption in data movement and storage",
+        "author": "Delestrac",
+        "year": "2024"
+      },
+      {
+        "issue": "3",
+        "key": "10.1016/j.future.2026.108519_b16",
+        "doi-asserted-by": "crossref",
+        "first-page": "254",
+        "DOI": "10.1177/1094342021990738",
+        "article-title": "Selecting optimal SpMV realizations for GPUs via machine learning",
+        "volume": "35",
+        "author": "Dufrechou",
+        "year": "2021",
+        "journal-title": "Int. J. High Perform. Comput. Appl."
+      },
+      {
+        "issue": "4",
+        "key": "10.1016/j.future.2026.108519_b17",
+        "doi-asserted-by": "crossref",
+        "first-page": "299",
+        "DOI": "10.1007/s00450-011-0195-8",
+        "article-title": "Optimization of power consumption in the iterative solution of sparse linear systems on graphics processors",
+        "volume": "27",
+        "author": "Anzt",
+        "year": "2012",
+        "journal-title": "Comput. Sci. Res. Dev."
+      },
+      {
+        "key": "10.1016/j.future.2026.108519_b18",
+        "doi-asserted-by": "crossref",
+        "first-page": "359",
+        "DOI": "10.1016/j.future.2024.06.004",
+        "article-title": "Batched sparse and mixed-precision linear algebra interface for efficient use of GPU hardware accelerators in scientific applications",
+        "volume": "160",
+        "author": "Luszczek",
+        "year": "2024",
+        "journal-title": "Future Gener. Comput. Syst."
+      },
+      {
+        "key": "10.1016/j.future.2026.108519_b19",
+        "series-title": "2024 IEEE 36th International Symposium on Computer Architecture and High Performance Computing",
+        "first-page": "70",
+        "article-title": "A performance and energy study of GPU-resident preconditioners for conjugate gradient solvers: In the context of existing and novel approaches",
+        "author": "Świrydowicz",
+        "year": "2024"
+      },
+      {
+        "issue": "4",
+        "key": "10.1016/j.future.2026.108519_b20",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1145/3190647",
+        "article-title": "BootCMatch: a software package for bootstrap AMG based on graph weighted matching",
+        "volume": "44",
+        "author": "D’Ambra",
+        "year": "2018",
+        "journal-title": "ACM Trans. Math. Softw."
+      },
+      {
+        "key": "10.1016/j.future.2026.108519_b21",
+        "doi-asserted-by": "crossref",
+        "first-page": "102599",
+        "DOI": "10.1016/j.parco.2019.102599",
+        "article-title": "AMG based on compatible weighted matching for GPUs",
+        "volume": "92",
+        "author": "Bernaschi",
+        "year": "2020",
+        "journal-title": "Parallel Comput."
+      },
+      {
+        "key": "10.1016/j.future.2026.108519_b22",
+        "doi-asserted-by": "crossref",
+        "first-page": "100041",
+        "DOI": "10.1016/j.simpa.2020.100041",
+        "article-title": "BootCMatchG: an adaptive algebraic multigrid linear solver for GPUs",
+        "volume": "6",
+        "author": "Bernaschi",
+        "year": "2020",
+        "journal-title": "Software Impacts"
+      },
+      {
+        "issue": "08",
+        "key": "10.1016/j.future.2026.108519_b23",
+        "doi-asserted-by": "crossref",
+        "first-page": "2365",
+        "DOI": "10.1109/TPDS.2023.3287238",
+        "article-title": "A multi-GPU aggregation-based AMG preconditioner for iterative linear solvers",
+        "volume": "34",
+        "author": "Bernaschi",
+        "year": "2023",
+        "journal-title": "IEEE Trans. Parallel & Distrib. Syst."
+      },
+      {
+        "key": "10.1016/j.future.2026.108519_b24",
+        "doi-asserted-by": "crossref",
+        "unstructured": "M. Bernaschi, M.G. Carrozzo, A. Celestini, G. Piperno, P. D’Ambra, Communication-reduced Conjugate Gradient Variants for GPU-accelerated Clusters, in: 2025 33rd Euromicro International Conference on Parallel, Distributed, and Network-Based Processing (PDP), 2025, pp. 178–186, http://dx.doi.org/10.1109/PDP66500.2025.00032.",
+        "DOI": "10.1109/PDP66500.2025.00032"
+      },
+      {
+        "key": "10.1016/j.future.2026.108519_b25",
+        "doi-asserted-by": "crossref",
+        "first-page": "409",
+        "DOI": "10.6028/jres.049.044",
+        "article-title": "Methods of conjugate gradients for solving linear systems",
+        "volume": "49",
+        "author": "Hestenes",
+        "year": "1952",
+        "journal-title": "J. Res. Natl. Bur. Stand."
+      },
+      {
+        "key": "10.1016/j.future.2026.108519_b26",
+        "doi-asserted-by": "crossref",
+        "first-page": "237",
+        "DOI": "10.1016/j.jcp.2014.10.043",
+        "article-title": "A massively parallel solver for discrete Poisson-like problems",
+        "volume": "281",
+        "author": "Notay",
+        "year": "2015",
+        "journal-title": "J. Comput. Phys."
+      },
+      {
+        "issue": "1",
+        "key": "10.1016/j.future.2026.108519_b27",
+        "doi-asserted-by": "crossref",
+        "first-page": "37",
+        "DOI": "10.1016/0167-8191(89)90062-8",
+        "article-title": "On the efficient implementation of preconditioned s-step conjugate gradient methods on multiprocessors with memory hierarchy",
+        "volume": "11",
+        "author": "Chronopoulos",
+        "year": "1989",
+        "journal-title": "Parallel Comput."
+      },
+      {
+        "issue": "5",
+        "key": "10.1016/j.future.2026.108519_b28",
+        "doi-asserted-by": "crossref",
+        "first-page": "S602",
+        "DOI": "10.1137/140980260",
+        "article-title": "AmgX: A library for GPU accelerated algebraic multigrid and preconditioned iterative methods",
+        "volume": "37",
+        "author": "Naumov",
+        "year": "2015",
+        "journal-title": "SIAM J. Sci. Comput."
+      },
+      {
+        "issue": "2",
+        "key": "10.1016/j.future.2026.108519_b29",
+        "doi-asserted-by": "crossref",
+        "first-page": "1",
+        "DOI": "10.1145/3177754",
+        "article-title": "RAPL in action: Experiences in using RAPL for power measurements",
+        "volume": "3",
+        "author": "Khan",
+        "year": "2018",
+        "journal-title": "ACM Trans. Model. Perform. Eval. Comput. Syst. (TOMPECS)"
+      },
+      {
+        "key": "10.1016/j.future.2026.108519_b30",
+        "series-title": "2010 39th International Conference on Parallel Processing Workshops",
+        "first-page": "207",
+        "article-title": "Likwid: A lightweight performance-oriented tool suite for x86 multicore environments",
+        "author": "Treibig",
+        "year": "2010"
+      },
+      {
+        "key": "10.1016/j.future.2026.108519_b31",
+        "series-title": "Likwid",
+        "year": "2025"
+      },
+      {
+        "key": "10.1016/j.future.2026.108519_b32",
+        "series-title": "NVIDIA management library: NVML API reference guide",
+        "year": "2025"
+      },
+      {
+        "key": "10.1016/j.future.2026.108519_b33",
+        "unstructured": "powerMonitor, https://github.com/alecel/powerMonitor."
+      },
+      {
+        "key": "10.1016/j.future.2026.108519_b34",
+        "unstructured": "GPowerU, https://github.com/crrossi/GPowerU."
+      },
+      {
+        "issue": "4",
+        "key": "10.1016/j.future.2026.108519_b35",
+        "doi-asserted-by": "crossref",
+        "first-page": "248",
+        "DOI": "10.3390/info14040248",
+        "article-title": "Energy-efficient parallel computing: Challenges to scaling",
+        "volume": "14",
+        "author": "Lastovetsky",
+        "year": "2023",
+        "journal-title": "Information"
+      },
+      {
+        "issue": "10",
+        "key": "10.1016/j.future.2026.108519_b36",
+        "doi-asserted-by": "crossref",
+        "first-page": "559",
+        "DOI": "10.1016/j.parco.2014.09.001",
+        "article-title": "A survey of power and energy efficient techniques for high performance numerical linear algebra operations",
+        "volume": "40",
+        "author": "Tan",
+        "year": "2014",
+        "journal-title": "Parallel Comput."
+      },
+      {
+        "key": "10.1016/j.future.2026.108519_b37",
+        "unstructured": "Ginkgo, https://ginkgo-project.github.io."
+      },
+      {
+        "issue": "1",
+        "key": "10.1016/j.future.2026.108519_b38",
+        "doi-asserted-by": "crossref",
+        "first-page": "2:1",
+        "DOI": "10.1145/3480935",
+        "article-title": "Ginkgo: A modern linear operator algebra framework for high performance computing",
+        "volume": "48",
+        "author": "Anzt",
+        "year": "2022",
+        "journal-title": "ACM Trans. Math. Software"
+      },
+      {
+        "issue": "5",
+        "key": "10.1016/j.future.2026.108519_b39",
+        "doi-asserted-by": "crossref",
+        "first-page": "S602",
+        "DOI": "10.1137/140980260",
+        "article-title": "AmgX: A library for GPU accelerated algebraic multigrid and preconditioned iterative methods",
+        "volume": "37",
+        "author": "Naumov",
+        "year": "2015",
+        "journal-title": "SIAM J. Sci. Comput."
+      },
+      {
+        "key": "10.1016/j.future.2026.108519_b40",
+        "series-title": "NVIDIA, Algebraic multigrid solver (AmgX) library version 2.5.0",
+        "year": "2025"
+      },
+      {
+        "issue": "1",
+        "key": "10.1016/j.future.2026.108519_b41",
+        "doi-asserted-by": "crossref",
+        "first-page": "3",
+        "DOI": "10.1177/1094342015593158",
+        "article-title": "High-performance Conjugate-Gradient benchmark: A new metric for ranking high-performance computing systems",
+        "volume": "30",
+        "author": "Dongarra",
+        "year": "2016",
+        "journal-title": "Int. J. High Perform. Comput. Appl."
+      },
+      {
+        "key": "10.1016/j.future.2026.108519_b42",
+        "series-title": "SuiteSparse Matrix Collection",
+        "year": "2026"
+      }
+    ],
+    "container-title": [
+      "Future Generation Computer Systems"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://api.elsevier.com/content/article/PII:S0167739X26001536?httpAccept=text/xml",
+        "content-type": "text/xml",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://api.elsevier.com/content/article/PII:S0167739X26001536?httpAccept=text/plain",
+        "content-type": "text/plain",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2026,
+          6,
+          2
+        ]
+      ],
+      "date-time": "2026-06-02T13:48:36Z",
+      "timestamp": 1780408116000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://linkinghub.elsevier.com/retrieve/pii/S0167739X26001536"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          10
+        ]
+      ]
+    },
+    "references-count": 42,
+    "alternative-id": [
+      "S0167739X26001536"
+    ],
+    "URL": "https://doi.org/10.1016/j.future.2026.108519",
+    "relation": {},
+    "ISSN": [
+      "0167-739X"
+    ],
+    "issn-type": [
+      {
+        "value": "0167-739X",
+        "type": "print"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2026,
+          10
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "Elsevier",
+        "name": "publisher",
+        "label": "This article is maintained by"
+      },
+      {
+        "value": "On the energy efficiency of sparse matrix computations on multi-GPU clusters",
+        "name": "articletitle",
+        "label": "Article Title"
+      },
+      {
+        "value": "Future Generation Computer Systems",
+        "name": "journaltitle",
+        "label": "Journal Title"
+      },
+      {
+        "value": "https://doi.org/10.1016/j.future.2026.108519",
+        "name": "articlelink",
+        "label": "CrossRef DOI link to publisher maintained version"
+      },
+      {
+        "value": "article",
+        "name": "content_type",
+        "label": "Content Type"
+      },
+      {
+        "value": "© 2026 The Authors. Published by Elsevier B.V.",
+        "name": "copyright",
+        "label": "Copyright"
+      }
+    ],
+    "article-number": "108519"
+  }
+}

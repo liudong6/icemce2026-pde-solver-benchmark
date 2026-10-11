@@ -1,0 +1,52 @@
+{
+  "DAmbra2023Coarsening": [
+    "https://www.sciencedirect.com/science/article/pii/S089812212300278X",
+    "https://iris.cnr.it/handle/20.500.14243/458617",
+    "Section 2: aggregate quality and AMG convergence; not a method evaluated in our experiments."
+  ],
+  "Anzt2022Ginkgo": [
+    "https://dl.acm.org/doi/10.1145/3480935",
+    "https://icl.utk.edu/files/publications/2022/icl-utk-1610-2022.pdf",
+    "Section 2: separation of numerical algorithms and architecture-specific backends; no Ginkgo performance comparison claimed."
+  ],
+  "Tsai2023ThreePrecision": [
+    "https://doi.org/10.1016/j.future.2023.07.024",
+    "https://icl.utk.edu/node/1766",
+    "Section 2: three precisions at distinct AMG levels on GPUs; distinguishes this literature from our float64 stencil benchmark."
+  ],
+  "Graillat2024AdaptivePrecision": [
+    "https://epubs.siam.org/doi/10.1137/22M1522619",
+    "https://api.crossref.org/works/10.1137/22M1522619",
+    "Section 2: magnitude-dependent entry precision for sparse matrix-vector products in Krylov solvers; no measured speedup imported."
+  ],
+  "Funk2022SolverPrediction": [
+    "https://epubs.siam.org/doi/10.1137/1.9781611977141.2",
+    "https://api.crossref.org/works/10.1137/1.9781611977141.2",
+    "Section 2: neural-network solver prediction from linear-system features."
+  ],
+  "Sun2025FeatureSelection": [
+    "https://link.springer.com/article/10.1007/s00357-024-09484-0",
+    "https://api.crossref.org/works/10.1007/s00357-024-09484-0",
+    "Section 2: feature-extraction cost in GMRES-type solver selection. Published online 2024; cited by assigned 2025 volume, consistent with publisher citation."
+  ],
+  "Xiong2025MMAutoSolver": [
+    "https://www.sciencedirect.com/science/article/pii/S074373152500111X",
+    "https://cs.newpaltz.edu/~lik/publications/Hantao-Xiong-JPDC-2025",
+    "Section 2: numerical and structural features for selecting solver-preconditioner combinations."
+  ],
+  "Zabegaev2024SolverSelection": [
+    "https://www.sciencedirect.com/science/article/pii/S0045782524002871",
+    "https://api.crossref.org/works/10.1016/j.cma.2024.117031",
+    "Section 2: online learning updates solver choices during multiphysics simulation."
+  ],
+  "AksoyluYeter2010": [
+    "https://link.springer.com/article/10.1007/s00791-010-0140-6",
+    "https://api.crossref.org/works/10.1007/s00791-010-0140-6",
+    "Replaces arXiv:0904.1885 with the 2010 journal version; preserves support for isolated-island modes and high-contrast preconditioning."
+  ],
+  "Firmbach2026": [
+    "https://arxiv.org/abs/2602.05686",
+    "https://doi.org/10.48550/arXiv.2602.05686",
+    "Retained as an explicitly labelled preprint; no journal version was identified. Crossref 404 is not evidence of nonexistence because its DOI is registered with DataCite."
+  ]
+}

@@ -1,10 +1,22 @@
 # Supplementary Artefact README
 
+Current delivery: **v7 / v1.3-six-page-author-update**, https://doi.org/10.5281/zenodo.23291818. [GitHub release](https://github.com/liudong6/icemce2026-pde-solver-benchmark/releases/tag/v1.3-six-page-author-update).
+
+## Author contribution update — 11 October 2026
+
+The 11 October author update adds Yuanxin Wang as the second author, sharing Dong Liu's affiliation (University of Nottingham Ningbo China, Ningbo 315100, China), and inserts the agreed Author contributions statement. Dong Liu remains the corresponding author. The main manuscript remains six pages; scientific content, references and the existing AI disclosure are unchanged. This update is included in the v7 release (https://doi.org/10.5281/zenodo.23291818).
+
+## Six-page compression — prepared 3 October 2026, included in v7
+
+This compression revision reduces the main manuscript from 15 to 6 pages while retaining three complete review-evidence tables, a compact core figure, all 31 references and the unchanged AI disclosure. Detailed methods, all nine original result tables and six original figures are preserved in the accompanying 13-page supplement. The body uses the template's 11 pt font; A4 margins are unchanged. Numerical data, scientific code and original figures/tables are unchanged. The reference requirements remain satisfied: 18/31 from 2022–2026, 17/31 recent formal papers, and 1/31 preprint. Yellow highlighting retains the reference-review comparison baseline. This revision is included in v7; this archive update does not submit it to a conference.
+
+See `paper/COMPRESSION_REPORT.md` for the content map. `paper/SUPPLEMENTARY_METHODS_AND_RESULTS.docx` and `.pdf` are separate companion files. The preceding public delivery is Zenodo v6 (https://doi.org/10.5281/zenodo.22908710); the numerical evidence is archived in v5 (https://doi.org/10.5281/zenodo.22874266). The current presentation and author update is identified by https://doi.org/10.5281/zenodo.23291818.
+
 ## Reviewer response update — v6 / v1.2.1-reviewer-response
 
-The current delivery is https://doi.org/10.5281/zenodo.22908710, with GitHub release https://github.com/liudong6/icemce2026-pde-solver-benchmark/releases/tag/v1.2.1-reviewer-response. It adds the revised two-page author-to-reviewer response and matching Markdown source. The paper and scientific evidence are unchanged from v5 (https://doi.org/10.5281/zenodo.22874266); existing manuscript and response citations to that evidence remain intentional. See RELEASE_NOTES.md for the scope and archive contents.
+The preceding reviewer-response delivery is https://doi.org/10.5281/zenodo.22908710, with GitHub release https://github.com/liudong6/icemce2026-pde-solver-benchmark/releases/tag/v1.2.1-reviewer-response. It adds the revised two-page author-to-reviewer response and matching Markdown source. The paper and scientific evidence are unchanged from v5 (https://doi.org/10.5281/zenodo.22874266); existing manuscript and response citations to that evidence remain intentional. See RELEASE_NOTES.md for the scope and archive contents.
 
-Submission formatting (21 September): the primary manuscript DOCX and its PDF export highlight additions and replacements relative to the previous reviewed manuscript in yellow. The LaTeX source/PDF is an unhighlighted backup. Regenerating the Word manuscript preserves highlighting using tools/review_baseline.docx and tools/highlight_manuscript_changes.py.
+Historical submission formatting (21 September; superseded by the reference-revision baseline above): the primary manuscript DOCX and its PDF export highlight additions and replacements relative to the previous reviewed manuscript in yellow. The LaTeX source/PDF is an unhighlighted backup. Regenerating the Word manuscript preserves highlighting using tools/review_baseline.docx and tools/highlight_manuscript_changes.py.
 
 ## Second-round review revision — v5 / v1.2
 

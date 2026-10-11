@@ -1,0 +1,1021 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          4,
+          17
+        ]
+      ],
+      "date-time": "2026-04-17T01:06:13Z",
+      "timestamp": 1776387973074,
+      "version": "3.51.2"
+    },
+    "reference-count": 65,
+    "publisher": "Elsevier BV",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2026,
+              7,
+              1
+            ]
+          ],
+          "date-time": "2026-07-01T00:00:00Z",
+          "timestamp": 1782864000000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2026,
+              7,
+              1
+            ]
+          ],
+          "date-time": "2026-07-01T00:00:00Z",
+          "timestamp": 1782864000000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://www.elsevier.com/legal/tdmrep-license"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2026,
+              7,
+              1
+            ]
+          ],
+          "date-time": "2026-07-01T00:00:00Z",
+          "timestamp": 1782864000000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-017"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2026,
+              7,
+              1
+            ]
+          ],
+          "date-time": "2026-07-01T00:00:00Z",
+          "timestamp": 1782864000000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-037"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2026,
+              7,
+              1
+            ]
+          ],
+          "date-time": "2026-07-01T00:00:00Z",
+          "timestamp": 1782864000000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-012"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2026,
+              7,
+              1
+            ]
+          ],
+          "date-time": "2026-07-01T00:00:00Z",
+          "timestamp": 1782864000000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-029"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2026,
+              7,
+              1
+            ]
+          ],
+          "date-time": "2026-07-01T00:00:00Z",
+          "timestamp": 1782864000000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-004"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/100006919",
+        "name": "Massachusetts Institute of Technology",
+        "doi-asserted-by": "publisher",
+        "id": [
+          {
+            "id": "10.13039/100006919",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      },
+      {
+        "DOI": "10.13039/100000015",
+        "name": "U.S. Department of Energy",
+        "doi-asserted-by": "publisher",
+        "id": [
+          {
+            "id": "10.13039/100000015",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      },
+      {
+        "DOI": "10.13039/100006168",
+        "name": "National Nuclear Security Administration",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "DE-NA0004266"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "DE-NA0004266"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/100006168",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "elsevier.com",
+        "sciencedirect.com"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [
+      "Computer Methods in Applied Mechanics and Engineering"
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2026,
+          7
+        ]
+      ]
+    },
+    "DOI": "10.1016/j.cma.2026.118951",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2026,
+          4,
+          7
+        ]
+      ],
+      "date-time": "2026-04-07T13:12:40Z",
+      "timestamp": 1775567560000
+    },
+    "page": "118951",
+    "update-policy": "https://doi.org/10.1016/elsevier_cm_policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 0,
+    "special_numbering": "C",
+    "title": [
+      "Preconditioning techniques for Hybridizable discontinuous Galerkin discretizations on GPU architectures"
+    ],
+    "prefix": "10.1016",
+    "volume": "456",
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0009-0009-6298-6649",
+        "authenticated-orcid": false,
+        "given": "Andrew",
+        "family": "Welter",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0001-9167-5780",
+        "authenticated-orcid": false,
+        "given": "Ngoc",
+        "family": "Cuong Nguyen",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      }
+    ],
+    "member": "78",
+    "reference": [
+      {
+        "key": "10.1016/j.cma.2026.118951_bib0001",
+        "doi-asserted-by": "crossref",
+        "first-page": "5955",
+        "DOI": "10.1016/j.jcp.2012.02.033",
+        "article-title": "Hybridizable discontinuous Galerkin methods for partial differential equations in continuum mechanics",
+        "volume": "231",
+        "author": "Nguyen",
+        "year": "2012",
+        "journal-title": "J. Comput. Phys."
+      },
+      {
+        "key": "10.1016/j.cma.2026.118951_bib0002",
+        "doi-asserted-by": "crossref",
+        "first-page": "58",
+        "DOI": "10.1016/j.jcp.2013.01.019",
+        "article-title": "A hybrid mixed method for the compressible navier-stokes equations",
+        "volume": "240",
+        "author": "Schütz",
+        "year": "2013",
+        "journal-title": "J. Comput. Phys."
+      },
+      {
+        "key": "10.1016/j.cma.2026.118951_bib0003",
+        "doi-asserted-by": "crossref",
+        "first-page": "3",
+        "DOI": "10.1016/j.compfluid.2014.03.023",
+        "article-title": "A comparison of hybridized and standard dg methods for target-based hp-adaptive simulation of compressible flow",
+        "volume": "98",
+        "author": "Woopen",
+        "year": "2014",
+        "journal-title": "Comput. Fluids"
+      },
+      {
+        "key": "10.1016/j.cma.2026.118951_bib0004",
+        "doi-asserted-by": "crossref",
+        "first-page": "80",
+        "DOI": "10.1016/j.compfluid.2016.04.004",
+        "article-title": "A hybridized discontinuous Galerkin method on mapped deforming domains",
+        "volume": "139",
+        "author": "Fidkowski",
+        "year": "2016",
+        "journal-title": "Comput. Fluids"
+      },
+      {
+        "key": "10.1016/j.cma.2026.118951_bib0005",
+        "doi-asserted-by": "crossref",
+        "first-page": "95",
+        "DOI": "10.1090/mcom/3199",
+        "article-title": "An entropy stable, hybridizable discontinuous Galerkin method for the compressible navier-stokes equations",
+        "volume": "87",
+        "author": "Williams",
+        "year": "2017",
+        "journal-title": "Math. Comput."
+      },
+      {
+        "key": "10.1016/j.cma.2026.118951_bib0006",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1016/j.jcp.2023.112507",
+        "article-title": "An adaptive viscosity regularization approach for the numerical solution of conservation laws: application to finite element methods",
+        "volume": "494",
+        "author": "Nguyen",
+        "year": "2023",
+        "journal-title": "J. Comput. Phys."
+      },
+      {
+        "key": "10.1016/j.cma.2026.118951_bib0007",
+        "series-title": "Implicit hybridized discontinuous Galerkin methods for compressible magnetohydrodynamics",
+        "author": "Ciucă",
+        "year": "2020"
+      },
+      {
+        "key": "10.1016/j.cma.2026.118951_bib0008",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1016/j.jcp.2020.110000",
+        "article-title": "A nested hybridizable discontinuous Galerkin method for computing second-harmonic generation in three-dimensional metallic nanostructures",
+        "volume": "429",
+        "author": "Vidal-Codina",
+        "year": "2021",
+        "journal-title": "J. Comput. Phys."
+      },
+      {
+        "key": "10.1016/j.cma.2026.118951_bib0009",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1016/j.cma.2021.113843",
+        "article-title": "Symplectic hamiltonian finite element methods for linear elastodynamics",
+        "volume": "381",
+        "author": "Sánchez",
+        "year": "2021",
+        "journal-title": "Comput. Methods Appl. Mech. Eng."
+      },
+      {
+        "key": "10.1016/j.cma.2026.118951_bib0010",
+        "doi-asserted-by": "crossref",
+        "first-page": "1665",
+        "DOI": "10.1093/imanum/drab059",
+        "article-title": "An HDG method for dissimilar meshes,",
+        "volume": "42",
+        "author": "Solano",
+        "year": "2022",
+        "journal-title": "IMA J. Numer. Anal."
+      },
+      {
+        "key": "10.1016/j.cma.2026.118951_bib0011",
+        "doi-asserted-by": "crossref",
+        "first-page": "748",
+        "DOI": "10.1016/j.cma.2015.12.003",
+        "article-title": "An explicit hybridizable discontinuous Galerkin method for the acoustic wave equation",
+        "volume": "300",
+        "author": "Stanglmeier",
+        "year": "2016",
+        "journal-title": "Comput. Methods Appl. Mech. Engrg."
+      },
+      {
+        "key": "10.1016/j.cma.2026.118951_bib0012",
+        "doi-asserted-by": "crossref",
+        "first-page": "561",
+        "DOI": "10.1016/j.cma.2019.04.029",
+        "article-title": "A hybridizable discontinuous Galerkin method for both thin and 3d nonlinear elastic structures",
+        "volume": "352",
+        "author": "Terrana",
+        "year": "2019",
+        "journal-title": "Comput. Methods Appl. Mech. Eng."
+      },
+      {
+        "key": "10.1016/j.cma.2026.118951_bib0013",
+        "doi-asserted-by": "crossref",
+        "first-page": "7151",
+        "DOI": "10.1016/j.jcp.2011.05.018",
+        "article-title": "Hybridizable discontinuous Galerkin methods for the time-harmonic maxwell’s equations",
+        "volume": "230",
+        "author": "Nguyen",
+        "year": "2011",
+        "journal-title": "J. Comput. Phys."
+      },
+      {
+        "key": "10.1016/j.cma.2026.118951_bib0014",
+        "doi-asserted-by": "crossref",
+        "first-page": "183",
+        "DOI": "10.1002/nme.4382",
+        "article-title": "A high-order hybridizable discontinuous Galerkin method for elliptic interface problems",
+        "volume": "93",
+        "author": "Huynh",
+        "year": "2013",
+        "journal-title": "Int. J. Numer. Methods Eng."
+      },
+      {
+        "key": "10.1016/j.cma.2026.118951_bib0015",
+        "doi-asserted-by": "crossref",
+        "first-page": "44",
+        "DOI": "10.1007/s10915-024-02604-3",
+        "article-title": "Hybridizable discontinuous Galerkin methods for the two-dimensional monge-ampère equation",
+        "volume": "100",
+        "author": "Nguyen",
+        "year": "2024",
+        "journal-title": "J. Sci. Comput."
+      },
+      {
+        "key": "10.1016/j.cma.2026.118951_bib0016",
+        "doi-asserted-by": "crossref",
+        "first-page": "1147",
+        "DOI": "10.1016/j.jcp.2010.10.032",
+        "article-title": "An implicit high-order hybridizable discontinuous Galerkin method for the incompressible Navier-Stokes equations",
+        "volume": "230",
+        "author": "Nguyen",
+        "year": "2011",
+        "journal-title": "J. Comput. Phys."
+      },
+      {
+        "key": "10.1016/j.cma.2026.118951_bib0017",
+        "doi-asserted-by": "crossref",
+        "first-page": "390",
+        "DOI": "10.1016/j.jcp.2015.11.028",
+        "article-title": "Hybridizable discontinuous Galerkin projection methods for Navier-Stokes and boussinesq equations",
+        "volume": "306",
+        "author": "Ueckermann",
+        "year": "2016",
+        "journal-title": "J. Comput. Phys."
+      },
+      {
+        "key": "10.1016/j.cma.2026.118951_bib0018",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1016/j.cma.2022.114969",
+        "article-title": "Symplectic hamiltonian finite element methods for electromagnetics",
+        "volume": "396",
+        "author": "Sánchez",
+        "year": "2022",
+        "journal-title": "Comput. Methods Appl. Mech. Eng."
+      },
+      {
+        "key": "10.1016/j.cma.2026.118951_bib0019",
+        "doi-asserted-by": "crossref",
+        "first-page": "1319",
+        "DOI": "10.1137/070706616",
+        "article-title": "Unified hybridization of discontinuous Galerkin, mixed, and continuous Galerkin methods for second order elliptic problems",
+        "volume": "47",
+        "author": "Cockburn",
+        "year": "2009",
+        "journal-title": "SIAM J. Numer. Anal."
+      },
+      {
+        "key": "10.1016/j.cma.2026.118951_bib0020",
+        "doi-asserted-by": "crossref",
+        "first-page": "3232",
+        "DOI": "10.1016/j.jcp.2009.01.030",
+        "article-title": "An implicit high-order hybridizable discontinuous Galerkin method for linear convection-diffusion equations",
+        "volume": "228",
+        "author": "Nguyen",
+        "year": "2009",
+        "journal-title": "J. Comput. Phys."
+      },
+      {
+        "key": "10.1016/j.cma.2026.118951_bib0021",
+        "doi-asserted-by": "crossref",
+        "first-page": "8841",
+        "DOI": "10.1016/j.jcp.2009.08.030",
+        "article-title": "An implicit high-order hybridizable discontinuous Galerkin method for nonlinear convection-diffusion equations",
+        "volume": "228",
+        "author": "Nguyen",
+        "year": "2009",
+        "journal-title": "J. Comput. Phys."
+      },
+      {
+        "key": "10.1016/j.cma.2026.118951_bib0022",
+        "doi-asserted-by": "crossref",
+        "first-page": "3695",
+        "DOI": "10.1016/j.jcp.2011.01.035",
+        "article-title": "High-order implicit hybridizable discontinuous Galerkin methods for acoustics and elastodynamics",
+        "volume": "230",
+        "author": "Nguyen",
+        "year": "2011",
+        "journal-title": "J. Comput. Phys."
+      },
+      {
+        "key": "10.1016/j.cma.2026.118951_bib0023",
+        "doi-asserted-by": "crossref",
+        "first-page": "215",
+        "DOI": "10.1007/s10915-010-9359-0",
+        "article-title": "A comparison of HDG methods for stokes flow",
+        "volume": "45",
+        "author": "Cockburn",
+        "year": "2010",
+        "journal-title": "J. Sci. Comput."
+      },
+      {
+        "key": "10.1016/j.cma.2026.118951_bib0024",
+        "doi-asserted-by": "crossref",
+        "first-page": "582",
+        "DOI": "10.1016/j.cma.2009.10.007",
+        "article-title": "A hybridizable discontinuous Galerkin method for stokes flow",
+        "volume": "199",
+        "author": "Nguyen",
+        "year": "2010",
+        "journal-title": "Comput. Methods Appl. Mech. Eng."
+      },
+      {
+        "key": "10.1016/j.cma.2026.118951_bib0025",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1016/j.softx.2022.101212",
+        "article-title": "Exasim: generating discontinuous Galerkin codes for numerical solutions of partial differential equations on graphics processors",
+        "volume": "20",
+        "author": "Vila-Pérez",
+        "year": "2022",
+        "journal-title": "SoftwareX"
+      },
+      {
+        "key": "10.1016/j.cma.2026.118951_bib0026",
+        "doi-asserted-by": "crossref",
+        "first-page": "529",
+        "DOI": "10.1002/nme.4547",
+        "article-title": "Efficiency of high-order elements for continuous and discontinuous Galerkin methods",
+        "volume": "96",
+        "author": "Huerta",
+        "year": "2013",
+        "journal-title": "Int. J. Numer. Methods Eng."
+      },
+      {
+        "key": "10.1016/j.cma.2026.118951_bib0027",
+        "series-title": "A hybridized multiscale discontinuous Galerkin method for compressible flows, in: 51st AIAA Aerospace Sciences Meeting including the New Horizons Forum and Aerospace Exposition",
+        "author": "Nguyen",
+        "year": "2013"
+      },
+      {
+        "key": "10.1016/j.cma.2026.118951_bib0028",
+        "series-title": "AIAA SCITECH 2023 Forum",
+        "article-title": "Implicit large eddy simulation of hypersonic boundary-layer transition for a flared cone",
+        "author": "Nguyen",
+        "year": "2023"
+      },
+      {
+        "key": "10.1016/j.cma.2026.118951_bib0029",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1016/j.paerosci.2024.100999",
+        "article-title": "Discontinuous Galerkin methods for hypersonic flows",
+        "volume": "146",
+        "author": "Hoskin",
+        "year": "2024",
+        "journal-title": "Prog. Aerosp. Sci."
+      },
+      {
+        "key": "10.1016/j.cma.2026.118951_bib0030",
+        "doi-asserted-by": "crossref",
+        "first-page": "3060",
+        "DOI": "10.2514/1.J060459",
+        "article-title": "Large-eddy simulation of transonic buffet using matrix-free discontinuous Galerkin method",
+        "volume": "60",
+        "author": "Nguyen",
+        "year": "2022",
+        "journal-title": "AIAA J."
+      },
+      {
+        "key": "10.1016/j.cma.2026.118951_bib0031",
+        "series-title": "AIAA Scitech 2020 Forum",
+        "article-title": "GPU-Accelerated Large Eddy Simulation of Hypersonic Flows",
+        "author": "Terrana",
+        "year": "2020"
+      },
+      {
+        "key": "10.1016/j.cma.2026.118951_bib0032",
+        "doi-asserted-by": "crossref",
+        "first-page": "308",
+        "DOI": "10.1016/j.jcp.2017.02.015",
+        "article-title": "The hybridized discontinuous Galerkin method for implicit large-eddy simulation of transitional turbulent flows",
+        "volume": "336",
+        "author": "Fernandez",
+        "year": "2017",
+        "journal-title": "J. Comput. Phys."
+      },
+      {
+        "key": "10.1016/j.cma.2026.118951_bib0033",
+        "doi-asserted-by": "crossref",
+        "first-page": "2709",
+        "DOI": "10.1137/070692108",
+        "article-title": "Newton-gmres preconditioning for discontinuous Galerkin discretizations of the navier-stokes equations",
+        "volume": "30",
+        "author": "Persson",
+        "year": "2008",
+        "journal-title": "SIAM J. Sci. Comput."
+      },
+      {
+        "key": "10.1016/j.cma.2026.118951_bib0034",
+        "doi-asserted-by": "crossref",
+        "first-page": "527",
+        "DOI": "10.1007/s002110200392",
+        "article-title": "A multilevel discontinuous Galerkin method",
+        "volume": "95",
+        "author": "Gopalakrishnan",
+        "year": "2003",
+        "journal-title": "Numer. Math."
+      },
+      {
+        "key": "10.1016/j.cma.2026.118951_bib0035",
+        "doi-asserted-by": "crossref",
+        "first-page": "330",
+        "DOI": "10.1016/j.jcp.2005.08.022",
+        "article-title": "High-order discontinuous Galerkin methods using an hp-multigrid approach",
+        "volume": "213",
+        "author": "Nastase",
+        "year": "2006",
+        "journal-title": "J. Comput. Phys."
+      },
+      {
+        "key": "10.1016/j.cma.2026.118951_bib0036",
+        "doi-asserted-by": "crossref",
+        "first-page": "92",
+        "DOI": "10.1016/j.jcp.2005.01.005",
+        "article-title": "P-multigrid solution of high-order discontinuous Galerkin discretizations of the compressible navier-stokes equations",
+        "volume": "207",
+        "author": "Fidkowski",
+        "year": "2005",
+        "journal-title": "J. Comput. Phys."
+      },
+      {
+        "key": "10.1016/j.cma.2026.118951_bib0037",
+        "doi-asserted-by": "crossref",
+        "first-page": "7917",
+        "DOI": "10.1016/j.jcp.2009.07.013",
+        "article-title": "Multigrid algorithms for high-order discontinuous Galerkin discretizations of the compressible navier-stokes equations",
+        "volume": "228",
+        "author": "Shahbazi",
+        "year": "2009",
+        "journal-title": "J. Comput. Phys."
+      },
+      {
+        "key": "10.1016/j.cma.2026.118951_bib0038",
+        "series-title": "Efficient discontinuous Galerkin implementations and preconditioners for implicit unsteady compressible flow simulations",
+        "first-page": "203",
+        "author": "Franciolini",
+        "year": "2020"
+      },
+      {
+        "key": "10.1016/j.cma.2026.118951_bib0039",
+        "doi-asserted-by": "crossref",
+        "first-page": "417",
+        "DOI": "10.1016/j.jcp.2019.06.001",
+        "article-title": "Matrix-free multigrid block-preconditioners for higher order discontinuous Galerkin discretisations",
+        "volume": "394",
+        "author": "Bastian",
+        "year": "2019",
+        "journal-title": "J. Comput. Phys."
+      },
+      {
+        "key": "10.1016/j.cma.2026.118951_bib0040",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1016/j.jcp.2020.109948",
+        "article-title": "Multigrid preconditioners for the hybridised discontinuous Galerkin discretisation of the shallow water equations",
+        "volume": "426",
+        "author": "Betteridge",
+        "year": "2021",
+        "journal-title": "J. Comput. Phys."
+      },
+      {
+        "key": "10.1016/j.cma.2026.118951_bib0041",
+        "doi-asserted-by": "crossref",
+        "first-page": "172",
+        "DOI": "10.1137/18M1193505",
+        "article-title": "Unified geometric multigrid algorithm for hybridized high-order finite element methods",
+        "volume": "41",
+        "author": "Wildey",
+        "year": "2019",
+        "journal-title": "SIAM J. Sci. Comput."
+      },
+      {
+        "key": "10.1016/j.cma.2026.118951_bib0042",
+        "series-title": "IHDG: an iterative hdg framework for partial differential equations",
+        "author": "Muralikrishnan",
+        "year": "2017"
+      },
+      {
+        "key": "10.1016/j.cma.2026.118951_bib0043",
+        "doi-asserted-by": "crossref",
+        "first-page": "380",
+        "DOI": "10.1016/j.jcp.2019.04.010",
+        "article-title": "A gpu accelerated discontinuous Galerkin incompressible flow solver",
+        "volume": "390",
+        "author": "Karakus",
+        "year": "2019",
+        "journal-title": "J. Comput. Phys."
+      },
+      {
+        "key": "10.1016/j.cma.2026.118951_bib0044",
+        "doi-asserted-by": "crossref",
+        "first-page": "5000",
+        "DOI": "10.1145/3325864",
+        "article-title": "Fast matrix-free evaluation of discontinuous Galerkin finite element operators,",
+        "volume": "45",
+        "author": "Kronbichler",
+        "year": "2019",
+        "journal-title": "ACM Trans. Math. Software"
+      },
+      {
+        "key": "10.1016/j.cma.2026.118951_bib0045",
+        "series-title": "Th AIAA Aerospace Sciences Meeting Including the New Horizons Forum and Aerospace Exposition",
+        "first-page": "49",
+        "article-title": "Gpu-accelerated sparse matrix-vector product for a hybridizable discontinuous Galerkin method",
+        "author": "Roca",
+        "year": "2011"
+      },
+      {
+        "key": "10.1016/j.cma.2026.118951_bib0046",
+        "doi-asserted-by": "crossref",
+        "first-page": "513",
+        "DOI": "10.4208/cicp.OA-2018-0235",
+        "article-title": "A gpu-accelerated hybridizable discontinuous Galerkin method for linear elasticity",
+        "volume": "27",
+        "author": "Fabien",
+        "year": "2020",
+        "journal-title": "Commun. Comput. Phys."
+      },
+      {
+        "key": "10.1016/j.cma.2026.118951_bib0047",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1002/nme.7401",
+        "article-title": "A high-order discontinuous Galerkin approach for physics-based thermospheric modeling",
+        "volume": "125",
+        "author": "Vila-Pérez",
+        "year": "2024",
+        "journal-title": "Int. J. Numer. Methods Eng."
+      },
+      {
+        "key": "10.1016/j.cma.2026.118951_bib0048",
+        "doi-asserted-by": "crossref",
+        "first-page": "3202",
+        "DOI": "10.1016/j.jpdc.2014.07.003",
+        "article-title": "Kokkos: enabling manycore performance portability through polymorphic memory access patterns",
+        "volume": "74",
+        "author": "Carter",
+        "year": "2014",
+        "journal-title": "J. Parallel Distrib. Comput."
+      },
+      {
+        "key": "10.1016/j.cma.2026.118951_bib0049",
+        "doi-asserted-by": "crossref",
+        "first-page": "805",
+        "DOI": "10.1109/TPDS.2021.3097283",
+        "article-title": "Programming model extensions for the exascale era",
+        "volume": "3",
+        "author": "Trott",
+        "year": "2022",
+        "journal-title": "IEEE Trans. Parallel Distrib. Syst."
+      },
+      {
+        "key": "10.1016/j.cma.2026.118951_bib0050",
+        "doi-asserted-by": "crossref",
+        "first-page": "250",
+        "DOI": "10.1006/jcph.1997.5705",
+        "article-title": "Approximate riemann solvers, parameter vectors, and difference schemes",
+        "volume": "135",
+        "author": "Roe",
+        "year": "1997",
+        "journal-title": "J. Comput. Phys."
+      },
+      {
+        "key": "10.1016/j.cma.2026.118951_bib0051",
+        "doi-asserted-by": "crossref",
+        "first-page": "173",
+        "DOI": "10.1023/A:1012873910884",
+        "article-title": "Runge-kutta discontinuous Galerkin methods for convection-dominated problems",
+        "volume": "16",
+        "author": "Cockburn",
+        "year": "2001",
+        "journal-title": "J. Sci. Comput."
+      },
+      {
+        "key": "10.1016/j.cma.2026.118951_bib0052",
+        "doi-asserted-by": "crossref",
+        "first-page": "357",
+        "DOI": "10.1016/0021-9991(83)90136-5",
+        "article-title": "High resolution schemes for hyperbolic conservation laws",
+        "volume": "49",
+        "author": "Harten",
+        "year": "1983",
+        "journal-title": "J. Comput. Phys"
+      },
+      {
+        "key": "10.1016/j.cma.2026.118951_bib0053",
+        "doi-asserted-by": "crossref",
+        "first-page": "260",
+        "DOI": "10.1006/jcph.1997.5713",
+        "article-title": "High resolution schemes for hyperbolic conservation laws",
+        "volume": "135",
+        "author": "Harten",
+        "year": "1997",
+        "journal-title": "J. Comput. Phys."
+      },
+      {
+        "key": "10.1016/j.cma.2026.118951_bib0054",
+        "doi-asserted-by": "crossref",
+        "first-page": "753",
+        "DOI": "10.1007/s11831-020-09508-z",
+        "article-title": "Hybridisable discontinuous Galerkin formulation of compressible flows",
+        "volume": "28",
+        "author": "Vila-Pérez",
+        "year": "2021",
+        "journal-title": "Arch. Comput. Methods Eng."
+      },
+      {
+        "key": "10.1016/j.cma.2026.118951_bib0055",
+        "doi-asserted-by": "crossref",
+        "first-page": "1006",
+        "DOI": "10.1137/0714068",
+        "article-title": "Diagonally implicit Runge-Kutta methods for stiff odes",
+        "volume": "14",
+        "author": "Alexander",
+        "year": "1977",
+        "journal-title": "SIAM J. Numer. Anal."
+      },
+      {
+        "key": "10.1016/j.cma.2026.118951_bib0056",
+        "series-title": "Solving ordinary differential equations ii",
+        "volume": "14",
+        "author": "Hairer",
+        "year": "1996"
+      },
+      {
+        "key": "10.1016/j.cma.2026.118951_bib0057",
+        "doi-asserted-by": "crossref",
+        "first-page": "856",
+        "DOI": "10.1137/0907058",
+        "article-title": "Gmres: a generalized minimal residual algorithm for solving nonsymmetric linear systems",
+        "volume": "7",
+        "author": "Saad",
+        "year": "1986",
+        "journal-title": "SIAM J. Sci. Stat. Comput."
+      },
+      {
+        "key": "10.1016/j.cma.2026.118951_bib0058",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1002/nla.2427",
+        "article-title": "Toward efficient polynomial preconditioning for gmres",
+        "volume": "29",
+        "author": "Loe",
+        "year": "2022",
+        "journal-title": "Numer. Linear Algebra Appl."
+      },
+      {
+        "key": "10.1016/j.cma.2026.118951_bib0059",
+        "doi-asserted-by": "crossref",
+        "first-page": "950",
+        "DOI": "10.1002/nme.4300",
+        "article-title": "A hybridized discontinuous petrov - Galerkin scheme for scalar conservation laws",
+        "volume": "91",
+        "author": "Moro",
+        "year": "2012",
+        "journal-title": "Int. J. Numer. Methods Eng."
+      },
+      {
+        "key": "10.1016/j.cma.2026.118951_bib0060",
+        "doi-asserted-by": "crossref",
+        "first-page": "1309",
+        "DOI": "10.1002/nme.2579",
+        "article-title": "Gmsh: a 3-D finite element mesh generator with built-in pre- and post-processing facilities",
+        "volume": "79",
+        "author": "Geuzaine",
+        "year": "2009",
+        "journal-title": "Int. J. Numer. Methods Eng."
+      },
+      {
+        "key": "10.1016/j.cma.2026.118951_bib0061",
+        "doi-asserted-by": "crossref",
+        "first-page": "1585",
+        "DOI": "10.1016/j.cma.2009.01.012",
+        "article-title": "Discontinuous Galerkin solution of the navier-stokes equations on deformable domains",
+        "volume": "198",
+        "author": "Persson",
+        "year": "2009",
+        "journal-title": "Comput. Methods Appl. Mech. Eng."
+      },
+      {
+        "key": "10.1016/j.cma.2026.118951_bib0062",
+        "series-title": "Th AIAA Aerospace Sciences Meeting",
+        "article-title": "Rans solutions using high order discontinuous Galerkin methods",
+        "author": "Nguyen",
+        "year": "2007"
+      },
+      {
+        "key": "10.1016/j.cma.2026.118951_bib0063",
+        "series-title": "20th AIAA Computational Fluid Dynamics Conference",
+        "article-title": "Navier-stokes solution using hybridizable discontinuous Galerkin methods",
+        "author": "Moro",
+        "year": "2011"
+      },
+      {
+        "key": "10.1016/j.cma.2026.118951_bib0064",
+        "doi-asserted-by": "crossref",
+        "first-page": "1970",
+        "DOI": "10.2514/1.J054961",
+        "article-title": "Mesh topology preserving boundary-layer adaptivity method for steady viscous flows",
+        "volume": "55",
+        "author": "Moro",
+        "year": "2017",
+        "journal-title": "AIAA J."
+      },
+      {
+        "key": "10.1016/j.cma.2026.118951_bib0065",
+        "series-title": "23rd AIAA Computational Fluid Dynamics Conference",
+        "first-page": "2017",
+        "article-title": "Subgrid-scale modeling and implicit numerical dissipation in dg-based large-eddy simulation",
+        "author": "Fernandez",
+        "year": "2017"
+      }
+    ],
+    "container-title": [
+      "Computer Methods in Applied Mechanics and Engineering"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://api.elsevier.com/content/article/PII:S0045782526002240?httpAccept=text/xml",
+        "content-type": "text/xml",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://api.elsevier.com/content/article/PII:S0045782526002240?httpAccept=text/plain",
+        "content-type": "text/plain",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2026,
+          4,
+          17
+        ]
+      ],
+      "date-time": "2026-04-17T00:26:55Z",
+      "timestamp": 1776385615000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://linkinghub.elsevier.com/retrieve/pii/S0045782526002240"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          7
+        ]
+      ]
+    },
+    "references-count": 65,
+    "alternative-id": [
+      "S0045782526002240"
+    ],
+    "URL": "https://doi.org/10.1016/j.cma.2026.118951",
+    "relation": {},
+    "ISSN": [
+      "0045-7825"
+    ],
+    "issn-type": [
+      {
+        "value": "0045-7825",
+        "type": "print"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2026,
+          7
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "Elsevier",
+        "name": "publisher",
+        "label": "This article is maintained by"
+      },
+      {
+        "value": "Preconditioning techniques for Hybridizable discontinuous Galerkin discretizations on GPU architectures",
+        "name": "articletitle",
+        "label": "Article Title"
+      },
+      {
+        "value": "Computer Methods in Applied Mechanics and Engineering",
+        "name": "journaltitle",
+        "label": "Journal Title"
+      },
+      {
+        "value": "https://doi.org/10.1016/j.cma.2026.118951",
+        "name": "articlelink",
+        "label": "CrossRef DOI link to publisher maintained version"
+      },
+      {
+        "value": "article",
+        "name": "content_type",
+        "label": "Content Type"
+      },
+      {
+        "value": "© 2026 Elsevier B.V. All rights are reserved, including those for text and data mining, AI training, and similar technologies.",
+        "name": "copyright",
+        "label": "Copyright"
+      }
+    ],
+    "article-number": "118951"
+  }
+}
